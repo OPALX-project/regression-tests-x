@@ -1,6 +1,6 @@
-/*      DriftTest-1.in
+/*      DriftTest-0.in
 	OPAL-X
-	Test simple Gaussian distribution with space charge in a 2 m drift
+	Test simple Gaussian distribution
 */
 
 OPTION, PSDUMPFREQ      = 1;     // 6d data written every 10th time step (h5).
@@ -9,6 +9,7 @@ OPTION, BOUNDPDESTROYFQ = 10;    // Delete lost particles, if any out of 10 \sig
 OPTION, AUTOPHASE       = 4;     // Autophase is on, and phase of max energy
                                  // gain will be found automatically for cavities.
 OPTION, VERSION=10900;
+OPTION, SEED=-1;                 // if -1, all ranks get the seed 1234567
 
 Title, string="Test simple Gaussian distribution with space charge";
 
@@ -18,7 +19,7 @@ Value,{OPALVERSION};
 // Global Parameters
 
 REAL rf_freq             = 1.3e3;    // RF frequency. (MHz)
-REAL n_particles         = 1E4;      // Number of particles in simulation.
+REAL n_particles         = 1E5;      // Number of particles in simulation.
 REAL beam_bunch_charge   = 1e-9;     // Charge of bunch. (C)
 
 // ----------------------------------------------------------------------------
@@ -44,7 +45,7 @@ SIGMAPX=0.0,
 SIGMAPY=0.0,
 SIGMAPZ=0.0;
 
-FS1: Fieldsolver, Type=NONE,
+FS1: Fieldsolver, Type=FFT,
      NX = 16, NY = 16, NZ = 16,
      PARFFTX = FALSE,
      PARFFTY = FALSE,
@@ -58,7 +59,7 @@ FS1: Fieldsolver, Type=NONE,
 BEAM1:  BEAM, PARTICLE = ELECTRON, pc = P0, NPART = n_particles,
         BFREQ = rf_freq, BCURRENT = beam_bunch_charge * rf_freq, CHARGE = -1;
 
-TRACK, LINE = DrLine, BEAM = BEAM1, MAXSTEPS = 1, DT = {1e-10}, ZSTOP=0.25; 
+TRACK, LINE = DrLine, BEAM = BEAM1, MAXSTEPS = 0, DT = {1e-10}, ZSTOP=0.25; 
  RUN, METHOD = "PARALLEL", BEAM = BEAM1, FIELDSOLVER = FS1, DISTRIBUTION = Dist1;
 ENDTRACK;
 QUIT;
