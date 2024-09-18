@@ -1,0 +1,276 @@
+Warning: Option 'DriftTest-0.in' is not parsed by Ippl.
+OPAL-X{0}> configure done argc= 4
+OPAL-X{0}> Reading startup file '/psi/home/adelmann/init.opal'
+OPAL-X{0}> 
+OPAL-X{0}> value: {TESTVAL} = {1.23457}
+OPAL-X{0}> 
+OPAL-X{0}> Finished reading startup file.
+OPAL-X{0}>               ____  _____        _       __   __
+OPAL-X{0}> 
+OPAL-X{0}> This is OPAL-X (Object Oriented Parallel Accelerator Library) Version 2024.1.00
+OPAL-X{0}>             git rev. adcad286b86959214221b607c36585bb2fbc36bb
+OPAL-X{0}> 
+OPAL-X{0}> 
+OPAL-X{0}>                      (c) PSI, http://amas.web.psi.ch
+OPAL-X{0}> 
+OPAL-X{0}> 
+OPAL-X{0}> This is the performance portable version of OPAL
+OPAL-X{0}> 
+OPAL-X{0}> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL-X{0}> to the OPAL developers opal@lists.psi.ch
+OPAL-X{0}> 
+OPAL-X{0}> Time: 12:02:34 date: 18/09/2024
+OPAL-X{0}> 
+OPAL-X{0}> * Reading input stream 'DriftTest-0.in'
+OPAL-X{0}> Use time(0) as seedOPTION,ECHO=FALSE,INFO=TRUE,TRACE=FALSE,WARN=TRUE,SEED=-1,TELL=FALSE,
+OPAL-X{0}>   PSDUMPFREQ=1,STATDUMPFREQ=1,PSDUMPEACHTURN=FALSE,
+OPAL-X{0}>   PSDUMPFRAME="GLOBAL",SPTDUMPFREQ=1,REPARTFREQ=10,REBINFREQ=100,
+OPAL-X{0}>   SCSOLVEFREQ=1,MTSSUBSTEPS=1,REMOTEPARTDEL=0,RHODUMP=FALSE,
+OPAL-X{0}>   EBDUMP=FALSE,CSRDUMP=FALSE,AUTOPHASE=4,NUMBLOCKS=0,RECYCLEBLOCKS=0,
+OPAL-X{0}>   NLHS=1,CZERO=FALSE,RNGTYPE="RANDOM",ENABLEHDF5=TRUE,ENABLEVTK=TRUE,
+OPAL-X{0}>   ASCIIDUMP=FALSE,BOUNDPDESTROYFQ=10,BEAMHALOBOUNDARY=0,
+OPAL-X{0}>   CLOTUNEONLY=FALSE,IDEALIZED=FALSE,LOGBENDTRAJECTORY=FALSE,
+OPAL-X{0}>   VERSION=10900,MEMORYDUMP=FALSE,HALOSHIFT=0,DELPARTFREQ=1,
+OPAL-X{0}>   MINBINEMITTED=10,MINSTEPFORREBIN=200,COMPUTEPERCENTILES=FALSE;
+OPAL-X{0}> 
+OPAL-X{0}> 
+OPAL-X{0}> value: {OPALVERSION} = {2.02401e+07}
+OPAL-X{0}> 
+OPAL-X{0}> 
+OPAL-X{0}> value: {EDES,P0,OPALVERSION} = {1.4e-09, 1.19616e-06, 2.02401e+07}
+OPAL-X{0}> 
+OPAL-X{0}> * Number of distributions  1
+OPAL-X{0}> 
+OPAL-X{0}> * ************* D I S T R I B U T I O N ********************************************
+OPAL-X{0}> * 
+OPAL-X{0}> * Distribution type: GAUSS
+OPAL-X{0}> * 
+OPAL-X{0}> * SIGMAX     = 0.00075 [m]
+OPAL-X{0}> * SIGMAY     = 0.00075 [m]
+OPAL-X{0}> * SIGMAZ     = 0.0005 [m]
+OPAL-X{0}> * SIGMAPX    = 0 [Beta Gamma]
+OPAL-X{0}> * SIGMAPY    = 0 [Beta Gamma]
+OPAL-X{0}> * SIGMAPZ    = 0 [Beta Gamma]
+OPAL-X{0}> * 
+OPAL-X{0}> * Distribution is injected.
+OPAL-X{0}> * 
+OPAL-X{0}> * **********************************************************************************
+OPAL-X{0}> 
+OPAL-X{0}> * ************* F I E L D S O L V E R ********************************************** 
+OPAL-X{0}> * FIELDSOLVER  FS1
+OPAL-X{0}> * TYPE         FFT
+OPAL-X{0}> * N-PROCESSORS 2
+OPAL-X{0}> * NX           16
+OPAL-X{0}> * NY           16
+OPAL-X{0}> * NZ           16
+OPAL-X{0}> * BBOXINCR     1
+OPAL-X{0}> * GREENSF      STANDARD
+OPAL-X{0}> * XDIM         serial  
+OPAL-X{0}> * YDIM         serial  
+OPAL-X{0}> * ZDIM      parallel  
+OPAL-X{0}> * ********************************************************************************** 
+OPAL-X{0}> 
+OPAL-X{0}> * ************* B E A M ************************************************************ 
+OPAL-X{0}> * BEAM        BEAM1
+OPAL-X{0}> * PARTICLE    ELECTRON
+OPAL-X{0}> * REST MASS   0.000510999 [GeV]
+OPAL-X{0}> * CHARGE      -e * 1 
+OPAL-X{0}> * MOMENTUM    1196.16 [eV/c]
+OPAL-X{0}> * MOMENTUM    1.19616e-06 [GeV/c]
+OPAL-X{0}> * CURRENT     1.3e-06 [A]
+OPAL-X{0}> * FREQUENCY   1300 [MHz]
+OPAL-X{0}> * NPART       100000
+OPAL-X{0}> * ********************************************************************************** 
+OPAL-X{0}> 
+OPAL-X{0}> * Solver and Load Balancer set
+OPAL-X{0}> * About to create particles ...
+OPAL-X{0}> seed = 1234567 on all ranks
+OPAL-X{0}> 
+OPAL-X{0}> * ************** B U N C H ********************************************************* 
+OPAL-X{0}> * PARTICLES       = 100000
+OPAL-X{0}> * CHARGE          = -1.000000e-09 (Cb) 
+OPAL-X{0}> * CORES           = 2
+OPAL-X{0}> * FIELD SOLVER    = FFT
+OPAL-X{0}> * INTEGRATOR      = LF2
+OPAL-X{0}> * MIN R (origin)  = (     -2.24728 ,     -2.25190 ,      0.00000 ) [mm]
+OPAL-X{0}> * MAX R (max ext) = (      2.24860 ,      2.24666 ,      1.98224 ) [mm]
+OPAL-X{0}> * RMS R           = (    756.96520 ,    756.85713 ,    331.18035 ) [um]
+OPAL-X{0}> * RMS P           = ( 0.000000e+00 , 0.000000e+00 , 1.058735e-04 ) [beta gamma]
+OPAL-X{0}> * Mean R: ( -4.277857e-06 , -2.449181e-06 , 2.401374e-04 ) [m]
+OPAL-X{0}> * Mean P: ( 0.000000e+00 , 0.000000e+00 , 2.444432e-03 ) [beta gamma]
+OPAL-X{0}> * MESH SPACING    = (    283.80237 ,    283.97184 ,    125.12868 ) [um]
+OPAL-X{0}> * COMPDOM INCR    = 1.000000e+00 (%) 
+OPAL-X{0}> * FIELD LAYOUT    = Domain = {[0:15:1],[0:15:1],[0:15:1]}
+OPAL-X{0}> Total number of boxes = 2
+OPAL-X{0}>     Box 0 {[0:15:1],[0:15:1],[0:7:1]}
+OPAL-X{0}>     Box 1 {[0:15:1],[0:15:1],[8:15:1]}
+OPAL-X{0}> 
+OPAL-X{0}> * Centroid : 
+OPAL-X{0}> * -4.277857e-01 0.000000e+00 -2.449181e-01 0.000000e+00 2.401374e+01 2.444432e+02 
+OPAL-X{0}> * Cov Matrix : 
+OPAL-X{0}> * 5.729963e-07 0.000000e+00 9.034931e-10 0.000000e+00 -2.937192e-10 -1.961655e-11 
+OPAL-X{0}> * 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 
+OPAL-X{0}> * 9.034931e-10 0.000000e+00 5.728327e-07 0.000000e+00 9.276896e-10 -1.123097e-11 
+OPAL-X{0}> * 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 
+OPAL-X{0}> * -2.937192e-10 0.000000e+00 9.276896e-10 0.000000e+00 1.096804e-07 1.101175e-09 
+OPAL-X{0}> * -1.961655e-11 0.000000e+00 -1.123097e-11 0.000000e+00 1.101175e-09 1.120919e-08 
+OPAL-X{0}> * * ********************************************************************************** 
+Ippl{0}> * Creating new file for data: 'DriftTest-0.stat'
+Ippl{0}> * Creating new file for data: 'DriftTest-0.lbal'
+OPAL-X{0}> * ParallelTracker zstop.size()= 1
+Ippl{0}[3]> DR1 gone live
+OPAL-X{0}> ParallelTrack: momentum=  0.00244443
+OPAL-X{0}> itsBunch_m->RefPartR_m= ( -4.27786e-06 , -2.44918e-06 , 0.000240137 )
+OPAL-X{0}> itsBunch_m->RefPartP_m= ( 0 , 0 , 0.00244443 )
+OPAL-X{0}> OrbitThreader dt_m= 1e-10
+OPAL-X{0}> 
+OPAL-X{0}> * Size of map 1 sections 
+OPAL-X{0}> * Key: (0.000000 - 0.249745) number of overlapping elements 1
+OPAL-X{0}> *                            DR1
+OPAL-X{0}> 
+Ippl{0}> * Creating new file for data: 'data/DriftTest-0_ElementPositions.sdds'
+OPAL-X{0}> * Track start at: 12:02:35, t= 0.000 [fs]; zstart at: 0.000 [um]
+OPAL-X{0}> * Executing ParallelTracker
+OPAL-X{0}> * Initial dt = 100.000 [ps]
+OPAL-X{0}> * Max integration steps = 0, next step = 0
+OPAL-X{0}> 
+ParallelTracker {0}[2]> REPARTFREQ 1000
+OPAL-X{0}>                dt [ns]           zStop [m]        num Steps [1]
+OPAL-X{0}> ->         1.000000e-10        2.500000e-01                   0
+ParallelTracker {0}[2]> Dump phase space of last step
+Ippl{0}[3]> DR1 gone off
+OPAL-X{0}> 
+OPAL-X{0}> * Done executing ParallelTracker at 12:02:35
+OPAL-X{0}> 
+PartBunch Destructor {0}> Finished time step: 0 time: 0
+OPAL-X{0}> * End of input stream 'DriftTest-0.in'
+Timings{0}> ---------------------------------------------
+Timings{0}>      Timing results for 2 nodes:
+Timings{0}> ---------------------------------------------
+Timings{0}> mainTimer........... Wall tot =   0.998456
+Timings{0}> 
+Timings{0}> gatherInfoPartBunch. Wall max = 0.000321401
+Timings{0}>                      Wall avg = 0.000315661
+Timings{0}>                      Wall min = 0.000309921
+Timings{0}> 
+Timings{0}> findInternal........ Wall max =  8.518e-06
+Timings{0}>                      Wall avg =   8.42e-06
+Timings{0}>                      Wall min =  8.322e-06
+Timings{0}> 
+Timings{0}> findPeriodic........ Wall max = 4.3256e-05
+Timings{0}>                      Wall avg =  4.217e-05
+Timings{0}>                      Wall min = 4.1084e-05
+Timings{0}> 
+Timings{0}> setSolver........... Wall max =  0.0832614
+Timings{0}>                      Wall avg =  0.0831074
+Timings{0}>                      Wall min =  0.0829535
+Timings{0}> 
+Timings{0}> Initialize.......... Wall max =  0.0828301
+Timings{0}>                      Wall avg =  0.0826802
+Timings{0}>                      Wall min =  0.0825304
+Timings{0}> 
+Timings{0}> Initialize: extra H. Wall max = 0.00261031
+Timings{0}>                      Wall avg = 0.00260629
+Timings{0}>                      Wall min = 0.00260227
+Timings{0}> 
+Timings{0}> Warmup.............. Wall max =   0.042046
+Timings{0}>                      Wall avg =   0.041959
+Timings{0}>                      Wall min =  0.0418721
+Timings{0}> 
+Timings{0}> Green Init.......... Wall max =  0.0337235
+Timings{0}>                      Wall avg =  0.0336282
+Timings{0}>                      Wall min =  0.0335328
+Timings{0}> 
+Timings{0}> FFT: Green.......... Wall max =  0.0224549
+Timings{0}>                      Wall avg =  0.0222689
+Timings{0}>                      Wall min =  0.0220829
+Timings{0}> 
+Timings{0}> prerun.............. Wall max =    0.14484
+Timings{0}>                      Wall avg =   0.144836
+Timings{0}>                      Wall min =   0.144832
+Timings{0}> 
+Timings{0}> Solve............... Wall max =   0.144563
+Timings{0}>                      Wall avg =    0.14456
+Timings{0}>                      Wall min =   0.144557
+Timings{0}> 
+Timings{0}> Solve: Physical to . Wall max = 0.00104087
+Timings{0}>                      Wall avg = 0.00092931
+Timings{0}>                      Wall min = 0.000817747
+Timings{0}> 
+Timings{0}> FFT: Rho............ Wall max =  0.0224854
+Timings{0}>                      Wall avg =  0.0223887
+Timings{0}>                      Wall min =   0.022292
+Timings{0}> 
+Timings{0}> FFT: Convolution.... Wall max =  0.0213207
+Timings{0}>                      Wall avg =  0.0212254
+Timings{0}>                      Wall min =    0.02113
+Timings{0}> 
+Timings{0}> Solve: Double to ph. Wall max = 0.000633036
+Timings{0}>                      Wall avg = 0.000532397
+Timings{0}>                      Wall min = 0.000431758
+Timings{0}> 
+Timings{0}> Solve: Electric fie. Wall max =  0.0905661
+Timings{0}>                      Wall avg =   0.090566
+Timings{0}>                      Wall min =  0.0905659
+Timings{0}> 
+Timings{0}> FFT: Efield......... Wall max =  0.0652374
+Timings{0}>                      Wall avg =  0.0644305
+Timings{0}>                      Wall min =  0.0636236
+Timings{0}> 
+Timings{0}> Efield: double to p. Wall max = 0.00516093
+Timings{0}>                      Wall avg = 0.00430575
+Timings{0}>                      Wall min = 0.00345057
+Timings{0}> 
+Timings{0}> particleBC.......... Wall max =  0.0122113
+Timings{0}>                      Wall avg = 0.00645472
+Timings{0}>                      Wall min = 0.000698086
+Timings{0}> 
+Timings{0}> updateParticle...... Wall max =   0.128241
+Timings{0}>                      Wall avg =   0.104418
+Timings{0}>                      Wall min =  0.0805945
+Timings{0}> 
+Timings{0}> locateParticles..... Wall max =   0.042424
+Timings{0}>                      Wall avg =  0.0224313
+Timings{0}>                      Wall min = 0.00243871
+Timings{0}> 
+Timings{0}> sendPreprocess...... Wall max =  0.0636327
+Timings{0}>                      Wall avg =  0.0378806
+Timings{0}>                      Wall min =  0.0121286
+Timings{0}> 
+Timings{0}> particleSend........ Wall max = 0.00751585
+Timings{0}>                      Wall avg = 0.00619692
+Timings{0}>                      Wall min = 0.00487799
+Timings{0}> 
+Timings{0}> particleDestroy..... Wall max = 0.00413732
+Timings{0}>                      Wall avg = 0.00285007
+Timings{0}>                      Wall min = 0.00156281
+Timings{0}> 
+Timings{0}> particleRecv........ Wall max =  0.0646366
+Timings{0}>                      Wall avg =  0.0350212
+Timings{0}>                      Wall min = 0.00540581
+Timings{0}> 
+Timings{0}> Write Stat.......... Wall max =          0
+Timings{0}>                      Wall avg =          0
+Timings{0}>                      Wall min =          0
+Timings{0}> 
+Timings{0}> Write H5-File....... Wall max =          0
+Timings{0}>                      Wall avg =          0
+Timings{0}>                      Wall min =          0
+Timings{0}> 
+Timings{0}> TIntegration1....... Wall max =          0
+Timings{0}>                      Wall avg =          0
+Timings{0}>                      Wall min =          0
+Timings{0}> 
+Timings{0}> TIntegration2....... Wall max =          0
+Timings{0}>                      Wall avg =          0
+Timings{0}>                      Wall min =          0
+Timings{0}> 
+Timings{0}> External field eval. Wall max =          0
+Timings{0}>                      Wall avg =          0
+Timings{0}>                      Wall min =          0
+Timings{0}> 
+Timings{0}> Binaryrepart........ Wall max =          0
+Timings{0}>                      Wall avg =          0
+Timings{0}>                      Wall min =          0
+Timings{0}> 
+Timings{0}> ---------------------------------------------
