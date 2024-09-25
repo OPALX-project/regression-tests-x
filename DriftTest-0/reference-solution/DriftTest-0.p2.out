@@ -19,7 +19,7 @@ OPAL-X{0}>
 OPAL-X{0}> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL-X{0}> to the OPAL developers opal@lists.psi.ch
 OPAL-X{0}> 
-OPAL-X{0}> Time: 13:57:49 date: 18/09/2024
+OPAL-X{0}> Time: 08:41:39 date: 25/09/2024
 OPAL-X{0}> 
 OPAL-X{0}> * Reading input stream 'DriftTest-0.in'
 OPAL-X{0}> 
@@ -104,10 +104,10 @@ OPAL-X{0}> * 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.
 OPAL-X{0}> * -2.937192e-10 0.000000e+00 9.276896e-10 0.000000e+00 1.096804e-07 1.101175e-09 
 OPAL-X{0}> * -1.961655e-11 0.000000e+00 -1.123097e-11 0.000000e+00 1.101175e-09 1.120919e-08 
 OPAL-X{0}> * * ********************************************************************************** 
-Ippl{0}> * Creating new file for data: 'DriftTest-0.stat'
-Ippl{0}> * Creating new file for data: 'DriftTest-0.lbal'
+OPAL-X{0}> * Creating new file for data: 'DriftTest-0.stat'
+OPAL-X{0}> * Creating new file for data: 'DriftTest-0.lbal'
 OPAL-X{0}> * ParallelTracker zstop.size()= 1
-Ippl{0}[3]> DR1 gone live
+OPAL-X{0}> * DR1 gone live
 OPAL-X{0}> ParallelTrack: momentum=  0.00244443
 OPAL-X{0}> itsBunch_m->RefPartR_m= ( -4.27786e-06 , -2.44918e-06 , 0.000240137 )
 OPAL-X{0}> itsBunch_m->RefPartP_m= ( 0 , 0 , 0.00244443 )
@@ -117,126 +117,126 @@ OPAL-X{0}> * Size of map 1 sections
 OPAL-X{0}> * Key: (0.000000 - 0.249745) number of overlapping elements 1
 OPAL-X{0}> *                            DR1
 OPAL-X{0}> 
-Ippl{0}> * Creating new file for data: 'data/DriftTest-0_ElementPositions.sdds'
-OPAL-X{0}> * Track start at: 13:57:50, t= 0.000 [fs]; zstart at: 0.000 [um]
+OPAL-X{0}> * Creating new file for data: 'data/DriftTest-0_ElementPositions.sdds'
+OPAL-X{0}> * Track start at: 08:41:40, t= 0.000 [fs]; zstart at: 0.000 [um]
 OPAL-X{0}> * Executing ParallelTracker
 OPAL-X{0}> * Initial dt = 100.000 [ps]
 OPAL-X{0}> * Max integration steps = 0, next step = 0
 OPAL-X{0}> 
-ParallelTracker {0}[2]> REPARTFREQ 1000
+OPAL-X{0}> * REPARTFREQ 1000
 OPAL-X{0}>                dt [ns]           zStop [m]        num Steps [1]
 OPAL-X{0}> ->         1.000000e-10        2.500000e-01                   0
-ParallelTracker {0}[2]> Dump phase space of last step
-Ippl{0}[3]> DR1 gone off
+OPAL-X{0}> * Dump phase space of last step
+OPAL-X{0}> * DR1 gone off
 OPAL-X{0}> 
-OPAL-X{0}> * Done executing ParallelTracker at 13:57:50
+OPAL-X{0}> * Done executing ParallelTracker at 08:41:40
 OPAL-X{0}> 
-PartBunch Destructor {0}> Finished time step: 0 time: 0
+OPAL-X{0}> * Finished time step: 0 time: 0.000000e+00
 OPAL-X{0}> * End of input stream 'DriftTest-0.in'
 Timings{0}> ---------------------------------------------
 Timings{0}>      Timing results for 2 nodes:
 Timings{0}> ---------------------------------------------
-Timings{0}> mainTimer........... Wall tot =    1.00587
+Timings{0}> mainTimer........... Wall tot =   0.995078
 Timings{0}> 
-Timings{0}> gatherInfoPartBunch. Wall max = 0.000296415
-Timings{0}>                      Wall avg = 0.000295709
-Timings{0}>                      Wall min = 0.000295003
+Timings{0}> gatherInfoPartBunch. Wall max = 0.000281006
+Timings{0}>                      Wall avg = 0.000275407
+Timings{0}>                      Wall min = 0.000269809
 Timings{0}> 
-Timings{0}> findInternal........ Wall max =   8.75e-06
-Timings{0}>                      Wall avg =  8.665e-06
-Timings{0}>                      Wall min =   8.58e-06
+Timings{0}> findInternal........ Wall max =  8.021e-06
+Timings{0}>                      Wall avg = 7.7525e-06
+Timings{0}>                      Wall min =  7.484e-06
 Timings{0}> 
-Timings{0}> findPeriodic........ Wall max = 4.5614e-05
-Timings{0}>                      Wall avg = 4.4868e-05
-Timings{0}>                      Wall min = 4.4122e-05
+Timings{0}> findPeriodic........ Wall max = 4.0491e-05
+Timings{0}>                      Wall avg = 3.9747e-05
+Timings{0}>                      Wall min = 3.9003e-05
 Timings{0}> 
-Timings{0}> setSolver........... Wall max =  0.0871858
-Timings{0}>                      Wall avg =  0.0864649
-Timings{0}>                      Wall min =  0.0857439
+Timings{0}> setSolver........... Wall max =  0.0747146
+Timings{0}>                      Wall avg =  0.0745449
+Timings{0}>                      Wall min =  0.0743753
 Timings{0}> 
-Timings{0}> Initialize.......... Wall max =  0.0867172
-Timings{0}>                      Wall avg =  0.0860184
-Timings{0}>                      Wall min =  0.0853197
+Timings{0}> Initialize.......... Wall max =  0.0742557
+Timings{0}>                      Wall avg =  0.0740909
+Timings{0}>                      Wall min =  0.0739261
 Timings{0}> 
-Timings{0}> Initialize: extra H. Wall max = 0.00246208
-Timings{0}>                      Wall avg = 0.00245413
-Timings{0}>                      Wall min = 0.00244618
+Timings{0}> Initialize: extra H. Wall max = 0.00221581
+Timings{0}>                      Wall avg =  0.0022113
+Timings{0}>                      Wall min = 0.00220679
 Timings{0}> 
-Timings{0}> Warmup.............. Wall max =  0.0454216
-Timings{0}>                      Wall avg =  0.0451293
-Timings{0}>                      Wall min =  0.0448371
+Timings{0}> Warmup.............. Wall max =  0.0388928
+Timings{0}>                      Wall avg =  0.0388894
+Timings{0}>                      Wall min =   0.038886
 Timings{0}> 
-Timings{0}> Green Init.......... Wall max =  0.0336344
-Timings{0}>                      Wall avg =   0.033333
-Timings{0}>                      Wall min =  0.0330316
+Timings{0}> Green Init.......... Wall max =  0.0289361
+Timings{0}>                      Wall avg =  0.0289208
+Timings{0}>                      Wall min =  0.0289056
 Timings{0}> 
-Timings{0}> FFT: Green.......... Wall max =  0.0221105
-Timings{0}>                      Wall avg =  0.0217612
-Timings{0}>                      Wall min =  0.0214119
+Timings{0}> FFT: Green.......... Wall max =   0.019099
+Timings{0}>                      Wall avg =  0.0190585
+Timings{0}>                      Wall min =  0.0190179
 Timings{0}> 
-Timings{0}> prerun.............. Wall max =   0.146028
-Timings{0}>                      Wall avg =   0.145999
-Timings{0}>                      Wall min =    0.14597
+Timings{0}> prerun.............. Wall max =   0.127256
+Timings{0}>                      Wall avg =   0.127238
+Timings{0}>                      Wall min =    0.12722
 Timings{0}> 
-Timings{0}> Solve............... Wall max =    0.14578
-Timings{0}>                      Wall avg =   0.145751
-Timings{0}>                      Wall min =   0.145722
+Timings{0}> Solve............... Wall max =   0.127025
+Timings{0}>                      Wall avg =   0.127006
+Timings{0}>                      Wall min =   0.126988
 Timings{0}> 
-Timings{0}> Solve: Physical to . Wall max = 0.000822989
-Timings{0}>                      Wall avg = 0.000747438
-Timings{0}>                      Wall min = 0.000671886
+Timings{0}> Solve: Physical to . Wall max = 0.000762289
+Timings{0}>                      Wall avg = 0.000711215
+Timings{0}>                      Wall min = 0.000660141
 Timings{0}> 
-Timings{0}> FFT: Rho............ Wall max =  0.0211277
-Timings{0}>                      Wall avg =  0.0210383
-Timings{0}>                      Wall min =  0.0209489
+Timings{0}> FFT: Rho............ Wall max =  0.0192611
+Timings{0}>                      Wall avg =  0.0192029
+Timings{0}>                      Wall min =  0.0191446
 Timings{0}> 
-Timings{0}> FFT: Convolution.... Wall max =  0.0223512
-Timings{0}>                      Wall avg =  0.0223459
-Timings{0}>                      Wall min =  0.0223407
+Timings{0}> FFT: Convolution.... Wall max =  0.0191557
+Timings{0}>                      Wall avg =   0.019155
+Timings{0}>                      Wall min =  0.0191543
 Timings{0}> 
-Timings{0}> Solve: Double to ph. Wall max = 0.00072525
-Timings{0}>                      Wall avg = 0.000717987
-Timings{0}>                      Wall min = 0.000710725
+Timings{0}> Solve: Double to ph. Wall max = 0.000606405
+Timings{0}>                      Wall avg = 0.000583157
+Timings{0}>                      Wall min = 0.000559909
 Timings{0}> 
-Timings{0}> Solve: Electric fie. Wall max =  0.0918896
-Timings{0}>                      Wall avg =  0.0918892
-Timings{0}>                      Wall min =  0.0918888
+Timings{0}> Solve: Electric fie. Wall max =  0.0795999
+Timings{0}>                      Wall avg =  0.0795972
+Timings{0}>                      Wall min =  0.0795946
 Timings{0}> 
-Timings{0}> FFT: Efield......... Wall max =  0.0685791
-Timings{0}>                      Wall avg =   0.067617
-Timings{0}>                      Wall min =  0.0666549
+Timings{0}> FFT: Efield......... Wall max =  0.0585214
+Timings{0}>                      Wall avg =   0.058366
+Timings{0}>                      Wall min =  0.0582105
 Timings{0}> 
-Timings{0}> Efield: double to p. Wall max = 0.00182063
-Timings{0}>                      Wall avg = 0.00169535
-Timings{0}>                      Wall min = 0.00157007
+Timings{0}> Efield: double to p. Wall max = 0.00180798
+Timings{0}>                      Wall avg = 0.00166632
+Timings{0}>                      Wall min = 0.00152466
 Timings{0}> 
-Timings{0}> particleBC.......... Wall max =  0.0117592
-Timings{0}>                      Wall avg = 0.00617918
-Timings{0}>                      Wall min = 0.000599111
+Timings{0}> particleBC.......... Wall max =    0.01288
+Timings{0}>                      Wall avg =  0.0069384
+Timings{0}>                      Wall min = 0.000996831
 Timings{0}> 
-Timings{0}> updateParticle...... Wall max =    0.12359
-Timings{0}>                      Wall avg =   0.100193
-Timings{0}>                      Wall min =   0.076795
+Timings{0}> updateParticle...... Wall max =   0.135469
+Timings{0}>                      Wall avg =   0.111491
+Timings{0}>                      Wall min =   0.087513
 Timings{0}> 
-Timings{0}> locateParticles..... Wall max =  0.0393054
-Timings{0}>                      Wall avg =  0.0206992
-Timings{0}>                      Wall min = 0.00209295
+Timings{0}> locateParticles..... Wall max =  0.0414266
+Timings{0}>                      Wall avg =  0.0226162
+Timings{0}>                      Wall min = 0.00380577
 Timings{0}> 
-Timings{0}> sendPreprocess...... Wall max =  0.0607473
-Timings{0}>                      Wall avg =  0.0365581
-Timings{0}>                      Wall min =   0.012369
+Timings{0}> sendPreprocess...... Wall max =  0.0635704
+Timings{0}>                      Wall avg =  0.0388352
+Timings{0}>                      Wall min =     0.0141
 Timings{0}> 
-Timings{0}> particleSend........ Wall max = 0.00731949
-Timings{0}>                      Wall avg = 0.00595064
-Timings{0}>                      Wall min = 0.00458178
+Timings{0}> particleSend........ Wall max =  0.0130859
+Timings{0}>                      Wall avg =   0.008665
+Timings{0}>                      Wall min = 0.00424414
 Timings{0}> 
-Timings{0}> particleDestroy..... Wall max =   0.003663
-Timings{0}>                      Wall avg = 0.00260478
-Timings{0}>                      Wall min = 0.00154656
+Timings{0}> particleDestroy..... Wall max =  0.0037801
+Timings{0}>                      Wall avg = 0.00299656
+Timings{0}>                      Wall min = 0.00221302
 Timings{0}> 
-Timings{0}> particleRecv........ Wall max =   0.063636
-Timings{0}>                      Wall avg =  0.0343442
-Timings{0}>                      Wall min = 0.00505254
+Timings{0}> particleRecv........ Wall max =  0.0718825
+Timings{0}>                      Wall avg =  0.0383299
+Timings{0}>                      Wall min = 0.00477727
 Timings{0}> 
 Timings{0}> Write Stat.......... Wall max =          0
 Timings{0}>                      Wall avg =          0

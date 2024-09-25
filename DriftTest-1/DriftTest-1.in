@@ -46,8 +46,8 @@ SIGMAPZ=0.0;
 
 FS1: Fieldsolver, Type=FFT,
      NX = 16, NY = 16, NZ = 16,
-     PARFFTX = FALSE,
-     PARFFTY = FALSE,
+     PARFFTX = TRUE,
+     PARFFTY = TRUE,
      PARFFTZ = TRUE,
      BCFFTX = OPEN,
      BCFFTY = OPEN,
