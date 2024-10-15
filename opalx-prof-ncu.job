@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH --uenv=eurohack/24.9:v2
+#SBATCH --view=modules
+#SBATCH --ntasks-per-node=1
+#SBATCH --nodes=1
+#SBATCH --output=out-%j.out
+#SBATCH -C gpu
+#SBATCH --partition=debug
+#SBATCH --time=00:05:00
+#
+export NSYS_NVTX_PROFILER_REGISTER_ONLY=0
+export CUDA_LAUNCH_BLOCKING=1
+#
+
+ncu -o opalx-ncu-4 --set=full --import-source=yes --kernel-name cuda_parallel_launch_local_memory --launch-skip 231 --launch-count 1 "/users/hck11/git/opalx/build/src/opalx" DriftTest-2/DriftTest-2.in --info 5 --kokkos-map-device-id-by=mpi_rank
+
+exit
+
+ncu -o opalx-ncu-1 --set=full --import-source=yes --kernel-name cuda_parallel_launch_local_memory --launch-skip 302 --launch-count 1 "/users/hck11/git/opalx/build/src/opalx" DriftTest-2/DriftTest-2.in --info 5 --kokkos-map-device-id-by=mpi_rank
+ncu -o opalx-ncu-2 --set=full --import-source=yes --kernel-name cuda_parallel_launch_local_memory --launch-skip 331 --launch-count 1 "/users/hck11/git/opalx/build/src/opalx" DriftTest-2/DriftTest-2.in --info 5 --kokkos-map-device-id-by=mpi_rank
+ncu -o opalx-ncu-3 --set=full --import-source=yes --kernel-name cuda_parallel_launch_local_memory --launch-skip 333 --launch-count 1 "/users/hck11/git/opalx/build/src/opalx" DriftTest-2/DriftTest-2.in --info 5 --kokkos-map-device-id-by=mpi_rank
+
+#ncu --set=full --import-source=yes  -o opalx-func-ncu-report.%p --kernel-name cuda_parallel_launch_local_memory --launch-skip 184 --launch-count 1 "/users/hck11/git/opalx/build/src/opalx" DriftTest-3/DriftTest-3.in --info 5 --kokkos-map-device-id-by=mpi_rank
+
+#ncu --set=full --import-source=yes --kernel-name cuda_parallel_launch_local_memory --launch-skip 689 --launch-count 1 -o opalxD2-ncu-report.%p "/users/hck11/git/opalx/build/src/opalx" DriftTest-2/DriftTest-2.in --info 5 --kokkos-map-device-id-by=mpi_rank

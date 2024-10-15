@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH --uenv=eurohack/24.9:v2
+#SBATCH --view=modules
+#SBATCH --ntasks-per-node=4
+#SBATCH --nodes=1
+#SBATCH --output=out-%j.out
+#SBATCH -C gpu
+#SBATCH --partition=debug
+#SBATCH --time=00:30:00
+#
+srun ./todi_gpu.sh $HOME/git/opalx/build/src/opalx DriftTest-3/DriftTest-3.in --info 5 --kokkos-map-device-id-by=mpi_rank
