@@ -1,13 +1,27 @@
 #!/bin/bash
 
+# We compare std-out of the runs.
+# A veto file can be used to ignore date time or other
+# quantities that "naturaly" have small changes
+#
+# This is to quick check if the opalx is not broken
+#
+# A Adelmann
+
 # Default values
 NUM_RANKS=1           # Default to 1 rank if no rank is provided
 CREATE_REF_SOL=false  # Default is not to create reference solution
+RUN_A100=false        # Run on CPU
+
+CPU_EXE_PATH=~adelmann/git/OPALX/build-omp/src
+GPU_EXE_PATH=~adelmann/git/OPALX/build-cuda-omp/src
 
 # Parse arguments
 for arg in "$@"; do
   if [ "$arg" == "--create-ref-sol" ]; then
     CREATE_REF_SOL=true
+  elif [[ "$arg" == "--run-A100" ]]; then
+    RUN_A100=true
   elif [[ "$arg" =~ ^[0-9]+$ ]]; then
     NUM_RANKS=$arg  # If the argument is a number, treat it as the number of ranks
   else
@@ -15,6 +29,12 @@ for arg in "$@"; do
     exit 1
   fi
 done
+
+if [[ $RUN_A100 == "true" ]]; then
+    OPAL_EXE_PATH=$GPU_EXE_PATH
+else
+    OPAL_EXE_PATH=$CPU_EXE_PATH
+fi
 
 # Check if number of ranks is provided as an argument
 if [ -z "$1" ]; then
@@ -30,12 +50,17 @@ for input_file in *.in; do
   # Extract the basename (filename without the extension)
   base_name=$(basename "$input_file" .in)
 
+  if [[ $RUN_A100 == "true" ]]; then
   # Define the output file
-  output_file="${base_name}.p${NUM_RANKS}.out"
-  
-  echo "Processing $input_file with $NUM_RANKS ranks..."
-  mpirun -np ${NUM_RANKS} opalx "$input_file" --info 5 >  "$output_file" 2>&1
-
+   output_file="gpu.${base_name}.p${NUM_RANKS}.out"
+   echo "Running $input_file with $NUM_RANKS ranks on GPU"
+   mpirun -np ${NUM_RANKS} ${OPAL_EXE_PATH}/opalx "$input_file" --info 5 >  "$output_file" 2>&1   
+  else
+   output_file="cpu.${base_name}.p${NUM_RANKS}.out"   
+   echo "Running $input_file with $NUM_RANKS ranks on CPU"
+   mpirun -np ${NUM_RANKS} ${OPAL_EXE_PATH}/opalx "$input_file" --info 5 >  "$output_file" 2>&1
+  fi
+   
   if [ "$CREATE_REF_SOL" == true ]; then
       read -p "Are you sure you want to create the reference solution? (Y/N): " CONFIRM
 
