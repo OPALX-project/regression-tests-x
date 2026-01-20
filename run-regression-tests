@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -l
 
 # We compare std-out of the runs.
 # A veto file can be used to ignore date time or other
@@ -6,78 +6,178 @@
 #
 # This is to quick check if the opalx is not broken
 #
+# In addition you can run all unit test at once.
+#
 # A Adelmann
+# \today
 
+set -euo pipefail
+
+usage() {
+    cat <<EOF
+Usage:
+  $(basename "$0") --rank 2 --cpu 
+
+Description:
+ The inputfile(s) in the local directory are run and the 
+ results compared to reference runs.  
+
+Options:
+  -h, --help        Show this help message and exit
+  --rank n	    Use n ranks for the run	    
+  --create-ref-sol  Run the probelm and save the results as reference solution
+  --run-a100        Use the NVIDIA A100 GPU
+  --run-g100	    Use the NVIDIA G100 GPU
+  --run-g200	    Use the NVIDIA G200 GPU	
+  --run-cpu	    Use the CPU (default)
+
+  --run-unit-tests  Run the unit tests
+
+
+Prerequistes: 
+
+1) One of the following environment variables pointing to the OPALX executable must be set:
+
+CPU_EXE_PATH
+
+GPU_EXE_PATH
+  
+2) You need to run inside an interactive session i.e. nodes must be reserved on the CPU and/or GPU partition
+  
+Example:
+  $(basename "$0") --rank 1 --run-cpu --create-ref-sol
+EOF
+}
+#
 # Default values
 NUM_RANKS=1           # Default to 1 rank if no rank is provided
 CREATE_REF_SOL=false  # Default is not to create reference solution
-RUN_A100=false        # Run on CPU
+RUN_A100=false        # 
+RUN_CPU=false         # 
+RUN_UNIT_TESTS=""     #
+ARCH=""               # The GPU architecture if empty we will use CPU
 
-CPU_EXE_PATH=~adelmann/git/OPALX/build-omp/src
-GPU_EXE_PATH=~adelmann/git/OPALX/build-cuda-omp/src
-
+#
+#
 # Parse arguments
-for arg in "$@"; do
-  if [ "$arg" == "--create-ref-sol" ]; then
-    CREATE_REF_SOL=true
-  elif [[ "$arg" == "--run-A100" ]]; then
-    RUN_A100=true
-  elif [[ "$arg" =~ ^[0-9]+$ ]]; then
-    NUM_RANKS=$arg  # If the argument is a number, treat it as the number of ranks
-  else
-    echo "Unknown argument: $arg"
-    exit 1
-  fi
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        -h|--help)
+            usage
+            exit 0
+            ;;
+        --create-ref-sol)
+            CREATE_REF_SOL=true
+            shift 1
+            ;;
+	--run-cpu)
+	    RUN_CPU=true
+	    ARCH="cpu"
+	    shift 1;
+	    if [[ -z "${CPU_EXE_PATH+x}" ]]; then
+		echo "CPU_EXE_PATH is not set"
+		usage >&2
+		exit 1
+	    fi
+	    ;;
+	--run-a100)
+	    RUN_A100=true
+	    ARCH="a100"
+	    shift 1;
+	    if [[ -z "${GPU_EXE_PATH+x}" ]]; then
+		echo "GPU_EXE_PATH is not set"
+		usage >&2
+		exit 1
+	    fi
+	    ;;
+	--run-unit-tests)
+	    RUN_UNIT_TESTS=true
+	    shift 1
+	    ;;
+	--rank)
+            NUM_RANKS="$2"
+            shift 2
+	    ;;
+	*)
+            echo "Error: unknown option '$1'" >&2
+            usage >&2
+            exit 1
+            ;;
+    esac
 done
 
-if [[ $RUN_A100 == "true" ]]; then
-    OPAL_EXE_PATH=$GPU_EXE_PATH
-else
-    OPAL_EXE_PATH=$CPU_EXE_PATH
+#
+# run unit tests
+#
+if [[ -z "${RUN_UNIT_TESTS+x}" ]]; then
+    echo "run unit tests ... "
+    if [[ -z "${ARCH:-}" ]]; then
+	EXE_DIR=${CPU_EXE_PATH}/../unit_tests
+    else
+	EXE_DIR=${GPU_EXE_PATH}/../unit_tests
+    fi
+
+    if [[ -d "${EXE_DIR:-}" ]]; then
+	echo "EXE_DIR points to a valid directory"
+	export UCX_TLS=tcp,shm,self
+	find "$EXE_DIR" -type f -perm -111 -print0 | while IFS= read -r -d '' file; do
+	    echo "Executing: $file"
+	    "$file"
+	done    
+    else
+	echo "Error: EXE_DIR is not set or not a directory: '${EXE_DIR:-}'" >&2
+	exit 1
+    fi
+    exit
 fi
 
-# Check if number of ranks is provided as an argument
-if [ -z "$1" ]; then
-    NUM_RANKS=1
-else
-    # Assign the number of ranks to a variable
-    NUM_RANKS=$1
-fi
-
+#
 # Loop over all .in files in the current directory
+#
 for input_file in *.in; do
+    # Extract the basename (filename without the extension)
+    base_name=$(basename "$input_file" .in)
+    case "$ARCH" in
+	"a100" )
+	    OPAL_EXE_PATH=$GPU_EXE_PATH
+	    output_file="${ARCH}.${base_name}.p${NUM_RANKS}.out"
+	    echo "Running $input_file with $NUM_RANKS ranks on ${ARCH}"
+	    #mpirun -np ${NUM_RANKS} ${OPAL_EXE_PATH}/opalx "$input_file" --info 5 >  "$output_file" 2>&1
+	    #echo ${OPAL_EXE_PATH}/opalx "$input_file" --info 5 >  "$output_file" 2>&1   
+	    ;;
+	"cpu" )
+	    OPAL_EXE_PATH=$CPU_EXE_PATH
+	    output_file="${ARCH}.${base_name}.p${NUM_RANKS}.out"   
+	    echo "Running $input_file with $NUM_RANKS ranks on ${ARCH}"
+	    mpirun -np ${NUM_RANKS} ${OPAL_EXE_PATH}/opalx "$input_file" --info 1 >  "$output_file" 2>&1
+	    ;;
+	*)
+	    echo "cpu/gpu architecture not known"
+	    exit 1
+	    ;;	
+    esac
+    
+    if [ "$CREATE_REF_SOL" == true ]; then
+	read -p "Are you sure you want to create the reference solution? (Y/N): " CONFIRM
+	# Check if the user typed 'Y'
+	if [[ "$CONFIRM" == "Y" || "$CONFIRM" == "y" ]]; then
+	    echo "Creating reference solution..."
+	    mv "$output_file" reference-solution/"$output_file"
+	else
+	    echo "Reference solution creation skipped."
+	fi
+    fi
+    #
+    #compare reference solution
+    #
+    diff <(grep -v -f reference-solution/veto.txt $output_file) <(grep -v -f reference-solution/veto.txt reference-solution/$output_file)
 
-  # Extract the basename (filename without the extension)
-  base_name=$(basename "$input_file" .in)
-
-  if [[ $RUN_A100 == "true" ]]; then
-  # Define the output file
-   output_file="gpu.${base_name}.p${NUM_RANKS}.out"
-   echo "Running $input_file with $NUM_RANKS ranks on GPU"
-   mpirun -np ${NUM_RANKS} ${OPAL_EXE_PATH}/opalx "$input_file" --info 5 >  "$output_file" 2>&1   
-  else
-   output_file="cpu.${base_name}.p${NUM_RANKS}.out"   
-   echo "Running $input_file with $NUM_RANKS ranks on CPU"
-   mpirun -np ${NUM_RANKS} ${OPAL_EXE_PATH}/opalx "$input_file" --info 5 >  "$output_file" 2>&1
-  fi
-   
-  if [ "$CREATE_REF_SOL" == true ]; then
-      read -p "Are you sure you want to create the reference solution? (Y/N): " CONFIRM
-
-  # Check if the user typed 'Y'
-  if [[ "$CONFIRM" == "Y" || "$CONFIRM" == "y" ]]; then
-      echo "Creating reference solution..."
-      mv "$output_file" reference-solution/"$output_file"
-  else
-      echo "Reference solution creation skipped."
-  fi
- fi
-
- diff <(grep -v -f reference-solution/veto.txt $output_file) <(grep -v -f reference-solution/veto.txt reference-solution/$output_file)
-
- if [ $? -eq 0 ]; then
-      echo "The files $output_file match after ignoring the specified keywords in reference-solution/veto.txt."
- else
-      echo "The files differ."
- fi
+    if [ $? -eq 0 ]; then
+	echo "The files $output_file match after ignoring the specified keywords in reference-solution/veto.txt."
+    else
+	echo "The files differ."
+    fi
+    rm -rf data *.h5   *.stat timing.dat
+    echo "done ..." 
 done
+exit
