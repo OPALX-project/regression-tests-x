@@ -1,4 +1,4 @@
 #!/bin/bash
 
 cd "$(cd "$(dirname "$0")" && pwd)"
-mpirun -np 1 "$OPAL_EXE_PATH/opalx" FodoCell.in --info 2 "$@" 2>&1
+mpirun -np 1 "$OPALX_EXE_PATH/opalx" FodoCell.in --info 2 "$@" 2>&1
