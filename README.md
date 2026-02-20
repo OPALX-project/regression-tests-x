@@ -2,16 +2,31 @@
 
 ## Purpose
 
-Create and run OPALX regression tests
+Create and run OPALX regression tests is similar to the procedure for OPAL 
+described [here](https://github.com/OPALX-project/regression-tests/tree/master).
 
-## Add a new regression test and generate reference solution
 
+## Create a Reference Solution
 
-## Check an OPALX run against reference solutions
+1. run the simulation in an isolated directory
+2. execute the script below
+3. commit the directory to the repository
 
-- [ ] [Set up project integrations](https://gitlab.psi.ch/OPAL/regresion-test-x/-/settings/integrations)
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
+```
+#
+F=`ls *.in`
+FB=`basename -s ".in" $F`
+F1=`ls $FB.out`
+F2=`ls $FB.stat`
+F3=`ls $FB.lbal`
+#
+mkdir -p reference
+cp $F1 reference/
+cp $F2 reference/
+cp $F3 reference/
+#
+cd reference
+md5sum $F1 > $F1.md5
+md5sum $F2 > $F2.md5
+md5sum $F3 > $F3.md5
+```
