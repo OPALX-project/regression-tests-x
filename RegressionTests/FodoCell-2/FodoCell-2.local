@@ -1,0 +1,4 @@
+#!/bin/bash
+F=`ls *.in`
+cd "$(cd "$(dirname "$0")" && pwd)"
+mpirun -np 1 "$OPALX_EXE_PATH/opalx" ${F} --info 2 "$@" 2>&1
