@@ -9,14 +9,15 @@ described [here](https://github.com/OPALX-project/regression-tests/tree/master).
 ## Create a Reference Solution
 
 1. create a isolated directory with an inputfile (yourfilename.in)
-2. execute the script below and make sure opalx is in the search path
-3. commit the directory to this repository in the branch *cleanup*
+2. execute the script below and make sure OPAL_EXE_PATH is set
+3. copy xxx.local and modyfiy
+4. commit the directory to this repository in the branch *cleanup*
 
 ```
 #!/bin/bash -l 
 F=`ls *.in`
 FB=`basename -s ".in" $F`
-opalx ${F} --info 10 | tee ${FB}.out
+${OPAL_EXE_PATH}/opalx ${F} --info 10 | tee ${FB}.out
 F1=`ls $FB.out`
 F2=`ls $FB.stat`
 #F3=`ls $FB.lbal`
