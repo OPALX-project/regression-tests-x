@@ -8,15 +8,15 @@ described [here](https://github.com/OPALX-project/regression-tests/tree/master).
 
 ## Create a Reference Solution
 
-1. run the simulation in an isolated directory
-2. execute the script below
+1. create a isolated directory with an inputfile (yourfilename.in)
+2. execute the script below and make sure opalx is in the search path
 3. commit the directory to this repository in the branch *cleanup*
 
 ```
 #!/bin/bash -l 
 F=`ls *.in`
 FB=`basename -s ".in" $F`
-/data/user/adelmann/NightlyBuildX/workspace/master/cpu-serial/build/src/opalx ${F} --info 10 | tee ${FB}.out
+opalx ${F} --info 10 | tee ${FB}.out
 F1=`ls $FB.out`
 F2=`ls $FB.stat`
 #F3=`ls $FB.lbal`
