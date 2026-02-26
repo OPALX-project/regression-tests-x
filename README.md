@@ -10,7 +10,7 @@ described [here](https://github.com/OPALX-project/regression-tests/tree/master).
 
 1. run the simulation in an isolated directory
 2. execute the script below
-3. commit the directory to the repository
+3. commit the directory to this repository in the branch *cleanup*
 
 ```
 #!/bin/bash -l 
