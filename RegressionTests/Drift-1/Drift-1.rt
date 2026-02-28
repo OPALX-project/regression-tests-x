@@ -1,0 +1,8 @@
+"Drift: Gaussian, 1 step, no space charge solver"
+stat "rms_x" last 1E-5
+stat "rms_y" last 1E-5
+stat "rms_s" last 1E-5
+stat "emit_x" last 1E-5
+stat "emit_y" last 1E-5
+stat "emit_s" last 1E-5
+stat "energy" last 1E-5

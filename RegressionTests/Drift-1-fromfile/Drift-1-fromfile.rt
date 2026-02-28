@@ -1,0 +1,8 @@
+"Drift from file: 1 step, FROMFILE distribution read-in check. Should match exactly!"
+stat "rms_x" last 1E-12
+stat "rms_y" last 1E-12
+stat "rms_s" last 1E-12
+stat "emit_x" last 1E-12
+stat "emit_y" last 1E-12
+stat "emit_s" last 1E-12
+stat "energy" last 1E-12
