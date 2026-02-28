@@ -1,5 +1,7 @@
-/*      Drinft-3.in
+/*      Drift-1-bins.in
 	OPALX
+    Tests that the program does not crash when binning is selected. 
+    Does not test any actual binning results.
 */
 
 OPTION, PSDUMPFREQ      = 10;     // 6d data written every 10th time step (h5).

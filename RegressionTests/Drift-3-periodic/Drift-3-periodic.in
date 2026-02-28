@@ -1,4 +1,4 @@
-/*      Drinft-3.in
+/*      Drinft-3-periodic.in
 	OPALX
     Test meaningful drift with periodic FFT solver.
 */

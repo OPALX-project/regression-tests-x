@@ -1,4 +1,4 @@
-/*      Drinft-1.in
+/*      Drinft-1-fromfile.in
 	OPALX
 	Fromfile distribution test, 1 timestep, no solver.
     Compares rms to see if read in correctly.
