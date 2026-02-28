@@ -8,31 +8,11 @@ described [here](https://github.com/OPALX-project/regression-tests/tree/master).
 
 ## Create a Reference Solution
 
-1. create a isolated directory with an inputfile (yourfilename.in)
-2. execute the script below and make sure OPAL_EXE_PATH is set
-3. copy xxx.local and modyfiy
-4. commit the directory to this repository in the branch *cleanup*
+1. clone this repository for example into $HOME/git
+2. checkout the branch *cleanup*
+3. create a new directory *foo* in $HOME/git/regresion-test-x/RegressionTests with an inputfile *foo.in*
+4. make sure OPALX_EXE_PATH is set and $HOME/git/regresion-test-x/bin is in the PATH
+5. cd to $HOME/git/regresion-test-x/RegressionTests/foo and execute *makeReference.sh*
+6. commit the directory to this repository in the branch *cleanup*
 
-```
-#!/bin/bash -l 
-F=`ls *.in`
-FB=`basename -s ".in" $F`
-${OPAL_EXE_PATH}/opalx ${F} --info 10 | tee ${FB}.out
-F1=`ls $FB.out`
-F2=`ls $FB.stat`
-#F3=`ls $FB.lbal`
-#
-mkdir -p reference
-cp $F1 reference/
-cp $F2 reference/
-#cp $F3 reference/
-#
-cd reference
-md5sum $F1 > $F1.md5
-md5sum $F2 > $F2.md5
-#md5sum $F3 > $F3.md5
-cd ..
-rm -rf data *.h5 *.out *.stat
-
-
-```
+In case you need to run on multiple ranks use *--ranks number* argument on **makeReference.sh**
