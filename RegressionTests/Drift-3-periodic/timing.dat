@@ -1,0 +1,38 @@
+                      ranks  Wall tot
+=====================================
+mainTimer...........      1    0.6209
+
+                      ranks  Wall max  Wall min  Wall avg
+=========================================================
+mainTimer...........      1    0.6209    0.6209    0.6209
+gatherInfoPartBunch.      1 6.063e-05 6.063e-05 6.063e-05
+bInitLimits.........      1  0.001614  0.001614  0.001614
+bAllReduceLimits....      1 5.892e-06 5.892e-06 5.892e-06
+bAllReduceGlobalHis.      1 4.925e-06 4.925e-06 4.925e-06
+bAssignUniformBins..      1  0.001981  0.001981  0.001981
+bExecuteHistoReduct.      1   0.00146   0.00146   0.00146
+bSortContainerByBin.      1  0.004109  0.004109  0.004109
+bVerifySorting......      1         0         0         0
+setSolver...........      1  0.002315  0.002315  0.002315
+prerun..............      1  0.003202  0.003202  0.003202
+samplingTime........      1   0.01396   0.01396   0.01396
+SamplingTimer.......      1   0.01395   0.01395   0.01395
+GenParticles........      1   0.01395   0.01395   0.01395
+particleBC..........      1   0.00349   0.00349   0.00349
+updateParticle......      1         0         0         0
+Write Stat..........      1  0.000589  0.000589  0.000589
+Write H5-File.......      1   0.01326   0.01326   0.01326
+TIntegration1.......      1   0.02977   0.02977   0.02977
+TIntegration2.......      1   0.03787   0.03787   0.03787
+External field eval.      1  0.006607  0.006607  0.006607
+Binaryrepart........      1         0         0         0
+OrbThreader.........      1    0.2176    0.2176    0.2176
+bTotalBinningT......      1   0.01165   0.01165   0.01165
+bDeviceSyncronizati.      1  1.16e-05  1.16e-05  1.16e-05
+bHistogramInit......      1   0.00016   0.00016   0.00016
+bMergeBins..........      1   0.00127   0.00127   0.00127
+SolveTimer..........      1    0.1625    0.1625    0.1625
+scatter.............      1   0.04219   0.04219   0.04219
+accumulateHalo......      1 0.0002718 0.0002718 0.0002718
+fillHalo............      1 0.0003206 0.0003206 0.0003206
+gather..............      1   0.02254   0.02254   0.02254
