@@ -2,7 +2,7 @@ OPAL-X> configure done argc= 4
 OPAL-X>               ____  _____        _       __   __
 OPAL-X> 
 OPAL-X> This is OPAL-X (Object Oriented Parallel Accelerator Library) Version 1.0
-OPAL-X>             git rev. 08a2c33a137eb49769954b5723efecdd6e6a00d0
+OPAL-X>             git rev. da2e16e7dbeabbe6bf7dd74d130628a943c3a7df
 OPAL-X> 
 OPAL-X> 
 OPAL-X>                      (c) PSI, http://amas.web.psi.ch
@@ -13,7 +13,7 @@ OPAL-X>
 OPAL-X> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL-X> to the OPAL developers 
 OPAL-X> 
-OPAL-X> Time: 17:05:36 date: 28/02/2026
+OPAL-X> Time: 07:46:34 date: 02/03/2026
 OPAL-X> 
 OPAL-X> * Host:   OpenMP
 OPAL-X> * Device: OpenMP
@@ -44,8 +44,9 @@ OPAL-X> * **********************************************************************
 OPAL-X> 
 OPAL-X> * ************* F I E L D S O L V E R ********************************************** 
 OPAL-X> * FIELDSOLVER  FS1
+OPAL-X> * BINS         NONE
 OPAL-X> * TYPE         OPEN
-OPAL-X> * RANKS       1
+OPAL-X> * RANKS        1
 OPAL-X> * NX           32
 OPAL-X> * NY           32
 OPAL-X> * NZ           32
@@ -53,7 +54,7 @@ OPAL-X> * BBOXINCR     5
 OPAL-X> * GREENSF      STANDARD
 OPAL-X> * XDIM         parallel  
 OPAL-X> * YDIM         parallel  
-OPAL-X> * ZDIM      serial  
+OPAL-X> * ZDIM         serial  
 OPAL-X> * ********************************************************************************** 
 OPAL-X> 
 OPAL-X> * ************* B E A M ************************************************************ 
@@ -73,15 +74,6 @@ OPAL-X> * Macro mass per particle: [GeV/c^2] 0.973329
 OPAL-X> * Particles per macro particle: 1904.76
 OPAL-X> PartBunch Constructor
 OPAL-X> * FieldContainer set to isAllPeriodic = 0
-AdaptBins> AdaptBins initialized with maxBins = 128, alpha = 1, beta = 1.5, desiredWidth = 0.1
-KOKKOS DEBUG> =====================================
-KOKKOS DEBUG>  Kokkos Debug Information (Rank 0)
-KOKKOS DEBUG> =====================================
-KOKKOS DEBUG> CPU Threads (OpenMP): 1
-KOKKOS DEBUG> CUDA: GPU support disabled.
-KOKKOS DEBUG> Default Execution Space Concurrency: 1
-KOKKOS DEBUG> Binning cost function parameters: alpha = 1, beta = 1.5, desiredWidth = 0.1
-KOKKOS DEBUG> =====================================
 PartBunch::setSolver> Initializing solver: OPEN
 FieldContainer::initializeFields> Mesh spacing = ( 0.1875 , 0.1875 , 0.1875 )
 FieldContainer::initializeFields> Origin       = ( -3 , -3 , -3 )
@@ -97,6 +89,7 @@ FieldSolver::initSolverWithParams> Set solver RHS.
 FieldSolver::initSolverWithParams> Set solver LHS.
 PartBunch::setSolver> Field solver initialized.
 PartBunch::setSolver> Solver and Load Balancer set.
+PartBunch::setBins> Solver FS1 has no binning command attached, not using binning.
 PartBunch::pre_run> PartBunch pre_run started.
 PartBunch::pre_run> Rho initialized to zero.
 FieldSolver::runSolver> Running solver with type: OPEN. Force skip field dump: 1
@@ -105,14 +98,14 @@ PartBunch::pre_run> Call counter reset. pre_run done.
 OPAL-X> * PartBunch constructor done.
 OPAL-X> not implemented
 OPAL-X> * BCHandler<3>: [OPEN, OPEN, OPEN]
-OPAL-X> number_of_processors 14
+OPAL-X> number_of_processors 16
 OPAL-X> MPI_Comm_size 1
 OPAL-X> * About to create particles ...
 OPAL-X> * Particle creation done
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00328963 , -0.00326818 , -0.00328556 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000205746 , 0.000204836 , 0.000206071 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00329529 , -0.00328433 , -0.00328115 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000205955 , 0.000205171 , 0.000205547 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -122,27 +115,27 @@ OPAL-X> * ************** B U N C H *********************************************
 OPAL-X> * PARTICLES       = 32768
 OPAL-X> * CHARGE          = -1.000000e-11 (Cb) 
 OPAL-X> * INTEGRATOR      = LF2
-OPAL-X> * MIN R (origin)  = (     -2.99037 ,     -2.97023 ,     -2.98583 ) [mm]
-OPAL-X> * MAX R (max ext) = (      2.99497 ,      2.98864 ,      3.00895 ) [mm]
-OPAL-X> * RMS R           = (    985.07250 ,    994.09241 ,    987.62600 ) [um]
-OPAL-X> * RMS P           = ( 9.971268e-10 , 9.967558e-10 , 1.003360e-09 ) [beta gamma]
-OPAL-X> * Mean R: ( -5.436893e-20 , 7.856561e-21 , -9.039430e-20 ) [m]
-OPAL-X> * Mean P: ( -3.505941e-12 , 5.337695e-12 , 1.978359e-03 ) [beta gamma]
-OPAL-X> * MESH SPACING    = (    205.74581 ,    204.83612 ,    206.07056 ) [um]
+OPAL-X> * MIN R (origin)  = (     -2.99572 ,     -2.98590 ,     -2.98217 ) [mm]
+OPAL-X> * MAX R (max ext) = (      2.99570 ,      2.98273 ,      2.99739 ) [mm]
+OPAL-X> * RMS R           = (    992.10021 ,    984.02935 ,    999.21486 ) [um]
+OPAL-X> * RMS P           = ( 9.978486e-10 , 1.000291e-09 , 1.003653e-09 ) [beta gamma]
+OPAL-X> * Mean R: ( 2.583450e-20 , 1.143494e-20 , -1.228198e-20 ) [m]
+OPAL-X> * Mean P: ( -7.598708e-12 , 3.152185e-12 , 1.978359e-03 ) [beta gamma]
+OPAL-X> * MESH SPACING    = (    205.95496 ,    205.17148 ,    205.54731 ) [um]
 OPAL-X> * COMPDOM INCR    = 5.000000e+00 (%) 
 OPAL-X> * FIELD LAYOUT    = Domain = {[0:31:1],[0:31:1],[0:31:1]}
 OPAL-X> Total number of boxes = 1
 OPAL-X>     Box 0 {[0:31:1],[0:31:1],[0:31:1]}
 OPAL-X> 
 OPAL-X> * Centroid : 
-OPAL-X> * -1.781561e-15 -1.148827e-07 2.574438e-16 1.749056e-07 -2.962040e-15 6.482688e+01 
+OPAL-X> * 8.465451e-16 -2.489945e-07 3.747003e-16 1.032908e-07 -4.024558e-16 6.482688e+01 
 OPAL-X> * Cov Matrix : 
-OPAL-X> * 9.703678e-07 2.370598e-15 9.321539e-09 -3.229410e-15 1.295832e-08 -1.337483e-16 
-OPAL-X> * 2.370598e-15 9.942618e-19 -9.499070e-15 -7.532501e-21 1.764664e-15 -6.773932e-22 
-OPAL-X> * 9.321539e-09 -9.499070e-15 9.882197e-07 1.871621e-15 7.528638e-09 7.514154e-16 
-OPAL-X> * -3.229410e-15 -7.532501e-21 1.871621e-15 9.935222e-19 -4.726361e-15 -2.505067e-21 
-OPAL-X> * 1.295832e-08 1.764664e-15 7.528638e-09 -4.726361e-15 9.754051e-07 5.372373e-15 
-OPAL-X> * -1.337483e-16 -6.773932e-22 7.514154e-16 -2.505067e-21 5.372373e-15 1.006732e-18 
+OPAL-X> * 9.842628e-07 4.358512e-15 -2.395982e-09 3.656247e-15 5.687779e-09 -1.223447e-14 
+OPAL-X> * 4.358512e-15 9.957019e-19 -2.923983e-15 -2.431892e-21 -4.130509e-15 -1.065720e-20 
+OPAL-X> * -2.395982e-09 -2.923983e-15 9.683138e-07 3.055302e-15 4.860467e-09 1.994036e-15 
+OPAL-X> * 3.656247e-15 -2.431892e-21 3.055302e-15 1.000581e-18 -7.242627e-15 -5.198089e-21 
+OPAL-X> * 5.687779e-09 -4.130509e-15 4.860467e-09 -7.242627e-15 9.984303e-07 -7.029973e-15 
+OPAL-X> * -1.223447e-14 -1.065720e-20 1.994036e-15 -5.198089e-21 -7.029973e-15 1.007319e-18 
 OPAL-X> * * ********************************************************************************** 
 OPAL-X> * Creating new file for data: 'Drift-3-open.stat'
 OPAL-X> * Creating new file for data: 'Drift-3-open.lbal'
@@ -156,7 +149,7 @@ ParallelTracker::execute>   rmin = ( -3 , -3 , -3 )
 ParallelTracker::execute>   rmax = ( 3 , 3 , 3 )
 ParallelTracker::execute> ParallelTrack: momentum = 0.00197836
 ParallelTracker::execute> itsBunch_m->RefPartR_m = ( 0 , 0 , 0 )
-ParallelTracker::execute> itsBunch_m->RefPartP_m = ( -3.50594e-12 , 5.3377e-12 , 0.00197836 )
+ParallelTracker::execute> itsBunch_m->RefPartP_m = ( -7.59871e-12 , 3.15219e-12 , 0.00197836 )
 OPAL-X> OrbitThreader dt_m= 5e-11
 OPAL-X> OrbitThreader maxDistance= 10
 OPAL-X> OrbitThreader #elements  = 1
@@ -169,7 +162,7 @@ OPAL-X> * Creating new file for data: 'data/Drift-3-open_ElementPositions.sdds'
 ParallelTracker::execute> Orbit threader execution done.
 ParallelTracker::execute> Set time view of particle bunch.
 ParallelTracker::execute> Reset bunch time to 0.
-ParallelTracker::execute> * Track start at: 17:05:36, t= 0.000 [fs]; zstart at: 0.000 [um]
+ParallelTracker::execute> * Track start at: 07:46:34, t= 0.000 [fs]; zstart at: 0.000 [um]
 ParallelTracker::execute> * Executing ParallelTracker
 ParallelTracker::execute> * Initial dt = 50.000 [ps]
 ParallelTracker::execute> * Max integration steps = 20, next step = 0
@@ -195,8 +188,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00328963 , -0.00326818 , -0.00327074 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000205746 , 0.000204836 , 0.000206071 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00329529 , -0.00328433 , -0.00326632 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000205955 , 0.000205171 , 0.000205547 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -211,26 +204,18 @@ PartBunch::calcBeamParameters> Local min/max calculated.
 PartBunch::calcBeamParameters> Global min/max calculated.
 ParallelTracker::computeSpaceChargeFields> Calculate beam parameters done.
 ParallelTracker::computeSpaceChargeFields> Transform particle positions to beam coordinate system done.
-AdaptBins> Initialized limits. Min: 0.00197835, max: 0.00197836, binWidth: 6.48715e-11
-AdaptBins> All bins assigned.
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-AdaptBins> Global histogram created.
-Histogram> Re-binned from 128 bins down to 1 bins. Total deviation cost = 0.015
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-PartBunch::computeSelfFields> Binning routine done.
+PartBunch::computeSelfFields> No AdaptBins object present, not using binning.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00328963 , -0.00326818 , -0.00327074 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000205746 , 0.000204836 , 0.000206071 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00329529 , -0.00328433 , -0.00326632 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000205955 , 0.000205171 , 0.000205547 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
 PartBunch::bunchUpdate> Moments updated.
 PartBunch::computeSelfFields> Scatter done.
 PartBunch::computeSelfFields> Rho scale by dt done.
-PartBunch::computeSelfFields> Rho normalized by cell volume: 8.68467e-12.
+PartBunch::computeSelfFields> Rho normalized by cell volume: 8.68562e-12.
 PartBunch::computeSelfFields> Rho coupling applied.
 FieldSolver::runSolver> Running solver with type: OPEN. Force skip field dump: 0
 PartBunch::computeSelfFields> Field solver run.
@@ -248,8 +233,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00329184 , -0.00326996 , -0.00325718 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000205884 , 0.000204946 , 0.00020618 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00329708 , -0.00328601 , -0.00325357 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000206083 , 0.000205293 , 0.00020568 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -261,7 +246,7 @@ ParallelTracker::execute> Selected new time step for next iteration, back_track 
 ParallelTracker::execute> Incremented bunch time to 50.000 [ps].
 ParallelTracker::execute> Updated reference particle at step 0.
 ParallelTracker::execute> Updated path length to 2.96548e-05.
-OPAL-X> * 17:05:36 Step      0 at 29.655 [um], t= 50.000 [ps], E=2.016 [keV]
+OPAL-X> * 07:46:34 Step      0 at 29.655 [um], t= 50.000 [ps], E=2.014 [keV]
 PartBunch::calcBeamParameters> Moments updated.
 PartBunch::calcBeamParameters> Local moments calculated.
 PartBunch::calcBeamParameters> Global moments calculated.
@@ -279,8 +264,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00329405 , -0.00327174 , -0.00327328 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000206022 , 0.000205056 , 0.000206289 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00329887 , -0.00328769 , -0.00327049 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000206211 , 0.000205415 , 0.000205812 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -295,26 +280,18 @@ PartBunch::calcBeamParameters> Local min/max calculated.
 PartBunch::calcBeamParameters> Global min/max calculated.
 ParallelTracker::computeSpaceChargeFields> Calculate beam parameters done.
 ParallelTracker::computeSpaceChargeFields> Transform particle positions to beam coordinate system done.
-AdaptBins> Initialized limits. Min: 0.00143262, max: 0.0025228, binWidth: 0.00109018
-AdaptBins> All bins assigned.
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-AdaptBins> Global histogram created.
-Histogram> Re-binned from 128 bins down to 1 bins. Total deviation cost = 0.0146759
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-PartBunch::computeSelfFields> Binning routine done.
+PartBunch::computeSelfFields> No AdaptBins object present, not using binning.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00329405 , -0.00327174 , -0.00324362 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000206022 , 0.000205056 , 0.000206289 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00329887 , -0.00328769 , -0.00324083 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000206211 , 0.000205415 , 0.000205812 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
 PartBunch::bunchUpdate> Moments updated.
 PartBunch::computeSelfFields> Scatter done.
 PartBunch::computeSelfFields> Rho scale by dt done.
-PartBunch::computeSelfFields> Rho normalized by cell volume: 8.71489e-12.
+PartBunch::computeSelfFields> Rho normalized by cell volume: 8.71794e-12.
 PartBunch::computeSelfFields> Rho coupling applied.
 FieldSolver::runSolver> Running solver with type: OPEN. Force skip field dump: 0
 PartBunch::computeSelfFields> Field solver run.
@@ -332,8 +309,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00329846 , -0.0032753 , -0.00326099 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000206298 , 0.000205276 , 0.000206507 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00330246 , -0.00329105 , -0.00325982 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000206466 , 0.000205659 , 0.000206076 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -345,7 +322,7 @@ ParallelTracker::execute> Selected new time step for next iteration, back_track 
 ParallelTracker::execute> Incremented bunch time to 100.000 [ps].
 ParallelTracker::execute> Updated reference particle at step 1.
 ParallelTracker::execute> Updated path length to 5.93096e-05.
-OPAL-X> * 17:05:36 Step      1 at 59.310 [um], t= 100.000 [ps], E=2.346 [keV]
+OPAL-X> * 07:46:34 Step      1 at 59.310 [um], t= 100.000 [ps], E=2.338 [keV]
 PartBunch::calcBeamParameters> Moments updated.
 PartBunch::calcBeamParameters> Local moments calculated.
 PartBunch::calcBeamParameters> Global moments calculated.
@@ -363,8 +340,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00330287 , -0.00327886 , -0.00327835 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000206574 , 0.000205495 , 0.000206725 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00330604 , -0.0032944 , -0.00327881 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000206721 , 0.000205902 , 0.00020634 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -379,26 +356,18 @@ PartBunch::calcBeamParameters> Local min/max calculated.
 PartBunch::calcBeamParameters> Global min/max calculated.
 ParallelTracker::computeSpaceChargeFields> Calculate beam parameters done.
 ParallelTracker::computeSpaceChargeFields> Transform particle positions to beam coordinate system done.
-AdaptBins> Initialized limits. Min: 0.000893717, max: 0.00306094, binWidth: 0.00216723
-AdaptBins> All bins assigned.
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-AdaptBins> Global histogram created.
-Histogram> Re-binned from 128 bins down to 1 bins. Total deviation cost = 0.0143616
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-PartBunch::computeSelfFields> Binning routine done.
+PartBunch::computeSelfFields> No AdaptBins object present, not using binning.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00330287 , -0.00327886 , -0.00321904 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000206574 , 0.000205495 , 0.000206725 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00330604 , -0.0032944 , -0.0032195 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000206721 , 0.000205902 , 0.00020634 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
 PartBunch::bunchUpdate> Moments updated.
 PartBunch::computeSelfFields> Scatter done.
 PartBunch::computeSelfFields> Rho scale by dt done.
-PartBunch::computeSelfFields> Rho normalized by cell volume: 8.77547e-12.
+PartBunch::computeSelfFields> Rho normalized by cell volume: 8.78273e-12.
 PartBunch::computeSelfFields> Rho coupling applied.
 FieldSolver::runSolver> Running solver with type: OPEN. Force skip field dump: 0
 PartBunch::computeSelfFields> Field solver run.
@@ -416,8 +385,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00330948 , -0.00328419 , -0.00326733 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000206987 , 0.000205824 , 0.000207052 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00331176 , -0.00329942 , -0.00327021 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000207115 , 0.000206267 , 0.000206736 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -429,7 +398,7 @@ ParallelTracker::execute> Selected new time step for next iteration, back_track 
 ParallelTracker::execute> Incremented bunch time to 150.000 [ps].
 ParallelTracker::execute> Updated reference particle at step 2.
 ParallelTracker::execute> Updated path length to 8.89644e-05.
-OPAL-X> * 17:05:36 Step      2 at 88.964 [um], t= 150.000 [ps], E=2.880 [keV]
+OPAL-X> * 07:46:34 Step      2 at 88.964 [um], t= 150.000 [ps], E=2.863 [keV]
 PartBunch::calcBeamParameters> Moments updated.
 PartBunch::calcBeamParameters> Local moments calculated.
 PartBunch::calcBeamParameters> Global moments calculated.
@@ -447,8 +416,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00331608 , -0.00328952 , -0.00328665 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.0002074 , 0.000206153 , 0.000207401 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00331805 , -0.00330445 , -0.00329127 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000207527 , 0.000206631 , 0.000207131 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -463,26 +432,18 @@ PartBunch::calcBeamParameters> Local min/max calculated.
 PartBunch::calcBeamParameters> Global min/max calculated.
 ParallelTracker::computeSpaceChargeFields> Calculate beam parameters done.
 ParallelTracker::computeSpaceChargeFields> Transform particle positions to beam coordinate system done.
-AdaptBins> Initialized limits. Min: 0.000368101, max: 0.00358685, binWidth: 0.00321875
-AdaptBins> All bins assigned.
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-AdaptBins> Global histogram created.
-Histogram> Re-binned from 128 bins down to 1 bins. Total deviation cost = 0.0140603
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-PartBunch::computeSelfFields> Binning routine done.
+PartBunch::computeSelfFields> No AdaptBins object present, not using binning.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00331608 , -0.00328952 , -0.00319769 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.0002074 , 0.000206153 , 0.000207401 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00331805 , -0.00330445 , -0.00320231 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000207527 , 0.000206631 , 0.000207131 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
 PartBunch::bunchUpdate> Moments updated.
 PartBunch::computeSelfFields> Scatter done.
 PartBunch::computeSelfFields> Rho scale by dt done.
-PartBunch::computeSelfFields> Rho normalized by cell volume: 8.86765e-12.
+PartBunch::computeSelfFields> Rho normalized by cell volume: 8.8821e-12.
 PartBunch::computeSelfFields> Rho coupling applied.
 FieldSolver::runSolver> Running solver with type: OPEN. Force skip field dump: 0
 PartBunch::computeSelfFields> Field solver run.
@@ -500,8 +461,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00332485 , -0.00329661 , -0.00327813 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000207949 , 0.00020659 , 0.000207876 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.0033264 , -0.00331113 , -0.00328472 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000208075 , 0.000207116 , 0.000207657 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -513,7 +474,7 @@ ParallelTracker::execute> Selected new time step for next iteration, back_track 
 ParallelTracker::execute> Incremented bunch time to 200.000 [ps].
 ParallelTracker::execute> Updated reference particle at step 3.
 ParallelTracker::execute> Updated path length to 0.000118619.
-OPAL-X> * 17:05:36 Step      3 at 118.619 [um], t= 200.000 [ps], E=3.598 [keV]
+OPAL-X> * 07:46:35 Step      3 at 118.619 [um], t= 200.000 [ps], E=3.569 [keV]
 PartBunch::calcBeamParameters> Moments updated.
 PartBunch::calcBeamParameters> Local moments calculated.
 PartBunch::calcBeamParameters> Global moments calculated.
@@ -531,8 +492,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00333363 , -0.0033037 , -0.00329926 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000208498 , 0.000207027 , 0.000208351 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00333476 , -0.00331781 , -0.00330783 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000208623 , 0.0002076 , 0.000208182 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -547,26 +508,18 @@ PartBunch::calcBeamParameters> Local min/max calculated.
 PartBunch::calcBeamParameters> Global min/max calculated.
 ParallelTracker::computeSpaceChargeFields> Calculate beam parameters done.
 ParallelTracker::computeSpaceChargeFields> Transform particle positions to beam coordinate system done.
-AdaptBins> Initialized limits. Min: 9.69207e-08, max: 0.00409516, binWidth: 0.00409506
-AdaptBins> All bins assigned.
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-AdaptBins> Global histogram created.
-Histogram> Re-binned from 128 bins down to 1 bins. Total deviation cost = 0.0138134
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-PartBunch::computeSelfFields> Binning routine done.
+PartBunch::computeSelfFields> No AdaptBins object present, not using binning.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00333363 , -0.0033037 , -0.00318064 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000208498 , 0.000207027 , 0.000208351 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00333476 , -0.00331781 , -0.00318921 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000208623 , 0.0002076 , 0.000208182 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
 PartBunch::bunchUpdate> Moments updated.
 PartBunch::computeSelfFields> Scatter done.
 PartBunch::computeSelfFields> Rho scale by dt done.
-PartBunch::computeSelfFields> Rho normalized by cell volume: 8.99341e-12.
+PartBunch::computeSelfFields> Rho normalized by cell volume: 9.01639e-12.
 PartBunch::computeSelfFields> Rho coupling applied.
 FieldSolver::runSolver> Running solver with type: OPEN. Force skip field dump: 0
 PartBunch::computeSelfFields> Field solver run.
@@ -584,8 +537,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00334455 , -0.00331385 , -0.00329228 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000209182 , 0.000207616 , 0.000208942 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00334516 , -0.00332755 , -0.00330332 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000209304 , 0.00020825 , 0.000208837 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -597,7 +550,7 @@ ParallelTracker::execute> Selected new time step for next iteration, back_track 
 ParallelTracker::execute> Incremented bunch time to 250.000 [ps].
 ParallelTracker::execute> Updated reference particle at step 4.
 ParallelTracker::execute> Updated path length to 0.000148274.
-OPAL-X> * 17:05:36 Step      4 at 148.274 [um], t= 250.000 [ps], E=4.474 [keV]
+OPAL-X> * 07:46:35 Step      4 at 148.274 [um], t= 250.000 [ps], E=4.431 [keV]
 PartBunch::calcBeamParameters> Moments updated.
 PartBunch::calcBeamParameters> Local moments calculated.
 PartBunch::calcBeamParameters> Global moments calculated.
@@ -615,8 +568,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00335548 , -0.00332541 , -0.00331496 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000209865 , 0.000208292 , 0.000209533 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00335557 , -0.00333782 , -0.00332846 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000209986 , 0.000208917 , 0.000209491 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -631,26 +584,18 @@ PartBunch::calcBeamParameters> Local min/max calculated.
 PartBunch::calcBeamParameters> Global min/max calculated.
 ParallelTracker::computeSpaceChargeFields> Calculate beam parameters done.
 ParallelTracker::computeSpaceChargeFields> Transform particle positions to beam coordinate system done.
-AdaptBins> Initialized limits. Min: 2.44222e-07, max: 0.0045851, binWidth: 0.00458486
-AdaptBins> All bins assigned.
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-AdaptBins> Global histogram created.
-Histogram> Re-binned from 128 bins down to 1 bins. Total deviation cost = 0.0136771
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-PartBunch::computeSelfFields> Binning routine done.
+PartBunch::computeSelfFields> No AdaptBins object present, not using binning.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00335548 , -0.00332541 , -0.00316669 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000209865 , 0.000208292 , 0.000209533 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00335557 , -0.00333782 , -0.00318018 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000209986 , 0.000208917 , 0.000209491 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
 PartBunch::bunchUpdate> Moments updated.
 PartBunch::computeSelfFields> Scatter done.
 PartBunch::computeSelfFields> Rho scale by dt done.
-PartBunch::computeSelfFields> Rho normalized by cell volume: 9.15938e-12.
+PartBunch::computeSelfFields> Rho normalized by cell volume: 9.19029e-12.
 PartBunch::computeSelfFields> Rho coupling applied.
 FieldSolver::runSolver> Running solver with type: OPEN. Force skip field dump: 0
 PartBunch::computeSelfFields> Field solver run.
@@ -668,8 +613,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00336853 , -0.00333948 , -0.00330953 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000210681 , 0.000209122 , 0.00021024 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00336799 , -0.00335009 , -0.00332594 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.0002108 , 0.000209713 , 0.000210273 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -681,7 +626,7 @@ ParallelTracker::execute> Selected new time step for next iteration, back_track 
 ParallelTracker::execute> Incremented bunch time to 300.000 [ps].
 ParallelTracker::execute> Updated reference particle at step 5.
 ParallelTracker::execute> Updated path length to 0.000177929.
-OPAL-X> * 17:05:36 Step      5 at 177.929 [um], t= 300.000 [ps], E=5.479 [keV]
+OPAL-X> * 07:46:35 Step      5 at 177.929 [um], t= 300.000 [ps], E=5.421 [keV]
 PartBunch::calcBeamParameters> Moments updated.
 PartBunch::calcBeamParameters> Local moments calculated.
 PartBunch::calcBeamParameters> Global moments calculated.
@@ -699,8 +644,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00338158 , -0.00335355 , -0.00333375 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000211498 , 0.000209951 , 0.000210947 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00338041 , -0.00336237 , -0.00335309 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000211614 , 0.00021051 , 0.000211054 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -715,26 +660,18 @@ PartBunch::calcBeamParameters> Local min/max calculated.
 PartBunch::calcBeamParameters> Global min/max calculated.
 ParallelTracker::computeSpaceChargeFields> Calculate beam parameters done.
 ParallelTracker::computeSpaceChargeFields> Transform particle positions to beam coordinate system done.
-AdaptBins> Initialized limits. Min: 1.15324e-07, max: 0.00505185, binWidth: 0.00505174
-AdaptBins> All bins assigned.
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-AdaptBins> Global histogram created.
-Histogram> Re-binned from 128 bins down to 1 bins. Total deviation cost = 0.0135483
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-PartBunch::computeSelfFields> Binning routine done.
+PartBunch::computeSelfFields> No AdaptBins object present, not using binning.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00338158 , -0.00335355 , -0.00315582 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000211498 , 0.000209951 , 0.000210947 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00338041 , -0.00336237 , -0.00317516 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000211614 , 0.00021051 , 0.000211054 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
 PartBunch::bunchUpdate> Moments updated.
 PartBunch::computeSelfFields> Scatter done.
 PartBunch::computeSelfFields> Rho scale by dt done.
-PartBunch::computeSelfFields> Rho normalized by cell volume: 9.36693e-12.
+PartBunch::computeSelfFields> Rho normalized by cell volume: 9.40179e-12.
 PartBunch::computeSelfFields> Rho coupling applied.
 FieldSolver::runSolver> Running solver with type: OPEN. Force skip field dump: 0
 PartBunch::computeSelfFields> Field solver run.
@@ -752,8 +689,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00339672 , -0.00336988 , -0.00332983 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000212444 , 0.000210914 , 0.000211767 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00339482 , -0.0033782 , -0.00335255 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000212558 , 0.000211486 , 0.000211961 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -765,7 +702,7 @@ ParallelTracker::execute> Selected new time step for next iteration, back_track 
 ParallelTracker::execute> Incremented bunch time to 350.000 [ps].
 ParallelTracker::execute> Updated reference particle at step 6.
 ParallelTracker::execute> Updated path length to 0.000207584.
-OPAL-X> * 17:05:36 Step      6 at 207.584 [um], t= 350.000 [ps], E=6.585 [keV]
+OPAL-X> * 07:46:35 Step      6 at 207.584 [um], t= 350.000 [ps], E=6.512 [keV]
 PartBunch::calcBeamParameters> Moments updated.
 PartBunch::calcBeamParameters> Local moments calculated.
 PartBunch::calcBeamParameters> Global moments calculated.
@@ -783,8 +720,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00341185 , -0.00338621 , -0.00335587 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000213391 , 0.000211877 , 0.000212597 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00340923 , -0.00339428 , -0.00338167 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000213501 , 0.00021247 , 0.000212868 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -799,26 +736,18 @@ PartBunch::calcBeamParameters> Local min/max calculated.
 PartBunch::calcBeamParameters> Global min/max calculated.
 ParallelTracker::computeSpaceChargeFields> Calculate beam parameters done.
 ParallelTracker::computeSpaceChargeFields> Transform particle positions to beam coordinate system done.
-AdaptBins> Initialized limits. Min: 1.71569e-07, max: 0.00549323, binWidth: 0.00549305
-AdaptBins> All bins assigned.
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-AdaptBins> Global histogram created.
-Histogram> Re-binned from 128 bins down to 1 bins. Total deviation cost = 0.0134275
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-PartBunch::computeSelfFields> Binning routine done.
+PartBunch::computeSelfFields> No AdaptBins object present, not using binning.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00341185 , -0.00338621 , -0.00314829 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000213391 , 0.000211877 , 0.000212597 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00340923 , -0.00339428 , -0.00317409 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000213501 , 0.00021247 , 0.000212868 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
 PartBunch::bunchUpdate> Moments updated.
 PartBunch::computeSelfFields> Scatter done.
 PartBunch::computeSelfFields> Rho scale by dt done.
-PartBunch::computeSelfFields> Rho normalized by cell volume: 9.61207e-12.
+PartBunch::computeSelfFields> Rho normalized by cell volume: 9.65627e-12.
 PartBunch::computeSelfFields> Rho coupling applied.
 FieldSolver::runSolver> Running solver with type: OPEN. Force skip field dump: 0
 PartBunch::computeSelfFields> Field solver run.
@@ -836,8 +765,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00342905 , -0.00340474 , -0.00335489 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000214466 , 0.000212969 , 0.000213576 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00342559 , -0.0034125 , -0.00338309 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000214572 , 0.000213587 , 0.000213898 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -849,7 +778,7 @@ ParallelTracker::execute> Selected new time step for next iteration, back_track 
 ParallelTracker::execute> Incremented bunch time to 400.000 [ps].
 ParallelTracker::execute> Updated reference particle at step 7.
 ParallelTracker::execute> Updated path length to 0.000237238.
-OPAL-X> * 17:05:36 Step      7 at 237.238 [um], t= 400.000 [ps], E=7.764 [keV]
+OPAL-X> * 07:46:35 Step      7 at 237.238 [um], t= 400.000 [ps], E=7.675 [keV]
 PartBunch::calcBeamParameters> Moments updated.
 PartBunch::calcBeamParameters> Local moments calculated.
 PartBunch::calcBeamParameters> Global moments calculated.
@@ -867,8 +796,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00344624 , -0.00342327 , -0.00338535 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000215542 , 0.000214062 , 0.000214613 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00344196 , -0.00343073 , -0.00341415 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000215643 , 0.000214703 , 0.000214929 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -883,26 +812,18 @@ PartBunch::calcBeamParameters> Local min/max calculated.
 PartBunch::calcBeamParameters> Global min/max calculated.
 ParallelTracker::computeSpaceChargeFields> Calculate beam parameters done.
 ParallelTracker::computeSpaceChargeFields> Transform particle positions to beam coordinate system done.
-AdaptBins> Initialized limits. Min: 1.52651e-07, max: 0.00590862, binWidth: 0.00590847
-AdaptBins> All bins assigned.
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-AdaptBins> Global histogram created.
-Histogram> Re-binned from 128 bins down to 1 bins. Total deviation cost = 0.0133147
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-PartBunch::computeSelfFields> Binning routine done.
+PartBunch::computeSelfFields> No AdaptBins object present, not using binning.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00344624 , -0.00342327 , -0.00314811 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000215542 , 0.000214062 , 0.000214613 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00344196 , -0.00343073 , -0.00317691 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000215643 , 0.000214703 , 0.000214929 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
 PartBunch::bunchUpdate> Moments updated.
 PartBunch::computeSelfFields> Scatter done.
 PartBunch::computeSelfFields> Rho scale by dt done.
-PartBunch::computeSelfFields> Rho normalized by cell volume: 9.90211e-12.
+PartBunch::computeSelfFields> Rho normalized by cell volume: 9.95105e-12.
 PartBunch::computeSelfFields> Rho coupling applied.
 FieldSolver::runSolver> Running solver with type: OPEN. Force skip field dump: 0
 PartBunch::computeSelfFields> Field solver run.
@@ -920,8 +841,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00346544 , -0.00344401 , -0.00339158 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000216742 , 0.000215311 , 0.000215889 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00346024 , -0.00345106 , -0.00341747 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000216839 , 0.000215949 , 0.00021608 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -933,7 +854,7 @@ ParallelTracker::execute> Selected new time step for next iteration, back_track 
 ParallelTracker::execute> Incremented bunch time to 450.000 [ps].
 ParallelTracker::execute> Updated reference particle at step 8.
 ParallelTracker::execute> Updated path length to 0.000266893.
-OPAL-X> * 17:05:36 Step      8 at 266.893 [um], t= 450.000 [ps], E=8.991 [keV]
+OPAL-X> * 07:46:35 Step      8 at 266.893 [um], t= 450.000 [ps], E=8.887 [keV]
 PartBunch::calcBeamParameters> Moments updated.
 PartBunch::calcBeamParameters> Local moments calculated.
 PartBunch::calcBeamParameters> Global moments calculated.
@@ -951,8 +872,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00348464 , -0.00346482 , -0.00342747 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000217943 , 0.000216608 , 0.000217166 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00347852 , -0.00347139 , -0.00345045 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000218034 , 0.000217195 , 0.000217231 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -967,26 +888,18 @@ PartBunch::calcBeamParameters> Local min/max calculated.
 PartBunch::calcBeamParameters> Global min/max calculated.
 ParallelTracker::computeSpaceChargeFields> Calculate beam parameters done.
 ParallelTracker::computeSpaceChargeFields> Transform particle positions to beam coordinate system done.
-AdaptBins> Initialized limits. Min: 1.30405e-08, max: 0.00629812, binWidth: 0.0062981
-AdaptBins> All bins assigned.
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-AdaptBins> Global histogram created.
-Histogram> Re-binned from 128 bins down to 1 bins. Total deviation cost = 0.0132097
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-PartBunch::computeSelfFields> Binning routine done.
+PartBunch::computeSelfFields> No AdaptBins object present, not using binning.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00348464 , -0.00346482 , -0.00316058 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000217943 , 0.000216608 , 0.000217166 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00347852 , -0.00347139 , -0.00318356 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000218034 , 0.000217195 , 0.000217231 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
 PartBunch::bunchUpdate> Moments updated.
 PartBunch::computeSelfFields> Scatter done.
 PartBunch::computeSelfFields> Rho scale by dt done.
-PartBunch::computeSelfFields> Rho normalized by cell volume: 1.0252e-11.
+PartBunch::computeSelfFields> Rho normalized by cell volume: 1.02872e-11.
 PartBunch::computeSelfFields> Rho coupling applied.
 FieldSolver::runSolver> Running solver with type: OPEN. Force skip field dump: 0
 PartBunch::computeSelfFields> Field solver run.
@@ -1004,8 +917,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.0035058 , -0.00348774 , -0.00343584 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000219267 , 0.000218036 , 0.000218572 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00349869 , -0.00349377 , -0.00345564 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000219352 , 0.000218568 , 0.000218501 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -1017,7 +930,7 @@ ParallelTracker::execute> Selected new time step for next iteration, back_track 
 ParallelTracker::execute> Incremented bunch time to 500.000 [ps].
 ParallelTracker::execute> Updated reference particle at step 9.
 ParallelTracker::execute> Updated path length to 0.000296548.
-OPAL-X> * 17:05:36 Step      9 at 296.548 [um], t= 500.000 [ps], E=10.245 [keV]
+OPAL-X> * 07:46:35 Step      9 at 296.548 [um], t= 500.000 [ps], E=10.127 [keV]
 PartBunch::calcBeamParameters> Moments updated.
 PartBunch::calcBeamParameters> Local moments calculated.
 PartBunch::calcBeamParameters> Global moments calculated.
@@ -1035,8 +948,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00352697 , -0.00351067 , -0.00347386 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.00022059 , 0.000219465 , 0.000219978 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00351885 , -0.00351615 , -0.00349049 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.00022067 , 0.000219941 , 0.00021977 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -1051,26 +964,18 @@ PartBunch::calcBeamParameters> Local min/max calculated.
 PartBunch::calcBeamParameters> Global min/max calculated.
 ParallelTracker::computeSpaceChargeFields> Calculate beam parameters done.
 ParallelTracker::computeSpaceChargeFields> Transform particle positions to beam coordinate system done.
-AdaptBins> Initialized limits. Min: 7.48431e-08, max: 0.00666385, binWidth: 0.00666377
-AdaptBins> All bins assigned.
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-AdaptBins> Global histogram created.
-Histogram> Re-binned from 128 bins down to 1 bins. Total deviation cost = 0.0131119
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-PartBunch::computeSelfFields> Binning routine done.
+PartBunch::computeSelfFields> No AdaptBins object present, not using binning.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00352697 , -0.00351067 , -0.00317731 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.00022059 , 0.000219465 , 0.000219978 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00351885 , -0.00351615 , -0.00319394 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.00022067 , 0.000219941 , 0.00021977 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
 PartBunch::bunchUpdate> Moments updated.
 PartBunch::computeSelfFields> Scatter done.
 PartBunch::computeSelfFields> Rho scale by dt done.
-PartBunch::computeSelfFields> Rho normalized by cell volume: 1.06495e-11.
+PartBunch::computeSelfFields> Rho normalized by cell volume: 1.06664e-11.
 PartBunch::computeSelfFields> Rho coupling applied.
 FieldSolver::runSolver> Running solver with type: OPEN. Force skip field dump: 0
 PartBunch::computeSelfFields> Field solver run.
@@ -1088,8 +993,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00355005 , -0.00353566 , -0.00348429 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000222033 , 0.000221023 , 0.000221509 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00354085 , -0.00354053 , -0.00349756 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000222107 , 0.000221437 , 0.000221193 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -1101,7 +1006,7 @@ ParallelTracker::execute> Selected new time step for next iteration, back_track 
 ParallelTracker::execute> Incremented bunch time to 550.000 [ps].
 ParallelTracker::execute> Updated reference particle at step 10.
 ParallelTracker::execute> Updated path length to 0.000326203.
-OPAL-X> * 17:05:36 Step     10 at 326.203 [um], t= 550.000 [ps], E=11.507 [keV]
+OPAL-X> * 07:46:35 Step     10 at 326.203 [um], t= 550.000 [ps], E=11.376 [keV]
 PartBunch::calcBeamParameters> Moments updated.
 PartBunch::calcBeamParameters> Local moments calculated.
 PartBunch::calcBeamParameters> Global moments calculated.
@@ -1119,8 +1024,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00357314 , -0.00356066 , -0.00352437 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000223476 , 0.00022258 , 0.000223041 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00356285 , -0.00356492 , -0.0035343 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000223545 , 0.000222933 , 0.000222623 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -1135,26 +1040,18 @@ PartBunch::calcBeamParameters> Local min/max calculated.
 PartBunch::calcBeamParameters> Global min/max calculated.
 ParallelTracker::computeSpaceChargeFields> Calculate beam parameters done.
 ParallelTracker::computeSpaceChargeFields> Transform particle positions to beam coordinate system done.
-AdaptBins> Initialized limits. Min: 9.38323e-10, max: 0.00700335, binWidth: 0.00700335
-AdaptBins> All bins assigned.
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-AdaptBins> Global histogram created.
-Histogram> Re-binned from 128 bins down to 1 bins. Total deviation cost = 0.0130216
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-PartBunch::computeSelfFields> Binning routine done.
+PartBunch::computeSelfFields> No AdaptBins object present, not using binning.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00357314 , -0.00356066 , -0.00319817 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000223476 , 0.00022258 , 0.000223041 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00356285 , -0.00356492 , -0.0032081 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000223545 , 0.000222933 , 0.000222623 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
 PartBunch::bunchUpdate> Moments updated.
 PartBunch::computeSelfFields> Scatter done.
 PartBunch::computeSelfFields> Rho scale by dt done.
-PartBunch::computeSelfFields> Rho normalized by cell volume: 1.10944e-11.
+PartBunch::computeSelfFields> Rho normalized by cell volume: 1.10945e-11.
 PartBunch::computeSelfFields> Rho coupling applied.
 FieldSolver::runSolver> Running solver with type: OPEN. Force skip field dump: 0
 PartBunch::computeSelfFields> Field solver run.
@@ -1172,8 +1069,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00359808 , -0.00358765 , -0.00353681 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000225036 , 0.000224262 , 0.000224696 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00358664 , -0.00359126 , -0.00354318 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000225098 , 0.000224549 , 0.000224169 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -1185,7 +1082,7 @@ ParallelTracker::execute> Selected new time step for next iteration, back_track 
 ParallelTracker::execute> Incremented bunch time to 600.000 [ps].
 ParallelTracker::execute> Updated reference particle at step 11.
 ParallelTracker::execute> Updated path length to 0.000355858.
-OPAL-X> * 17:05:36 Step     11 at 355.858 [um], t= 600.000 [ps], E=12.762 [keV]
+OPAL-X> * 07:46:35 Step     11 at 355.858 [um], t= 600.000 [ps], E=12.620 [keV]
 PartBunch::calcBeamParameters> Moments updated.
 PartBunch::calcBeamParameters> Local moments calculated.
 PartBunch::calcBeamParameters> Global moments calculated.
@@ -1203,8 +1100,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00362303 , -0.00361465 , -0.0035789 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000226596 , 0.000225944 , 0.00022635 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00361043 , -0.00361759 , -0.00358171 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000226651 , 0.000226165 , 0.000225715 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -1219,26 +1116,18 @@ PartBunch::calcBeamParameters> Local min/max calculated.
 PartBunch::calcBeamParameters> Global min/max calculated.
 ParallelTracker::computeSpaceChargeFields> Calculate beam parameters done.
 ParallelTracker::computeSpaceChargeFields> Transform particle positions to beam coordinate system done.
-AdaptBins> Initialized limits. Min: 3.25911e-07, max: 0.00731928, binWidth: 0.00731895
-AdaptBins> All bins assigned.
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-AdaptBins> Global histogram created.
-Histogram> Re-binned from 128 bins down to 1 bins. Total deviation cost = 0.0129382
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-PartBunch::computeSelfFields> Binning routine done.
+PartBunch::computeSelfFields> No AdaptBins object present, not using binning.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00362303 , -0.00361465 , -0.00322305 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000226596 , 0.000225944 , 0.00022635 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00361043 , -0.00361759 , -0.00322586 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000226651 , 0.000226165 , 0.000225715 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
 PartBunch::bunchUpdate> Moments updated.
 PartBunch::computeSelfFields> Scatter done.
 PartBunch::computeSelfFields> Rho scale by dt done.
-PartBunch::computeSelfFields> Rho normalized by cell volume: 1.15887e-11.
+PartBunch::computeSelfFields> Rho normalized by cell volume: 1.15703e-11.
 PartBunch::computeSelfFields> Rho coupling applied.
 FieldSolver::runSolver> Running solver with type: OPEN. Force skip field dump: 0
 PartBunch::computeSelfFields> Field solver run.
@@ -1256,8 +1145,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00364978 , -0.00364358 , -0.00359329 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000228268 , 0.000227748 , 0.000228123 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00363596 , -0.00364583 , -0.00359614 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000228318 , 0.000227898 , 0.000227498 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -1269,7 +1158,7 @@ ParallelTracker::execute> Selected new time step for next iteration, back_track 
 ParallelTracker::execute> Incremented bunch time to 650.000 [ps].
 ParallelTracker::execute> Updated reference particle at step 12.
 ParallelTracker::execute> Updated path length to 0.000385512.
-OPAL-X> * 17:05:36 Step     12 at 385.512 [um], t= 650.000 [ps], E=14.000 [keV]
+OPAL-X> * 07:46:35 Step     12 at 385.512 [um], t= 650.000 [ps], E=13.848 [keV]
 PartBunch::calcBeamParameters> Moments updated.
 PartBunch::calcBeamParameters> Local moments calculated.
 PartBunch::calcBeamParameters> Global moments calculated.
@@ -1287,8 +1176,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00367654 , -0.00367252 , -0.00363732 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000229941 , 0.000229551 , 0.000229897 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.0036615 , -0.00367406 , -0.00364072 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000229984 , 0.000229632 , 0.000229297 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -1303,26 +1192,18 @@ PartBunch::calcBeamParameters> Local min/max calculated.
 PartBunch::calcBeamParameters> Global min/max calculated.
 ParallelTracker::computeSpaceChargeFields> Calculate beam parameters done.
 ParallelTracker::computeSpaceChargeFields> Transform particle positions to beam coordinate system done.
-AdaptBins> Initialized limits. Min: 6.66594e-08, max: 0.00761317, binWidth: 0.00761311
-AdaptBins> All bins assigned.
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-AdaptBins> Global histogram created.
-Histogram> Re-binned from 128 bins down to 1 bins. Total deviation cost = 0.012861
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-PartBunch::computeSelfFields> Binning routine done.
+PartBunch::computeSelfFields> No AdaptBins object present, not using binning.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00367654 , -0.00367252 , -0.00325181 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000229941 , 0.000229551 , 0.000229897 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.0036615 , -0.00367406 , -0.00325521 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000229984 , 0.000229632 , 0.000229297 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
 PartBunch::bunchUpdate> Moments updated.
 PartBunch::computeSelfFields> Scatter done.
 PartBunch::computeSelfFields> Rho scale by dt done.
-PartBunch::computeSelfFields> Rho normalized by cell volume: 1.21347e-11.
+PartBunch::computeSelfFields> Rho normalized by cell volume: 1.21095e-11.
 PartBunch::computeSelfFields> Rho coupling applied.
 FieldSolver::runSolver> Running solver with type: OPEN. Force skip field dump: 0
 PartBunch::computeSelfFields> Field solver run.
@@ -1340,8 +1221,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00370505 , -0.00370333 , -0.00365358 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000231724 , 0.000231471 , 0.000231785 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00368872 , -0.00370414 , -0.00365757 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.00023176 , 0.000231479 , 0.000231214 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -1353,7 +1234,7 @@ ParallelTracker::execute> Selected new time step for next iteration, back_track 
 ParallelTracker::execute> Incremented bunch time to 700.000 [ps].
 ParallelTracker::execute> Updated reference particle at step 13.
 ParallelTracker::execute> Updated path length to 0.000415167.
-OPAL-X> * 17:05:36 Step     13 at 415.167 [um], t= 700.000 [ps], E=15.210 [keV]
+OPAL-X> * 07:46:35 Step     13 at 415.167 [um], t= 700.000 [ps], E=15.050 [keV]
 PartBunch::calcBeamParameters> Moments updated.
 PartBunch::calcBeamParameters> Local moments calculated.
 PartBunch::calcBeamParameters> Global moments calculated.
@@ -1371,8 +1252,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00373357 , -0.00373415 , -0.00369949 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000233507 , 0.000233392 , 0.000233673 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00371595 , -0.00373421 , -0.00370408 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000233536 , 0.000233326 , 0.00023313 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -1387,26 +1268,18 @@ PartBunch::calcBeamParameters> Local min/max calculated.
 PartBunch::calcBeamParameters> Global min/max calculated.
 ParallelTracker::computeSpaceChargeFields> Calculate beam parameters done.
 ParallelTracker::computeSpaceChargeFields> Transform particle positions to beam coordinate system done.
-AdaptBins> Initialized limits. Min: 6.60368e-08, max: 0.0078863, binWidth: 0.00788624
-AdaptBins> All bins assigned.
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-AdaptBins> Global histogram created.
-Histogram> Re-binned from 128 bins down to 1 bins. Total deviation cost = 0.0127896
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-PartBunch::computeSelfFields> Binning routine done.
+PartBunch::computeSelfFields> No AdaptBins object present, not using binning.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00373357 , -0.00373415 , -0.00328433 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000233507 , 0.000233392 , 0.000233673 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00371595 , -0.00373421 , -0.00328891 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000233536 , 0.000233326 , 0.00023313 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
 PartBunch::bunchUpdate> Moments updated.
 PartBunch::computeSelfFields> Scatter done.
 PartBunch::computeSelfFields> Rho scale by dt done.
-PartBunch::computeSelfFields> Rho normalized by cell volume: 1.27349e-11.
+PartBunch::computeSelfFields> Rho normalized by cell volume: 1.27032e-11.
 PartBunch::computeSelfFields> Rho coupling applied.
 FieldSolver::runSolver> Running solver with type: OPEN. Force skip field dump: 0
 PartBunch::computeSelfFields> Field solver run.
@@ -1424,8 +1297,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00376378 , -0.00376677 , -0.00371757 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000235396 , 0.000235425 , 0.000235673 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00374481 , -0.00376607 , -0.00372278 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000235418 , 0.000235282 , 0.000235159 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -1437,7 +1310,7 @@ ParallelTracker::execute> Selected new time step for next iteration, back_track 
 ParallelTracker::execute> Incremented bunch time to 750.000 [ps].
 ParallelTracker::execute> Updated reference particle at step 14.
 ParallelTracker::execute> Updated path length to 0.000444822.
-OPAL-X> * 17:05:37 Step     14 at 444.822 [um], t= 750.000 [ps], E=16.388 [keV]
+OPAL-X> * 07:46:35 Step     14 at 444.822 [um], t= 750.000 [ps], E=16.219 [keV]
 PartBunch::calcBeamParameters> Moments updated.
 PartBunch::calcBeamParameters> Local moments calculated.
 PartBunch::calcBeamParameters> Global moments calculated.
@@ -1455,8 +1328,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.003794 , -0.0037994 , -0.0037653 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000237285 , 0.000237459 , 0.000237673 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00377368 , -0.00379792 , -0.00377113 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000237301 , 0.000237239 , 0.000237188 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -1471,26 +1344,18 @@ PartBunch::calcBeamParameters> Local min/max calculated.
 PartBunch::calcBeamParameters> Global min/max calculated.
 ParallelTracker::computeSpaceChargeFields> Calculate beam parameters done.
 ParallelTracker::computeSpaceChargeFields> Transform particle positions to beam coordinate system done.
-AdaptBins> Initialized limits. Min: 3.40368e-07, max: 0.00813997, binWidth: 0.00813963
-AdaptBins> All bins assigned.
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-AdaptBins> Global histogram created.
-Histogram> Re-binned from 128 bins down to 1 bins. Total deviation cost = 0.0127237
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-PartBunch::computeSelfFields> Binning routine done.
+PartBunch::computeSelfFields> No AdaptBins object present, not using binning.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.003794 , -0.0037994 , -0.00332048 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000237285 , 0.000237459 , 0.000237673 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00377368 , -0.00379792 , -0.00332631 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000237301 , 0.000237239 , 0.000237188 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
 PartBunch::bunchUpdate> Moments updated.
 PartBunch::computeSelfFields> Scatter done.
 PartBunch::computeSelfFields> Rho scale by dt done.
-PartBunch::computeSelfFields> Rho normalized by cell volume: 1.33918e-11.
+PartBunch::computeSelfFields> Rho normalized by cell volume: 1.3353e-11.
 PartBunch::computeSelfFields> Rho coupling applied.
 FieldSolver::runSolver> Running solver with type: OPEN. Force skip field dump: 0
 PartBunch::computeSelfFields> Field solver run.
@@ -1508,8 +1373,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00382587 , -0.00383377 , -0.00378513 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000239277 , 0.000239602 , 0.000239781 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00380413 , -0.00383148 , -0.00379162 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000239286 , 0.000239302 , 0.000239326 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -1521,7 +1386,7 @@ ParallelTracker::execute> Selected new time step for next iteration, back_track 
 ParallelTracker::execute> Incremented bunch time to 800.000 [ps].
 ParallelTracker::execute> Updated reference particle at step 15.
 ParallelTracker::execute> Updated path length to 0.000474477.
-OPAL-X> * 17:05:37 Step     15 at 474.477 [um], t= 800.000 [ps], E=17.528 [keV]
+OPAL-X> * 07:46:35 Step     15 at 474.477 [um], t= 800.000 [ps], E=17.352 [keV]
 PartBunch::calcBeamParameters> Moments updated.
 PartBunch::calcBeamParameters> Local moments calculated.
 PartBunch::calcBeamParameters> Global moments calculated.
@@ -1539,8 +1404,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00385774 , -0.00386814 , -0.00383462 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000241269 , 0.000241745 , 0.000241888 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00383459 , -0.00386504 , -0.00384175 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000241272 , 0.000241365 , 0.000241464 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -1555,26 +1420,18 @@ PartBunch::calcBeamParameters> Local min/max calculated.
 PartBunch::calcBeamParameters> Global min/max calculated.
 ParallelTracker::computeSpaceChargeFields> Calculate beam parameters done.
 ParallelTracker::computeSpaceChargeFields> Transform particle positions to beam coordinate system done.
-AdaptBins> Initialized limits. Min: 4.93399e-07, max: 0.00837632, binWidth: 0.00837582
-AdaptBins> All bins assigned.
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-AdaptBins> Global histogram created.
-Histogram> Re-binned from 128 bins down to 1 bins. Total deviation cost = 0.0126626
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-PartBunch::computeSelfFields> Binning routine done.
+PartBunch::computeSelfFields> No AdaptBins object present, not using binning.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00385774 , -0.00386814 , -0.00336014 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000241269 , 0.000241745 , 0.000241888 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00383459 , -0.00386504 , -0.00336728 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000241272 , 0.000241365 , 0.000241464 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
 PartBunch::bunchUpdate> Moments updated.
 PartBunch::computeSelfFields> Scatter done.
 PartBunch::computeSelfFields> Rho scale by dt done.
-PartBunch::computeSelfFields> Rho normalized by cell volume: 1.41083e-11.
+PartBunch::computeSelfFields> Rho normalized by cell volume: 1.40615e-11.
 PartBunch::computeSelfFields> Rho coupling applied.
 FieldSolver::runSolver> Running solver with type: OPEN. Force skip field dump: 0
 PartBunch::computeSelfFields> Field solver run.
@@ -1592,8 +1449,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00389286 , -0.00390419 , -0.00385614 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000243415 , 0.000243993 , 0.0002441 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00386659 , -0.00390025 , -0.00386394 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000243357 , 0.00024353 , 0.000243707 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -1605,7 +1462,7 @@ ParallelTracker::execute> Selected new time step for next iteration, back_track 
 ParallelTracker::execute> Incremented bunch time to 850.000 [ps].
 ParallelTracker::execute> Updated reference particle at step 16.
 ParallelTracker::execute> Updated path length to 0.000504132.
-OPAL-X> * 17:05:37 Step     16 at 504.132 [um], t= 850.000 [ps], E=18.627 [keV]
+OPAL-X> * 07:46:35 Step     16 at 504.132 [um], t= 850.000 [ps], E=18.445 [keV]
 PartBunch::calcBeamParameters> Moments updated.
 PartBunch::calcBeamParameters> Local moments calculated.
 PartBunch::calcBeamParameters> Global moments calculated.
@@ -1623,8 +1480,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00392926 , -0.00394025 , -0.00390731 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000245603 , 0.000246241 , 0.000246312 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00389983 , -0.00393545 , -0.00391579 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000245482 , 0.000245695 , 0.000245949 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -1639,26 +1496,18 @@ PartBunch::calcBeamParameters> Local min/max calculated.
 PartBunch::calcBeamParameters> Global min/max calculated.
 ParallelTracker::computeSpaceChargeFields> Calculate beam parameters done.
 ParallelTracker::computeSpaceChargeFields> Transform particle positions to beam coordinate system done.
-AdaptBins> Initialized limits. Min: 3.68311e-07, max: 0.00859657, binWidth: 0.0085962
-AdaptBins> All bins assigned.
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-AdaptBins> Global histogram created.
-Histogram> Re-binned from 128 bins down to 1 bins. Total deviation cost = 0.0126059
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-PartBunch::computeSelfFields> Binning routine done.
+PartBunch::computeSelfFields> No AdaptBins object present, not using binning.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00392926 , -0.00394025 , -0.00340318 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000245603 , 0.000246241 , 0.000246312 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00389983 , -0.00393545 , -0.00341166 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000245482 , 0.000245695 , 0.000245949 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
 PartBunch::bunchUpdate> Moments updated.
 PartBunch::computeSelfFields> Scatter done.
 PartBunch::computeSelfFields> Rho scale by dt done.
-PartBunch::computeSelfFields> Rho normalized by cell volume: 1.48964e-11.
+PartBunch::computeSelfFields> Rho normalized by cell volume: 1.48341e-11.
 PartBunch::computeSelfFields> Rho coupling applied.
 FieldSolver::runSolver> Running solver with type: OPEN. Force skip field dump: 0
 PartBunch::computeSelfFields> Field solver run.
@@ -1676,8 +1525,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.0039673 , -0.00397792 , -0.00393046 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000247891 , 0.000248592 , 0.000248623 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00393769 , -0.00397227 , -0.00393961 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000247807 , 0.000247976 , 0.000248292 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -1689,7 +1538,7 @@ ParallelTracker::execute> Selected new time step for next iteration, back_track 
 ParallelTracker::execute> Incremented bunch time to 900.000 [ps].
 ParallelTracker::execute> Updated reference particle at step 17.
 ParallelTracker::execute> Updated path length to 0.000533786.
-OPAL-X> * 17:05:37 Step     17 at 533.786 [um], t= 900.000 [ps], E=19.684 [keV]
+OPAL-X> * 07:46:35 Step     17 at 533.786 [um], t= 900.000 [ps], E=19.497 [keV]
 PartBunch::calcBeamParameters> Moments updated.
 PartBunch::calcBeamParameters> Local moments calculated.
 PartBunch::calcBeamParameters> Global moments calculated.
@@ -1707,8 +1556,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00400534 , -0.0040156 , -0.00398326 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000250178 , 0.000250942 , 0.000250935 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00397556 , -0.00400909 , -0.00399309 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000250131 , 0.00025027 , 0.000250634 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -1723,26 +1572,18 @@ PartBunch::calcBeamParameters> Local min/max calculated.
 PartBunch::calcBeamParameters> Global min/max calculated.
 ParallelTracker::computeSpaceChargeFields> Calculate beam parameters done.
 ParallelTracker::computeSpaceChargeFields> Transform particle positions to beam coordinate system done.
-AdaptBins> Initialized limits. Min: 8.07672e-08, max: 0.00880204, binWidth: 0.00880196
-AdaptBins> All bins assigned.
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-AdaptBins> Global histogram created.
-Histogram> Re-binned from 128 bins down to 1 bins. Total deviation cost = 0.0125531
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-PartBunch::computeSelfFields> Binning routine done.
+PartBunch::computeSelfFields> No AdaptBins object present, not using binning.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00400534 , -0.0040156 , -0.00344948 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000250178 , 0.000250942 , 0.000250935 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00397556 , -0.00400909 , -0.0034593 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000250131 , 0.00025027 , 0.000250634 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
 PartBunch::bunchUpdate> Moments updated.
 PartBunch::computeSelfFields> Scatter done.
 PartBunch::computeSelfFields> Rho scale by dt done.
-PartBunch::computeSelfFields> Rho normalized by cell volume: 1.57537e-11.
+PartBunch::computeSelfFields> Rho normalized by cell volume: 1.56898e-11.
 PartBunch::computeSelfFields> Rho coupling applied.
 FieldSolver::runSolver> Running solver with type: OPEN. Force skip field dump: 0
 PartBunch::computeSelfFields> Field solver run.
@@ -1760,8 +1601,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00404493 , -0.00405483 , -0.00400798 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000252561 , 0.000253389 , 0.000253344 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00401498 , -0.00404744 , -0.00401848 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000252552 , 0.000252659 , 0.000253073 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -1773,7 +1614,7 @@ ParallelTracker::execute> Selected new time step for next iteration, back_track 
 ParallelTracker::execute> Incremented bunch time to 950.000 [ps].
 ParallelTracker::execute> Updated reference particle at step 18.
 ParallelTracker::execute> Updated path length to 0.000563441.
-OPAL-X> * 17:05:37 Step     18 at 563.441 [um], t= 950.000 [ps], E=20.697 [keV]
+OPAL-X> * 07:46:35 Step     18 at 563.441 [um], t= 950.000 [ps], E=20.506 [keV]
 PartBunch::calcBeamParameters> Moments updated.
 PartBunch::calcBeamParameters> Local moments calculated.
 PartBunch::calcBeamParameters> Global moments calculated.
@@ -1791,8 +1632,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00408453 , -0.00409406 , -0.00406235 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000254943 , 0.000255837 , 0.000255752 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.0040544 , -0.00408579 , -0.00407352 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000254973 , 0.000255048 , 0.000255512 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -1807,26 +1648,18 @@ PartBunch::calcBeamParameters> Local min/max calculated.
 PartBunch::calcBeamParameters> Global min/max calculated.
 ParallelTracker::computeSpaceChargeFields> Calculate beam parameters done.
 ParallelTracker::computeSpaceChargeFields> Transform particle positions to beam coordinate system done.
-AdaptBins> Initialized limits. Min: 5.98871e-07, max: 0.00899191, binWidth: 0.00899131
-AdaptBins> All bins assigned.
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-AdaptBins> Global histogram created.
-Histogram> Re-binned from 128 bins down to 1 bins. Total deviation cost = 0.0125047
-AdaptBins> Using host-only parallel_reduce reduction.
-AdaptBins> Reducer ran without error.
-PartBunch::computeSelfFields> Binning routine done.
+PartBunch::computeSelfFields> No AdaptBins object present, not using binning.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00408453 , -0.00409406 , -0.00349891 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000254943 , 0.000255837 , 0.000255752 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.0040544 , -0.00408579 , -0.00351007 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000254973 , 0.000255048 , 0.000255512 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
 PartBunch::bunchUpdate> Moments updated.
 PartBunch::computeSelfFields> Scatter done.
 PartBunch::computeSelfFields> Rho scale by dt done.
-PartBunch::computeSelfFields> Rho normalized by cell volume: 1.66811e-11.
+PartBunch::computeSelfFields> Rho normalized by cell volume: 1.6616e-11.
 PartBunch::computeSelfFields> Rho coupling applied.
 FieldSolver::runSolver> Running solver with type: OPEN. Force skip field dump: 0
 PartBunch::computeSelfFields> Field solver run.
@@ -1844,8 +1677,8 @@ OPAL-X> * Switched to unitless positions.
 OPAL-X> * Switched to physical positions.
 PartBunch::bunchUpdate> Updating bunch and doing repartitioning if needed.
 PartBunch::bunchUpdate> Field Container updated with new mesh boundaries and spacing:
-PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00412574 , -0.00413478 , -0.00408856 )
-PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000257488 , 0.000258378 , 0.000258253 )
+PartBunch::bunchUpdate> 		> Mesh origin:   ( -0.00409532 , -0.0041256 , -0.0041004 )
+PartBunch::bunchUpdate> 		> Mesh spacing:  ( 0.000257488 , 0.000257529 , 0.000258043 )
 PartBunch::bunchUpdate> 		> Box increment: 5%
 PartBunch::bunchUpdate> Particle container updated with new layout.
 PartBunch::bunchUpdate> Load balancer repartitioning done.
@@ -1857,7 +1690,7 @@ ParallelTracker::execute> Selected new time step for next iteration, back_track 
 ParallelTracker::execute> Incremented bunch time to 1.000 [ns].
 ParallelTracker::execute> Updated reference particle at step 19.
 ParallelTracker::execute> Updated path length to 0.000593096.
-OPAL-X> * 17:05:37 Step     19 at 593.096 [um], t= 1.000 [ns], E=21.667 [keV]
+OPAL-X> * 07:46:35 Step     19 at 593.096 [um], t= 1.000 [ns], E=21.472 [keV]
 PartBunch::calcBeamParameters> Moments updated.
 PartBunch::calcBeamParameters> Local moments calculated.
 PartBunch::calcBeamParameters> Global moments calculated.
@@ -1876,189 +1709,145 @@ OPAL-X> not implemented
 OPAL-X> * Dump phase space of last step
 OPAL-X> * D1 gone off
 OPAL-X> 
-OPAL-X> * Done executing ParallelTracker at 17:05:37
+OPAL-X> * Done executing ParallelTracker at 07:46:35
 OPAL-X> 
 OPAL-X> * PartBunch Destructor: Finished time step: 0 time: 0.000000e+00
 OPAL-X> * End of input stream 'Drift-3-open.in'
 Timings> ---------------------------------------------
 Timings>      Timing results for 1 nodes:
 Timings> ---------------------------------------------
-Timings> mainTimer........... Wall tot =      1.224
+Timings> mainTimer........... Wall tot =    1.12321
 Timings> 
-Timings> gatherInfoPartBunch. Wall max = 5.6455e-05
-Timings>                      Wall avg = 5.6455e-05
-Timings>                      Wall min = 5.6455e-05
+Timings> gatherInfoPartBunch. Wall max = 8.2107e-05
+Timings>                      Wall avg = 8.2107e-05
+Timings>                      Wall min = 8.2107e-05
 Timings> 
-Timings> bInitLimits......... Wall max = 0.00158246
-Timings>                      Wall avg = 0.00158246
-Timings>                      Wall min = 0.00158246
+Timings> setSolver........... Wall max =  0.0207344
+Timings>                      Wall avg =  0.0207344
+Timings>                      Wall min =  0.0207344
 Timings> 
-Timings> bAllReduceLimits.... Wall max =  7.645e-06
-Timings>                      Wall avg =  7.645e-06
-Timings>                      Wall min =  7.645e-06
+Timings> Initialize.......... Wall max =  0.0203754
+Timings>                      Wall avg =  0.0203754
+Timings>                      Wall min =  0.0203754
 Timings> 
-Timings> bAllReduceGlobalHis. Wall max =  6.029e-06
-Timings>                      Wall avg =  6.029e-06
-Timings>                      Wall min =  6.029e-06
+Timings> Initialize: extra H. Wall max = 0.00203244
+Timings>                      Wall avg = 0.00203244
+Timings>                      Wall min = 0.00203244
 Timings> 
-Timings> bAssignUniformBins.. Wall max = 0.00191917
-Timings>                      Wall avg = 0.00191917
-Timings>                      Wall min = 0.00191917
+Timings> Warmup.............. Wall max = 0.00969902
+Timings>                      Wall avg = 0.00969902
+Timings>                      Wall min = 0.00969902
 Timings> 
-Timings> bExecuteHistoReduct. Wall max =  0.0014446
-Timings>                      Wall avg =  0.0014446
-Timings>                      Wall min =  0.0014446
+Timings> Green Init.......... Wall max = 0.00566555
+Timings>                      Wall avg = 0.00566555
+Timings>                      Wall min = 0.00566555
 Timings> 
-Timings> bSortContainerByBin. Wall max = 0.00396068
-Timings>                      Wall avg = 0.00396068
-Timings>                      Wall min = 0.00396068
+Timings> FFT: Green.......... Wall max =  0.0923832
+Timings>                      Wall avg =  0.0923832
+Timings>                      Wall min =  0.0923832
 Timings> 
-Timings> bVerifySorting...... Wall max =          0
-Timings>                      Wall avg =          0
-Timings>                      Wall min =          0
+Timings> prerun.............. Wall max =  0.0245796
+Timings>                      Wall avg =  0.0245796
+Timings>                      Wall min =  0.0245796
 Timings> 
-Timings> setSolver........... Wall max =  0.0220846
-Timings>                      Wall avg =  0.0220846
-Timings>                      Wall min =  0.0220846
+Timings> Solve............... Wall max =   0.612967
+Timings>                      Wall avg =   0.612967
+Timings>                      Wall min =   0.612967
 Timings> 
-Timings> Initialize.......... Wall max =  0.0216146
-Timings>                      Wall avg =  0.0216146
-Timings>                      Wall min =  0.0216146
+Timings> Solve: Physical to . Wall max = 0.000332021
+Timings>                      Wall avg = 0.000332021
+Timings>                      Wall min = 0.000332021
 Timings> 
-Timings> Initialize: extra H. Wall max = 0.00214157
-Timings>                      Wall avg = 0.00214157
-Timings>                      Wall min = 0.00214157
+Timings> FFT: Rho............ Wall max =   0.098077
+Timings>                      Wall avg =   0.098077
+Timings>                      Wall min =   0.098077
 Timings> 
-Timings> Warmup.............. Wall max =  0.0105638
-Timings>                      Wall avg =  0.0105638
-Timings>                      Wall min =  0.0105638
+Timings> FFT: Convolution.... Wall max =  0.0918285
+Timings>                      Wall avg =  0.0918285
+Timings>                      Wall min =  0.0918285
 Timings> 
-Timings> Green Init.......... Wall max = 0.00571861
-Timings>                      Wall avg = 0.00571861
-Timings>                      Wall min = 0.00571861
+Timings> Solve: Double to ph. Wall max = 0.000569378
+Timings>                      Wall avg = 0.000569378
+Timings>                      Wall min = 0.000569378
 Timings> 
-Timings> FFT: Green.......... Wall max =   0.098921
-Timings>                      Wall avg =   0.098921
-Timings>                      Wall min =   0.098921
+Timings> Solve: Electric fie. Wall max =   0.300938
+Timings>                      Wall avg =   0.300938
+Timings>                      Wall min =   0.300938
 Timings> 
-Timings> prerun.............. Wall max =  0.0254222
-Timings>                      Wall avg =  0.0254222
-Timings>                      Wall min =  0.0254222
+Timings> FFT: Efield......... Wall max =   0.269559
+Timings>                      Wall avg =   0.269559
+Timings>                      Wall min =   0.269559
 Timings> 
-Timings> Solve............... Wall max =   0.662539
-Timings>                      Wall avg =   0.662539
-Timings>                      Wall min =   0.662539
+Timings> Efield: double to p. Wall max = 0.00235187
+Timings>                      Wall avg = 0.00235187
+Timings>                      Wall min = 0.00235187
 Timings> 
-Timings> Solve: Physical to . Wall max = 0.00036274
-Timings>                      Wall avg = 0.00036274
-Timings>                      Wall min = 0.00036274
+Timings> samplingTime........ Wall max = 0.00903003
+Timings>                      Wall avg = 0.00903003
+Timings>                      Wall min = 0.00903003
 Timings> 
-Timings> FFT: Rho............ Wall max =   0.103246
-Timings>                      Wall avg =   0.103246
-Timings>                      Wall min =   0.103246
+Timings> SamplingTimer....... Wall max =  0.0090138
+Timings>                      Wall avg =  0.0090138
+Timings>                      Wall min =  0.0090138
 Timings> 
-Timings> FFT: Convolution.... Wall max =  0.0997672
-Timings>                      Wall avg =  0.0997672
-Timings>                      Wall min =  0.0997672
+Timings> GenParticles........ Wall max = 0.00901449
+Timings>                      Wall avg = 0.00901449
+Timings>                      Wall min = 0.00901449
 Timings> 
-Timings> Solve: Double to ph. Wall max = 0.000528684
-Timings>                      Wall avg = 0.000528684
-Timings>                      Wall min = 0.000528684
-Timings> 
-Timings> Solve: Electric fie. Wall max =   0.331435
-Timings>                      Wall avg =   0.331435
-Timings>                      Wall min =   0.331435
-Timings> 
-Timings> FFT: Efield......... Wall max =   0.295501
-Timings>                      Wall avg =   0.295501
-Timings>                      Wall min =   0.295501
-Timings> 
-Timings> Efield: double to p. Wall max = 0.00206501
-Timings>                      Wall avg = 0.00206501
-Timings>                      Wall min = 0.00206501
-Timings> 
-Timings> samplingTime........ Wall max =  0.0139987
-Timings>                      Wall avg =  0.0139987
-Timings>                      Wall min =  0.0139987
-Timings> 
-Timings> SamplingTimer....... Wall max =  0.0139803
-Timings>                      Wall avg =  0.0139803
-Timings>                      Wall min =  0.0139803
-Timings> 
-Timings> GenParticles........ Wall max =   0.013981
-Timings>                      Wall avg =   0.013981
-Timings>                      Wall min =   0.013981
-Timings> 
-Timings> particleBC.......... Wall max = 0.00340879
-Timings>                      Wall avg = 0.00340879
-Timings>                      Wall min = 0.00340879
+Timings> particleBC.......... Wall max = 0.00720151
+Timings>                      Wall avg = 0.00720151
+Timings>                      Wall min = 0.00720151
 Timings> 
 Timings> updateParticle...... Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> Write Stat.......... Wall max = 0.000779083
-Timings>                      Wall avg = 0.000779083
-Timings>                      Wall min = 0.000779083
+Timings> Write Stat.......... Wall max = 0.00079467
+Timings>                      Wall avg = 0.00079467
+Timings>                      Wall min = 0.00079467
 Timings> 
-Timings> Write H5-File....... Wall max =  0.0136065
-Timings>                      Wall avg =  0.0136065
-Timings>                      Wall min =  0.0136065
+Timings> Write H5-File....... Wall max = 0.00533359
+Timings>                      Wall avg = 0.00533359
+Timings>                      Wall min = 0.00533359
 Timings> 
-Timings> TIntegration1....... Wall max =  0.0292677
-Timings>                      Wall avg =  0.0292677
-Timings>                      Wall min =  0.0292677
+Timings> TIntegration1....... Wall max =  0.0312952
+Timings>                      Wall avg =  0.0312952
+Timings>                      Wall min =  0.0312952
 Timings> 
-Timings> TIntegration2....... Wall max =  0.0361115
-Timings>                      Wall avg =  0.0361115
-Timings>                      Wall min =  0.0361115
+Timings> TIntegration2....... Wall max =  0.0348754
+Timings>                      Wall avg =  0.0348754
+Timings>                      Wall min =  0.0348754
 Timings> 
-Timings> External field eval. Wall max = 0.00690475
-Timings>                      Wall avg = 0.00690475
-Timings>                      Wall min = 0.00690475
+Timings> External field eval. Wall max = 0.00783752
+Timings>                      Wall avg = 0.00783752
+Timings>                      Wall min = 0.00783752
 Timings> 
 Timings> Binaryrepart........ Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> OrbThreader......... Wall max =    0.22354
-Timings>                      Wall avg =    0.22354
-Timings>                      Wall min =    0.22354
+Timings> OrbThreader......... Wall max =   0.213083
+Timings>                      Wall avg =   0.213083
+Timings>                      Wall min =   0.213083
 Timings> 
-Timings> bTotalBinningT...... Wall max =  0.0117368
-Timings>                      Wall avg =  0.0117368
-Timings>                      Wall min =  0.0117368
+Timings> SolveTimer.......... Wall max =   0.660755
+Timings>                      Wall avg =   0.660755
+Timings>                      Wall min =   0.660755
 Timings> 
-Timings> bDeviceSyncronizati. Wall max = 1.5017e-05
-Timings>                      Wall avg = 1.5017e-05
-Timings>                      Wall min = 1.5017e-05
+Timings> scatter............. Wall max =  0.0291005
+Timings>                      Wall avg =  0.0291005
+Timings>                      Wall min =  0.0291005
 Timings> 
-Timings> bHistogramInit...... Wall max = 0.000208823
-Timings>                      Wall avg = 0.000208823
-Timings>                      Wall min = 0.000208823
+Timings> accumulateHalo...... Wall max =  2.142e-06
+Timings>                      Wall avg =  2.142e-06
+Timings>                      Wall min =  2.142e-06
 Timings> 
-Timings> bMergeBins.......... Wall max = 0.00126761
-Timings>                      Wall avg = 0.00126761
-Timings>                      Wall min = 0.00126761
+Timings> fillHalo............ Wall max =   1.97e-06
+Timings>                      Wall avg =   1.97e-06
+Timings>                      Wall min =   1.97e-06
 Timings> 
-Timings> SolveTimer.......... Wall max =   0.726805
-Timings>                      Wall avg =   0.726805
-Timings>                      Wall min =   0.726805
-Timings> 
-Timings> scatter............. Wall max =  0.0401325
-Timings>                      Wall avg =  0.0401325
-Timings>                      Wall min =  0.0401325
-Timings> 
-Timings> accumulateHalo...... Wall max =  2.053e-06
-Timings>                      Wall avg =  2.053e-06
-Timings>                      Wall min =  2.053e-06
-Timings> 
-Timings> fillHalo............ Wall max =  2.885e-06
-Timings>                      Wall avg =  2.885e-06
-Timings>                      Wall min =  2.885e-06
-Timings> 
-Timings> gather.............. Wall max =  0.0214303
-Timings>                      Wall avg =  0.0214303
-Timings>                      Wall min =  0.0214303
+Timings> gather.............. Wall max =  0.0131463
+Timings>                      Wall avg =  0.0131463
+Timings>                      Wall min =  0.0131463
 Timings> 
 Timings> ---------------------------------------------

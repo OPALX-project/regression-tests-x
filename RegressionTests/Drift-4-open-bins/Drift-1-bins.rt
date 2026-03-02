@@ -1,0 +1,9 @@
+"Drift with binning: 1 step, velocity binning (sanity check)"
+stat "rms_x" last 1E-5
+stat "rms_y" last 1E-5
+stat "rms_s" last 1E-5
+stat "emit_x" last 1E-5
+stat "emit_y" last 1E-5
+stat "emit_s" last 1E-5
+stat "energy" last 1E-5
+stat "numParticles" last 0
