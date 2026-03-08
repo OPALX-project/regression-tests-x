@@ -1,0 +1,9 @@
+"Drift with bins in accelerating cavity: create significant energy spread that leads to multiple bins. When particles are close to c, bin number decreases."
+stat "rms_x" last 1E-3
+stat "rms_y" last 1E-3
+stat "rms_s" last 1E-2
+stat "rms_px" last 1E-3
+stat "rms_py" last 1E-3
+stat "rms_ps" last 1E-2
+stat "energy" last 1E3
+stat "nBins" avg 0.2

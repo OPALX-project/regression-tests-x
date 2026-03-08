@@ -1,0 +1,14 @@
+"Dist-flattop: 1 step Flattop distribution sanity check. Some timesteps to test the time emission."
+stat "rms_x"      avg 1E-6
+stat "rms_y"      avg 1E-6
+stat "rms_s"      avg 1E-6
+stat "rms_px"     avg 1E-9
+stat "rms_py"     avg 1E-9
+stat "rms_ps"     avg 1E-9
+stat "emit_x"     avg 1E-9
+stat "emit_y"     avg 1E-9
+stat "emit_s"     avg 1E-9
+stat "mean_x"     last 1E-9
+stat "mean_y"     last 1E-9
+stat "mean_s"     last 1E-9
+stat "numParticles" last 1E-12

@@ -1,18 +1,21 @@
-# regresion-test-x
+# Regression Tests Repository
 
-## Purpose
+This repository contains regression tests for the OPALX project.
 
-Create and run OPALX regression tests is similar to the procedure for OPAL 
-described [here](https://github.com/OPALX-project/regression-tests/tree/master).
+## Directory Structure
 
+The tests are organized under the `RegressionTests/` directory. Each subdirectory represents a specific test case.
 
-## Create a Reference Solution
+### Test Case Structure
 
-1. clone this repository for example into $HOME/git
-2. checkout the branch *cleanup*
-3. create a new directory *foo* in $HOME/git/regresion-test-x/RegressionTests with an inputfile e.g. *foo.in*
-4. make sure OPALX_EXE_PATH is set and $HOME/git/regresion-test-x/bin is in the PATH
-5. cd to $HOME/git/regresion-test-x/RegressionTests/foo and execute *makeReference.sh*
-6. commit the directory (e.g. foo)  to this repository in the branch *cleanup*
+Each test case folder (e.g., `RegressionTests/FodoCell/`) generally contains the following files:
 
-In case you need to run on multiple ranks use *--ranks number* argument on **makeReference.sh**
+- **`<TestName>.in`**: The input file for the simulation (e.g., `FodoCell.in`).
+- **`<TestName>.local`**: A shell script to execute the simulation locally. It typically sets up the environment and calls the executable with `mpirun`.
+- **`<TestName>.rt`**: The regression test definition file. This file specifies:
+  - The name/description of the test.
+  - The statistics to check (e.g., `rms_x`, `energy`).
+  - The type of check (e.g., `avg`).
+  - The tolerance allowed for the test to pass.
+- **`reference/`**: A subdirectory containing the reference output files (e.g., `<TestName>.stat`) used to validate the current run.
+

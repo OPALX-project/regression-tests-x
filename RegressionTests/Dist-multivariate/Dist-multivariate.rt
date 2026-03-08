@@ -1,0 +1,14 @@
+"Dist-multivariate: 1 step Multivariate Gaussian distribution sanity check."
+stat "rms_x"      last 1E-4
+stat "rms_y"      last 1E-4
+stat "rms_s"      last 1E-4
+stat "rms_px"     last 1E-9
+stat "rms_py"     last 1E-9
+stat "rms_ps"     last 1E-9
+stat "emit_x"     last 1E-9
+stat "emit_y"     last 1E-9
+stat "emit_s"     last 1E-9
+stat "mean_x"     last 1E-9
+stat "mean_y"     last 1E-9
+stat "mean_s"     last 1E-9
+stat "numParticles" last 1E-12
