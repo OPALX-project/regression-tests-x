@@ -57,7 +57,8 @@ Dist1: DISTRIBUTION, TYPE=FLATTOP,
         TFALL = 6.0e-12,
         TPULSEFWHM = 20.0e-12,
         CUTOFFLONG = 4.0,
-        EMITTED = true;
+        EMITTED = true,
+        NPARTDIST = n_particles;
 
 ES1: EMISSIONSOURCE, DISTRIBUTION = Dist1;
 mySources: EMISSIONSOURCELIST = (ES1);

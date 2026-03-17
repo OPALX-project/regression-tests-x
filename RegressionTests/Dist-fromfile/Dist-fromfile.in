@@ -52,6 +52,7 @@ FS1: Fieldsolver, TYPE=NONE,
     BCFFTZ=OPEN, BBOXINCR = 5, GREENSF = STANDARD;
 
 Dist1: DISTRIBUTION, TYPE=FROMFILE, 
+    NPARTDIST = n_particles,
     FNAME = "inputdistr.dat";
 
 ES1: EMISSIONSOURCE, DISTRIBUTION = Dist1;

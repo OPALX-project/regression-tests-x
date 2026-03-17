@@ -58,7 +58,8 @@ Dist1: DISTRIBUTION, TYPE=MULTIVARIATEGAUSS,
     SIGMAPY=1e-3, 
     SIGMAPZ=2e-3, 
     // Correlation matrix: spatial and momentum couplings
-    CORR = {1e-2,2e-2,3e-3,6e-4,1e-2,2e-3,2e-4,1e-4,5e-4,1e-4,2e-4,3e-3,5e-4,2e-4,1e-4};
+    CORR = {1e-2,2e-2,3e-3,6e-4,1e-2,2e-3,2e-4,1e-4,5e-4,1e-4,2e-4,3e-3,5e-4,2e-4,1e-4},
+    NPARTDIST = n_particles;
 
 ES1: EMISSIONSOURCE, DISTRIBUTION = Dist1;
 mySources: EMISSIONSOURCELIST = (ES1);

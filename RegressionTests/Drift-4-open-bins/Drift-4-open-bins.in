@@ -67,7 +67,8 @@ Dist1: DISTRIBUTION, TYPE=GAUSS,
     SIGMAZ=0.1,     
     SIGMAPX=1e-9, 
     SIGMAPY=1e-9, 
-    SIGMAPZ=1e-2;    // small initial pz spread
+    SIGMAPZ=1e-2,    // small initial pz spread
+    NPARTDIST = n_particles;
 
 ES1: EMISSIONSOURCE, DISTRIBUTION = Dist1;
 mySources: EMISSIONSOURCELIST = (ES1);

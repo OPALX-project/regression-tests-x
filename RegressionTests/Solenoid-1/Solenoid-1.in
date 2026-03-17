@@ -113,7 +113,8 @@ Dist2:  DISTRIBUTION,
 	SIGMAZ  = 1e-3,
         SIGMAPX = 0.94e-0,
         SIGMAPY = 0.94e-0,
-        SIGMAPZ = 0.94e-0;
+        SIGMAPZ = 0.94e-0,
+        NPARTDIST = n_particles;
 
 ES1: EMISSIONSOURCE, DISTRIBUTION = Dist2;
 mySources: EMISSIONSOURCELIST = (ES1);
