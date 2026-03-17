@@ -6,3 +6,4 @@
 *.aux
 *.h5
 data
+*timing.dat
