@@ -115,6 +115,9 @@ Dist2:  DISTRIBUTION,
         SIGMAPY = 0.94e-0,
         SIGMAPZ = 0.94e-0;
 
+ES1: EMISSIONSOURCE, DISTRIBUTION = Dist2;
+mySources: EMISSIONSOURCELIST = (ES1);
+
 // DOES NOT WORK
 // Dist3:  DISTRIBUTION, 
 //        TYPE=fromfile, 
@@ -153,14 +156,14 @@ BEAM0:  BEAM,
 
 TRACK,  LINE = Line2,           // <-
         BEAM =  BEAM0, 
+        SOURCES = mySources,
         MAXSTEPS = 200000, 
         DT = 1e-12, 
         ZSTOP = 1.5;            // <- 
 
 RUN,    METHOD = "PARALLEL", 
         BEAM = BEAM0,
-        FIELDSOLVER = FS1, 
-        DISTRIBUTION = Dist2;   // <- 
+        FIELDSOLVER = FS1; 
 
 //----------------------------------------------------------------------------
 // End Tracking

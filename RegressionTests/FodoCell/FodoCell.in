@@ -91,6 +91,9 @@ Dist: DISTRIBUTION, TYPE = GAUSS,
         SIGMAY = 0.01,
 	    SIGMAZ = 0.01;
 
+ES1: EMISSIONSOURCE, DISTRIBUTION = Dist;
+mySources: EMISSIONSOURCELIST = (ES1);
+
 //----------------------------------------------------------------------------
 // Define Field solvers
 // The mesh sizes should be a factor of 2
@@ -116,9 +119,9 @@ BEAM1:  BEAM, PARTICLE = ELECTRON, pc = P0, NPART = n_particles,
 //----------------------------------------------------------------------------
 // Simulate the beamline using TRACK and RUN.
 
-TRACK, LINE = SOLine, BEAM = BEAM1, MAXSTEPS = 20014, DT = 1e-10, ZSTOP=60.0;
+TRACK, LINE = SOLine, BEAM = BEAM1, SOURCES = mySources, MAXSTEPS = 20014, DT = 1e-10, ZSTOP=60.0;
 RUN, METHOD = "PARALLEL", BEAM = BEAM1,
-    FIELDSOLVER = FS_SC, DISTRIBUTION = Dist;
+    FIELDSOLVER = FS_SC;
 ENDTRACK;
 Quit;
 
