@@ -1,3 +1,4 @@
+NONE
 .DS_Store
 *~
 *.o
@@ -6,3 +7,5 @@
 *.aux
 *.h5
 data
+*.png
+*.html

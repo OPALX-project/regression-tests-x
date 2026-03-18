@@ -1,0 +1,33 @@
+                      ranks  Wall tot
+=====================================
+mainTimer...........      1    0.4132
+
+                      ranks  Wall max  Wall min  Wall avg
+=========================================================
+mainTimer...........      1    0.4132    0.4132    0.4132
+Write Stat..........      1    0.0013    0.0013    0.0013
+Write H5-File.......      1  0.003703  0.003703  0.003703
+bInitLimits.........      1 0.0006697 0.0006697 0.0006697
+bAllReduceLimits....      1 1.335e-06 1.335e-06 1.335e-06
+bAllReduceGlobalHis.      1 2.042e-06 2.042e-06 2.042e-06
+bAssignUniformBins..      1 0.0006118 0.0006118 0.0006118
+bExecuteHistoReduct.      1 0.0008518 0.0008518 0.0008518
+bSortContainerByBin.      1 0.0004792 0.0004792 0.0004792
+bVerifySorting......      1         0         0         0
+samplingTime........      1   0.02024   0.02024   0.02024
+Sampling............      1   0.02023   0.02023   0.02023
+particleBC..........      1  0.003876  0.003876  0.003876
+updateParticle......      1         0         0         0
+TIntegration1.......      1 0.0009519 0.0009519 0.0009519
+TIntegration2.......      1  0.003754  0.003754  0.003754
+External field eval.      1  0.001843  0.001843  0.001843
+Binaryrepart........      1         0         0         0
+OrbThreader.........      1    0.2223    0.2223    0.2223
+bTotalBinningT......      1  0.004823  0.004823  0.004823
+bDeviceSyncronizati.      1 4.128e-06 4.128e-06 4.128e-06
+bHistogramInit......      1 2.425e-05 2.425e-05 2.425e-05
+bMergeBins..........      1 0.0005317 0.0005317 0.0005317
+scatter.............      1  0.004552  0.004552  0.004552
+accumulateHalo......      1  3.77e-07  3.77e-07  3.77e-07
+fillHalo............      1  4.58e-07  4.58e-07  4.58e-07
+gather..............      1  0.002465  0.002465  0.002465

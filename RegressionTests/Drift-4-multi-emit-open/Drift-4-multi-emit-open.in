@@ -12,7 +12,7 @@
  *     (Gaussian with EMISSIONSOURCE::t0).
  */
 
-OPTION, PSDUMPFREQ      = 500;     // 6d data written every 10th time step (h5).
+OPTION, PSDUMPFREQ      = -1;     // 6d data written every 10th time step (h5).
 OPTION, STATDUMPFREQ    = 1;     // Beam Stats written every time step (stat).
 OPTION, BOUNDPDESTROYFQ = 10;    // Delete lost particles, if any out of 10 \sigma
 OPTION, AUTOPHASE       = 4;     // Autophase is on, and phase of max energy
