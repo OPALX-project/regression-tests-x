@@ -1,0 +1,9 @@
+"Dist-flattop: Some timesteps to test the flattop time emission."
+stat "rms_x"      avg 1E-5
+stat "rms_y"      avg 1E-5
+stat "rms_s"      avg 1E-5
+stat "rms_px"     avg 1E-5
+stat "rms_py"     avg 1E-5
+stat "rms_ps"     avg 1E-5
+stat "energy"     avg 1E-5
+stat "numParticles" avg 1E-9
