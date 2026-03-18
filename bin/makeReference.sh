@@ -42,16 +42,16 @@ chmod +x ${FB}.local
 mpirun -np ${RANKS} ${OPALX_EXE_PATH}/opalx ${F} --info 10 | tee ${FB}.out
 F1=`ls $FB.out`
 F2=`ls $FB.stat`
-#F3=`ls $FB.lbal`
+F3=`ls timing.dat`
 #
 mkdir -p reference
 cp $F1 reference/
 cp $F2 reference/
-#cp $F3 reference/
+cp $F3 reference/
 #
 cd reference
 md5sum $F1 > $F1.md5
 md5sum $F2 > $F2.md5
-#md5sum $F3 > $F3.md5
+md5sum $F3 > $F3.md5
 cd ..
-rm -rf data *.h5 *.out *.stat
+rm -rf data *.h5 *.out *.stat timing.dat
