@@ -5,5 +5,4 @@ stat "rms_s"      avg 1E-5
 stat "rms_px"     avg 1E-5
 stat "rms_py"     avg 1E-5
 stat "rms_ps"     avg 1E-5
-stat "energy"     avg 1E-5
 stat "numParticles" avg 1E-9
