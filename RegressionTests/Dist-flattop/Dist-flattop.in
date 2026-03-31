@@ -7,7 +7,7 @@
 
 OPTION, PSDUMPFREQ      = 100;    // 6d data written every 10th time step (h5).
 OPTION, STATDUMPFREQ    = 1;     // Beam Stats written every time step (stat).
-OPTION, BOUNDPDESTROYFQ = 10;    // Delete lost particles, if any out of 10 \sigma
+OPTION, BOUNDPDESTROY = 10;    // Delete lost particles, if any out of 10 \sigma
 OPTION, AUTOPHASE       = 4;     // Autophase is on, and phase of max energy
                                  // gain will be found automatically for cavities.
 OPTION, VERSION=10900;
