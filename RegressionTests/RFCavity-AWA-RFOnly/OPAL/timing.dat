@@ -1,0 +1,30 @@
+Problem size:
+            NP: 100000
+
+                  num Nodes   CPU tot  Wall tot
+===============================================
+mainTimer...........      1      1.12     1.148
+
+                  num Nodes   CPU max  Wall max   CPU min  Wall min   CPU avg  Wall avg
+=======================================================================================
+mainTimer...........      1      1.12     1.148      1.12     1.148      1.12     1.148
+Binaryrepart........      1         0         0         0         0         0         0
+Boundingbox.........      1         0   0.00127         0   0.00127         0   0.00127
+Boundingbox-bounds..      1         0 0.0001422         0 0.0001422         0 0.0001422
+Boundingbox-update..      1         0 0.0004068         0 0.0004068         0 0.0004068
+Compute Statistics..      1      0.35    0.3666      0.35    0.3666      0.35    0.3666
+Create Distr........      1      0.04   0.04833      0.04   0.04833      0.04   0.04833
+External field eval.      1      0.23    0.2364      0.23    0.2364      0.23    0.2364
+Fast inside test....      1         0         0         0         0         0         0
+Histogram...........      1         0         0         0         0         0         0
+Initialize geometry.      1         0         0         0         0         0         0
+Inside test.........      1         0         0         0         0         0         0
+Load Distr..........      1         0         0         0         0         0         0
+Particle Inside.....      1         0         0         0         0         0         0
+Ray tracing.........      1         0         0         0         0         0         0
+SelfField total.....      1         0         0         0         0         0         0
+TIntegration1.......      1      0.07   0.05788      0.07   0.05788      0.07   0.05788
+TIntegration2.......      1      0.17    0.1559      0.17    0.1559      0.17    0.1559
+WakeField...........      1         0         0         0         0         0         0
+Write H5-File.......      1         0  0.005556         0  0.005556         0  0.005556
+Write Stat..........      1      0.02   0.02563      0.02   0.02563      0.02   0.02563
