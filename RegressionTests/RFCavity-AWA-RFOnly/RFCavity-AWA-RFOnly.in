@@ -99,10 +99,7 @@ BEAM1:  BEAM, PARTICLE = ELECTRON, pc = P0, NPART = n_particles,
         CHARGE = -1;
 
 // ----------------------------------------------------------------------------
-// Simulate the beamline using TRACK and RUN.
-// Note, different time steps are set based on the z location in the beam line.
-// In the case below, 1.0e-13 is used for 0.0 to 0.001 m,
-// and 1.0e-11 is used from 0.001 to 1.25 m.
+// Start tracking
 
 TRACK,  LINE = DRIVE, BEAM = BEAM1, MAXSTEPS = 150, 
         DT = 1.0e-11, ZSTOP = 1.25;
