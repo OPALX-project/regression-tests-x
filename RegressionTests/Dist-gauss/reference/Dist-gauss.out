@@ -21,7 +21,7 @@ OPAL-X>
 OPAL-X> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL-X> to the OPAL developers https://github.com/OPALX-project/OPALX/issues
 OPAL-X> 
-OPAL-X> Time: 09:42:23 date: 09/04/2026
+OPAL-X> Time: 13:03:04 date: 09/04/2026
 OPAL-X> 
 OPAL-X> * Host:   OpenMP
 OPAL-X> * Device: OpenMP
@@ -31,7 +31,7 @@ OPAL-X>
 OPAL-X> value: {OPALVERSION} = {900}
 OPAL-X> 
 OPAL-X> 
-OPAL-X> value: {EDES,P0} = {0.01, 0.0104986}
+OPAL-X> value: {EDES,P0} = {1e-09, 1.01094e-06}
 OPAL-X> 
 OPAL-X> * ************* F I E L D S O L V E R ********************************************** 
 OPAL-X> * FIELDSOLVER  FS1
@@ -54,8 +54,8 @@ OPAL-X> * BEAM        BEAM1
 OPAL-X> * PARTICLE    ELECTRON
 OPAL-X> * REST MASS   0.000510999 [GeV]
 OPAL-X> * CHARGE      -e * 1 
-OPAL-X> * MOMENTUM    1.04986e+07 [eV/c]
-OPAL-X> * MOMENTUM    0.0104986 [GeV/c]
+OPAL-X> * MOMENTUM    1010.94 [eV/c]
+OPAL-X> * MOMENTUM    1.01094e-06 [GeV/c]
 OPAL-X> * CURRENT     1.3 [A]
 OPAL-X> * FREQUENCY   1.3e+09 [MHz]
 OPAL-X> * NPART       100000
@@ -70,15 +70,15 @@ OPAL-X> * CONTAINER       = 0
 OPAL-X> * PARTICLES       = 100000
 OPAL-X> * CHARGE          = -1.000000e-15 (Cb) 
 OPAL-X> * QM STORAGE MODE = SINGLE
-OPAL-X> * <EKIN>          = 10.000 [MeV]
-OPAL-X> * <dEKIN>         = 0.510 [eV]
+OPAL-X> * <EKIN>          = 1.000 [eV]
+OPAL-X> * <dEKIN>         = 0.001 [eV]
 OPAL-X> * INTEGRATOR      = LF2
 OPAL-X> * MIN R (origin)  = (     -2.99749 ,    -14.96149 ,    -29.96675 ) [mm]
 OPAL-X> * MAX R (max ext) = (      2.99898 ,     15.00431 ,     29.99476 ) [mm]
 OPAL-X> * RMS R           = (      0.99083 ,      4.93719 ,      9.87592 ) [mm]
 OPAL-X> * RMS P           = ( 9.996079e-07 , 1.004210e-06 , 9.986487e-07 ) [beta gamma]
 OPAL-X> * Mean R          = ( -6.938894e-23 , 2.386980e-20 , -1.376677e-19 ) [m]
-OPAL-X> * Mean P          = ( 2.340136e-09 , -1.285497e-09 , 2.054519e+01 ) [beta gamma]
+OPAL-X> * Mean P          = ( 2.340136e-09 , -1.285497e-09 , 1.978361e-03 ) [beta gamma]
 OPAL-X> * MESH SPACING    = (      0.20613 ,      1.03007 ,      2.06118 ) [mm]
 OPAL-X> * COMPDOM INCR    = 5.000000e+00 (%) 
 OPAL-X> * FIELD LAYOUT    = Domain = {[0:31:1],[0:31:1],[0:31:1]}
@@ -86,7 +86,7 @@ OPAL-X> Total number of boxes = 1
 OPAL-X>     Box 0 {[0:31:1],[0:31:1],[0:31:1]}
 OPAL-X> 
 OPAL-X> * Centroid : 
-OPAL-X> * -6.938894e-18 2.340136e-04 2.386980e-15 -1.285497e-04 -1.376677e-14 2.054519e+06 
+OPAL-X> * -6.938894e-18 2.340136e-04 2.386980e-15 -1.285497e-04 -1.376677e-14 1.978361e+02 
 OPAL-X> * Cov Matrix : 
 OPAL-X> * 9.817498e-07 -6.932746e-13 1.984391e-09 -1.396070e-12 -8.333211e-09 -1.969014e-12 
 OPAL-X> * -6.932746e-13 9.992159e-13 2.704748e-12 2.960243e-15 -5.549864e-12 -8.822221e-16 
@@ -98,72 +98,72 @@ OPAL-X> * * ********************************************************************
 OPAL-X> 
 OPAL-X> * D1 gone live
 OPAL-X> * OrbitThreader dt_m= 5e-11
-OPAL-X> * OrbitThreader maxDistance= 1.14972
+OPAL-X> * OrbitThreader maxDistance= 1.0003
 OPAL-X> * OrbitThreader #elements  = 1
 OPAL-X> 
 OPAL-X> * Size of map 1 sections 
-OPAL-X> * Key: (0.000000 - 1.003117) number of overlapping elements 1
+OPAL-X> * Key: (0.000000 - 0.999990) number of overlapping elements 1
 OPAL-X> *                            D1
 OPAL-X> 
 OPAL-X> * Creating new file for data: 'data/Dist-gauss_ElementPositions.sdds'
-OPAL-X> * Track start at: 09:42:23, t= 0.000 [fs]; zstart at: 0.000 [um]
+OPAL-X> * Track start at: 13:03:04, t= 0.000 [fs]; zstart at: 0.000 [um]
 OPAL-X> * Initial dt = 50.000 [ps]
 OPAL-X> * Max integration steps = 1, next step = 0
 OPAL-X>                dt [ns]           zStop [m]        num Steps [1]
 OPAL-X> ->         5.000000e-11        1.000000e+00                   1
-OPAL-X> * 09:42:23 Step      0 at 14.972 [mm], t= 50.000 [ps], E=10.000 [MeV]
+OPAL-X> * 13:03:04 Step      0 at 29.655 [um], t= 50.000 [ps], E=1.000 [eV]
 OPAL-X> * D1 gone off
 OPAL-X> 
-OPAL-X> * Done executing ParallelTracker at 09:42:23
+OPAL-X> * Done executing ParallelTracker at 13:03:04
 OPAL-X> 
 OPAL-X> * End of input stream 'Dist-gauss.in'
 Timings> ---------------------------------------------
 Timings>      Timing results for 1 rank(s):
 Timings> ---------------------------------------------
-Timings> mainTimer........... Wall tot =   0.032919
+Timings> mainTimer........... Wall tot =   0.138015
 Timings> 
-Timings> Write Stat.......... Wall max =   0.000242
-Timings>                      Wall avg =   0.000242
-Timings>                      Wall min =   0.000242
+Timings> Write Stat.......... Wall max =   0.000252
+Timings>                      Wall avg =   0.000252
+Timings>                      Wall min =   0.000252
 Timings> 
-Timings> Write H5-File....... Wall max =   0.003666
-Timings>                      Wall avg =   0.003666
-Timings>                      Wall min =   0.003666
+Timings> Write H5-File....... Wall max =   0.004915
+Timings>                      Wall avg =   0.004915
+Timings>                      Wall min =   0.004915
 Timings> 
-Timings> samplingTime........ Wall max =   0.007454
-Timings>                      Wall avg =   0.007454
-Timings>                      Wall min =   0.007454
+Timings> samplingTime........ Wall max =   0.007096
+Timings>                      Wall avg =   0.007096
+Timings>                      Wall min =   0.007096
 Timings> 
-Timings> Sampling............ Wall max =   0.007438
-Timings>                      Wall avg =   0.007438
-Timings>                      Wall min =   0.007438
+Timings> Sampling............ Wall max =   0.007049
+Timings>                      Wall avg =   0.007049
+Timings>                      Wall min =   0.007049
 Timings> 
-Timings> particleBC.......... Wall max =   0.001282
-Timings>                      Wall avg =   0.001282
-Timings>                      Wall min =   0.001282
+Timings> particleBC.......... Wall max =   0.001361
+Timings>                      Wall avg =   0.001361
+Timings>                      Wall min =   0.001361
 Timings> 
 Timings> updateParticle...... Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> TIntegration1....... Wall max =   0.000254
-Timings>                      Wall avg =   0.000254
-Timings>                      Wall min =   0.000254
+Timings> TIntegration1....... Wall max =   0.000299
+Timings>                      Wall avg =   0.000299
+Timings>                      Wall min =   0.000299
 Timings> 
-Timings> TIntegration2....... Wall max =   0.000369
-Timings>                      Wall avg =   0.000369
-Timings>                      Wall min =   0.000369
+Timings> TIntegration2....... Wall max =   0.000389
+Timings>                      Wall avg =   0.000389
+Timings>                      Wall min =   0.000389
 Timings> 
-Timings> External field eval. Wall max =   0.000672
-Timings>                      Wall avg =   0.000672
-Timings>                      Wall min =   0.000672
+Timings> External field eval. Wall max =   0.000701
+Timings>                      Wall avg =   0.000701
+Timings>                      Wall min =   0.000701
 Timings> 
 Timings> Binaryrepart........ Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> OrbThreader......... Wall max =   0.000568
-Timings>                      Wall avg =   0.000568
-Timings>                      Wall min =   0.000568
+Timings> OrbThreader......... Wall max =   0.088464
+Timings>                      Wall avg =   0.088464
+Timings>                      Wall min =   0.088464
 Timings> 
 Timings> ---------------------------------------------
