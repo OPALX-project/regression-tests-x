@@ -86,7 +86,8 @@ Line2: Line = (SOL0, SOL1, SOL2);
 // Line3: Line = (D0,SOL1);
 
 DistFF: DISTRIBUTION, TYPE=FROMFILE, 
-    FNAME = "input-distribution.txt";
+    FNAME = "input-distribution.txt",
+    NPARTDIST=n_particles;
 
 ES1: EMISSIONSOURCE, DISTRIBUTION = DistFF;
 mySources: EMISSIONSOURCELIST = (ES1);
@@ -124,8 +125,8 @@ BEAM0:  BEAM,
 
 TRACK,  LINE = Line2,           // <-
         BEAM =  BEAM0, 
-        MAXSTEPS = 200000, 
-        DT = 1e-12, 
+        MAXSTEPS = 5000, 
+        DT = 2e-12, 
         ZSTOP = 1.5;            // <- 
 
 RUN,    METHOD = "PARALLEL", 
