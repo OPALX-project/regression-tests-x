@@ -57,11 +57,11 @@ Dist1: DISTRIBUTION, TYPE=MULTIVARIATEGAUSS,
     // Correlation matrix: upper triangle of 6x6, interleaved order x,px,y,py,z,pz.
     // Canonical phase-space couplings only: k=0 (x-px), k=9 (y-py), k=14 (z-pz).
     // r stored as input value; covariance entry = r^2.
-    // Correlation coefficients: rho(x,px)=0.1, rho(y,py)=0.1, rho(z,pz)=0.5.
-    CORR = {1e-3, 0,    0,    0,    0, 
-                  0,    0,    0,    0, 
-                        1e-4, 0,    0, 
-                        0,    0,    1e-4},
+    // rho = r^2/sigma^2 = (5e-4)^2/(1e-3)^2 = 0.25 for all three planes.
+    CORR = {5e-4, 0,    0,    0,    0,
+                  0,    0,    0,    0,
+                        5e-4, 0,    0,
+                        0,    0,    5e-4},
     NPARTDIST = n_particles;
 
 ES1: EMISSIONSOURCE, DISTRIBUTION = Dist1;
