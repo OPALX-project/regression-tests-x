@@ -54,8 +54,14 @@ Dist1: DISTRIBUTION, TYPE=MULTIVARIATEGAUSS,
     SIGMAPX=1e-2, 
     SIGMAPY=1e-3, 
     SIGMAPZ=2e-3, 
-    // Correlation matrix: spatial and momentum couplings
-    CORR = {1e-2,2e-2,3e-3,6e-4,1e-2,2e-3,2e-4,1e-4,5e-4,1e-4,2e-4,3e-3,5e-4,2e-4,1e-4},
+    // Correlation matrix: upper triangle of 6x6, interleaved order x,px,y,py,z,pz.
+    // Canonical phase-space couplings only: k=0 (x-px), k=9 (y-py), k=14 (z-pz).
+    // r stored as input value; covariance entry = r^2.
+    // Correlation coefficients: rho(x,px)=0.1, rho(y,py)=0.1, rho(z,pz)=0.5.
+    CORR = {1e-2, 0,    0,    0,    0, 
+                  0,    0,    0,    0, 
+                        1e-3, 0,    0, 
+                        0,    0,    1e-3},
     NPARTDIST = n_particles;
 
 ES1: EMISSIONSOURCE, DISTRIBUTION = Dist1;
