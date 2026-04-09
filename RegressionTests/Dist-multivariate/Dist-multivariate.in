@@ -6,7 +6,7 @@
 
 OPTION, PSDUMPFREQ      = 10;    // 6d data written every 10th time step (h5).
 OPTION, STATDUMPFREQ    = 1;     // Beam Stats written every time step (stat).
-OPTION, BOUNDPDESTROY = 10;    // Delete lost particles, if any out of 10 \sigma
+OPTION, BOUNDPDESTROY   = 10;    // Delete lost particles, if any out of 10 \sigma
 OPTION, AUTOPHASE       = 4;     // Autophase is on, and phase of max energy
                                  // gain will be found automatically for cavities.
 OPTION, VERSION=10900;
@@ -24,7 +24,7 @@ REAL beam_bunch_charge   = 1e-9;     // Charge of bunch. (C)
 
 //----------------------------------------------------------------------------
 //Initial Momentum Calculation
-REAL Edes    = 1e-6; //initial energy in GeV
+REAL Edes    = 1e-9; //initial energy in GeV
 REAL gamma   = (Edes+EMASS)/EMASS; 
 REAL beta    = sqrt(1-(1/gamma^2));
 REAL P0      = gamma*beta*EMASS;    //inital z momentum
@@ -48,20 +48,20 @@ FS1: Fieldsolver, TYPE=NONE,
     BCFFTZ=OPEN, BBOXINCR = 1, GREENSF = INTEGRATED;
 
 Dist1: DISTRIBUTION, TYPE=MULTIVARIATEGAUSS, 
-    SIGMAX=1e-1, 
-    SIGMAY=1e-2, 
+    SIGMAX=1e-3, 
+    SIGMAY=1e-3, 
     SIGMAZ=1e-3, 
-    SIGMAPX=1e-2, 
+    SIGMAPX=1e-3, 
     SIGMAPY=1e-3, 
-    SIGMAPZ=2e-3, 
+    SIGMAPZ=1e-3, 
     // Correlation matrix: upper triangle of 6x6, interleaved order x,px,y,py,z,pz.
     // Canonical phase-space couplings only: k=0 (x-px), k=9 (y-py), k=14 (z-pz).
     // r stored as input value; covariance entry = r^2.
     // Correlation coefficients: rho(x,px)=0.1, rho(y,py)=0.1, rho(z,pz)=0.5.
-    CORR = {1e-2, 0,    0,    0,    0, 
+    CORR = {1e-3, 0,    0,    0,    0, 
                   0,    0,    0,    0, 
-                        1e-3, 0,    0, 
-                        0,    0,    1e-3},
+                        1e-4, 0,    0, 
+                        0,    0,    1e-4},
     NPARTDIST = n_particles;
 
 ES1: EMISSIONSOURCE, DISTRIBUTION = Dist1;

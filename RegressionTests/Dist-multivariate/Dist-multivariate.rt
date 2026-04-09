@@ -12,3 +12,4 @@ stat "mean_x"     last 1E-9
 stat "mean_y"     last 1E-9
 stat "mean_s"     last 1E-9
 stat "numParticles" last 1E-12
+stat "numParticles" last 1e-12

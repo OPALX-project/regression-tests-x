@@ -21,7 +21,7 @@ OPAL-X>
 OPAL-X> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL-X> to the OPAL developers https://github.com/OPALX-project/OPALX/issues
 OPAL-X> 
-OPAL-X> Time: 09:42:47 date: 09/04/2026
+OPAL-X> Time: 13:31:54 date: 09/04/2026
 OPAL-X> 
 OPAL-X> * Host:   OpenMP
 OPAL-X> * Device: OpenMP
@@ -116,29 +116,29 @@ OPAL-X> * Key: (0.000000 - 1.250009) number of overlapping elements 1
 OPAL-X> *                            D1
 OPAL-X> 
 OPAL-X> * Creating new file for data: 'data/Dist-gauss-bins_ElementPositions.sdds'
-OPAL-X> * Track start at: 09:42:47, t= 0.000 [fs]; zstart at: 0.000 [um]
+OPAL-X> * Track start at: 13:31:54, t= 0.000 [fs]; zstart at: 0.000 [um]
 OPAL-X> * Initial dt = 50.000 [ps]
 OPAL-X> * Max integration steps = 1, next step = 0
 OPAL-X>                dt [ns]           zStop [m]        num Steps [1]
 OPAL-X> ->         5.000000e-11        1.250000e+00                   1
-OPAL-X> * 09:42:47 Step      0 at 29.655 [um], t= 50.000 [ps], E=1.000 [eV]
+OPAL-X> * 13:31:54 Step      0 at 29.655 [um], t= 50.000 [ps], E=1.000 [eV]
 OPAL-X> * D1 gone off
 OPAL-X> 
-OPAL-X> * Done executing ParallelTracker at 09:42:47
+OPAL-X> * Done executing ParallelTracker at 13:31:54
 OPAL-X> 
 OPAL-X> * End of input stream 'Dist-gauss-bins.in'
 Timings> ---------------------------------------------
 Timings>      Timing results for 1 rank(s):
 Timings> ---------------------------------------------
-Timings> mainTimer........... Wall tot =    0.13265
+Timings> mainTimer........... Wall tot =   0.154551
 Timings> 
-Timings> Write Stat.......... Wall max =   0.000222
-Timings>                      Wall avg =   0.000222
-Timings>                      Wall min =   0.000222
+Timings> Write Stat.......... Wall max =   0.000582
+Timings>                      Wall avg =   0.000582
+Timings>                      Wall min =   0.000582
 Timings> 
-Timings> Write H5-File....... Wall max =    0.00221
-Timings>                      Wall avg =    0.00221
-Timings>                      Wall min =    0.00221
+Timings> Write H5-File....... Wall max =   0.006803
+Timings>                      Wall avg =   0.006803
+Timings>                      Wall min =   0.006803
 Timings> 
 Timings> bInitLimits......... Wall max =          0
 Timings>                      Wall avg =          0
@@ -168,40 +168,40 @@ Timings> bVerifySorting...... Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> samplingTime........ Wall max =   0.002792
-Timings>                      Wall avg =   0.002792
-Timings>                      Wall min =   0.002792
+Timings> samplingTime........ Wall max =     0.0026
+Timings>                      Wall avg =     0.0026
+Timings>                      Wall min =     0.0026
 Timings> 
-Timings> Sampling............ Wall max =   0.002775
-Timings>                      Wall avg =   0.002775
-Timings>                      Wall min =   0.002775
+Timings> Sampling............ Wall max =   0.002577
+Timings>                      Wall avg =   0.002577
+Timings>                      Wall min =   0.002577
 Timings> 
-Timings> particleBC.......... Wall max =   0.001033
-Timings>                      Wall avg =   0.001033
-Timings>                      Wall min =   0.001033
+Timings> particleBC.......... Wall max =   0.001055
+Timings>                      Wall avg =   0.001055
+Timings>                      Wall min =   0.001055
 Timings> 
 Timings> updateParticle...... Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> TIntegration1....... Wall max =   0.000189
-Timings>                      Wall avg =   0.000189
-Timings>                      Wall min =   0.000189
+Timings> TIntegration1....... Wall max =   0.000183
+Timings>                      Wall avg =   0.000183
+Timings>                      Wall min =   0.000183
 Timings> 
-Timings> TIntegration2....... Wall max =   0.000257
-Timings>                      Wall avg =   0.000257
-Timings>                      Wall min =   0.000257
+Timings> TIntegration2....... Wall max =   0.000301
+Timings>                      Wall avg =   0.000301
+Timings>                      Wall min =   0.000301
 Timings> 
-Timings> External field eval. Wall max =   0.000406
-Timings>                      Wall avg =   0.000406
-Timings>                      Wall min =   0.000406
+Timings> External field eval. Wall max =   0.000565
+Timings>                      Wall avg =   0.000565
+Timings>                      Wall min =   0.000565
 Timings> 
 Timings> Binaryrepart........ Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> OrbThreader......... Wall max =   0.110047
-Timings>                      Wall avg =   0.110047
-Timings>                      Wall min =   0.110047
+Timings> OrbThreader......... Wall max =   0.110594
+Timings>                      Wall avg =   0.110594
+Timings>                      Wall min =   0.110594
 Timings> 
 Timings> ---------------------------------------------
