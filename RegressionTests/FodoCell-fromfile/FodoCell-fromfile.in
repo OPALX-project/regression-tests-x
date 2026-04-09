@@ -86,13 +86,17 @@ FOCUS_POLE_8, FIRST_DRIFT_8, DEFOCUS_POLE_8, SECOND_DRIFT_8,
 FOCUS_POLE_9, FIRST_DRIFT_9, DEFOCUS_POLE_9, SECOND_DRIFT_9
 );
 
-Dist: DISTRIBUTION, TYPE = GAUSS,
-        SIGMAX = 0.01,
-        SIGMAY = 0.01,
-	    SIGMAZ = 0.01,
-        NPARTDIST = n_particles;
+//Dist: DISTRIBUTION, TYPE = GAUSS,
+//        SIGMAX = 0.01,
+//        SIGMAY = 0.01,
+//	      SIGMAZ = 0.01,
+//        NPARTDIST = n_particles;
 
-ES1: EMISSIONSOURCE, DISTRIBUTION = Dist;
+Dist_FF: DISTRIBUTION, TYPE=FROMFILE,
+    FNAME = "input-distribution-gauss.txt",
+    NPARTDIST=n_particles;
+
+ES1: EMISSIONSOURCE, DISTRIBUTION = Dist_FF;
 mySources: EMISSIONSOURCELIST = (ES1);
 
 //----------------------------------------------------------------------------
