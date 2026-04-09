@@ -4,7 +4,7 @@
     to test a big drift with space charge.
 */
 
-OPTION, PSDUMPFREQ      = 12000;    // 6d data written every 10th time step (h5).
+OPTION, PSDUMPFREQ      = 10000;    // 6d data written every 10th time step (h5).
 OPTION, STATDUMPFREQ    = 10;     // Beam Stats written every time step (stat).
 OPTION, BOUNDPDESTROY = 10;    // Delete lost particles, if any out of 10 \sigma
 OPTION, AUTOPHASE       = 4;     // Autophase is on, and phase of max energy
@@ -49,22 +49,27 @@ FS1: Fieldsolver, TYPE=OPEN,
     BCFFTY=OPEN, 
     BCFFTZ=OPEN, BBOXINCR = 5, GREENSF = INTEGRATED;
 
-Dist1: DISTRIBUTION, TYPE=GAUSS, 
-    SIGMAX=1e-3, 
-    SIGMAY=1e-3, 
-    SIGMAZ=1e-5, 
-    SIGMAPX=1e-6, 
-    SIGMAPY=1e-6, 
-    SIGMAPZ=1e-6,
+//Dist1: DISTRIBUTION, TYPE=GAUSS, 
+//    SIGMAX=1e-3, 
+//    SIGMAY=1e-3, 
+//    SIGMAZ=1e-5, 
+//    SIGMAPX=1e-6, 
+//    SIGMAPY=1e-6, 
+//    SIGMAPZ=1e-6,
+//    NPARTDIST = n_particles;
+
+// Uses the above Dist1 pre-sampled to properly compare CPU against GPU
+Dist1_FF: DISTRIBUTION, TYPE=FROMFILE,
+    FNAME = "input-distribution-gauss.txt",
     NPARTDIST = n_particles;
 
-ES1: EMISSIONSOURCE, DISTRIBUTION = Dist1;
+ES1: EMISSIONSOURCE, DISTRIBUTION = Dist1_FF;
 mySources: EMISSIONSOURCELIST = (ES1);
 
 BEAM1:  BEAM, PARTICLE = ELECTRON, pc = P0, NPART = n_particles,
         BFREQ = rf_freq, BCURRENT = beam_bunch_charge * rf_freq * 1E6, SOURCES = mySources, CHARGE = -1;
 
-TRACK, LINE = L1, BEAM = BEAM1, MAXSTEPS = 500, DT = {6e-11}, ZSTOP=4.0; 
+TRACK, LINE = L1, BEAM = BEAM1, MAXSTEPS = 300, DT = {6e-11}, ZSTOP=4.0; 
 RUN, METHOD = "PARALLEL", FIELDSOLVER = FS1;
 ENDTRACK;
 
