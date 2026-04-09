@@ -1,4 +1,4 @@
-OPTION, PSDUMPFREQ = 5000;     // Write Phase Space every PSDUMPFREQ steps 
+OPTION, PSDUMPFREQ = 50000;     // Write Phase Space every PSDUMPFREQ steps 
 OPTION, STATDUMPFREQ = 1;      // Write Beam Stats every STATDUMPFREQ steps  
 OPTION, BOUNDPDESTROY=10;    // Delete lost particles, if any
 OPTION, AUTOPHASE=4;           // Autophase is on, and phase of max energy
