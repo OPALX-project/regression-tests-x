@@ -59,16 +59,20 @@ FS1: Fieldsolver, TYPE=OPEN, BINS=BINS1,
     BCFFTY=OPEN, 
     BCFFTZ=OPEN, BBOXINCR = 5, GREENSF = STANDARD;
 
-Dist1: DISTRIBUTION, TYPE=GAUSS, 
-    SIGMAX=1e-3, 
-    SIGMAY=1e-3, 
-    SIGMAZ=0.1,     
-    SIGMAPX=1e-9, 
-    SIGMAPY=1e-9, 
-    SIGMAPZ=1e-2,    // small initial pz spread
-    NPARTDIST = n_particles;
+//Dist1: DISTRIBUTION, TYPE=GAUSS, 
+//    SIGMAX=1e-3, 
+//    SIGMAY=1e-3, 
+//    SIGMAZ=0.1,     
+//    SIGMAPX=1e-9, 
+//    SIGMAPY=1e-9, 
+//    SIGMAPZ=1e-2,    // small initial pz spread
+//    NPARTDIST = n_particles;
 
-ES1: EMISSIONSOURCE, DISTRIBUTION = Dist1;
+Dist1_FF: DISTRIBUTION, TYPE=FROMFILE,
+    FNAME = "input-distribution-gauss.txt",
+    NPARTDIST=n_particles;
+
+ES1: EMISSIONSOURCE, DISTRIBUTION = Dist1_FF;
 mySources: EMISSIONSOURCELIST = (ES1);
 
 BEAM1:  BEAM, PARTICLE = ELECTRON, pc = P0, NPART = n_particles,
