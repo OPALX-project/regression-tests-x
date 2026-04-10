@@ -1,0 +1,276 @@
+OPAL>                ____  _____       ___ 
+OPAL>               / __ \|  __ \ /\   | | 
+OPAL>              | |  | | |__) /  \  | |
+OPAL>              | |  | |  ___/ /\ \ | |
+OPAL>              | |__| | |  / ____ \| |____
+OPAL>               \____/|_| /_/    \_\______|
+OPAL> 
+OPAL> This is OPAL (Object Oriented Parallel Accelerator Library) Version 2022.1.0
+OPAL>             git rev. a4e0e14466557289b4f7a843fb9eb72700ff1992
+OPAL> 
+OPAL> 
+OPAL>                      (c) PSI, http://amas.web.psi.ch
+OPAL> 
+OPAL> 
+OPAL> The optimiser (former opt-Pilot) is integrated 
+OPAL> 
+OPAL> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL> to the OPAL developers opal@lists.psi.ch
+OPAL> 
+OPAL> Time: 13:25:06 date: 10/04/2026
+OPAL> 
+OPAL> * Reading input stream 'RFCavity-AWA-RFOnly-opal.in'
+OPAL> 
+OPAL> value: {OPALVERSION} = {2.02201e+07}
+OPAL> 
+OPAL> 
+OPAL> value: {EDES,GAMMA,BETA,P0,P0*3e+08} = {1.4e-09, 1, 0.00234082, 1.19616e-06, 358.848}
+OPAL> 
+Ippl> No solver attached
+OPAL[2]> * Generation of distribution with seed = 123456789
+OPAL[2]> * isn't scalable with number of particles and cores.
+OPAL> * m before gsl_linalg_cholesky_decomp
+OPAL> * r(0, : ) =          1 &          0 &          0 &          0 &          0 &          0 \\
+OPAL> * r(1, : ) =          0 &          1 &          0 &          0 &          0 &          0 \\
+OPAL> * r(2, : ) =          0 &          0 &          1 &          0 &          0 &          0 \\
+OPAL> * r(3, : ) =          0 &          0 &          0 &          1 &          0 &          0 \\
+OPAL> * r(4, : ) =          0 &          0 &          0 &          0 &          1 &          0 \\
+OPAL> * r(5, : ) =          0 &          0 &          0 &          0 &          0 &          1 \\
+OPAL> * m after gsl_linalg_cholesky_decomp
+OPAL> * r(0, : ) =          1 &          0 &          0 &          0 &          0 &          0 \\
+OPAL> * r(1, : ) =          0 &          1 &          0 &          0 &          0 &          0 \\
+OPAL> * r(2, : ) =          0 &          0 &          1 &          0 &          0 &          0 \\
+OPAL> * r(3, : ) =          0 &          0 &          0 &          1 &          0 &          0 \\
+OPAL> * r(4, : ) =          0 &          0 &          0 &          0 &          1 &          0 \\
+OPAL> * r(5, : ) =          0 &          0 &          0 &          0 &          0 &          1 \\
+OPAL> 
+OPAL> * ************* T R A C K  R U N *************************************************** 
+OPAL> * Selected Tracking Method == PARALLEL-T, NEW TRACK
+OPAL> * ********************************************************************************** 
+OPAL> * Phase space dump frequency    = 200
+OPAL> * Statistics dump frequency     = 1 w.r.t. the time step.
+OPAL> * DT                            = 1e-11 [s]
+OPAL> * MAXSTEPS                      = 150
+OPAL> * Mass of simulation particle   = 31.89 [GeV/c^2]
+OPAL> * Charge of simulation particle = -1e-14 [C]
+OPAL> * ********************************************************************************** 
+Ippl> * Creating new file for data: 'RFCavity-AWA-RFOnly-opal.stat'
+Ippl> * Creating new file for data: 'RFCavity-AWA-RFOnly-opal.lbal'
+OPAL> 
+OPAL> * ************* D I S T R I B U T I O N ********************************************
+OPAL> * 
+OPAL> * Number of particles: 100000
+OPAL> * 
+OPAL> * Distribution input momentum units: [Beta Gamma]
+OPAL> * 
+OPAL> * Distribution type: GAUSS
+OPAL> * 
+OPAL> * SIGMAX     = 7.5000e-04 [m]
+OPAL> * SIGMAY     = 7.5000e-04 [m]
+OPAL> * SIGMAZ     = 1.0000e-12 [m]
+OPAL> * SIGMAPX    = 1.0000e-09 [Beta Gamma]
+OPAL> * SIGMAPY    = 1.0000e-09 [Beta Gamma]
+OPAL> * SIGMAPZ    = 0.0000e+00 [Beta Gamma]
+OPAL> * AVRGPZ     = 2.3408e-03 [Beta Gamma]
+OPAL> * CORRX      = 0.0000e+00
+OPAL> * CORRY      = 0.0000e+00
+OPAL> * CORRZ      = 0.0000e+00
+OPAL> * R61        = 0.0000e+00
+OPAL> * R62        = 0.0000e+00
+OPAL> * R51        = 0.0000e+00
+OPAL> * R52        = 0.0000e+00
+OPAL> * CUTOFFX    = 3.0000e+00 [units of SIGMAX]
+OPAL> * CUTOFFY    = 3.0000e+00 [units of SIGMAY]
+OPAL> * CUTOFFLONG = 3.0000e+00 [units of SIGMAZ]
+OPAL> * CUTOFFPX   = 3.0000e+00 [units of SIGMAPX]
+OPAL> * CUTOFFPY   = 3.0000e+00 [units of SIGMAPY]
+OPAL> * CUTOFFPZ   = 3.0000e+00 [units of SIGMAPY]
+OPAL> * 
+OPAL> * Distribution is injected.
+OPAL> *
+OPAL> * Write initial distribution to file 'data/RFCavity-AWA-RFOnly-opal_DIST.dat'
+OPAL> * 
+OPAL> * **********************************************************************************
+OPAL> 
+OPAL> * ************* B E A M ************************************************************ 
+OPAL> * BEAM        BEAM1
+OPAL> * PARTICLE    ELECTRON
+OPAL> * REST MASS   5.1100e-04 [GeV]
+OPAL> * CHARGE      -e * 1.0000e+00 
+OPAL> * MOMENTUM    1.1962e+03 [eV/c]
+OPAL> * CURRENT     1.3000e+00 [A]
+OPAL> * FREQUENCY   1.3000e+03 [MHz]
+OPAL> * NPART       1.0000e+05
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL> * ************* F I E L D S O L V E R ********************************************** 
+OPAL> * FIELDSOLVER  FS_SC
+OPAL> * TYPE         NONE
+OPAL> * N-PROCESSORS 1
+OPAL> * MX           3.2000e+01
+OPAL> * MY           3.2000e+01
+OPAL> * MT           3.2000e+01
+OPAL> * BBOXINCR     1.0000e+00
+OPAL> * XDIM         serial  
+OPAL> * YDIM         serial  
+OPAL> * Z(T)DIM      parallel  
+OPAL> * ********************************************************************************** 
+OPAL> 
+RFCavity [2]> GUN using file DriveGun.T7 (2D dynamic); zini= 0 m; zfinal= 0.292707 m;
+Ippl> 
+Ippl> * ************* G U N **************************************************************
+Ippl[2]> estimated phase= 2.4642147 rad = 141.1891 deg 
+Ippl[2]> Ekin= 6.2824683 MeV
+Ippl[2]> 
+Ippl> GUN_phi = 140.4391 [deg], corresp. in Astra = 230.4391 [deg],
+Ippl> E = 6.2868 [MeV], phi_nom = 0.0000 [deg]
+Ippl> Ez_0 = 60.0000 [MV/m]
+Ippl> time = 0.0000 [ns], dt = 10.0000 [ps]
+Ippl> * **********************************************************************************
+Ippl> 
+OPAL> 
+OPAL> * Size of map 2 sections 
+OPAL> * Key: (0.000000 - 0.292296) number of overlapping elements 1
+OPAL> *                            GUN
+OPAL> * Key: (0.292296 - 1.250000) number of overlapping elements 0
+OPAL> 
+Ippl> * Creating new file for data: 'data/RFCavity-AWA-RFOnly-opal_ElementPositions.sdds'
+Ippl> Saved phases in the h5 file: Cav-1-name -> GUN --- Cav-1-value -> 2.4511
+OPAL> 
+OPAL> * ************** B U N C H ********************************************************* 
+OPAL> * NP              = 100000
+OPAL> * Qtot            =     1000.000 [pC]         Qi    =       10.000 [fC]
+OPAL> * Ekin            =        1.400 [eV]         dEkin =        0.000 [eV]
+OPAL> * rmax            = (      2.24598 ,      2.24916 ,      0.00000 ) [mm]
+OPAL> * rmin            = (     -2.23893 ,     -2.24822 ,     -0.00000 ) [mm]
+OPAL> * rms beam size   = (    727.35465 ,    732.61948 ,      0.00000 ) [um]
+OPAL> * rms momenta     = (  9.71774e-10 ,  9.72184e-10 ,  1.69092e-15 ) [beta gamma]
+OPAL> * mean position   = (      0.00000 ,     -0.00000 ,      0.00000 ) [um]
+OPAL> * mean momenta    = (  9.18584e-27 , -2.40781e-26 ,  2.34083e-03 ) [beta gamma]
+OPAL> * rms emittance   = (  3.01955e-10 ,  3.04268e-10 ,  7.13712e-25 ) (not normalized)
+OPAL> * rms correlation = (  4.84149e-04 ,  2.66842e-03 , -2.42107e-05 )
+OPAL> * hr              = (    144.67453 ,    145.07686 ,      0.00001 ) [um]
+OPAL> * dh              =   1.00000e-10 [%]
+OPAL> * t               =        0.000 [fs]         dT    =       10.000 [ps]
+OPAL> * spos            =        0.000 [um]
+OPAL> * ********************************************************************************** 
+OPAL> 
+OPAL> * Track start at: 13:25:07, t= 0.000 [fs]; zstart at: 0.000 [um]
+OPAL> * Executing ParallelTTracker
+OPAL> * Initial dt = 10.000 [ps]
+OPAL> * Max integration steps = 150, next step = 0
+OPAL> 
+ParallelTTracker [2]> MINBINEMITTED 10
+ParallelTTracker [2]> MINSTEPFORREBIN 200
+ParallelTTracker [2]> 13:25:07 Step     99 at 289.307 [mm], t= 1000.000 [ps], E=6.286 [MeV]
+OPAL > 
+OPAL > * ************** B U N C H ********************************************************* 
+OPAL > * NP              = 100000
+OPAL > * Qtot            =     1000.000 [pC]         Qi    =       10.000 [fC]
+OPAL > * Ekin            =       6.286 [MeV]         dEkin =      327.349 [eV]
+OPAL > * rmax            = (      5.02026 ,      5.02737 ,     -0.00002 ) [mm]
+OPAL > * rmin            = (     -5.00458 ,     -5.02527 ,     -0.02836 ) [mm]
+OPAL > * rms beam size   = (      1.62623 ,      1.63801 ,      0.00561 ) [mm]
+OPAL > * rms momenta     = (  3.56354e-02 ,  3.58933e-02 ,  7.27961e-04 ) [beta gamma]
+OPAL > * mean position   = (     -0.00015 ,      0.00002 ,     -8.37348 ) [um]
+OPAL > * mean momenta    = ( -5.78470e-09 ,  1.02025e-08 ,  1.32639e+01 ) [beta gamma]
+OPAL > * rms emittance   = (  3.22639e-10 ,  3.19605e-10 ,  4.83108e-11 ) (not normalized)
+OPAL > * rms correlation = (  1.00000e+00 ,  1.00000e+00 ,  9.87598e-01 )
+OPAL > * hr              = (    144.67453 ,    145.07686 ,      0.00001 ) [um]
+OPAL > * dh              =   1.00000e-10 [%]
+OPAL > * t               =        1.500 [ns]         dT    =       10.000 [ps]
+OPAL > * spos            =      438.779 [mm]
+OPAL > * ********************************************************************************** 
+OPAL > 
+OPAL [2]> * Wrote beam phase space.
+ParallelTTracker [2]> Dump phase space of last step
+OPAL> 
+OPAL> * Done executing ParallelTTracker at 13:25:08
+OPAL> 
+OPAL> * End of input stream 'RFCavity-AWA-RFOnly-opal.in'
+Timings> -----------------------------------------------------------------
+Timings>      Timing results for 1 nodes:
+Timings> -----------------------------------------------------------------
+Timings> mainTimer........... Wall tot =    1.28056, CPU tot =       1.25
+Timings> 
+Timings> Binaryrepart........ Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Boundingbox......... Wall max = 0.00291146, CPU max =          0
+Timings>                      Wall avg = 0.00291146, CPU avg =          0
+Timings>                      Wall min = 0.00291146, CPU min =          0
+Timings> 
+Timings> Boundingbox-bounds.. Wall max = 0.000132167, CPU max =          0
+Timings>                      Wall avg = 0.000132167, CPU avg =          0
+Timings>                      Wall min = 0.000132167, CPU min =          0
+Timings> 
+Timings> Boundingbox-update.. Wall max = 0.000157917, CPU max =          0
+Timings>                      Wall avg = 0.000157917, CPU avg =          0
+Timings>                      Wall min = 0.000157917, CPU min =          0
+Timings> 
+Timings> Compute Statistics.. Wall max =   0.360725, CPU max =       0.26
+Timings>                      Wall avg =   0.360725, CPU avg =       0.26
+Timings>                      Wall min =   0.360725, CPU min =       0.26
+Timings> 
+Timings> Create Distr........ Wall max =    0.22934, CPU max =       0.22
+Timings>                      Wall avg =    0.22934, CPU avg =       0.22
+Timings>                      Wall min =    0.22934, CPU min =       0.22
+Timings> 
+Timings> External field eval. Wall max =   0.231665, CPU max =       0.26
+Timings>                      Wall avg =   0.231665, CPU avg =       0.26
+Timings>                      Wall min =   0.231665, CPU min =       0.26
+Timings> 
+Timings> Fast inside test.... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Histogram........... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Initialize geometry. Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Inside test......... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Load Distr.......... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Particle Inside..... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Ray tracing......... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> SelfField total..... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> TIntegration1....... Wall max =  0.0575887, CPU max =        0.1
+Timings>                      Wall avg =  0.0575887, CPU avg =        0.1
+Timings>                      Wall min =  0.0575887, CPU min =        0.1
+Timings> 
+Timings> TIntegration2....... Wall max =   0.147645, CPU max =       0.25
+Timings>                      Wall avg =   0.147645, CPU avg =       0.25
+Timings>                      Wall min =   0.147645, CPU min =       0.25
+Timings> 
+Timings> WakeField........... Wall max =          0, CPU max =          0
+Timings>                      Wall avg =          0, CPU avg =          0
+Timings>                      Wall min =          0, CPU min =          0
+Timings> 
+Timings> Write H5-File....... Wall max = 0.00593788, CPU max =          0
+Timings>                      Wall avg = 0.00593788, CPU avg =          0
+Timings>                      Wall min = 0.00593788, CPU min =          0
+Timings> 
+Timings> Write Stat.......... Wall max =  0.0244488, CPU max =       0.01
+Timings>                      Wall avg =  0.0244488, CPU avg =       0.01
+Timings>                      Wall min =  0.0244488, CPU min =       0.01
+Timings> 
+Timings> -----------------------------------------------------------------

@@ -64,7 +64,8 @@ Dist:   DISTRIBUTION, TYPE = GAUSS,
         SIGMAZ = 1e-12, 
         SIGMAPX = 1e-9, 
         SIGMAPY = 1e-9, 
-        NBIN = 1;
+        NBIN = 1,
+        WRITETOFILE = True;
 
 //----------------------------------------------------------------------------
 // Define Field solvers
