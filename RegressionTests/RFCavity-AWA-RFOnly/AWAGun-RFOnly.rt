@@ -1,2 +1,2 @@
 "AWAGun only RF Cavity without Space Charge"
-stat "energy" avg 1E-4   #this is a comment
+stat "energy" avg 1E-10   #this is a comment
