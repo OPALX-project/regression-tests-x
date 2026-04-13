@@ -1,4 +1,4 @@
-/*      AWAGun - RFOnly.in
+/*      RFCavity.in
         OPALX
         Simple RF Cavity test, with Gaussian distribution loaded from file
 */
@@ -10,7 +10,7 @@ OPTION, AUTOPHASE       = 4;    // Autophase is on, and phase of max energy
                                 // gain will be found automatically for cavities.
 OPTION, VERSION = 10900;                     
 
-Title, string = "AWA Photoinjector";
+Title, string = "AWA RFCavity";
 
 Value, {OPALVERSION};
 
