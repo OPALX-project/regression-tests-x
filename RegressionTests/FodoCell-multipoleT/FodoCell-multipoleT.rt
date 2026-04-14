@@ -1,8 +1,8 @@
-"FodoCell without Space Charge"
-stat "rms_x" avg 1E-5    #this is a comment
-stat "rms_y" avg 1E-5    #this is a comment
-stat "rms_s" avg 1E-5    #this is a comment
-stat "emit_x" avg 1E-5   #this is a comment
-stat "emit_y" avg 1E-5   #this is a comment
-stat "emit_s" avg 1E-5   #this is a comment
-stat "energy" avg 1E-5   #this is a comment
+"FodoCell without Space Charge, but with MultipoleT elements instead of Multipoles."
+stat "rms_x" avg 1E-5
+stat "rms_y" avg 1E-5
+stat "rms_s" avg 1E-5
+stat "emit_x" avg 1E-5
+stat "emit_y" avg 1E-5
+stat "emit_s" avg 1E-5
+stat "energy" avg 1E-5
