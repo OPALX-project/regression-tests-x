@@ -1,4 +1,4 @@
-OPTION, PSDUMPFREQ = 1;     // 6d data written every 300000 time steps (h5).
+OPTION, PSDUMPFREQ = 300000;     // 6d data written every 300000 time steps (h5).
 OPTION, STATDUMPFREQ = 1;   // Beam Stats written every 10 time steps (stat).
 OPTION, BOUNDPDESTROY=10; // Delete lost particles, if any
 OPTION, AUTOPHASE=4;        // Autophase is on, and phase of max energy
@@ -144,7 +144,7 @@ BEAM1:  BEAM, PARTICLE = ELECTRON, pc = P0, NPART = n_particles,
 //----------------------------------------------------------------------------
 // Simulate the beamline using TRACK and RUN.
 
-TRACK, LINE = SOLine, BEAM = BEAM1, MAXSTEPS = 1, DT = 1e-10, ZSTOP=60.0;
+TRACK, LINE = SOLine, BEAM = BEAM1, MAXSTEPS = 2050, DT = 1e-10, ZSTOP=60.0;
 RUN, METHOD = "PARALLEL",
     FIELDSOLVER = FS_SC;
 ENDTRACK;
