@@ -25,10 +25,11 @@ Each test needs to provide a reference solution under `RegressionTests/test-dir/
 ```bash
 # From inside the top level build/ directory set OPALX_EXE_PATH
 export OPALX_EXE_PATH="$(pwd)/src/opalx"
+
 # From inside the top level regression-tests-x/ directory, add to PATH:
 export PATH="$(pwd)/bin:$PATH"
 ```
-Next, place you input file in a new test directory, e.g.:
+Next, place the input file in a new test directory, e.g.:
 ```text
 RegressionTests/
 └── FodoCell/
@@ -60,5 +61,5 @@ RegressionTests/
     └── reference/
         └── ...
 ```
-Note that the `.local` file determines how the test is executed. It's auto-generated and generally doesn't need to be touched.
+Note that the `.local` file determines how the test is executed. It's auto-generated and generally doesn't need to be touched. Content inside the `reference/` folder is also auto-generated and should not be modified manually.
 
