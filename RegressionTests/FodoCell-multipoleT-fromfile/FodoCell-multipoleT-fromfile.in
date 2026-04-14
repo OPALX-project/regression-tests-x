@@ -106,11 +106,15 @@ FOCUS_POLE_8, FIRST_DRIFT_8, DEFOCUS_POLE_8, SECOND_DRIFT_8,
 FOCUS_POLE_9, FIRST_DRIFT_9, DEFOCUS_POLE_9, SECOND_DRIFT_9
 );
 
-Dist: DISTRIBUTION, TYPE = GAUSS,
-        SIGMAX = 0.01,
-        SIGMAY = 0.01,
-	    SIGMAZ = 0.01,
-        NPARTDIST = n_particles;
+// Dist: DISTRIBUTION, TYPE = GAUSS,
+//        SIGMAX = 0.01,
+//        SIGMAY = 0.01,
+//        SIGMAZ = 0.01,
+//        NPARTDIST = n_particles;
+
+Dist: DISTRIBUTION, TYPE = FROMFILE,
+    FNAME = "distr-multipolet.txt",
+    NPARTDIST = n_particles;
 
 ES1: EMISSIONSOURCE, DISTRIBUTION = Dist;
 mySources: EMISSIONSOURCELIST = (ES1);
@@ -140,7 +144,7 @@ BEAM1:  BEAM, PARTICLE = ELECTRON, pc = P0, NPART = n_particles,
 //----------------------------------------------------------------------------
 // Simulate the beamline using TRACK and RUN.
 
-TRACK, LINE = SOLine, BEAM = BEAM1, MAXSTEPS = 20014, DT = 1e-10, ZSTOP=60.0;
+TRACK, LINE = SOLine, BEAM = BEAM1, MAXSTEPS = 1, DT = 1e-10, ZSTOP=60.0;
 RUN, METHOD = "PARALLEL",
     FIELDSOLVER = FS_SC;
 ENDTRACK;
