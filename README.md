@@ -40,7 +40,7 @@ Note that you can add whatever you need in this directory (like fieldmaps). Only
 cd .../FodoCell
 makeReference.sh # Will automatically pick up the .in file
 ```
-Then, in the test directory, add the `.rt` file (which defines after which parameters the input file is tested against), e.g.:
+Then, in the test directory, add the `.rt` file (which defines which statistics from the `.stat` output are checked and with what tolerance), e.g.:
 ```rt
 "Add one line of meaningful explanation of your test"
 stat "rms_x" avg 1E-5
