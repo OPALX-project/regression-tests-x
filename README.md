@@ -21,10 +21,10 @@ Each test case folder (e.g., `RegressionTests/FodoCell/`) generally contains the
 
 ## Make a Reference
 
-Each test needs to provide a reference solution under `RegressionTests/test-dir/reference/`. Please generate the reference with the provided script `bin/makeReference.sh`. In order to use it, add `bin/` to `PATH` and set the build directory as an env: 
+Each test needs to provide a reference solution under `RegressionTests/test-dir/reference/`. Please generate the reference with the provided script `bin/makeReference.sh`. In order to use it, add `bin/` to `PATH` and set `OPALX_EXE_PATH` to the directory containing the `opalx` binary (not the top-level build directory and not the binary itself):
 ```bash
-# From inside the top level build/ directory set OPALX_EXE_PATH
-export OPALX_EXE_PATH="$(pwd)/src/opalx"
+# From inside the top level build/ directory, point OPALX_EXE_PATH at the directory that contains `opalx`
+export OPALX_EXE_PATH="$(pwd)/src"
 
 # From inside the top level regression-tests-x/ directory, add to PATH:
 export PATH="$(pwd)/bin:$PATH"
