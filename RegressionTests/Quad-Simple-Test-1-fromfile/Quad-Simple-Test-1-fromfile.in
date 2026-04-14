@@ -1,0 +1,58 @@
+OPTION, ECHO=FALSE;
+OPTION, INFO=FALSE;
+OPTION, PSDUMPFREQ=10000;
+OPTION, STATDUMPFREQ=1;
+Option, VERSION=10900;
+
+TITLE, STRING="Quad-Simple-Test-1 (no space charge)";
+
+REAL Edes   = 0.590;
+REAL gamma  = (Edes+PMASS)/PMASS;
+REAL beta   = sqrt(1-(1/gamma^2));
+REAL gambet = gamma*beta;
+REAL P0     = gamma*beta*PMASS;
+REAL brho   = (PMASS*1.0e9*gambet) / CLIGHT;
+REAL rf     = 50.6328e6;  //need to be confirmed
+
+VALUE,{gamma,brho,Edes,beta,gambet};
+
+QP1: QUADRUPOLE, L=0.644, ELEMEDGE=2.000, K1= 4.744;
+QP2: QUADRUPOLE, L=0.644, ELEMEDGE=3.644, K1=-5.616;
+QP3: QUADRUPOLE, L=0.644, ELEMEDGE=5.288, K1= 4.744;
+
+D: DRIFT, L=2.0, ELEMEDGE=5.288+0.644;
+
+QUADTEST: LINE=(QP1,QP2,QP3,D);
+
+//D1: DISTRIBUTION, TYPE = GAUSS,
+//        SIGMAX = 5*1.0e-03, SIGMAPX=0.001,
+//        SIGMAY = 5*1.0e-03, SIGMAPY=0.001,
+//	  SIGMAZ = 0.0005,
+//        NPARTDIST = 1000;
+
+// This is the exact same as D1, but pre-sampled (for reference, please don't change the above distribution without redoing the .txt)
+D1_FF: DISTRIBUTION, TYPE = FROMFILE,
+        FNAME = "input-distribution-gauss.txt",
+        NPARTDIST = 1000;
+	    
+ES1: EMISSIONSOURCE, DISTRIBUTION = D1_FF; // use fromfile version of input distr
+mySources: EMISSIONSOURCELIST = (ES1);
+
+FS1: Fieldsolver, TYPE = NONE,
+            NX = 16, NY = 16, NZ = 16, // SC grid size is 32^3
+            PARFFTX = false,
+            PARFFTY = false,
+            PARFFTZ = true,  // parallel in the z direction only
+            BCFFTX = open,
+            BCFFTY = open,
+            BCFFTZ = open,
+            BBOXINCR = 1,
+            GREENSF = INTEGRATED;
+
+BEAM1: BEAM, PARTICLE=PROTON, PC=P0, NPART=1000, BCURRENT=2.0e-03, BFREQ=rf * 1e-6, SOURCES = mySources, CHARGE=1;
+ 
+TRACK, LINE=QUADTEST, BEAM=BEAM1, MAXSTEPS=4000, DT=1.0e-11, ZSTOP=8.0, ZSTART=0.005;
+ RUN, METHOD = "PARALLEL",  FIELDSOLVER=FS1;
+ENDTRACK;
+
+STOP;

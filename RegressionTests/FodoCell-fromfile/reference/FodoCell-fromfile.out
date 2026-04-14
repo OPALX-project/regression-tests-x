@@ -1,0 +1,2815 @@
+OPAL-X>               ____  _____        _       __   __
+OPAL-X> [1;32m
+OPAL-X> 
+OPAL-X>   ██████  ██████   █████  ██      ██   ██
+OPAL-X>  ██    ██ ██   ██ ██   ██ ██       ██ ██
+OPAL-X>  ██    ██ ██████  ███████ ██        ███
+OPAL-X>  ██    ██ ██      ██   ██ ██       ██ ██
+OPAL-X>   ██████  ██      ██   ██ ███████ ██   ██
+OPAL-X> 
+OPAL-X>          This is OPALX (Object Oriented Parallel Accelerator Library for Exascale)
+OPAL-X> 
+OPAL-X> [0m
+OPAL-X> 
+OPAL-X> OPALX is the performance portable version of OPAL :: Version 0.9
+OPAL-X>             git rev. d5667df15f75705f858ac4531f7a6dd2cfe3daa0
+OPAL-X> 
+OPAL-X> 
+OPAL-X>              (c) PSI, https://github.com/OPALX-project/OPALX
+OPAL-X> 
+OPAL-X> 
+OPAL-X> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL-X> to the OPAL developers https://github.com/OPALX-project/OPALX/issues
+OPAL-X> 
+OPAL-X> Time: 13:13:53 date: 09/04/2026
+OPAL-X> 
+OPAL-X> * Host:   OpenMP
+OPAL-X> * Device: OpenMP
+OPAL-X> 
+OPAL-X> * Reading input stream 'FodoCell-fromfile.in'
+OPAL-X> 
+OPAL-X> value: {EDES,P0,OPALVERSION} = {1, 1.00051, 900}
+OPAL-X> 
+OPAL-X> * ************* F I E L D S O L V E R ********************************************** 
+OPAL-X> * FIELDSOLVER  FS_SC
+OPAL-X> * BINS         NONE
+OPAL-X> * TYPE         NONE
+OPAL-X> * RANKS        1
+OPAL-X> * NX           16
+OPAL-X> * NY           16
+OPAL-X> * NZ           16
+OPAL-X> * BBOXINCR     1
+OPAL-X> * GREENSF      INTEGRATED
+OPAL-X> * XDIM         serial  
+OPAL-X> * YDIM         serial  
+OPAL-X> * ZDIM         parallel  
+OPAL-X> * ********************************************************************************** 
+OPAL-X> 
+OPAL-X> * RUN resolved beams: BEAM1
+OPAL-X> * ************* B E A M ************************************************************ 
+OPAL-X> * BEAM        BEAM1
+OPAL-X> * PARTICLE    ELECTRON
+OPAL-X> * REST MASS   0.000510999 [GeV]
+OPAL-X> * CHARGE      -e * 1 
+OPAL-X> * MOMENTUM    1.00051e+09 [eV/c]
+OPAL-X> * MOMENTUM    1.00051 [GeV/c]
+OPAL-X> * CURRENT     2.08283e-06 [A]
+OPAL-X> * FREQUENCY   1300 [MHz]
+OPAL-X> * NPART       1000
+OPAL-X> * ********************************************************************************** 
+OPAL-X> 
+OPAL-X> 
+OPAL-X> * Creating new file for data: 'FodoCell-fromfile.stat'
+OPAL-X> * Creating new file for data: 'FodoCell-fromfile.lbal'
+FromFile::generateParticles> FromFile: Loaded 1000 particles from file 'input-distribution-gauss.txt'
+FromFile::generateParticles> Rank 0: 1000 local particles
+OPAL-X> 
+OPAL-X> * ************** B U N C H ********************************************************* 
+OPAL-X> * CONTAINER       = 0
+OPAL-X> * PARTICLES       = 1000
+OPAL-X> * CHARGE          = -1.602177e-15 (Cb) 
+OPAL-X> * QM STORAGE MODE = SINGLE
+OPAL-X> * <EKIN>          = 1.000 [GeV]
+OPAL-X> * <dEKIN>         = 0.014 [eV]
+OPAL-X> * INTEGRATOR      = LF2
+OPAL-X> * MIN R (origin)  = (    -29.05193 ,    -29.10437 ,    -27.09135 ) [mm]
+OPAL-X> * MAX R (max ext) = (     28.68475 ,     29.90142 ,     29.16019 ) [mm]
+OPAL-X> * RMS R           = (     10.03918 ,     10.10394 ,      9.75492 ) [mm]
+OPAL-X> * RMS P           = ( 3.092850e-01 , 3.147442e-01 , 5.003483e-05 ) [beta gamma]
+OPAL-X> * Mean R          = ( -1.212177e-08 , -1.830813e-08 , -3.807045e-10 ) [m]
+OPAL-X> * Mean P          = ( -1.583351e-03 , -2.391416e-03 , 1.957951e+03 ) [beta gamma]
+OPAL-X> * MESH SPACING    = (      3.68071 ,      3.76162 ,      3.58604 ) [mm]
+OPAL-X> * COMPDOM INCR    = 1.000000e+00 (%) 
+OPAL-X> * FIELD LAYOUT    = Domain = {[0:15:1],[0:15:1],[0:15:1]}
+OPAL-X> Total number of boxes = 1
+OPAL-X>     Box 0 {[0:15:1],[0:15:1],[0:15:1]}
+OPAL-X> 
+OPAL-X> * Centroid : 
+OPAL-X> * -1.212177e-05 -1.583351e+00 -1.830813e-05 -2.391416e+00 -3.807045e-07 1.957951e+06 
+OPAL-X> * Cov Matrix : 
+OPAL-X> * 1.007852e-04 3.014538e-03 -3.236804e-06 9.479063e-05 3.430719e-07 2.228630e-08 
+OPAL-X> * 3.014538e-03 9.565721e-02 -9.474463e-05 3.004186e-03 3.688023e-05 6.284759e-07 
+OPAL-X> * -3.236804e-06 -9.474463e-05 1.020896e-04 -3.120479e-03 -2.354062e-06 -2.866783e-08 
+OPAL-X> * 9.479063e-05 3.004186e-03 -3.120479e-03 9.906394e-02 1.144624e-04 7.911837e-07 
+OPAL-X> * 3.430719e-07 3.688023e-05 -2.354062e-06 1.144624e-04 9.515838e-05 -7.789121e-08 
+OPAL-X> * 2.228630e-08 6.284759e-07 -2.866783e-08 7.911837e-07 -7.789121e-08 2.503484e-09 
+OPAL-X> * * ********************************************************************************** 
+OPAL-X> 
+OPAL-X> * FOCUS_POLE_0 gone live
+OPAL-X> * FIRST_DRIFT_0 gone live
+OPAL-X> * DEFOCUS_POLE_0 gone live
+OPAL-X> * SECOND_DRIFT_0 gone live
+OPAL-X> * FOCUS_POLE_1 gone live
+OPAL-X> * FIRST_DRIFT_1 gone live
+OPAL-X> * DEFOCUS_POLE_1 gone live
+OPAL-X> * SECOND_DRIFT_1 gone live
+OPAL-X> * FOCUS_POLE_2 gone live
+OPAL-X> * FIRST_DRIFT_2 gone live
+OPAL-X> * DEFOCUS_POLE_2 gone live
+OPAL-X> * SECOND_DRIFT_2 gone live
+OPAL-X> * FOCUS_POLE_3 gone live
+OPAL-X> * FIRST_DRIFT_3 gone live
+OPAL-X> * DEFOCUS_POLE_3 gone live
+OPAL-X> * SECOND_DRIFT_3 gone live
+OPAL-X> * FOCUS_POLE_4 gone live
+OPAL-X> * FIRST_DRIFT_4 gone live
+OPAL-X> * DEFOCUS_POLE_4 gone live
+OPAL-X> * SECOND_DRIFT_4 gone live
+OPAL-X> * FOCUS_POLE_5 gone live
+OPAL-X> * FIRST_DRIFT_5 gone live
+OPAL-X> * DEFOCUS_POLE_5 gone live
+OPAL-X> * SECOND_DRIFT_5 gone live
+OPAL-X> * FOCUS_POLE_6 gone live
+OPAL-X> * FIRST_DRIFT_6 gone live
+OPAL-X> * DEFOCUS_POLE_6 gone live
+OPAL-X> * SECOND_DRIFT_6 gone live
+OPAL-X> * FOCUS_POLE_7 gone live
+OPAL-X> * FIRST_DRIFT_7 gone live
+OPAL-X> * DEFOCUS_POLE_7 gone live
+OPAL-X> * SECOND_DRIFT_7 gone live
+OPAL-X> * FOCUS_POLE_8 gone live
+OPAL-X> * FIRST_DRIFT_8 gone live
+OPAL-X> * DEFOCUS_POLE_8 gone live
+OPAL-X> * SECOND_DRIFT_8 gone live
+OPAL-X> * FOCUS_POLE_9 gone live
+OPAL-X> * FIRST_DRIFT_9 gone live
+OPAL-X> * DEFOCUS_POLE_9 gone live
+OPAL-X> * SECOND_DRIFT_9 gone live
+OPAL-X> * OrbitThreader dt_m= 1e-10
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.80944
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 4.80736
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 10
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 10.8032
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 10
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 16.799
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 10
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 10
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 10
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 10
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 28.2113
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 10
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 22.1855
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 10
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 16.1896
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 13.1917
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 10.1938
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 7.19588
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 10
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.20004
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 61.2882
+OPAL-X> * OrbitThreader #elements  = 0
+OPAL-X> 
+OPAL-X> * Size of map 41 sections 
+OPAL-X> * Key: ( 0.000000 -  0.509647) number of overlapping elements 1
+OPAL-X> *                              FOCUS_POLE_0
+OPAL-X> * Key: ( 0.509647 -  2.997924) number of overlapping elements 1
+OPAL-X> *                              FIRST_DRIFT_0
+OPAL-X> * Key: ( 2.997924 -  3.507571) number of overlapping elements 1
+OPAL-X> *                              DEFOCUS_POLE_0
+OPAL-X> * Key: ( 3.507571 -  5.995848) number of overlapping elements 1
+OPAL-X> *                              SECOND_DRIFT_0
+OPAL-X> * Key: ( 5.995848 -  6.505495) number of overlapping elements 1
+OPAL-X> *                              FOCUS_POLE_1
+OPAL-X> * Key: ( 6.505495 -  8.993773) number of overlapping elements 1
+OPAL-X> *                              FIRST_DRIFT_1
+OPAL-X> * Key: ( 8.993773 -  9.503420) number of overlapping elements 1
+OPAL-X> *                              DEFOCUS_POLE_1
+OPAL-X> * Key: ( 9.503420 - 11.991697) number of overlapping elements 1
+OPAL-X> *                              SECOND_DRIFT_1
+OPAL-X> * Key: (11.991697 - 12.501344) number of overlapping elements 1
+OPAL-X> *                              FOCUS_POLE_2
+OPAL-X> * Key: (12.501344 - 14.989621) number of overlapping elements 1
+OPAL-X> *                              FIRST_DRIFT_2
+OPAL-X> * Key: (14.989621 - 15.499268) number of overlapping elements 1
+OPAL-X> *                              DEFOCUS_POLE_2
+OPAL-X> * Key: (15.499268 - 17.987545) number of overlapping elements 1
+OPAL-X> *                              SECOND_DRIFT_2
+OPAL-X> * Key: (17.987545 - 18.497192) number of overlapping elements 1
+OPAL-X> *                              FOCUS_POLE_3
+OPAL-X> * Key: (18.497192 - 20.985469) number of overlapping elements 1
+OPAL-X> *                              FIRST_DRIFT_3
+OPAL-X> * Key: (20.985469 - 21.495116) number of overlapping elements 1
+OPAL-X> *                              DEFOCUS_POLE_3
+OPAL-X> * Key: (21.495116 - 24.013373) number of overlapping elements 1
+OPAL-X> *                              SECOND_DRIFT_3
+OPAL-X> * Key: (24.013373 - 24.493041) number of overlapping elements 1
+OPAL-X> *                              FOCUS_POLE_4
+OPAL-X> * Key: (24.493041 - 27.011297) number of overlapping elements 1
+OPAL-X> *                              FIRST_DRIFT_4
+OPAL-X> * Key: (27.011297 - 27.490965) number of overlapping elements 1
+OPAL-X> *                              DEFOCUS_POLE_4
+OPAL-X> * Key: (27.490965 - 30.009221) number of overlapping elements 1
+OPAL-X> *                              SECOND_DRIFT_4
+OPAL-X> * Key: (30.009221 - 30.488889) number of overlapping elements 1
+OPAL-X> *                              FOCUS_POLE_5
+OPAL-X> * Key: (30.488889 - 33.007145) number of overlapping elements 1
+OPAL-X> *                              FIRST_DRIFT_5
+OPAL-X> * Key: (33.007145 - 33.486813) number of overlapping elements 1
+OPAL-X> *                              DEFOCUS_POLE_5
+OPAL-X> * Key: (33.486813 - 36.005070) number of overlapping elements 1
+OPAL-X> *                              SECOND_DRIFT_5
+OPAL-X> * Key: (36.005070 - 36.514717) number of overlapping elements 1
+OPAL-X> *                              FOCUS_POLE_6
+OPAL-X> * Key: (36.514717 - 39.002994) number of overlapping elements 1
+OPAL-X> *                              FIRST_DRIFT_6
+OPAL-X> * Key: (39.002994 - 39.512641) number of overlapping elements 1
+OPAL-X> *                              DEFOCUS_POLE_6
+OPAL-X> * Key: (39.512641 - 42.000918) number of overlapping elements 1
+OPAL-X> *                              SECOND_DRIFT_6
+OPAL-X> * Key: (42.000918 - 42.510565) number of overlapping elements 1
+OPAL-X> *                              FOCUS_POLE_7
+OPAL-X> * Key: (42.510565 - 44.998842) number of overlapping elements 1
+OPAL-X> *                              FIRST_DRIFT_7
+OPAL-X> * Key: (44.998842 - 45.508489) number of overlapping elements 1
+OPAL-X> *                              DEFOCUS_POLE_7
+OPAL-X> * Key: (45.508489 - 47.996766) number of overlapping elements 1
+OPAL-X> *                              SECOND_DRIFT_7
+OPAL-X> * Key: (47.996766 - 48.506413) number of overlapping elements 1
+OPAL-X> *                              FOCUS_POLE_8
+OPAL-X> * Key: (48.506413 - 50.994690) number of overlapping elements 1
+OPAL-X> *                              FIRST_DRIFT_8
+OPAL-X> * Key: (50.994690 - 51.504338) number of overlapping elements 1
+OPAL-X> *                              DEFOCUS_POLE_8
+OPAL-X> * Key: (51.504338 - 53.992615) number of overlapping elements 1
+OPAL-X> *                              SECOND_DRIFT_8
+OPAL-X> * Key: (53.992615 - 54.502262) number of overlapping elements 1
+OPAL-X> *                              FOCUS_POLE_9
+OPAL-X> * Key: (54.502262 - 56.990539) number of overlapping elements 1
+OPAL-X> *                              FIRST_DRIFT_9
+OPAL-X> * Key: (56.990539 - 57.500186) number of overlapping elements 1
+OPAL-X> *                              DEFOCUS_POLE_9
+OPAL-X> * Key: (57.500186 - 59.988463) number of overlapping elements 1
+OPAL-X> *                              SECOND_DRIFT_9
+OPAL-X> * Key: (59.988463 - 66.000000) number of overlapping elements 0
+OPAL-X> 
+OPAL-X> * Creating new file for data: 'data/FodoCell-fromfile_ElementPositions.sdds'
+OPAL-X> * Track start at: 13:13:53, t= 0.000 [fs]; zstart at: 0.000 [um]
+OPAL-X> * Initial dt = 100.000 [ps]
+OPAL-X> * Max integration steps = 20014, next step = 0
+OPAL-X>                dt [ns]           zStop [m]        num Steps [1]
+OPAL-X> ->         1.000000e-10        6.000000e+01               20014
+Multipole::apply() called
+OPAL-X> * 13:13:53 Step      0 at 29.979 [mm], t= 100.000 [ps], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:53 Step      1 at 59.958 [mm], t= 200.000 [ps], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:53 Step      2 at 89.938 [mm], t= 300.000 [ps], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:53 Step      3 at 119.917 [mm], t= 400.000 [ps], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:53 Step      4 at 149.896 [mm], t= 500.000 [ps], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:53 Step      5 at 179.875 [mm], t= 600.000 [ps], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:53 Step      6 at 209.855 [mm], t= 700.000 [ps], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:53 Step      7 at 239.834 [mm], t= 800.000 [ps], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:53 Step      8 at 269.813 [mm], t= 900.000 [ps], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:53 Step      9 at 299.792 [mm], t= 1.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:53 Step     10 at 329.772 [mm], t= 1.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:53 Step     11 at 359.751 [mm], t= 1.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:53 Step     12 at 389.730 [mm], t= 1.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:53 Step     13 at 419.709 [mm], t= 1.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:53 Step     14 at 449.689 [mm], t= 1.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:53 Step     15 at 479.668 [mm], t= 1.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:53 Step     16 at 509.647 [mm], t= 1.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:53 Step     17 at 539.626 [mm], t= 1.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:53 Step     18 at 569.606 [mm], t= 1.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     19 at 599.585 [mm], t= 2.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     20 at 629.564 [mm], t= 2.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     21 at 659.543 [mm], t= 2.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     22 at 689.523 [mm], t= 2.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     23 at 719.502 [mm], t= 2.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     24 at 749.481 [mm], t= 2.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     25 at 779.460 [mm], t= 2.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     26 at 809.440 [mm], t= 2.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     27 at 839.419 [mm], t= 2.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     28 at 869.398 [mm], t= 2.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     29 at 899.377 [mm], t= 3.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     30 at 929.356 [mm], t= 3.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     31 at 959.336 [mm], t= 3.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     32 at 989.315 [mm], t= 3.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     33 at 1.019 [m], t= 3.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     34 at 1.049 [m], t= 3.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     35 at 1.079 [m], t= 3.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     36 at 1.109 [m], t= 3.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     37 at 1.139 [m], t= 3.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     38 at 1.169 [m], t= 3.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     39 at 1.199 [m], t= 4.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     40 at 1.229 [m], t= 4.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     41 at 1.259 [m], t= 4.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     42 at 1.289 [m], t= 4.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     43 at 1.319 [m], t= 4.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     44 at 1.349 [m], t= 4.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     45 at 1.379 [m], t= 4.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     46 at 1.409 [m], t= 4.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     47 at 1.439 [m], t= 4.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     48 at 1.469 [m], t= 4.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     49 at 1.499 [m], t= 5.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:53 Step     50 at 1.529 [m], t= 5.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     51 at 1.559 [m], t= 5.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     52 at 1.589 [m], t= 5.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     53 at 1.619 [m], t= 5.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     54 at 1.649 [m], t= 5.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     55 at 1.679 [m], t= 5.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     56 at 1.709 [m], t= 5.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     57 at 1.739 [m], t= 5.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     58 at 1.769 [m], t= 5.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     59 at 1.799 [m], t= 6.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     60 at 1.829 [m], t= 6.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     61 at 1.859 [m], t= 6.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     62 at 1.889 [m], t= 6.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     63 at 1.919 [m], t= 6.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     64 at 1.949 [m], t= 6.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     65 at 1.979 [m], t= 6.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     66 at 2.009 [m], t= 6.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     67 at 2.039 [m], t= 6.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     68 at 2.069 [m], t= 6.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     69 at 2.099 [m], t= 7.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     70 at 2.129 [m], t= 7.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     71 at 2.159 [m], t= 7.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     72 at 2.188 [m], t= 7.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     73 at 2.218 [m], t= 7.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     74 at 2.248 [m], t= 7.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     75 at 2.278 [m], t= 7.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     76 at 2.308 [m], t= 7.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     77 at 2.338 [m], t= 7.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     78 at 2.368 [m], t= 7.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     79 at 2.398 [m], t= 8.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     80 at 2.428 [m], t= 8.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     81 at 2.458 [m], t= 8.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     82 at 2.488 [m], t= 8.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     83 at 2.518 [m], t= 8.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     84 at 2.548 [m], t= 8.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     85 at 2.578 [m], t= 8.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     86 at 2.608 [m], t= 8.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     87 at 2.638 [m], t= 8.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     88 at 2.668 [m], t= 8.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     89 at 2.698 [m], t= 9.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     90 at 2.728 [m], t= 9.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     91 at 2.758 [m], t= 9.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     92 at 2.788 [m], t= 9.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     93 at 2.818 [m], t= 9.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     94 at 2.848 [m], t= 9.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     95 at 2.878 [m], t= 9.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     96 at 2.908 [m], t= 9.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step     97 at 2.938 [m], t= 9.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:54 Step     98 at 2.968 [m], t= 9.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:54 Step     99 at 2.998 [m], t= 10.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:54 Step    100 at 3.028 [m], t= 10.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:54 Step    101 at 3.058 [m], t= 10.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:54 Step    102 at 3.088 [m], t= 10.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:54 Step    103 at 3.118 [m], t= 10.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:54 Step    104 at 3.148 [m], t= 10.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:54 Step    105 at 3.178 [m], t= 10.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:54 Step    106 at 3.208 [m], t= 10.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:54 Step    107 at 3.238 [m], t= 10.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:54 Step    108 at 3.268 [m], t= 10.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:54 Step    109 at 3.298 [m], t= 11.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:54 Step    110 at 3.328 [m], t= 11.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:54 Step    111 at 3.358 [m], t= 11.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:54 Step    112 at 3.388 [m], t= 11.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:54 Step    113 at 3.418 [m], t= 11.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:54 Step    114 at 3.448 [m], t= 11.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:54 Step    115 at 3.478 [m], t= 11.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:54 Step    116 at 3.508 [m], t= 11.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:54 Step    117 at 3.538 [m], t= 11.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:54 Step    118 at 3.568 [m], t= 11.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    119 at 3.598 [m], t= 12.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    120 at 3.627 [m], t= 12.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    121 at 3.657 [m], t= 12.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    122 at 3.687 [m], t= 12.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    123 at 3.717 [m], t= 12.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    124 at 3.747 [m], t= 12.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    125 at 3.777 [m], t= 12.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    126 at 3.807 [m], t= 12.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    127 at 3.837 [m], t= 12.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    128 at 3.867 [m], t= 12.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    129 at 3.897 [m], t= 13.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    130 at 3.927 [m], t= 13.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    131 at 3.957 [m], t= 13.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    132 at 3.987 [m], t= 13.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    133 at 4.017 [m], t= 13.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    134 at 4.047 [m], t= 13.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    135 at 4.077 [m], t= 13.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    136 at 4.107 [m], t= 13.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    137 at 4.137 [m], t= 13.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    138 at 4.167 [m], t= 13.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    139 at 4.197 [m], t= 14.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    140 at 4.227 [m], t= 14.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    141 at 4.257 [m], t= 14.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    142 at 4.287 [m], t= 14.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    143 at 4.317 [m], t= 14.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    144 at 4.347 [m], t= 14.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    145 at 4.377 [m], t= 14.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    146 at 4.407 [m], t= 14.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    147 at 4.437 [m], t= 14.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    148 at 4.467 [m], t= 14.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    149 at 4.497 [m], t= 15.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    150 at 4.527 [m], t= 15.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    151 at 4.557 [m], t= 15.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    152 at 4.587 [m], t= 15.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    153 at 4.617 [m], t= 15.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    154 at 4.647 [m], t= 15.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    155 at 4.677 [m], t= 15.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    156 at 4.707 [m], t= 15.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    157 at 4.737 [m], t= 15.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    158 at 4.767 [m], t= 15.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    159 at 4.797 [m], t= 16.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    160 at 4.827 [m], t= 16.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    161 at 4.857 [m], t= 16.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    162 at 4.887 [m], t= 16.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    163 at 4.917 [m], t= 16.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    164 at 4.947 [m], t= 16.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    165 at 4.977 [m], t= 16.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    166 at 5.007 [m], t= 16.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    167 at 5.037 [m], t= 16.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    168 at 5.066 [m], t= 16.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    169 at 5.096 [m], t= 17.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    170 at 5.126 [m], t= 17.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    171 at 5.156 [m], t= 17.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    172 at 5.186 [m], t= 17.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    173 at 5.216 [m], t= 17.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    174 at 5.246 [m], t= 17.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    175 at 5.276 [m], t= 17.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    176 at 5.306 [m], t= 17.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    177 at 5.336 [m], t= 17.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    178 at 5.366 [m], t= 17.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    179 at 5.396 [m], t= 18.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    180 at 5.426 [m], t= 18.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    181 at 5.456 [m], t= 18.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    182 at 5.486 [m], t= 18.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:54 Step    183 at 5.516 [m], t= 18.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    184 at 5.546 [m], t= 18.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    185 at 5.576 [m], t= 18.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    186 at 5.606 [m], t= 18.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    187 at 5.636 [m], t= 18.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    188 at 5.666 [m], t= 18.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    189 at 5.696 [m], t= 19.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    190 at 5.726 [m], t= 19.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    191 at 5.756 [m], t= 19.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    192 at 5.786 [m], t= 19.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    193 at 5.816 [m], t= 19.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    194 at 5.846 [m], t= 19.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    195 at 5.876 [m], t= 19.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    196 at 5.906 [m], t= 19.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    197 at 5.936 [m], t= 19.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    198 at 5.966 [m], t= 19.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    199 at 5.996 [m], t= 20.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    200 at 6.026 [m], t= 20.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    201 at 6.056 [m], t= 20.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    202 at 6.086 [m], t= 20.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    203 at 6.116 [m], t= 20.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    204 at 6.146 [m], t= 20.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    205 at 6.176 [m], t= 20.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    206 at 6.206 [m], t= 20.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    207 at 6.236 [m], t= 20.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    208 at 6.266 [m], t= 20.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    209 at 6.296 [m], t= 21.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    210 at 6.326 [m], t= 21.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    211 at 6.356 [m], t= 21.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    212 at 6.386 [m], t= 21.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    213 at 6.416 [m], t= 21.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    214 at 6.446 [m], t= 21.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    215 at 6.476 [m], t= 21.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    216 at 6.505 [m], t= 21.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    217 at 6.535 [m], t= 21.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    218 at 6.565 [m], t= 21.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    219 at 6.595 [m], t= 22.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    220 at 6.625 [m], t= 22.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    221 at 6.655 [m], t= 22.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    222 at 6.685 [m], t= 22.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    223 at 6.715 [m], t= 22.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    224 at 6.745 [m], t= 22.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    225 at 6.775 [m], t= 22.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    226 at 6.805 [m], t= 22.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    227 at 6.835 [m], t= 22.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    228 at 6.865 [m], t= 22.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    229 at 6.895 [m], t= 23.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    230 at 6.925 [m], t= 23.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    231 at 6.955 [m], t= 23.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    232 at 6.985 [m], t= 23.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    233 at 7.015 [m], t= 23.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    234 at 7.045 [m], t= 23.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    235 at 7.075 [m], t= 23.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    236 at 7.105 [m], t= 23.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    237 at 7.135 [m], t= 23.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    238 at 7.165 [m], t= 23.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    239 at 7.195 [m], t= 24.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    240 at 7.225 [m], t= 24.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    241 at 7.255 [m], t= 24.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    242 at 7.285 [m], t= 24.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    243 at 7.315 [m], t= 24.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    244 at 7.345 [m], t= 24.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    245 at 7.375 [m], t= 24.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    246 at 7.405 [m], t= 24.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    247 at 7.435 [m], t= 24.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    248 at 7.465 [m], t= 24.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    249 at 7.495 [m], t= 25.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    250 at 7.525 [m], t= 25.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    251 at 7.555 [m], t= 25.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    252 at 7.585 [m], t= 25.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    253 at 7.615 [m], t= 25.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    254 at 7.645 [m], t= 25.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    255 at 7.675 [m], t= 25.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    256 at 7.705 [m], t= 25.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    257 at 7.735 [m], t= 25.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    258 at 7.765 [m], t= 25.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    259 at 7.795 [m], t= 26.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    260 at 7.825 [m], t= 26.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    261 at 7.855 [m], t= 26.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    262 at 7.885 [m], t= 26.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    263 at 7.915 [m], t= 26.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    264 at 7.944 [m], t= 26.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    265 at 7.974 [m], t= 26.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    266 at 8.004 [m], t= 26.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    267 at 8.034 [m], t= 26.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    268 at 8.064 [m], t= 26.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    269 at 8.094 [m], t= 27.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    270 at 8.124 [m], t= 27.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    271 at 8.154 [m], t= 27.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    272 at 8.184 [m], t= 27.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    273 at 8.214 [m], t= 27.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    274 at 8.244 [m], t= 27.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    275 at 8.274 [m], t= 27.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    276 at 8.304 [m], t= 27.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    277 at 8.334 [m], t= 27.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    278 at 8.364 [m], t= 27.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    279 at 8.394 [m], t= 28.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    280 at 8.424 [m], t= 28.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    281 at 8.454 [m], t= 28.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    282 at 8.484 [m], t= 28.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    283 at 8.514 [m], t= 28.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    284 at 8.544 [m], t= 28.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    285 at 8.574 [m], t= 28.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    286 at 8.604 [m], t= 28.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    287 at 8.634 [m], t= 28.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    288 at 8.664 [m], t= 28.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    289 at 8.694 [m], t= 29.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    290 at 8.724 [m], t= 29.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    291 at 8.754 [m], t= 29.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    292 at 8.784 [m], t= 29.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    293 at 8.814 [m], t= 29.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    294 at 8.844 [m], t= 29.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    295 at 8.874 [m], t= 29.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    296 at 8.904 [m], t= 29.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    297 at 8.934 [m], t= 29.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    298 at 8.964 [m], t= 29.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    299 at 8.994 [m], t= 30.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    300 at 9.024 [m], t= 30.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    301 at 9.054 [m], t= 30.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    302 at 9.084 [m], t= 30.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    303 at 9.114 [m], t= 30.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    304 at 9.144 [m], t= 30.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    305 at 9.174 [m], t= 30.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    306 at 9.204 [m], t= 30.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    307 at 9.234 [m], t= 30.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    308 at 9.264 [m], t= 30.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    309 at 9.294 [m], t= 31.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    310 at 9.324 [m], t= 31.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    311 at 9.354 [m], t= 31.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    312 at 9.384 [m], t= 31.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    313 at 9.413 [m], t= 31.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    314 at 9.443 [m], t= 31.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    315 at 9.473 [m], t= 31.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    316 at 9.503 [m], t= 31.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    317 at 9.533 [m], t= 31.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:55 Step    318 at 9.563 [m], t= 31.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    319 at 9.593 [m], t= 32.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    320 at 9.623 [m], t= 32.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:55 Step    321 at 9.653 [m], t= 32.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    322 at 9.683 [m], t= 32.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    323 at 9.713 [m], t= 32.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    324 at 9.743 [m], t= 32.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    325 at 9.773 [m], t= 32.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    326 at 9.803 [m], t= 32.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    327 at 9.833 [m], t= 32.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    328 at 9.863 [m], t= 32.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    329 at 9.893 [m], t= 33.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    330 at 9.923 [m], t= 33.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    331 at 9.953 [m], t= 33.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    332 at 9.983 [m], t= 33.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    333 at 10.013 [m], t= 33.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    334 at 10.043 [m], t= 33.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    335 at 10.073 [m], t= 33.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    336 at 10.103 [m], t= 33.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    337 at 10.133 [m], t= 33.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    338 at 10.163 [m], t= 33.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    339 at 10.193 [m], t= 34.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    340 at 10.223 [m], t= 34.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    341 at 10.253 [m], t= 34.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    342 at 10.283 [m], t= 34.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    343 at 10.313 [m], t= 34.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    344 at 10.343 [m], t= 34.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    345 at 10.373 [m], t= 34.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    346 at 10.403 [m], t= 34.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    347 at 10.433 [m], t= 34.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    348 at 10.463 [m], t= 34.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    349 at 10.493 [m], t= 35.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    350 at 10.523 [m], t= 35.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    351 at 10.553 [m], t= 35.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    352 at 10.583 [m], t= 35.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    353 at 10.613 [m], t= 35.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    354 at 10.643 [m], t= 35.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    355 at 10.673 [m], t= 35.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    356 at 10.703 [m], t= 35.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    357 at 10.733 [m], t= 35.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    358 at 10.763 [m], t= 35.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    359 at 10.793 [m], t= 36.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    360 at 10.823 [m], t= 36.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    361 at 10.852 [m], t= 36.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    362 at 10.882 [m], t= 36.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    363 at 10.912 [m], t= 36.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    364 at 10.942 [m], t= 36.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    365 at 10.972 [m], t= 36.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    366 at 11.002 [m], t= 36.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    367 at 11.032 [m], t= 36.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    368 at 11.062 [m], t= 36.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    369 at 11.092 [m], t= 37.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    370 at 11.122 [m], t= 37.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    371 at 11.152 [m], t= 37.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    372 at 11.182 [m], t= 37.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    373 at 11.212 [m], t= 37.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    374 at 11.242 [m], t= 37.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    375 at 11.272 [m], t= 37.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    376 at 11.302 [m], t= 37.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    377 at 11.332 [m], t= 37.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    378 at 11.362 [m], t= 37.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    379 at 11.392 [m], t= 38.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    380 at 11.422 [m], t= 38.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    381 at 11.452 [m], t= 38.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    382 at 11.482 [m], t= 38.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    383 at 11.512 [m], t= 38.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    384 at 11.542 [m], t= 38.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    385 at 11.572 [m], t= 38.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    386 at 11.602 [m], t= 38.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    387 at 11.632 [m], t= 38.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    388 at 11.662 [m], t= 38.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    389 at 11.692 [m], t= 39.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    390 at 11.722 [m], t= 39.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    391 at 11.752 [m], t= 39.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    392 at 11.782 [m], t= 39.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    393 at 11.812 [m], t= 39.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    394 at 11.842 [m], t= 39.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    395 at 11.872 [m], t= 39.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    396 at 11.902 [m], t= 39.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    397 at 11.932 [m], t= 39.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:56 Step    398 at 11.962 [m], t= 39.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:56 Step    399 at 11.992 [m], t= 40.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:56 Step    400 at 12.022 [m], t= 40.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:56 Step    401 at 12.052 [m], t= 40.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:56 Step    402 at 12.082 [m], t= 40.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:56 Step    403 at 12.112 [m], t= 40.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:56 Step    404 at 12.142 [m], t= 40.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:56 Step    405 at 12.172 [m], t= 40.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:56 Step    406 at 12.202 [m], t= 40.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:56 Step    407 at 12.232 [m], t= 40.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:56 Step    408 at 12.262 [m], t= 40.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:56 Step    409 at 12.291 [m], t= 41.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:56 Step    410 at 12.321 [m], t= 41.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:56 Step    411 at 12.351 [m], t= 41.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:56 Step    412 at 12.381 [m], t= 41.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:56 Step    413 at 12.411 [m], t= 41.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:56 Step    414 at 12.441 [m], t= 41.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:56 Step    415 at 12.471 [m], t= 41.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:56 Step    416 at 12.501 [m], t= 41.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:56 Step    417 at 12.531 [m], t= 41.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:56 Step    418 at 12.561 [m], t= 41.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    419 at 12.591 [m], t= 42.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    420 at 12.621 [m], t= 42.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    421 at 12.651 [m], t= 42.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    422 at 12.681 [m], t= 42.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    423 at 12.711 [m], t= 42.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    424 at 12.741 [m], t= 42.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    425 at 12.771 [m], t= 42.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    426 at 12.801 [m], t= 42.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    427 at 12.831 [m], t= 42.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    428 at 12.861 [m], t= 42.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    429 at 12.891 [m], t= 43.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    430 at 12.921 [m], t= 43.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    431 at 12.951 [m], t= 43.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    432 at 12.981 [m], t= 43.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    433 at 13.011 [m], t= 43.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    434 at 13.041 [m], t= 43.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    435 at 13.071 [m], t= 43.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    436 at 13.101 [m], t= 43.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    437 at 13.131 [m], t= 43.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    438 at 13.161 [m], t= 43.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    439 at 13.191 [m], t= 44.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    440 at 13.221 [m], t= 44.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    441 at 13.251 [m], t= 44.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    442 at 13.281 [m], t= 44.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    443 at 13.311 [m], t= 44.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    444 at 13.341 [m], t= 44.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    445 at 13.371 [m], t= 44.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    446 at 13.401 [m], t= 44.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    447 at 13.431 [m], t= 44.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    448 at 13.461 [m], t= 44.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    449 at 13.491 [m], t= 45.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    450 at 13.521 [m], t= 45.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    451 at 13.551 [m], t= 45.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    452 at 13.581 [m], t= 45.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    453 at 13.611 [m], t= 45.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    454 at 13.641 [m], t= 45.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    455 at 13.671 [m], t= 45.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    456 at 13.701 [m], t= 45.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    457 at 13.730 [m], t= 45.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    458 at 13.760 [m], t= 45.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    459 at 13.790 [m], t= 46.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    460 at 13.820 [m], t= 46.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    461 at 13.850 [m], t= 46.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    462 at 13.880 [m], t= 46.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    463 at 13.910 [m], t= 46.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    464 at 13.940 [m], t= 46.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    465 at 13.970 [m], t= 46.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:56 Step    466 at 14.000 [m], t= 46.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    467 at 14.030 [m], t= 46.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    468 at 14.060 [m], t= 46.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    469 at 14.090 [m], t= 47.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    470 at 14.120 [m], t= 47.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    471 at 14.150 [m], t= 47.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    472 at 14.180 [m], t= 47.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    473 at 14.210 [m], t= 47.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    474 at 14.240 [m], t= 47.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    475 at 14.270 [m], t= 47.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    476 at 14.300 [m], t= 47.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    477 at 14.330 [m], t= 47.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    478 at 14.360 [m], t= 47.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    479 at 14.390 [m], t= 48.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    480 at 14.420 [m], t= 48.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    481 at 14.450 [m], t= 48.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    482 at 14.480 [m], t= 48.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    483 at 14.510 [m], t= 48.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    484 at 14.540 [m], t= 48.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    485 at 14.570 [m], t= 48.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    486 at 14.600 [m], t= 48.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    487 at 14.630 [m], t= 48.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    488 at 14.660 [m], t= 48.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    489 at 14.690 [m], t= 49.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    490 at 14.720 [m], t= 49.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    491 at 14.750 [m], t= 49.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    492 at 14.780 [m], t= 49.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    493 at 14.810 [m], t= 49.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    494 at 14.840 [m], t= 49.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    495 at 14.870 [m], t= 49.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    496 at 14.900 [m], t= 49.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    497 at 14.930 [m], t= 49.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    498 at 14.960 [m], t= 49.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    499 at 14.990 [m], t= 50.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    500 at 15.020 [m], t= 50.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    501 at 15.050 [m], t= 50.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    502 at 15.080 [m], t= 50.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    503 at 15.110 [m], t= 50.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    504 at 15.140 [m], t= 50.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    505 at 15.169 [m], t= 50.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    506 at 15.199 [m], t= 50.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    507 at 15.229 [m], t= 50.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    508 at 15.259 [m], t= 50.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    509 at 15.289 [m], t= 51.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    510 at 15.319 [m], t= 51.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    511 at 15.349 [m], t= 51.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    512 at 15.379 [m], t= 51.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    513 at 15.409 [m], t= 51.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    514 at 15.439 [m], t= 51.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    515 at 15.469 [m], t= 51.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    516 at 15.499 [m], t= 51.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    517 at 15.529 [m], t= 51.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    518 at 15.559 [m], t= 51.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    519 at 15.589 [m], t= 52.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    520 at 15.619 [m], t= 52.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    521 at 15.649 [m], t= 52.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    522 at 15.679 [m], t= 52.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    523 at 15.709 [m], t= 52.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    524 at 15.739 [m], t= 52.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    525 at 15.769 [m], t= 52.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    526 at 15.799 [m], t= 52.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    527 at 15.829 [m], t= 52.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    528 at 15.859 [m], t= 52.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    529 at 15.889 [m], t= 53.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    530 at 15.919 [m], t= 53.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    531 at 15.949 [m], t= 53.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    532 at 15.979 [m], t= 53.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    533 at 16.009 [m], t= 53.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    534 at 16.039 [m], t= 53.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    535 at 16.069 [m], t= 53.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    536 at 16.099 [m], t= 53.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    537 at 16.129 [m], t= 53.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    538 at 16.159 [m], t= 53.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    539 at 16.189 [m], t= 54.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    540 at 16.219 [m], t= 54.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    541 at 16.249 [m], t= 54.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    542 at 16.279 [m], t= 54.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    543 at 16.309 [m], t= 54.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    544 at 16.339 [m], t= 54.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    545 at 16.369 [m], t= 54.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    546 at 16.399 [m], t= 54.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    547 at 16.429 [m], t= 54.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    548 at 16.459 [m], t= 54.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    549 at 16.489 [m], t= 55.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    550 at 16.519 [m], t= 55.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    551 at 16.549 [m], t= 55.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    552 at 16.579 [m], t= 55.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    553 at 16.609 [m], t= 55.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    554 at 16.638 [m], t= 55.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    555 at 16.668 [m], t= 55.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    556 at 16.698 [m], t= 55.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    557 at 16.728 [m], t= 55.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    558 at 16.758 [m], t= 55.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    559 at 16.788 [m], t= 56.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    560 at 16.818 [m], t= 56.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    561 at 16.848 [m], t= 56.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    562 at 16.878 [m], t= 56.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    563 at 16.908 [m], t= 56.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    564 at 16.938 [m], t= 56.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    565 at 16.968 [m], t= 56.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    566 at 16.998 [m], t= 56.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    567 at 17.028 [m], t= 56.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    568 at 17.058 [m], t= 56.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    569 at 17.088 [m], t= 57.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    570 at 17.118 [m], t= 57.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    571 at 17.148 [m], t= 57.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    572 at 17.178 [m], t= 57.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    573 at 17.208 [m], t= 57.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    574 at 17.238 [m], t= 57.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    575 at 17.268 [m], t= 57.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    576 at 17.298 [m], t= 57.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    577 at 17.328 [m], t= 57.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    578 at 17.358 [m], t= 57.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    579 at 17.388 [m], t= 58.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    580 at 17.418 [m], t= 58.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    581 at 17.448 [m], t= 58.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    582 at 17.478 [m], t= 58.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    583 at 17.508 [m], t= 58.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    584 at 17.538 [m], t= 58.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    585 at 17.568 [m], t= 58.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    586 at 17.598 [m], t= 58.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    587 at 17.628 [m], t= 58.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    588 at 17.658 [m], t= 58.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    589 at 17.688 [m], t= 59.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    590 at 17.718 [m], t= 59.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    591 at 17.748 [m], t= 59.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    592 at 17.778 [m], t= 59.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    593 at 17.808 [m], t= 59.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    594 at 17.838 [m], t= 59.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    595 at 17.868 [m], t= 59.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    596 at 17.898 [m], t= 59.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:57 Step    597 at 17.928 [m], t= 59.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    598 at 17.958 [m], t= 59.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:57 Step    599 at 17.988 [m], t= 60.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    600 at 18.018 [m], t= 60.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    601 at 18.048 [m], t= 60.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    602 at 18.077 [m], t= 60.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    603 at 18.107 [m], t= 60.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    604 at 18.137 [m], t= 60.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    605 at 18.167 [m], t= 60.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    606 at 18.197 [m], t= 60.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    607 at 18.227 [m], t= 60.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    608 at 18.257 [m], t= 60.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    609 at 18.287 [m], t= 61.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    610 at 18.317 [m], t= 61.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    611 at 18.347 [m], t= 61.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    612 at 18.377 [m], t= 61.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    613 at 18.407 [m], t= 61.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    614 at 18.437 [m], t= 61.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    615 at 18.467 [m], t= 61.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    616 at 18.497 [m], t= 61.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    617 at 18.527 [m], t= 61.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    618 at 18.557 [m], t= 61.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    619 at 18.587 [m], t= 62.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    620 at 18.617 [m], t= 62.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    621 at 18.647 [m], t= 62.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    622 at 18.677 [m], t= 62.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    623 at 18.707 [m], t= 62.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    624 at 18.737 [m], t= 62.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    625 at 18.767 [m], t= 62.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    626 at 18.797 [m], t= 62.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    627 at 18.827 [m], t= 62.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    628 at 18.857 [m], t= 62.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    629 at 18.887 [m], t= 63.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    630 at 18.917 [m], t= 63.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    631 at 18.947 [m], t= 63.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    632 at 18.977 [m], t= 63.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    633 at 19.007 [m], t= 63.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    634 at 19.037 [m], t= 63.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    635 at 19.067 [m], t= 63.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    636 at 19.097 [m], t= 63.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    637 at 19.127 [m], t= 63.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    638 at 19.157 [m], t= 63.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    639 at 19.187 [m], t= 64.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    640 at 19.217 [m], t= 64.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    641 at 19.247 [m], t= 64.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    642 at 19.277 [m], t= 64.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    643 at 19.307 [m], t= 64.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    644 at 19.337 [m], t= 64.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    645 at 19.367 [m], t= 64.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    646 at 19.397 [m], t= 64.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    647 at 19.427 [m], t= 64.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    648 at 19.457 [m], t= 64.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    649 at 19.487 [m], t= 65.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    650 at 19.516 [m], t= 65.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    651 at 19.546 [m], t= 65.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    652 at 19.576 [m], t= 65.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    653 at 19.606 [m], t= 65.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    654 at 19.636 [m], t= 65.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    655 at 19.666 [m], t= 65.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    656 at 19.696 [m], t= 65.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    657 at 19.726 [m], t= 65.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    658 at 19.756 [m], t= 65.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    659 at 19.786 [m], t= 66.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    660 at 19.816 [m], t= 66.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    661 at 19.846 [m], t= 66.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    662 at 19.876 [m], t= 66.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    663 at 19.906 [m], t= 66.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    664 at 19.936 [m], t= 66.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    665 at 19.966 [m], t= 66.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    666 at 19.996 [m], t= 66.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    667 at 20.026 [m], t= 66.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    668 at 20.056 [m], t= 66.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    669 at 20.086 [m], t= 67.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    670 at 20.116 [m], t= 67.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    671 at 20.146 [m], t= 67.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    672 at 20.176 [m], t= 67.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    673 at 20.206 [m], t= 67.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    674 at 20.236 [m], t= 67.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    675 at 20.266 [m], t= 67.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    676 at 20.296 [m], t= 67.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    677 at 20.326 [m], t= 67.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    678 at 20.356 [m], t= 67.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    679 at 20.386 [m], t= 68.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    680 at 20.416 [m], t= 68.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    681 at 20.446 [m], t= 68.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    682 at 20.476 [m], t= 68.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    683 at 20.506 [m], t= 68.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    684 at 20.536 [m], t= 68.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    685 at 20.566 [m], t= 68.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    686 at 20.596 [m], t= 68.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    687 at 20.626 [m], t= 68.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    688 at 20.656 [m], t= 68.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    689 at 20.686 [m], t= 69.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    690 at 20.716 [m], t= 69.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    691 at 20.746 [m], t= 69.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    692 at 20.776 [m], t= 69.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    693 at 20.806 [m], t= 69.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    694 at 20.836 [m], t= 69.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    695 at 20.866 [m], t= 69.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    696 at 20.896 [m], t= 69.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    697 at 20.926 [m], t= 69.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    698 at 20.955 [m], t= 69.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    699 at 20.985 [m], t= 70.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    700 at 21.015 [m], t= 70.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    701 at 21.045 [m], t= 70.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    702 at 21.075 [m], t= 70.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    703 at 21.105 [m], t= 70.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    704 at 21.135 [m], t= 70.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    705 at 21.165 [m], t= 70.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    706 at 21.195 [m], t= 70.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    707 at 21.225 [m], t= 70.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    708 at 21.255 [m], t= 70.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    709 at 21.285 [m], t= 71.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    710 at 21.315 [m], t= 71.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    711 at 21.345 [m], t= 71.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    712 at 21.375 [m], t= 71.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    713 at 21.405 [m], t= 71.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    714 at 21.435 [m], t= 71.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    715 at 21.465 [m], t= 71.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    716 at 21.495 [m], t= 71.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    717 at 21.525 [m], t= 71.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:58 Step    718 at 21.555 [m], t= 71.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    719 at 21.585 [m], t= 72.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    720 at 21.615 [m], t= 72.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    721 at 21.645 [m], t= 72.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    722 at 21.675 [m], t= 72.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    723 at 21.705 [m], t= 72.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    724 at 21.735 [m], t= 72.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    725 at 21.765 [m], t= 72.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    726 at 21.795 [m], t= 72.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    727 at 21.825 [m], t= 72.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    728 at 21.855 [m], t= 72.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    729 at 21.885 [m], t= 73.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    730 at 21.915 [m], t= 73.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    731 at 21.945 [m], t= 73.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    732 at 21.975 [m], t= 73.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    733 at 22.005 [m], t= 73.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    734 at 22.035 [m], t= 73.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    735 at 22.065 [m], t= 73.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    736 at 22.095 [m], t= 73.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    737 at 22.125 [m], t= 73.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    738 at 22.155 [m], t= 73.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    739 at 22.185 [m], t= 74.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    740 at 22.215 [m], t= 74.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:58 Step    741 at 22.245 [m], t= 74.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    742 at 22.275 [m], t= 74.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    743 at 22.305 [m], t= 74.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    744 at 22.335 [m], t= 74.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    745 at 22.365 [m], t= 74.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    746 at 22.394 [m], t= 74.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    747 at 22.424 [m], t= 74.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    748 at 22.454 [m], t= 74.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    749 at 22.484 [m], t= 75.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    750 at 22.514 [m], t= 75.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    751 at 22.544 [m], t= 75.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    752 at 22.574 [m], t= 75.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    753 at 22.604 [m], t= 75.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    754 at 22.634 [m], t= 75.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    755 at 22.664 [m], t= 75.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    756 at 22.694 [m], t= 75.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    757 at 22.724 [m], t= 75.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    758 at 22.754 [m], t= 75.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    759 at 22.784 [m], t= 76.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    760 at 22.814 [m], t= 76.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    761 at 22.844 [m], t= 76.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    762 at 22.874 [m], t= 76.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    763 at 22.904 [m], t= 76.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    764 at 22.934 [m], t= 76.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    765 at 22.964 [m], t= 76.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    766 at 22.994 [m], t= 76.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    767 at 23.024 [m], t= 76.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    768 at 23.054 [m], t= 76.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    769 at 23.084 [m], t= 77.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    770 at 23.114 [m], t= 77.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    771 at 23.144 [m], t= 77.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    772 at 23.174 [m], t= 77.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    773 at 23.204 [m], t= 77.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    774 at 23.234 [m], t= 77.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    775 at 23.264 [m], t= 77.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    776 at 23.294 [m], t= 77.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    777 at 23.324 [m], t= 77.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    778 at 23.354 [m], t= 77.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    779 at 23.384 [m], t= 78.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    780 at 23.414 [m], t= 78.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    781 at 23.444 [m], t= 78.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    782 at 23.474 [m], t= 78.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    783 at 23.504 [m], t= 78.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    784 at 23.534 [m], t= 78.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    785 at 23.564 [m], t= 78.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    786 at 23.594 [m], t= 78.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    787 at 23.624 [m], t= 78.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    788 at 23.654 [m], t= 78.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    789 at 23.684 [m], t= 79.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    790 at 23.714 [m], t= 79.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    791 at 23.744 [m], t= 79.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    792 at 23.774 [m], t= 79.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    793 at 23.804 [m], t= 79.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    794 at 23.833 [m], t= 79.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    795 at 23.863 [m], t= 79.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    796 at 23.893 [m], t= 79.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    797 at 23.923 [m], t= 79.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    798 at 23.953 [m], t= 79.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:59 Step    799 at 23.983 [m], t= 80.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:59 Step    800 at 24.013 [m], t= 80.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:59 Step    801 at 24.043 [m], t= 80.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:59 Step    802 at 24.073 [m], t= 80.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:59 Step    803 at 24.103 [m], t= 80.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:59 Step    804 at 24.133 [m], t= 80.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:59 Step    805 at 24.163 [m], t= 80.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:59 Step    806 at 24.193 [m], t= 80.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:59 Step    807 at 24.223 [m], t= 80.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:59 Step    808 at 24.253 [m], t= 80.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:59 Step    809 at 24.283 [m], t= 81.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:59 Step    810 at 24.313 [m], t= 81.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:59 Step    811 at 24.343 [m], t= 81.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:59 Step    812 at 24.373 [m], t= 81.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:59 Step    813 at 24.403 [m], t= 81.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:59 Step    814 at 24.433 [m], t= 81.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:59 Step    815 at 24.463 [m], t= 81.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:59 Step    816 at 24.493 [m], t= 81.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:59 Step    817 at 24.523 [m], t= 81.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:13:59 Step    818 at 24.553 [m], t= 81.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    819 at 24.583 [m], t= 82.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    820 at 24.613 [m], t= 82.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    821 at 24.643 [m], t= 82.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    822 at 24.673 [m], t= 82.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    823 at 24.703 [m], t= 82.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    824 at 24.733 [m], t= 82.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    825 at 24.763 [m], t= 82.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    826 at 24.793 [m], t= 82.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    827 at 24.823 [m], t= 82.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    828 at 24.853 [m], t= 82.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    829 at 24.883 [m], t= 83.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    830 at 24.913 [m], t= 83.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    831 at 24.943 [m], t= 83.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    832 at 24.973 [m], t= 83.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    833 at 25.003 [m], t= 83.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    834 at 25.033 [m], t= 83.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    835 at 25.063 [m], t= 83.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    836 at 25.093 [m], t= 83.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    837 at 25.123 [m], t= 83.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    838 at 25.153 [m], t= 83.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    839 at 25.183 [m], t= 84.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    840 at 25.213 [m], t= 84.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    841 at 25.243 [m], t= 84.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    842 at 25.273 [m], t= 84.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    843 at 25.302 [m], t= 84.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    844 at 25.332 [m], t= 84.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    845 at 25.362 [m], t= 84.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    846 at 25.392 [m], t= 84.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    847 at 25.422 [m], t= 84.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    848 at 25.452 [m], t= 84.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    849 at 25.482 [m], t= 85.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    850 at 25.512 [m], t= 85.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    851 at 25.542 [m], t= 85.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    852 at 25.572 [m], t= 85.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    853 at 25.602 [m], t= 85.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    854 at 25.632 [m], t= 85.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    855 at 25.662 [m], t= 85.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    856 at 25.692 [m], t= 85.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    857 at 25.722 [m], t= 85.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    858 at 25.752 [m], t= 85.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    859 at 25.782 [m], t= 86.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    860 at 25.812 [m], t= 86.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    861 at 25.842 [m], t= 86.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    862 at 25.872 [m], t= 86.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    863 at 25.902 [m], t= 86.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    864 at 25.932 [m], t= 86.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    865 at 25.962 [m], t= 86.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    866 at 25.992 [m], t= 86.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    867 at 26.022 [m], t= 86.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    868 at 26.052 [m], t= 86.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    869 at 26.082 [m], t= 87.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    870 at 26.112 [m], t= 87.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    871 at 26.142 [m], t= 87.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    872 at 26.172 [m], t= 87.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    873 at 26.202 [m], t= 87.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    874 at 26.232 [m], t= 87.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    875 at 26.262 [m], t= 87.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    876 at 26.292 [m], t= 87.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    877 at 26.322 [m], t= 87.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    878 at 26.352 [m], t= 87.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    879 at 26.382 [m], t= 88.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    880 at 26.412 [m], t= 88.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    881 at 26.442 [m], t= 88.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    882 at 26.472 [m], t= 88.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    883 at 26.502 [m], t= 88.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    884 at 26.532 [m], t= 88.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:13:59 Step    885 at 26.562 [m], t= 88.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    886 at 26.592 [m], t= 88.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    887 at 26.622 [m], t= 88.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    888 at 26.652 [m], t= 88.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    889 at 26.682 [m], t= 89.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    890 at 26.712 [m], t= 89.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    891 at 26.741 [m], t= 89.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    892 at 26.771 [m], t= 89.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    893 at 26.801 [m], t= 89.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    894 at 26.831 [m], t= 89.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    895 at 26.861 [m], t= 89.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    896 at 26.891 [m], t= 89.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    897 at 26.921 [m], t= 89.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    898 at 26.951 [m], t= 89.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step    899 at 26.981 [m], t= 90.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step    900 at 27.011 [m], t= 90.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step    901 at 27.041 [m], t= 90.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step    902 at 27.071 [m], t= 90.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step    903 at 27.101 [m], t= 90.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step    904 at 27.131 [m], t= 90.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step    905 at 27.161 [m], t= 90.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step    906 at 27.191 [m], t= 90.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step    907 at 27.221 [m], t= 90.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step    908 at 27.251 [m], t= 90.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step    909 at 27.281 [m], t= 91.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step    910 at 27.311 [m], t= 91.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step    911 at 27.341 [m], t= 91.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step    912 at 27.371 [m], t= 91.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step    913 at 27.401 [m], t= 91.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step    914 at 27.431 [m], t= 91.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step    915 at 27.461 [m], t= 91.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step    916 at 27.491 [m], t= 91.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step    917 at 27.521 [m], t= 91.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step    918 at 27.551 [m], t= 91.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    919 at 27.581 [m], t= 92.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    920 at 27.611 [m], t= 92.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    921 at 27.641 [m], t= 92.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    922 at 27.671 [m], t= 92.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    923 at 27.701 [m], t= 92.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    924 at 27.731 [m], t= 92.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    925 at 27.761 [m], t= 92.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    926 at 27.791 [m], t= 92.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    927 at 27.821 [m], t= 92.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    928 at 27.851 [m], t= 92.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    929 at 27.881 [m], t= 93.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    930 at 27.911 [m], t= 93.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    931 at 27.941 [m], t= 93.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    932 at 27.971 [m], t= 93.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    933 at 28.001 [m], t= 93.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    934 at 28.031 [m], t= 93.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    935 at 28.061 [m], t= 93.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    936 at 28.091 [m], t= 93.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    937 at 28.121 [m], t= 93.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    938 at 28.151 [m], t= 93.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    939 at 28.180 [m], t= 94.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    940 at 28.210 [m], t= 94.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    941 at 28.240 [m], t= 94.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    942 at 28.270 [m], t= 94.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    943 at 28.300 [m], t= 94.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    944 at 28.330 [m], t= 94.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    945 at 28.360 [m], t= 94.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    946 at 28.390 [m], t= 94.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    947 at 28.420 [m], t= 94.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    948 at 28.450 [m], t= 94.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    949 at 28.480 [m], t= 95.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    950 at 28.510 [m], t= 95.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    951 at 28.540 [m], t= 95.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    952 at 28.570 [m], t= 95.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    953 at 28.600 [m], t= 95.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    954 at 28.630 [m], t= 95.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    955 at 28.660 [m], t= 95.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    956 at 28.690 [m], t= 95.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    957 at 28.720 [m], t= 95.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    958 at 28.750 [m], t= 95.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    959 at 28.780 [m], t= 96.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    960 at 28.810 [m], t= 96.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    961 at 28.840 [m], t= 96.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    962 at 28.870 [m], t= 96.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    963 at 28.900 [m], t= 96.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    964 at 28.930 [m], t= 96.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    965 at 28.960 [m], t= 96.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    966 at 28.990 [m], t= 96.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    967 at 29.020 [m], t= 96.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    968 at 29.050 [m], t= 96.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    969 at 29.080 [m], t= 97.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    970 at 29.110 [m], t= 97.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    971 at 29.140 [m], t= 97.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    972 at 29.170 [m], t= 97.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    973 at 29.200 [m], t= 97.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    974 at 29.230 [m], t= 97.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    975 at 29.260 [m], t= 97.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    976 at 29.290 [m], t= 97.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    977 at 29.320 [m], t= 97.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    978 at 29.350 [m], t= 97.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    979 at 29.380 [m], t= 98.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    980 at 29.410 [m], t= 98.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    981 at 29.440 [m], t= 98.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    982 at 29.470 [m], t= 98.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    983 at 29.500 [m], t= 98.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    984 at 29.530 [m], t= 98.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    985 at 29.560 [m], t= 98.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    986 at 29.590 [m], t= 98.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    987 at 29.619 [m], t= 98.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    988 at 29.649 [m], t= 98.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    989 at 29.679 [m], t= 99.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    990 at 29.709 [m], t= 99.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    991 at 29.739 [m], t= 99.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    992 at 29.769 [m], t= 99.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    993 at 29.799 [m], t= 99.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    994 at 29.829 [m], t= 99.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    995 at 29.859 [m], t= 99.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    996 at 29.889 [m], t= 99.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    997 at 29.919 [m], t= 99.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step    998 at 29.949 [m], t= 99.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step    999 at 29.979 [m], t= 100.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step   1000 at 30.009 [m], t= 100.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step   1001 at 30.039 [m], t= 100.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step   1002 at 30.069 [m], t= 100.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step   1003 at 30.099 [m], t= 100.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step   1004 at 30.129 [m], t= 100.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step   1005 at 30.159 [m], t= 100.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step   1006 at 30.189 [m], t= 100.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step   1007 at 30.219 [m], t= 100.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step   1008 at 30.249 [m], t= 100.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step   1009 at 30.279 [m], t= 101.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step   1010 at 30.309 [m], t= 101.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step   1011 at 30.339 [m], t= 101.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step   1012 at 30.369 [m], t= 101.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step   1013 at 30.399 [m], t= 101.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step   1014 at 30.429 [m], t= 101.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step   1015 at 30.459 [m], t= 101.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step   1016 at 30.489 [m], t= 101.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step   1017 at 30.519 [m], t= 101.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:00 Step   1018 at 30.549 [m], t= 101.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step   1019 at 30.579 [m], t= 102.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step   1020 at 30.609 [m], t= 102.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step   1021 at 30.639 [m], t= 102.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step   1022 at 30.669 [m], t= 102.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step   1023 at 30.699 [m], t= 102.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step   1024 at 30.729 [m], t= 102.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step   1025 at 30.759 [m], t= 102.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step   1026 at 30.789 [m], t= 102.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step   1027 at 30.819 [m], t= 102.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step   1028 at 30.849 [m], t= 102.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step   1029 at 30.879 [m], t= 103.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:00 Step   1030 at 30.909 [m], t= 103.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1031 at 30.939 [m], t= 103.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1032 at 30.969 [m], t= 103.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1033 at 30.999 [m], t= 103.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1034 at 31.029 [m], t= 103.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1035 at 31.058 [m], t= 103.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1036 at 31.088 [m], t= 103.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1037 at 31.118 [m], t= 103.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1038 at 31.148 [m], t= 103.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1039 at 31.178 [m], t= 104.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1040 at 31.208 [m], t= 104.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1041 at 31.238 [m], t= 104.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1042 at 31.268 [m], t= 104.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1043 at 31.298 [m], t= 104.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1044 at 31.328 [m], t= 104.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1045 at 31.358 [m], t= 104.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1046 at 31.388 [m], t= 104.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1047 at 31.418 [m], t= 104.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1048 at 31.448 [m], t= 104.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1049 at 31.478 [m], t= 105.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1050 at 31.508 [m], t= 105.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1051 at 31.538 [m], t= 105.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1052 at 31.568 [m], t= 105.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1053 at 31.598 [m], t= 105.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1054 at 31.628 [m], t= 105.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1055 at 31.658 [m], t= 105.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1056 at 31.688 [m], t= 105.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1057 at 31.718 [m], t= 105.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1058 at 31.748 [m], t= 105.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1059 at 31.778 [m], t= 106.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1060 at 31.808 [m], t= 106.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1061 at 31.838 [m], t= 106.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1062 at 31.868 [m], t= 106.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1063 at 31.898 [m], t= 106.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1064 at 31.928 [m], t= 106.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1065 at 31.958 [m], t= 106.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1066 at 31.988 [m], t= 106.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1067 at 32.018 [m], t= 106.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1068 at 32.048 [m], t= 106.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1069 at 32.078 [m], t= 107.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1070 at 32.108 [m], t= 107.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1071 at 32.138 [m], t= 107.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1072 at 32.168 [m], t= 107.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1073 at 32.198 [m], t= 107.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1074 at 32.228 [m], t= 107.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1075 at 32.258 [m], t= 107.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1076 at 32.288 [m], t= 107.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1077 at 32.318 [m], t= 107.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1078 at 32.348 [m], t= 107.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1079 at 32.378 [m], t= 108.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1080 at 32.408 [m], t= 108.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1081 at 32.438 [m], t= 108.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1082 at 32.468 [m], t= 108.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1083 at 32.497 [m], t= 108.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1084 at 32.527 [m], t= 108.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1085 at 32.557 [m], t= 108.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1086 at 32.587 [m], t= 108.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1087 at 32.617 [m], t= 108.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1088 at 32.647 [m], t= 108.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1089 at 32.677 [m], t= 109.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1090 at 32.707 [m], t= 109.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1091 at 32.737 [m], t= 109.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1092 at 32.767 [m], t= 109.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1093 at 32.797 [m], t= 109.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1094 at 32.827 [m], t= 109.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1095 at 32.857 [m], t= 109.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1096 at 32.887 [m], t= 109.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1097 at 32.917 [m], t= 109.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1098 at 32.947 [m], t= 109.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:01 Step   1099 at 32.977 [m], t= 110.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:01 Step   1100 at 33.007 [m], t= 110.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:01 Step   1101 at 33.037 [m], t= 110.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:01 Step   1102 at 33.067 [m], t= 110.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:01 Step   1103 at 33.097 [m], t= 110.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:01 Step   1104 at 33.127 [m], t= 110.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:01 Step   1105 at 33.157 [m], t= 110.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:01 Step   1106 at 33.187 [m], t= 110.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:01 Step   1107 at 33.217 [m], t= 110.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:01 Step   1108 at 33.247 [m], t= 110.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:01 Step   1109 at 33.277 [m], t= 111.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:01 Step   1110 at 33.307 [m], t= 111.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:01 Step   1111 at 33.337 [m], t= 111.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:01 Step   1112 at 33.367 [m], t= 111.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:01 Step   1113 at 33.397 [m], t= 111.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:01 Step   1114 at 33.427 [m], t= 111.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:01 Step   1115 at 33.457 [m], t= 111.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:01 Step   1116 at 33.487 [m], t= 111.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:01 Step   1117 at 33.517 [m], t= 111.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:01 Step   1118 at 33.547 [m], t= 111.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1119 at 33.577 [m], t= 112.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1120 at 33.607 [m], t= 112.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1121 at 33.637 [m], t= 112.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1122 at 33.667 [m], t= 112.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1123 at 33.697 [m], t= 112.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1124 at 33.727 [m], t= 112.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1125 at 33.757 [m], t= 112.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1126 at 33.787 [m], t= 112.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1127 at 33.817 [m], t= 112.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1128 at 33.847 [m], t= 112.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1129 at 33.877 [m], t= 113.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1130 at 33.907 [m], t= 113.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1131 at 33.937 [m], t= 113.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1132 at 33.966 [m], t= 113.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1133 at 33.996 [m], t= 113.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1134 at 34.026 [m], t= 113.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1135 at 34.056 [m], t= 113.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1136 at 34.086 [m], t= 113.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1137 at 34.116 [m], t= 113.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1138 at 34.146 [m], t= 113.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1139 at 34.176 [m], t= 114.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1140 at 34.206 [m], t= 114.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1141 at 34.236 [m], t= 114.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1142 at 34.266 [m], t= 114.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1143 at 34.296 [m], t= 114.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1144 at 34.326 [m], t= 114.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1145 at 34.356 [m], t= 114.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1146 at 34.386 [m], t= 114.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1147 at 34.416 [m], t= 114.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1148 at 34.446 [m], t= 114.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1149 at 34.476 [m], t= 115.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1150 at 34.506 [m], t= 115.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1151 at 34.536 [m], t= 115.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1152 at 34.566 [m], t= 115.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1153 at 34.596 [m], t= 115.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1154 at 34.626 [m], t= 115.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1155 at 34.656 [m], t= 115.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1156 at 34.686 [m], t= 115.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1157 at 34.716 [m], t= 115.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1158 at 34.746 [m], t= 115.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1159 at 34.776 [m], t= 116.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1160 at 34.806 [m], t= 116.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1161 at 34.836 [m], t= 116.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1162 at 34.866 [m], t= 116.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1163 at 34.896 [m], t= 116.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1164 at 34.926 [m], t= 116.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1165 at 34.956 [m], t= 116.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1166 at 34.986 [m], t= 116.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1167 at 35.016 [m], t= 116.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1168 at 35.046 [m], t= 116.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1169 at 35.076 [m], t= 117.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1170 at 35.106 [m], t= 117.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:01 Step   1171 at 35.136 [m], t= 117.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1172 at 35.166 [m], t= 117.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1173 at 35.196 [m], t= 117.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1174 at 35.226 [m], t= 117.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1175 at 35.256 [m], t= 117.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1176 at 35.286 [m], t= 117.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1177 at 35.316 [m], t= 117.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1178 at 35.346 [m], t= 117.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1179 at 35.376 [m], t= 118.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1180 at 35.405 [m], t= 118.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1181 at 35.435 [m], t= 118.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1182 at 35.465 [m], t= 118.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1183 at 35.495 [m], t= 118.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1184 at 35.525 [m], t= 118.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1185 at 35.555 [m], t= 118.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1186 at 35.585 [m], t= 118.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1187 at 35.615 [m], t= 118.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1188 at 35.645 [m], t= 118.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1189 at 35.675 [m], t= 119.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1190 at 35.705 [m], t= 119.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1191 at 35.735 [m], t= 119.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1192 at 35.765 [m], t= 119.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1193 at 35.795 [m], t= 119.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1194 at 35.825 [m], t= 119.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1195 at 35.855 [m], t= 119.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1196 at 35.885 [m], t= 119.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1197 at 35.915 [m], t= 119.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1198 at 35.945 [m], t= 119.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1199 at 35.975 [m], t= 120.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1200 at 36.005 [m], t= 120.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1201 at 36.035 [m], t= 120.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1202 at 36.065 [m], t= 120.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1203 at 36.095 [m], t= 120.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1204 at 36.125 [m], t= 120.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1205 at 36.155 [m], t= 120.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1206 at 36.185 [m], t= 120.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1207 at 36.215 [m], t= 120.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1208 at 36.245 [m], t= 120.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1209 at 36.275 [m], t= 121.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1210 at 36.305 [m], t= 121.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1211 at 36.335 [m], t= 121.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1212 at 36.365 [m], t= 121.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1213 at 36.395 [m], t= 121.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1214 at 36.425 [m], t= 121.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1215 at 36.455 [m], t= 121.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1216 at 36.485 [m], t= 121.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1217 at 36.515 [m], t= 121.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1218 at 36.545 [m], t= 121.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1219 at 36.575 [m], t= 122.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1220 at 36.605 [m], t= 122.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1221 at 36.635 [m], t= 122.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1222 at 36.665 [m], t= 122.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1223 at 36.695 [m], t= 122.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1224 at 36.725 [m], t= 122.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1225 at 36.755 [m], t= 122.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1226 at 36.785 [m], t= 122.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1227 at 36.815 [m], t= 122.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1228 at 36.844 [m], t= 122.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1229 at 36.874 [m], t= 123.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1230 at 36.904 [m], t= 123.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1231 at 36.934 [m], t= 123.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1232 at 36.964 [m], t= 123.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1233 at 36.994 [m], t= 123.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1234 at 37.024 [m], t= 123.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1235 at 37.054 [m], t= 123.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1236 at 37.084 [m], t= 123.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1237 at 37.114 [m], t= 123.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1238 at 37.144 [m], t= 123.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1239 at 37.174 [m], t= 124.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1240 at 37.204 [m], t= 124.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1241 at 37.234 [m], t= 124.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1242 at 37.264 [m], t= 124.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1243 at 37.294 [m], t= 124.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1244 at 37.324 [m], t= 124.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1245 at 37.354 [m], t= 124.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1246 at 37.384 [m], t= 124.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1247 at 37.414 [m], t= 124.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1248 at 37.444 [m], t= 124.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1249 at 37.474 [m], t= 125.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1250 at 37.504 [m], t= 125.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1251 at 37.534 [m], t= 125.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1252 at 37.564 [m], t= 125.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1253 at 37.594 [m], t= 125.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1254 at 37.624 [m], t= 125.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1255 at 37.654 [m], t= 125.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1256 at 37.684 [m], t= 125.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1257 at 37.714 [m], t= 125.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1258 at 37.744 [m], t= 125.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1259 at 37.774 [m], t= 126.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1260 at 37.804 [m], t= 126.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1261 at 37.834 [m], t= 126.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1262 at 37.864 [m], t= 126.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1263 at 37.894 [m], t= 126.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1264 at 37.924 [m], t= 126.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1265 at 37.954 [m], t= 126.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1266 at 37.984 [m], t= 126.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1267 at 38.014 [m], t= 126.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1268 at 38.044 [m], t= 126.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1269 at 38.074 [m], t= 127.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1270 at 38.104 [m], t= 127.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1271 at 38.134 [m], t= 127.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1272 at 38.164 [m], t= 127.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1273 at 38.194 [m], t= 127.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1274 at 38.224 [m], t= 127.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1275 at 38.254 [m], t= 127.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1276 at 38.283 [m], t= 127.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1277 at 38.313 [m], t= 127.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1278 at 38.343 [m], t= 127.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1279 at 38.373 [m], t= 128.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1280 at 38.403 [m], t= 128.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1281 at 38.433 [m], t= 128.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1282 at 38.463 [m], t= 128.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1283 at 38.493 [m], t= 128.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1284 at 38.523 [m], t= 128.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1285 at 38.553 [m], t= 128.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1286 at 38.583 [m], t= 128.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1287 at 38.613 [m], t= 128.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1288 at 38.643 [m], t= 128.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1289 at 38.673 [m], t= 129.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1290 at 38.703 [m], t= 129.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1291 at 38.733 [m], t= 129.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1292 at 38.763 [m], t= 129.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1293 at 38.793 [m], t= 129.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1294 at 38.823 [m], t= 129.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1295 at 38.853 [m], t= 129.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1296 at 38.883 [m], t= 129.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1297 at 38.913 [m], t= 129.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:02 Step   1298 at 38.943 [m], t= 129.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1299 at 38.973 [m], t= 130.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1300 at 39.003 [m], t= 130.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1301 at 39.033 [m], t= 130.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1302 at 39.063 [m], t= 130.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1303 at 39.093 [m], t= 130.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:02 Step   1304 at 39.123 [m], t= 130.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1305 at 39.153 [m], t= 130.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1306 at 39.183 [m], t= 130.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1307 at 39.213 [m], t= 130.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1308 at 39.243 [m], t= 130.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1309 at 39.273 [m], t= 131.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1310 at 39.303 [m], t= 131.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1311 at 39.333 [m], t= 131.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1312 at 39.363 [m], t= 131.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1313 at 39.393 [m], t= 131.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1314 at 39.423 [m], t= 131.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1315 at 39.453 [m], t= 131.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1316 at 39.483 [m], t= 131.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1317 at 39.513 [m], t= 131.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1318 at 39.543 [m], t= 131.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1319 at 39.573 [m], t= 132.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1320 at 39.603 [m], t= 132.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1321 at 39.633 [m], t= 132.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1322 at 39.663 [m], t= 132.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1323 at 39.693 [m], t= 132.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1324 at 39.722 [m], t= 132.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1325 at 39.752 [m], t= 132.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1326 at 39.782 [m], t= 132.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1327 at 39.812 [m], t= 132.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1328 at 39.842 [m], t= 132.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1329 at 39.872 [m], t= 133.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1330 at 39.902 [m], t= 133.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1331 at 39.932 [m], t= 133.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1332 at 39.962 [m], t= 133.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1333 at 39.992 [m], t= 133.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1334 at 40.022 [m], t= 133.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1335 at 40.052 [m], t= 133.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1336 at 40.082 [m], t= 133.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1337 at 40.112 [m], t= 133.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1338 at 40.142 [m], t= 133.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1339 at 40.172 [m], t= 134.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1340 at 40.202 [m], t= 134.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1341 at 40.232 [m], t= 134.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1342 at 40.262 [m], t= 134.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1343 at 40.292 [m], t= 134.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1344 at 40.322 [m], t= 134.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1345 at 40.352 [m], t= 134.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1346 at 40.382 [m], t= 134.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1347 at 40.412 [m], t= 134.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1348 at 40.442 [m], t= 134.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1349 at 40.472 [m], t= 135.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1350 at 40.502 [m], t= 135.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1351 at 40.532 [m], t= 135.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1352 at 40.562 [m], t= 135.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1353 at 40.592 [m], t= 135.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1354 at 40.622 [m], t= 135.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1355 at 40.652 [m], t= 135.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1356 at 40.682 [m], t= 135.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1357 at 40.712 [m], t= 135.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1358 at 40.742 [m], t= 135.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1359 at 40.772 [m], t= 136.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1360 at 40.802 [m], t= 136.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1361 at 40.832 [m], t= 136.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1362 at 40.862 [m], t= 136.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1363 at 40.892 [m], t= 136.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1364 at 40.922 [m], t= 136.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1365 at 40.952 [m], t= 136.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1366 at 40.982 [m], t= 136.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1367 at 41.012 [m], t= 136.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1368 at 41.042 [m], t= 136.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1369 at 41.072 [m], t= 137.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1370 at 41.102 [m], t= 137.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1371 at 41.132 [m], t= 137.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1372 at 41.161 [m], t= 137.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1373 at 41.191 [m], t= 137.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1374 at 41.221 [m], t= 137.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1375 at 41.251 [m], t= 137.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1376 at 41.281 [m], t= 137.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1377 at 41.311 [m], t= 137.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1378 at 41.341 [m], t= 137.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1379 at 41.371 [m], t= 138.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1380 at 41.401 [m], t= 138.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1381 at 41.431 [m], t= 138.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1382 at 41.461 [m], t= 138.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1383 at 41.491 [m], t= 138.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1384 at 41.521 [m], t= 138.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1385 at 41.551 [m], t= 138.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1386 at 41.581 [m], t= 138.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1387 at 41.611 [m], t= 138.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1388 at 41.641 [m], t= 138.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1389 at 41.671 [m], t= 139.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1390 at 41.701 [m], t= 139.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1391 at 41.731 [m], t= 139.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1392 at 41.761 [m], t= 139.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1393 at 41.791 [m], t= 139.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1394 at 41.821 [m], t= 139.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1395 at 41.851 [m], t= 139.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1396 at 41.881 [m], t= 139.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1397 at 41.911 [m], t= 139.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1398 at 41.941 [m], t= 139.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1399 at 41.971 [m], t= 140.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1400 at 42.001 [m], t= 140.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1401 at 42.031 [m], t= 140.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1402 at 42.061 [m], t= 140.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1403 at 42.091 [m], t= 140.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1404 at 42.121 [m], t= 140.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1405 at 42.151 [m], t= 140.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1406 at 42.181 [m], t= 140.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1407 at 42.211 [m], t= 140.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1408 at 42.241 [m], t= 140.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1409 at 42.271 [m], t= 141.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1410 at 42.301 [m], t= 141.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1411 at 42.331 [m], t= 141.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1412 at 42.361 [m], t= 141.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1413 at 42.391 [m], t= 141.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1414 at 42.421 [m], t= 141.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1415 at 42.451 [m], t= 141.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1416 at 42.481 [m], t= 141.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1417 at 42.511 [m], t= 141.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1418 at 42.541 [m], t= 141.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:03 Step   1419 at 42.571 [m], t= 142.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1420 at 42.601 [m], t= 142.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1421 at 42.630 [m], t= 142.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1422 at 42.660 [m], t= 142.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1423 at 42.690 [m], t= 142.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1424 at 42.720 [m], t= 142.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1425 at 42.750 [m], t= 142.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1426 at 42.780 [m], t= 142.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1427 at 42.810 [m], t= 142.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1428 at 42.840 [m], t= 142.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1429 at 42.870 [m], t= 143.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1430 at 42.900 [m], t= 143.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1431 at 42.930 [m], t= 143.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1432 at 42.960 [m], t= 143.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1433 at 42.990 [m], t= 143.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1434 at 43.020 [m], t= 143.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1435 at 43.050 [m], t= 143.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1436 at 43.080 [m], t= 143.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:03 Step   1437 at 43.110 [m], t= 143.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1438 at 43.140 [m], t= 143.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1439 at 43.170 [m], t= 144.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1440 at 43.200 [m], t= 144.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1441 at 43.230 [m], t= 144.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1442 at 43.260 [m], t= 144.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1443 at 43.290 [m], t= 144.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1444 at 43.320 [m], t= 144.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1445 at 43.350 [m], t= 144.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1446 at 43.380 [m], t= 144.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1447 at 43.410 [m], t= 144.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1448 at 43.440 [m], t= 144.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1449 at 43.470 [m], t= 145.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1450 at 43.500 [m], t= 145.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1451 at 43.530 [m], t= 145.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1452 at 43.560 [m], t= 145.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1453 at 43.590 [m], t= 145.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1454 at 43.620 [m], t= 145.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1455 at 43.650 [m], t= 145.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1456 at 43.680 [m], t= 145.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1457 at 43.710 [m], t= 145.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1458 at 43.740 [m], t= 145.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1459 at 43.770 [m], t= 146.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1460 at 43.800 [m], t= 146.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1461 at 43.830 [m], t= 146.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1462 at 43.860 [m], t= 146.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1463 at 43.890 [m], t= 146.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1464 at 43.920 [m], t= 146.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1465 at 43.950 [m], t= 146.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1466 at 43.980 [m], t= 146.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1467 at 44.010 [m], t= 146.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1468 at 44.040 [m], t= 146.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1469 at 44.069 [m], t= 147.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1470 at 44.099 [m], t= 147.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1471 at 44.129 [m], t= 147.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1472 at 44.159 [m], t= 147.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1473 at 44.189 [m], t= 147.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1474 at 44.219 [m], t= 147.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1475 at 44.249 [m], t= 147.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1476 at 44.279 [m], t= 147.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1477 at 44.309 [m], t= 147.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1478 at 44.339 [m], t= 147.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1479 at 44.369 [m], t= 148.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1480 at 44.399 [m], t= 148.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1481 at 44.429 [m], t= 148.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1482 at 44.459 [m], t= 148.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1483 at 44.489 [m], t= 148.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1484 at 44.519 [m], t= 148.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1485 at 44.549 [m], t= 148.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1486 at 44.579 [m], t= 148.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1487 at 44.609 [m], t= 148.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1488 at 44.639 [m], t= 148.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1489 at 44.669 [m], t= 149.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1490 at 44.699 [m], t= 149.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1491 at 44.729 [m], t= 149.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1492 at 44.759 [m], t= 149.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1493 at 44.789 [m], t= 149.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1494 at 44.819 [m], t= 149.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1495 at 44.849 [m], t= 149.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1496 at 44.879 [m], t= 149.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1497 at 44.909 [m], t= 149.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1498 at 44.939 [m], t= 149.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:04 Step   1499 at 44.969 [m], t= 150.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:04 Step   1500 at 44.999 [m], t= 150.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:04 Step   1501 at 45.029 [m], t= 150.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:04 Step   1502 at 45.059 [m], t= 150.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:04 Step   1503 at 45.089 [m], t= 150.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:04 Step   1504 at 45.119 [m], t= 150.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:04 Step   1505 at 45.149 [m], t= 150.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:04 Step   1506 at 45.179 [m], t= 150.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:04 Step   1507 at 45.209 [m], t= 150.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:04 Step   1508 at 45.239 [m], t= 150.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:04 Step   1509 at 45.269 [m], t= 151.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:04 Step   1510 at 45.299 [m], t= 151.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:04 Step   1511 at 45.329 [m], t= 151.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:04 Step   1512 at 45.359 [m], t= 151.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:04 Step   1513 at 45.389 [m], t= 151.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:04 Step   1514 at 45.419 [m], t= 151.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:04 Step   1515 at 45.449 [m], t= 151.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:04 Step   1516 at 45.479 [m], t= 151.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:04 Step   1517 at 45.508 [m], t= 151.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:04 Step   1518 at 45.538 [m], t= 151.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:04 Step   1519 at 45.568 [m], t= 152.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1520 at 45.598 [m], t= 152.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1521 at 45.628 [m], t= 152.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1522 at 45.658 [m], t= 152.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1523 at 45.688 [m], t= 152.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1524 at 45.718 [m], t= 152.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1525 at 45.748 [m], t= 152.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1526 at 45.778 [m], t= 152.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1527 at 45.808 [m], t= 152.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1528 at 45.838 [m], t= 152.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1529 at 45.868 [m], t= 153.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1530 at 45.898 [m], t= 153.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1531 at 45.928 [m], t= 153.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1532 at 45.958 [m], t= 153.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1533 at 45.988 [m], t= 153.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1534 at 46.018 [m], t= 153.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1535 at 46.048 [m], t= 153.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1536 at 46.078 [m], t= 153.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1537 at 46.108 [m], t= 153.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1538 at 46.138 [m], t= 153.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1539 at 46.168 [m], t= 154.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1540 at 46.198 [m], t= 154.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1541 at 46.228 [m], t= 154.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1542 at 46.258 [m], t= 154.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1543 at 46.288 [m], t= 154.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1544 at 46.318 [m], t= 154.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1545 at 46.348 [m], t= 154.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1546 at 46.378 [m], t= 154.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1547 at 46.408 [m], t= 154.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1548 at 46.438 [m], t= 154.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1549 at 46.468 [m], t= 155.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1550 at 46.498 [m], t= 155.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1551 at 46.528 [m], t= 155.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1552 at 46.558 [m], t= 155.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1553 at 46.588 [m], t= 155.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1554 at 46.618 [m], t= 155.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1555 at 46.648 [m], t= 155.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1556 at 46.678 [m], t= 155.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1557 at 46.708 [m], t= 155.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1558 at 46.738 [m], t= 155.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1559 at 46.768 [m], t= 156.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1560 at 46.798 [m], t= 156.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1561 at 46.828 [m], t= 156.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1562 at 46.858 [m], t= 156.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1563 at 46.888 [m], t= 156.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1564 at 46.918 [m], t= 156.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1565 at 46.947 [m], t= 156.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:04 Step   1566 at 46.977 [m], t= 156.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1567 at 47.007 [m], t= 156.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1568 at 47.037 [m], t= 156.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1569 at 47.067 [m], t= 157.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1570 at 47.097 [m], t= 157.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1571 at 47.127 [m], t= 157.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1572 at 47.157 [m], t= 157.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1573 at 47.187 [m], t= 157.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1574 at 47.217 [m], t= 157.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1575 at 47.247 [m], t= 157.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1576 at 47.277 [m], t= 157.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1577 at 47.307 [m], t= 157.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1578 at 47.337 [m], t= 157.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1579 at 47.367 [m], t= 158.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1580 at 47.397 [m], t= 158.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1581 at 47.427 [m], t= 158.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1582 at 47.457 [m], t= 158.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1583 at 47.487 [m], t= 158.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1584 at 47.517 [m], t= 158.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1585 at 47.547 [m], t= 158.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1586 at 47.577 [m], t= 158.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1587 at 47.607 [m], t= 158.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1588 at 47.637 [m], t= 158.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1589 at 47.667 [m], t= 159.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1590 at 47.697 [m], t= 159.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1591 at 47.727 [m], t= 159.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1592 at 47.757 [m], t= 159.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1593 at 47.787 [m], t= 159.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1594 at 47.817 [m], t= 159.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1595 at 47.847 [m], t= 159.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1596 at 47.877 [m], t= 159.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1597 at 47.907 [m], t= 159.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1598 at 47.937 [m], t= 159.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:05 Step   1599 at 47.967 [m], t= 160.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:05 Step   1600 at 47.997 [m], t= 160.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:05 Step   1601 at 48.027 [m], t= 160.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:05 Step   1602 at 48.057 [m], t= 160.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:05 Step   1603 at 48.087 [m], t= 160.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:05 Step   1604 at 48.117 [m], t= 160.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:05 Step   1605 at 48.147 [m], t= 160.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:05 Step   1606 at 48.177 [m], t= 160.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:05 Step   1607 at 48.207 [m], t= 160.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:05 Step   1608 at 48.237 [m], t= 160.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:05 Step   1609 at 48.267 [m], t= 161.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:05 Step   1610 at 48.297 [m], t= 161.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:05 Step   1611 at 48.327 [m], t= 161.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:05 Step   1612 at 48.357 [m], t= 161.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:05 Step   1613 at 48.386 [m], t= 161.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:05 Step   1614 at 48.416 [m], t= 161.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:05 Step   1615 at 48.446 [m], t= 161.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:05 Step   1616 at 48.476 [m], t= 161.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:05 Step   1617 at 48.506 [m], t= 161.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:05 Step   1618 at 48.536 [m], t= 161.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:05 Step   1619 at 48.566 [m], t= 162.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1620 at 48.596 [m], t= 162.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1621 at 48.626 [m], t= 162.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1622 at 48.656 [m], t= 162.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1623 at 48.686 [m], t= 162.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1624 at 48.716 [m], t= 162.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1625 at 48.746 [m], t= 162.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1626 at 48.776 [m], t= 162.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1627 at 48.806 [m], t= 162.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1628 at 48.836 [m], t= 162.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1629 at 48.866 [m], t= 163.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1630 at 48.896 [m], t= 163.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1631 at 48.926 [m], t= 163.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1632 at 48.956 [m], t= 163.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1633 at 48.986 [m], t= 163.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1634 at 49.016 [m], t= 163.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1635 at 49.046 [m], t= 163.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1636 at 49.076 [m], t= 163.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1637 at 49.106 [m], t= 163.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1638 at 49.136 [m], t= 163.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1639 at 49.166 [m], t= 164.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1640 at 49.196 [m], t= 164.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1641 at 49.226 [m], t= 164.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1642 at 49.256 [m], t= 164.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1643 at 49.286 [m], t= 164.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1644 at 49.316 [m], t= 164.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1645 at 49.346 [m], t= 164.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1646 at 49.376 [m], t= 164.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1647 at 49.406 [m], t= 164.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1648 at 49.436 [m], t= 164.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1649 at 49.466 [m], t= 165.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1650 at 49.496 [m], t= 165.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1651 at 49.526 [m], t= 165.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1652 at 49.556 [m], t= 165.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1653 at 49.586 [m], t= 165.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1654 at 49.616 [m], t= 165.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1655 at 49.646 [m], t= 165.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1656 at 49.676 [m], t= 165.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1657 at 49.706 [m], t= 165.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1658 at 49.736 [m], t= 165.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1659 at 49.766 [m], t= 166.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1660 at 49.796 [m], t= 166.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1661 at 49.826 [m], t= 166.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1662 at 49.855 [m], t= 166.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1663 at 49.885 [m], t= 166.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1664 at 49.915 [m], t= 166.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1665 at 49.945 [m], t= 166.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1666 at 49.975 [m], t= 166.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1667 at 50.005 [m], t= 166.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1668 at 50.035 [m], t= 166.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1669 at 50.065 [m], t= 167.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1670 at 50.095 [m], t= 167.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1671 at 50.125 [m], t= 167.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1672 at 50.155 [m], t= 167.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1673 at 50.185 [m], t= 167.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1674 at 50.215 [m], t= 167.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1675 at 50.245 [m], t= 167.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1676 at 50.275 [m], t= 167.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1677 at 50.305 [m], t= 167.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1678 at 50.335 [m], t= 167.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1679 at 50.365 [m], t= 168.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1680 at 50.395 [m], t= 168.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1681 at 50.425 [m], t= 168.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1682 at 50.455 [m], t= 168.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1683 at 50.485 [m], t= 168.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1684 at 50.515 [m], t= 168.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1685 at 50.545 [m], t= 168.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1686 at 50.575 [m], t= 168.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1687 at 50.605 [m], t= 168.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1688 at 50.635 [m], t= 168.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1689 at 50.665 [m], t= 169.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1690 at 50.695 [m], t= 169.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1691 at 50.725 [m], t= 169.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1692 at 50.755 [m], t= 169.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1693 at 50.785 [m], t= 169.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1694 at 50.815 [m], t= 169.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1695 at 50.845 [m], t= 169.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1696 at 50.875 [m], t= 169.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:05 Step   1697 at 50.905 [m], t= 169.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1698 at 50.935 [m], t= 169.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1699 at 50.965 [m], t= 170.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1700 at 50.995 [m], t= 170.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1701 at 51.025 [m], t= 170.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1702 at 51.055 [m], t= 170.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1703 at 51.085 [m], t= 170.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1704 at 51.115 [m], t= 170.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1705 at 51.145 [m], t= 170.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1706 at 51.175 [m], t= 170.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1707 at 51.205 [m], t= 170.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1708 at 51.235 [m], t= 170.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1709 at 51.265 [m], t= 171.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1710 at 51.294 [m], t= 171.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1711 at 51.324 [m], t= 171.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1712 at 51.354 [m], t= 171.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1713 at 51.384 [m], t= 171.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1714 at 51.414 [m], t= 171.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1715 at 51.444 [m], t= 171.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1716 at 51.474 [m], t= 171.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1717 at 51.504 [m], t= 171.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1718 at 51.534 [m], t= 171.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1719 at 51.564 [m], t= 172.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1720 at 51.594 [m], t= 172.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1721 at 51.624 [m], t= 172.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1722 at 51.654 [m], t= 172.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1723 at 51.684 [m], t= 172.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1724 at 51.714 [m], t= 172.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1725 at 51.744 [m], t= 172.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1726 at 51.774 [m], t= 172.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1727 at 51.804 [m], t= 172.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1728 at 51.834 [m], t= 172.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1729 at 51.864 [m], t= 173.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1730 at 51.894 [m], t= 173.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1731 at 51.924 [m], t= 173.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1732 at 51.954 [m], t= 173.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1733 at 51.984 [m], t= 173.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1734 at 52.014 [m], t= 173.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1735 at 52.044 [m], t= 173.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1736 at 52.074 [m], t= 173.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1737 at 52.104 [m], t= 173.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1738 at 52.134 [m], t= 173.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1739 at 52.164 [m], t= 174.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1740 at 52.194 [m], t= 174.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1741 at 52.224 [m], t= 174.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1742 at 52.254 [m], t= 174.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1743 at 52.284 [m], t= 174.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1744 at 52.314 [m], t= 174.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1745 at 52.344 [m], t= 174.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1746 at 52.374 [m], t= 174.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1747 at 52.404 [m], t= 174.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1748 at 52.434 [m], t= 174.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1749 at 52.464 [m], t= 175.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1750 at 52.494 [m], t= 175.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1751 at 52.524 [m], t= 175.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1752 at 52.554 [m], t= 175.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1753 at 52.584 [m], t= 175.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1754 at 52.614 [m], t= 175.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1755 at 52.644 [m], t= 175.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1756 at 52.674 [m], t= 175.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1757 at 52.704 [m], t= 175.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1758 at 52.733 [m], t= 175.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1759 at 52.763 [m], t= 176.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1760 at 52.793 [m], t= 176.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1761 at 52.823 [m], t= 176.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1762 at 52.853 [m], t= 176.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1763 at 52.883 [m], t= 176.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1764 at 52.913 [m], t= 176.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1765 at 52.943 [m], t= 176.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1766 at 52.973 [m], t= 176.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1767 at 53.003 [m], t= 176.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1768 at 53.033 [m], t= 176.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1769 at 53.063 [m], t= 177.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1770 at 53.093 [m], t= 177.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1771 at 53.123 [m], t= 177.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1772 at 53.153 [m], t= 177.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1773 at 53.183 [m], t= 177.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1774 at 53.213 [m], t= 177.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1775 at 53.243 [m], t= 177.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1776 at 53.273 [m], t= 177.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1777 at 53.303 [m], t= 177.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1778 at 53.333 [m], t= 177.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1779 at 53.363 [m], t= 178.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1780 at 53.393 [m], t= 178.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1781 at 53.423 [m], t= 178.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1782 at 53.453 [m], t= 178.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1783 at 53.483 [m], t= 178.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1784 at 53.513 [m], t= 178.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1785 at 53.543 [m], t= 178.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1786 at 53.573 [m], t= 178.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1787 at 53.603 [m], t= 178.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1788 at 53.633 [m], t= 178.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1789 at 53.663 [m], t= 179.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1790 at 53.693 [m], t= 179.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1791 at 53.723 [m], t= 179.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1792 at 53.753 [m], t= 179.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1793 at 53.783 [m], t= 179.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1794 at 53.813 [m], t= 179.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1795 at 53.843 [m], t= 179.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1796 at 53.873 [m], t= 179.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1797 at 53.903 [m], t= 179.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1798 at 53.933 [m], t= 179.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1799 at 53.963 [m], t= 180.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1800 at 53.993 [m], t= 180.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1801 at 54.023 [m], t= 180.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1802 at 54.053 [m], t= 180.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1803 at 54.083 [m], t= 180.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1804 at 54.113 [m], t= 180.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1805 at 54.143 [m], t= 180.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1806 at 54.172 [m], t= 180.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1807 at 54.202 [m], t= 180.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1808 at 54.232 [m], t= 180.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1809 at 54.262 [m], t= 181.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1810 at 54.292 [m], t= 181.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1811 at 54.322 [m], t= 181.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1812 at 54.352 [m], t= 181.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1813 at 54.382 [m], t= 181.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1814 at 54.412 [m], t= 181.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1815 at 54.442 [m], t= 181.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1816 at 54.472 [m], t= 181.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1817 at 54.502 [m], t= 181.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1818 at 54.532 [m], t= 181.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:06 Step   1819 at 54.562 [m], t= 182.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1820 at 54.592 [m], t= 182.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1821 at 54.622 [m], t= 182.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1822 at 54.652 [m], t= 182.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1823 at 54.682 [m], t= 182.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1824 at 54.712 [m], t= 182.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1825 at 54.742 [m], t= 182.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1826 at 54.772 [m], t= 182.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1827 at 54.802 [m], t= 182.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1828 at 54.832 [m], t= 182.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1829 at 54.862 [m], t= 183.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1830 at 54.892 [m], t= 183.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1831 at 54.922 [m], t= 183.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1832 at 54.952 [m], t= 183.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1833 at 54.982 [m], t= 183.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:06 Step   1834 at 55.012 [m], t= 183.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1835 at 55.042 [m], t= 183.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1836 at 55.072 [m], t= 183.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1837 at 55.102 [m], t= 183.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1838 at 55.132 [m], t= 183.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1839 at 55.162 [m], t= 184.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1840 at 55.192 [m], t= 184.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1841 at 55.222 [m], t= 184.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1842 at 55.252 [m], t= 184.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1843 at 55.282 [m], t= 184.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1844 at 55.312 [m], t= 184.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1845 at 55.342 [m], t= 184.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1846 at 55.372 [m], t= 184.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1847 at 55.402 [m], t= 184.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1848 at 55.432 [m], t= 184.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1849 at 55.462 [m], t= 185.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1850 at 55.492 [m], t= 185.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1851 at 55.522 [m], t= 185.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1852 at 55.552 [m], t= 185.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1853 at 55.582 [m], t= 185.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1854 at 55.611 [m], t= 185.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1855 at 55.641 [m], t= 185.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1856 at 55.671 [m], t= 185.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1857 at 55.701 [m], t= 185.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1858 at 55.731 [m], t= 185.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1859 at 55.761 [m], t= 186.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1860 at 55.791 [m], t= 186.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1861 at 55.821 [m], t= 186.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1862 at 55.851 [m], t= 186.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1863 at 55.881 [m], t= 186.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1864 at 55.911 [m], t= 186.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1865 at 55.941 [m], t= 186.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1866 at 55.971 [m], t= 186.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1867 at 56.001 [m], t= 186.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1868 at 56.031 [m], t= 186.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1869 at 56.061 [m], t= 187.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1870 at 56.091 [m], t= 187.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1871 at 56.121 [m], t= 187.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1872 at 56.151 [m], t= 187.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1873 at 56.181 [m], t= 187.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1874 at 56.211 [m], t= 187.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1875 at 56.241 [m], t= 187.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1876 at 56.271 [m], t= 187.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1877 at 56.301 [m], t= 187.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1878 at 56.331 [m], t= 187.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1879 at 56.361 [m], t= 188.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1880 at 56.391 [m], t= 188.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1881 at 56.421 [m], t= 188.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1882 at 56.451 [m], t= 188.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1883 at 56.481 [m], t= 188.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1884 at 56.511 [m], t= 188.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1885 at 56.541 [m], t= 188.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1886 at 56.571 [m], t= 188.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1887 at 56.601 [m], t= 188.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1888 at 56.631 [m], t= 188.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1889 at 56.661 [m], t= 189.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1890 at 56.691 [m], t= 189.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1891 at 56.721 [m], t= 189.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1892 at 56.751 [m], t= 189.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1893 at 56.781 [m], t= 189.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1894 at 56.811 [m], t= 189.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1895 at 56.841 [m], t= 189.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1896 at 56.871 [m], t= 189.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1897 at 56.901 [m], t= 189.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1898 at 56.931 [m], t= 189.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:07 Step   1899 at 56.961 [m], t= 190.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:07 Step   1900 at 56.991 [m], t= 190.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:07 Step   1901 at 57.021 [m], t= 190.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:07 Step   1902 at 57.050 [m], t= 190.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:07 Step   1903 at 57.080 [m], t= 190.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:07 Step   1904 at 57.110 [m], t= 190.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:07 Step   1905 at 57.140 [m], t= 190.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:07 Step   1906 at 57.170 [m], t= 190.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:07 Step   1907 at 57.200 [m], t= 190.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:07 Step   1908 at 57.230 [m], t= 190.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:07 Step   1909 at 57.260 [m], t= 191.000 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:07 Step   1910 at 57.290 [m], t= 191.100 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:07 Step   1911 at 57.320 [m], t= 191.200 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:07 Step   1912 at 57.350 [m], t= 191.300 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:07 Step   1913 at 57.380 [m], t= 191.400 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:07 Step   1914 at 57.410 [m], t= 191.500 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:07 Step   1915 at 57.440 [m], t= 191.600 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:07 Step   1916 at 57.470 [m], t= 191.700 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:07 Step   1917 at 57.500 [m], t= 191.800 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:07 Step   1918 at 57.530 [m], t= 191.900 [ns], E=1.000 [GeV]
+Multipole::apply() called
+OPAL-X> * 13:14:07 Step   1919 at 57.560 [m], t= 192.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1920 at 57.590 [m], t= 192.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1921 at 57.620 [m], t= 192.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1922 at 57.650 [m], t= 192.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1923 at 57.680 [m], t= 192.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1924 at 57.710 [m], t= 192.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1925 at 57.740 [m], t= 192.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1926 at 57.770 [m], t= 192.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1927 at 57.800 [m], t= 192.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1928 at 57.830 [m], t= 192.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1929 at 57.860 [m], t= 193.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1930 at 57.890 [m], t= 193.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1931 at 57.920 [m], t= 193.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1932 at 57.950 [m], t= 193.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1933 at 57.980 [m], t= 193.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1934 at 58.010 [m], t= 193.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1935 at 58.040 [m], t= 193.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1936 at 58.070 [m], t= 193.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1937 at 58.100 [m], t= 193.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1938 at 58.130 [m], t= 193.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1939 at 58.160 [m], t= 194.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1940 at 58.190 [m], t= 194.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1941 at 58.220 [m], t= 194.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1942 at 58.250 [m], t= 194.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1943 at 58.280 [m], t= 194.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1944 at 58.310 [m], t= 194.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1945 at 58.340 [m], t= 194.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1946 at 58.370 [m], t= 194.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1947 at 58.400 [m], t= 194.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1948 at 58.430 [m], t= 194.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1949 at 58.460 [m], t= 195.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1950 at 58.490 [m], t= 195.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1951 at 58.519 [m], t= 195.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1952 at 58.549 [m], t= 195.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1953 at 58.579 [m], t= 195.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1954 at 58.609 [m], t= 195.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1955 at 58.639 [m], t= 195.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1956 at 58.669 [m], t= 195.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1957 at 58.699 [m], t= 195.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1958 at 58.729 [m], t= 195.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1959 at 58.759 [m], t= 196.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:07 Step   1960 at 58.789 [m], t= 196.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1961 at 58.819 [m], t= 196.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1962 at 58.849 [m], t= 196.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1963 at 58.879 [m], t= 196.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1964 at 58.909 [m], t= 196.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1965 at 58.939 [m], t= 196.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1966 at 58.969 [m], t= 196.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1967 at 58.999 [m], t= 196.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1968 at 59.029 [m], t= 196.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1969 at 59.059 [m], t= 197.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1970 at 59.089 [m], t= 197.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1971 at 59.119 [m], t= 197.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1972 at 59.149 [m], t= 197.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1973 at 59.179 [m], t= 197.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1974 at 59.209 [m], t= 197.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1975 at 59.239 [m], t= 197.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1976 at 59.269 [m], t= 197.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1977 at 59.299 [m], t= 197.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1978 at 59.329 [m], t= 197.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1979 at 59.359 [m], t= 198.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1980 at 59.389 [m], t= 198.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1981 at 59.419 [m], t= 198.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1982 at 59.449 [m], t= 198.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1983 at 59.479 [m], t= 198.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1984 at 59.509 [m], t= 198.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1985 at 59.539 [m], t= 198.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1986 at 59.569 [m], t= 198.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1987 at 59.599 [m], t= 198.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1988 at 59.629 [m], t= 198.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1989 at 59.659 [m], t= 199.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1990 at 59.689 [m], t= 199.100 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1991 at 59.719 [m], t= 199.200 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1992 at 59.749 [m], t= 199.300 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1993 at 59.779 [m], t= 199.400 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1994 at 59.809 [m], t= 199.500 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1995 at 59.839 [m], t= 199.600 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1996 at 59.869 [m], t= 199.700 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1997 at 59.899 [m], t= 199.800 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1998 at 59.929 [m], t= 199.900 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   1999 at 59.958 [m], t= 200.000 [ns], E=1.000 [GeV]
+OPAL-X> * 13:14:08 Step   2000 at 59.988 [m], t= 200.100 [ns], E=1.000 [GeV]
+OPAL-X> * FOCUS_POLE_0 gone off
+OPAL-X> * FIRST_DRIFT_0 gone off
+OPAL-X> * DEFOCUS_POLE_0 gone off
+OPAL-X> * SECOND_DRIFT_0 gone off
+OPAL-X> * FOCUS_POLE_1 gone off
+OPAL-X> * FIRST_DRIFT_1 gone off
+OPAL-X> * DEFOCUS_POLE_1 gone off
+OPAL-X> * SECOND_DRIFT_1 gone off
+OPAL-X> * FOCUS_POLE_2 gone off
+OPAL-X> * FIRST_DRIFT_2 gone off
+OPAL-X> * DEFOCUS_POLE_2 gone off
+OPAL-X> * SECOND_DRIFT_2 gone off
+OPAL-X> * FOCUS_POLE_3 gone off
+OPAL-X> * FIRST_DRIFT_3 gone off
+OPAL-X> * DEFOCUS_POLE_3 gone off
+OPAL-X> * SECOND_DRIFT_3 gone off
+OPAL-X> * FOCUS_POLE_4 gone off
+OPAL-X> * FIRST_DRIFT_4 gone off
+OPAL-X> * DEFOCUS_POLE_4 gone off
+OPAL-X> * SECOND_DRIFT_4 gone off
+OPAL-X> * FOCUS_POLE_5 gone off
+OPAL-X> * FIRST_DRIFT_5 gone off
+OPAL-X> * DEFOCUS_POLE_5 gone off
+OPAL-X> * SECOND_DRIFT_5 gone off
+OPAL-X> * FOCUS_POLE_6 gone off
+OPAL-X> * FIRST_DRIFT_6 gone off
+OPAL-X> * DEFOCUS_POLE_6 gone off
+OPAL-X> * SECOND_DRIFT_6 gone off
+OPAL-X> * FOCUS_POLE_7 gone off
+OPAL-X> * FIRST_DRIFT_7 gone off
+OPAL-X> * DEFOCUS_POLE_7 gone off
+OPAL-X> * SECOND_DRIFT_7 gone off
+OPAL-X> * FOCUS_POLE_8 gone off
+OPAL-X> * FIRST_DRIFT_8 gone off
+OPAL-X> * DEFOCUS_POLE_8 gone off
+OPAL-X> * SECOND_DRIFT_8 gone off
+OPAL-X> * FOCUS_POLE_9 gone off
+OPAL-X> * FIRST_DRIFT_9 gone off
+OPAL-X> * DEFOCUS_POLE_9 gone off
+OPAL-X> * SECOND_DRIFT_9 gone off
+OPAL-X> 
+OPAL-X> * Done executing ParallelTracker at 13:14:08
+OPAL-X> 
+OPAL-X> * End of input stream 'FodoCell-fromfile.in'
+Timings> ---------------------------------------------
+Timings>      Timing results for 1 rank(s):
+Timings> ---------------------------------------------
+Timings> mainTimer........... Wall tot =    14.7397
+Timings> 
+Timings> Write Stat.......... Wall max =   0.154789
+Timings>                      Wall avg =   0.154789
+Timings>                      Wall min =   0.154789
+Timings> 
+Timings> Write H5-File....... Wall max =    2.96832
+Timings>                      Wall avg =    2.96832
+Timings>                      Wall min =    2.96832
+Timings> 
+Timings> samplingTime........ Wall max =   0.002693
+Timings>                      Wall avg =   0.002693
+Timings>                      Wall min =   0.002693
+Timings> 
+Timings> particleBC.......... Wall max =    1.44459
+Timings>                      Wall avg =    1.44459
+Timings>                      Wall min =    1.44459
+Timings> 
+Timings> updateParticle...... Wall max =          0
+Timings>                      Wall avg =          0
+Timings>                      Wall min =          0
+Timings> 
+Timings> TIntegration1....... Wall max =   0.289695
+Timings>                      Wall avg =   0.289695
+Timings>                      Wall min =   0.289695
+Timings> 
+Timings> TIntegration2....... Wall max =   0.393849
+Timings>                      Wall avg =   0.393849
+Timings>                      Wall min =   0.393849
+Timings> 
+Timings> External field eval. Wall max =   0.871373
+Timings>                      Wall avg =   0.871373
+Timings>                      Wall min =   0.871373
+Timings> 
+Timings> Binaryrepart........ Wall max =          0
+Timings>                      Wall avg =          0
+Timings>                      Wall min =          0
+Timings> 
+Timings> OrbThreader......... Wall max =   0.013106
+Timings>                      Wall avg =   0.013106
+Timings>                      Wall min =   0.013106
+Timings> 
+Timings> ---------------------------------------------

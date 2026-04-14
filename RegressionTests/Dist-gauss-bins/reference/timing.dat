@@ -1,0 +1,25 @@
+                      ranks  Wall tot
+=====================================
+mainTimer...........      1    0.1546
+
+                      ranks  Wall max  Wall min  Wall avg
+=========================================================
+mainTimer...........      1    0.1546    0.1546    0.1546
+Write Stat..........      1  0.000582  0.000582  0.000582
+Write H5-File.......      1  0.006803  0.006803  0.006803
+bInitLimits.........      1         0         0         0
+bAllReduceLimits....      1         0         0         0
+bAllReduceGlobalHis.      1         0         0         0
+bAssignUniformBins..      1         0         0         0
+bExecuteHistoReduct.      1         0         0         0
+bSortContainerByBin.      1         0         0         0
+bVerifySorting......      1         0         0         0
+samplingTime........      1    0.0026    0.0026    0.0026
+Sampling............      1  0.002577  0.002577  0.002577
+particleBC..........      1  0.001055  0.001055  0.001055
+updateParticle......      1         0         0         0
+TIntegration1.......      1  0.000183  0.000183  0.000183
+TIntegration2.......      1  0.000301  0.000301  0.000301
+External field eval.      1  0.000565  0.000565  0.000565
+Binaryrepart........      1         0         0         0
+OrbThreader.........      1    0.1106    0.1106    0.1106
