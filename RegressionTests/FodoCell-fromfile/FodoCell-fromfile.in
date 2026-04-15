@@ -1,9 +1,9 @@
-OPTION, PSDUMPFREQ = 1;     // 6d data written every 300000 time steps (h5).
-OPTION, STATDUMPFREQ = 1;   // Beam Stats written every 10 time steps (stat).
-OPTION, BOUNDPDESTROY=10; // Delete lost particles, if any
-OPTION, AUTOPHASE=4;        // Autophase is on, and phase of max energy
-                            // gain will be found automatically for cavities
-Option, VERSION=10900;
+OPTION, PSDUMPFREQ    = 300000;
+OPTION, STATDUMPFREQ  = 1; 
+OPTION, BOUNDPDESTROY = 10; 
+OPTION, AUTOPHASE     = 4; 
+                            
+Option, VERSION = 10900;
 
 Title, string="FODO Test";
 
@@ -94,15 +94,10 @@ FOCUS_POLE_9, FIRST_DRIFT_9, DEFOCUS_POLE_9, SECOND_DRIFT_9
 
 Dist_FF: DISTRIBUTION, TYPE=FROMFILE,
     FNAME = "input-distribution-gauss.txt",
-    NPARTDIST=n_particles;
+    NPARTDIST = n_particles;
 
 ES1: EMISSIONSOURCE, DISTRIBUTION = Dist_FF;
 mySources: EMISSIONSOURCELIST = (ES1);
-
-//----------------------------------------------------------------------------
-// Define Field solvers
-// The mesh sizes should be a factor of 2
-// for most efficient space charge calculation.
 
 FS_SC: Fieldsolver, TYPE = NONE,
             NX = 16, NY = 16, NZ = 16, // SC grid size is 32^3

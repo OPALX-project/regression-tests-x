@@ -1,4 +1,4 @@
-"FodoCell without Space Charge"
+"FodoCell without space charge using multipole elements."
 stat "rms_x" avg 1E-5
 stat "rms_y" avg 1E-5
 stat "rms_s" avg 1E-5
