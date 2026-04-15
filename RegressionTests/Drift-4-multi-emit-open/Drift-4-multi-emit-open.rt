@@ -6,5 +6,5 @@ stat "rms_px"       last 1E-3
 stat "rms_py"       last 1E-3
 stat "rms_ps"       last 1E-3
 stat "energy"       last 1E-3
-stat "numParticles" avg 10 # Since BOUNDPDESTROY might lead to different N on GPU
+stat "numParticles" avg 10 # Since BOUNDPDESTROY might lead to different N on GPU (this is more a GCC 12 vs 13/15 thingy)
 stat "nBins"        avg 1e-1 # It's a discrete quantity, so larger tolerance
