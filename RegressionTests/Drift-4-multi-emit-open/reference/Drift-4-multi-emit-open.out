@@ -21,7 +21,7 @@ OPAL-X>
 OPAL-X> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL-X> to the OPAL developers https://github.com/OPALX-project/OPALX/issues
 OPAL-X> 
-OPAL-X> Time: 11:01:55 date: 15/04/2026
+OPAL-X> Time: 11:27:33 date: 15/04/2026
 OPAL-X> 
 OPAL-X> * Host:   OpenMP
 OPAL-X> * Device: OpenMP
@@ -38,9 +38,9 @@ OPAL-X> * FIELDSOLVER  FS1
 OPAL-X> * BINS         BINS1
 OPAL-X> * TYPE         OPEN
 OPAL-X> * RANKS        1
-OPAL-X> * NX           24
-OPAL-X> * NY           24
-OPAL-X> * NZ           24
+OPAL-X> * NX           16
+OPAL-X> * NY           16
+OPAL-X> * NZ           16
 OPAL-X> * BBOXINCR     5
 OPAL-X> * GREENSF      STANDARD
 OPAL-X> * XDIM         parallel  
@@ -68,7 +68,7 @@ OPAL-X> * MOMENTUM    1010.94 [eV/c]
 OPAL-X> * MOMENTUM    1.01094e-06 [GeV/c]
 OPAL-X> * CURRENT     1.3e+06 [A]
 OPAL-X> * FREQUENCY   1.3e+09 [MHz]
-OPAL-X> * NPART       33829
+OPAL-X> * NPART       4000
 OPAL-X> * ********************************************************************************** 
 OPAL-X> 
 OPAL-X> 
@@ -89,11 +89,11 @@ OPAL-X> * RMS R           = (      0.00000 ,      0.00000 ,      0.00000 ) [um]
 OPAL-X> * RMS P           = ( 0.000000e+00 , 0.000000e+00 , 0.000000e+00 ) [beta gamma]
 OPAL-X> * Mean R          = ( 0.000000e+00 , 0.000000e+00 , 0.000000e+00 ) [m]
 OPAL-X> * Mean P          = ( 0.000000e+00 , 0.000000e+00 , 0.000000e+00 ) [beta gamma]
-OPAL-X> * MESH SPACING    = (      0.00417 ,      0.00417 ,      0.00417 ) [um]
+OPAL-X> * MESH SPACING    = (      0.00625 ,      0.00625 ,      0.00625 ) [um]
 OPAL-X> * COMPDOM INCR    = 5.000000e+00 (%) 
-OPAL-X> * FIELD LAYOUT    = Domain = {[0:23:1],[0:23:1],[0:23:1]}
+OPAL-X> * FIELD LAYOUT    = Domain = {[0:15:1],[0:15:1],[0:15:1]}
 OPAL-X> Total number of boxes = 1
-OPAL-X>     Box 0 {[0:23:1],[0:23:1],[0:23:1]}
+OPAL-X>     Box 0 {[0:15:1],[0:15:1],[0:15:1]}
 OPAL-X> 
 OPAL-X> * Centroid : 
 OPAL-X> * 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 
@@ -108,377 +108,284 @@ OPAL-X> * * ********************************************************************
 OPAL-X> 
 OPAL-X> * E1 gone live
 OPAL-X> * D1 gone live
-OPAL-X> * OrbitThreader dt_m= 5e-11
+OPAL-X> * OrbitThreader dt_m= 1e-10
 OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
 OPAL-X> * OrbitThreader #elements  = 1
-OPAL-X> * OrbitThreader maxDistance= 0.00592717
+OPAL-X> * OrbitThreader maxDistance= 0.00616412
 OPAL-X> * OrbitThreader #elements  = 1
-OPAL-X> * OrbitThreader maxDistance= 1.00499
+OPAL-X> * OrbitThreader maxDistance= 0.991906
 OPAL-X> * OrbitThreader #elements  = 0
 OPAL-X> 
 OPAL-X> * Size of map 3 sections 
-OPAL-X> * Key: (0.000000 - 1.005631) number of overlapping elements 1
+OPAL-X> * Key: (0.000000 - 1.005571) number of overlapping elements 1
 OPAL-X> *                            E1
-OPAL-X> * Key: (1.005631 - 2.004694) number of overlapping elements 1
+OPAL-X> * Key: (1.005571 - 1.991313) number of overlapping elements 1
 OPAL-X> *                            D1
-OPAL-X> * Key: (2.004694 - 2.018014) number of overlapping elements 0
+OPAL-X> * Key: (1.991313 - 2.000000) number of overlapping elements 0
 OPAL-X> 
 OPAL-X> * Creating new file for data: 'data/Drift-4-multi-emit-open_ElementPositions.sdds'
-OPAL-X> * Track start at: 11:01:55, t= 0.000 [fs]; zstart at: 0.000 [um]
-OPAL-X> * Initial dt = 20833.333 [ms]
-OPAL-X> * Max integration steps = 200, next step = 0
+OPAL-X> * Track start at: 11:27:33, t= 0.000 [fs]; zstart at: 0.000 [um]
+OPAL-X> * Initial dt = 31250.000 [ms]
+OPAL-X> * Max integration steps = 100, next step = 0
 OPAL-X>                dt [ns]           zStop [m]        num Steps [1]
-OPAL-X> ->         5.000000e-11        2.000000e+00                 200
-OPAL-X> * 11:01:55 Step      0;    -- no emission yet --     t= 50.000 [ps]
-OPAL-X> * 11:01:55 Step      1;    -- no emission yet --     t= 100.000 [ps]
-OPAL-X> * 11:01:55 Step      2;    -- no emission yet --     t= 150.000 [ps]
-OPAL-X> * 11:01:55 Step      3;    -- no emission yet --     t= 200.000 [ps]
-OPAL-X> * 11:01:55 Step      4;    -- no emission yet --     t= 250.000 [ps]
-OPAL-X> * 11:01:55 Step      5;    -- no emission yet --     t= 300.000 [ps]
-OPAL-X> * 11:01:55 Step      6;    -- no emission yet --     t= 350.000 [ps]
-OPAL-X> * 11:01:55 Step      7 at 8.635 [mm], t= 400.000 [ps], E=60.315 [keV]
-OPAL-X> * 11:01:55 Step      8 at 10.881 [mm], t= 450.000 [ps], E=62.354 [keV]
-OPAL-X> * 11:01:55 Step      9 at 13.382 [mm], t= 500.000 [ps], E=63.402 [keV]
-OPAL-X> * 11:01:55 Step     10 at 16.133 [mm], t= 550.000 [ps], E=65.147 [keV]
-OPAL-X> * 11:01:55 Step     11 at 19.135 [mm], t= 600.000 [ps], E=66.340 [keV]
-OPAL-X> * 11:01:55 Step     12 at 22.383 [mm], t= 650.000 [ps], E=67.419 [keV]
-OPAL-X> * 11:01:55 Step     13 at 25.875 [mm], t= 700.000 [ps], E=68.523 [keV]
-OPAL-X> * 11:01:55 Step     14 at 29.608 [mm], t= 750.000 [ps], E=69.312 [keV]
-OPAL-X> * 11:01:55 Step     15 at 33.579 [mm], t= 800.000 [ps], E=70.393 [keV]
-OPAL-X> * 11:01:55 Step     16 at 37.785 [mm], t= 850.000 [ps], E=71.122 [keV]
-OPAL-X> * 11:01:55 Step     17 at 42.223 [mm], t= 900.000 [ps], E=72.012 [keV]
-OPAL-X> * 11:01:55 Step     18 at 46.889 [mm], t= 950.000 [ps], E=72.858 [keV]
-OPAL-X> * 11:01:55 Step     19 at 51.780 [mm], t= 1.000 [ns], E=73.602 [keV]
-OPAL-X> * 11:01:55 Step     20 at 56.891 [mm], t= 1.050 [ns], E=74.255 [keV]
-OPAL-X> * 11:01:56 Step     21 at 62.220 [mm], t= 1.100 [ns], E=74.948 [keV]
-OPAL-X> * 11:01:56 Step     22 at 67.762 [mm], t= 1.150 [ns], E=75.647 [keV]
-OPAL-X> * 11:01:56 Step     23 at 73.515 [mm], t= 1.200 [ns], E=76.343 [keV]
-OPAL-X> * 11:01:56 Step     24 at 79.472 [mm], t= 1.250 [ns], E=77.041 [keV]
-OPAL-X> * 11:01:56 Step     25 at 85.632 [mm], t= 1.300 [ns], E=77.801 [keV]
-OPAL-X> * 11:01:56 Step     26 at 91.990 [mm], t= 1.350 [ns], E=78.552 [keV]
-OPAL-X> * 11:01:56 Step     27 at 98.541 [mm], t= 1.400 [ns], E=79.310 [keV]
-OPAL-X> * 11:01:56 Step     28 at 105.283 [mm], t= 1.450 [ns], E=80.084 [keV]
-OPAL-X> * 11:01:56 Step     29 at 112.210 [mm], t= 1.500 [ns], E=80.878 [keV]
-OPAL-X> * 11:01:56 Step     30 at 119.319 [mm], t= 1.550 [ns], E=81.699 [keV]
-OPAL-X> * 11:01:56 Step     31 at 126.607 [mm], t= 1.600 [ns], E=82.547 [keV]
-OPAL-X> * 11:01:56 Step     32 at 134.068 [mm], t= 1.650 [ns], E=83.443 [keV]
-OPAL-X> * 11:01:56 Step     33 at 141.700 [mm], t= 1.700 [ns], E=84.360 [keV]
-OPAL-X> * 11:01:56 Step     34 at 149.498 [mm], t= 1.750 [ns], E=85.334 [keV]
-OPAL-X> * 11:01:56 Step     35 at 157.458 [mm], t= 1.800 [ns], E=86.350 [keV]
-OPAL-X> * 11:01:56 Step     36 at 165.577 [mm], t= 1.850 [ns], E=87.415 [keV]
-OPAL-X> * 11:01:56 Step     37 at 173.851 [mm], t= 1.900 [ns], E=88.529 [keV]
-OPAL-X> * 11:01:56 Step     38 at 182.276 [mm], t= 1.950 [ns], E=89.704 [keV]
-OPAL-X> * 11:01:56 Step     39 at 190.848 [mm], t= 2.000 [ns], E=110.765 [keV]
-OPAL-X> * 11:01:56 Step     40 at 199.565 [mm], t= 2.050 [ns], E=112.924 [keV]
-OPAL-X> * 11:01:56 Step     41 at 208.421 [mm], t= 2.100 [ns], E=117.575 [keV]
-OPAL-X> * 11:01:56 Step     42 at 217.414 [mm], t= 2.150 [ns], E=122.328 [keV]
-OPAL-X> * 11:01:56 Step     43 at 226.541 [mm], t= 2.200 [ns], E=126.970 [keV]
-OPAL-X> * 11:01:56 Step     44 at 235.798 [mm], t= 2.250 [ns], E=131.597 [keV]
-OPAL-X> * 11:01:56 Step     45 at 245.181 [mm], t= 2.300 [ns], E=136.126 [keV]
-OPAL-X> * 11:01:56 Step     46 at 254.688 [mm], t= 2.350 [ns], E=140.652 [keV]
-OPAL-X> * 11:01:56 Step     47 at 264.316 [mm], t= 2.400 [ns], E=145.149 [keV]
-OPAL-X> * 11:01:56 Step     48 at 274.060 [mm], t= 2.450 [ns], E=149.643 [keV]
-OPAL-X> * 11:01:56 Step     49 at 283.919 [mm], t= 2.500 [ns], E=154.145 [keV]
-OPAL-X> * 11:01:56 Step     50 at 293.889 [mm], t= 2.550 [ns], E=158.637 [keV]
-OPAL-X> * 11:01:57 Step     51 at 303.968 [mm], t= 2.600 [ns], E=163.143 [keV]
-OPAL-X> * 11:01:57 Step     52 at 314.152 [mm], t= 2.650 [ns], E=167.646 [keV]
-OPAL-X> * 11:01:57 Step     53 at 324.439 [mm], t= 2.700 [ns], E=172.151 [keV]
-OPAL-X> * 11:01:57 Step     54 at 334.826 [mm], t= 2.750 [ns], E=176.667 [keV]
-OPAL-X> * 11:01:57 Step     55 at 345.311 [mm], t= 2.800 [ns], E=181.183 [keV]
-OPAL-X> * 11:01:57 Step     56 at 355.891 [mm], t= 2.850 [ns], E=185.701 [keV]
-OPAL-X> * 11:01:57 Step     57 at 366.563 [mm], t= 2.900 [ns], E=190.227 [keV]
-OPAL-X> * 11:01:57 Step     58 at 377.326 [mm], t= 2.950 [ns], E=194.756 [keV]
-OPAL-X> * 11:01:57 Step     59 at 388.176 [mm], t= 3.000 [ns], E=199.285 [keV]
-OPAL-X> * 11:01:57 Step     60 at 399.112 [mm], t= 3.050 [ns], E=203.823 [keV]
-OPAL-X> * 11:01:57 Step     61 at 410.131 [mm], t= 3.100 [ns], E=208.386 [keV]
-OPAL-X> * 11:01:57 Step     62 at 421.231 [mm], t= 3.150 [ns], E=212.976 [keV]
-OPAL-X> * 11:01:57 Step     63 at 432.411 [mm], t= 3.200 [ns], E=217.609 [keV]
-OPAL-X> * 11:01:57 Step     64 at 443.667 [mm], t= 3.250 [ns], E=222.298 [keV]
-OPAL-X> * 11:01:57 Step     65 at 454.998 [mm], t= 3.300 [ns], E=227.057 [keV]
-OPAL-X> * 11:01:57 Step     66 at 466.402 [mm], t= 3.350 [ns], E=231.890 [keV]
-OPAL-X> * 11:01:57 Step     67 at 477.878 [mm], t= 3.400 [ns], E=236.806 [keV]
-OPAL-X> * 11:01:57 Step     68 at 489.423 [mm], t= 3.450 [ns], E=241.812 [keV]
-OPAL-X> * 11:01:57 Step     69 at 501.035 [mm], t= 3.500 [ns], E=246.923 [keV]
-OPAL-X> * 11:01:58 Step     70 at 512.714 [mm], t= 3.550 [ns], E=252.138 [keV]
-OPAL-X> * 11:01:58 Step     71 at 524.456 [mm], t= 3.600 [ns], E=257.465 [keV]
-OPAL-X> * 11:01:58 Step     72 at 536.261 [mm], t= 3.650 [ns], E=262.907 [keV]
-OPAL-X> * 11:01:58 Step     73 at 548.127 [mm], t= 3.700 [ns], E=268.468 [keV]
-OPAL-X> * 11:01:58 Step     74 at 560.052 [mm], t= 3.750 [ns], E=274.145 [keV]
-OPAL-X> * 11:01:58 Step     75 at 572.036 [mm], t= 3.800 [ns], E=279.938 [keV]
-OPAL-X> * 11:01:58 Step     76 at 584.075 [mm], t= 3.850 [ns], E=285.849 [keV]
-OPAL-X> * 11:01:58 Step     77 at 596.170 [mm], t= 3.900 [ns], E=291.876 [keV]
-OPAL-X> * 11:01:58 Step     78 at 608.319 [mm], t= 3.950 [ns], E=298.015 [keV]
-OPAL-X> * 11:01:58 Step     79 at 620.520 [mm], t= 4.000 [ns], E=304.263 [keV]
-OPAL-X> * 11:01:58 Step     80 at 632.772 [mm], t= 4.050 [ns], E=310.608 [keV]
-OPAL-X> * 11:01:58 Step     81 at 645.074 [mm], t= 4.100 [ns], E=317.055 [keV]
-OPAL-X> * 11:01:58 Step     82 at 657.424 [mm], t= 4.150 [ns], E=323.598 [keV]
-OPAL-X> * 11:01:58 Step     83 at 669.822 [mm], t= 4.200 [ns], E=330.233 [keV]
-OPAL-X> * 11:01:58 Step     84 at 682.266 [mm], t= 4.250 [ns], E=336.953 [keV]
-OPAL-X> * 11:01:58 Step     85 at 694.756 [mm], t= 4.300 [ns], E=343.744 [keV]
-OPAL-X> * 11:01:58 Step     86 at 707.289 [mm], t= 4.350 [ns], E=350.616 [keV]
-OPAL-X> * 11:01:58 Step     87 at 719.865 [mm], t= 4.400 [ns], E=357.553 [keV]
-OPAL-X> * 11:01:58 Step     88 at 732.484 [mm], t= 4.450 [ns], E=364.556 [keV]
-OPAL-X> * 11:01:59 Step     89 at 745.143 [mm], t= 4.500 [ns], E=371.617 [keV]
-OPAL-X> * 11:01:59 Step     90 at 757.843 [mm], t= 4.550 [ns], E=378.737 [keV]
-OPAL-X> * 11:01:59 Step     91 at 770.581 [mm], t= 4.600 [ns], E=385.907 [keV]
-OPAL-X> * 11:01:59 Step     92 at 783.358 [mm], t= 4.650 [ns], E=393.127 [keV]
-OPAL-X> * 11:01:59 Step     93 at 796.172 [mm], t= 4.700 [ns], E=400.388 [keV]
-OPAL-X> * 11:01:59 Step     94 at 809.022 [mm], t= 4.750 [ns], E=407.688 [keV]
-OPAL-X> * 11:01:59 Step     95 at 821.908 [mm], t= 4.800 [ns], E=415.028 [keV]
-OPAL-X> * 11:01:59 Step     96 at 834.829 [mm], t= 4.850 [ns], E=422.407 [keV]
-OPAL-X> * 11:01:59 Step     97 at 847.784 [mm], t= 4.900 [ns], E=429.825 [keV]
-OPAL-X> * 11:01:59 Step     98 at 860.772 [mm], t= 4.950 [ns], E=437.271 [keV]
-OPAL-X> * 11:01:59 Step     99 at 873.792 [mm], t= 5.000 [ns], E=444.744 [keV]
-OPAL-X> * 11:01:59 Step    100 at 886.844 [mm], t= 5.050 [ns], E=452.255 [keV]
-OPAL-X> * 11:01:59 Step    101 at 899.928 [mm], t= 5.100 [ns], E=459.791 [keV]
-OPAL-X> * 11:01:59 Step    102 at 913.041 [mm], t= 5.150 [ns], E=467.353 [keV]
-OPAL-X> * 11:01:59 Step    103 at 926.184 [mm], t= 5.200 [ns], E=474.938 [keV]
-OPAL-X> * 11:01:59 Step    104 at 939.356 [mm], t= 5.250 [ns], E=482.546 [keV]
-OPAL-X> * 11:01:59 Step    105 at 952.557 [mm], t= 5.300 [ns], E=490.176 [keV]
-OPAL-X> * 11:01:59 Step    106 at 965.785 [mm], t= 5.350 [ns], E=497.826 [keV]
-OPAL-X> * 11:01:59 Step    107 at 979.041 [mm], t= 5.400 [ns], E=505.497 [keV]
-OPAL-X> * 11:01:59 Step    108 at 992.323 [mm], t= 5.450 [ns], E=513.186 [keV]
-OPAL-X> * 11:01:59 Step    109 at 1.006 [m], t= 5.500 [ns], E=520.892 [keV]
-OPAL-X> * 11:01:59 Step    110 at 1.019 [m], t= 5.550 [ns], E=528.613 [keV]
-OPAL-X> * 11:02:00 Step    111 at 1.032 [m], t= 5.600 [ns], E=536.347 [keV]
-OPAL-X> * 11:02:00 Step    112 at 1.046 [m], t= 5.650 [ns], E=544.093 [keV]
-OPAL-X> * 11:02:00 Step    113 at 1.059 [m], t= 5.700 [ns], E=551.849 [keV]
-OPAL-X> * 11:02:00 Step    114 at 1.072 [m], t= 5.750 [ns], E=559.611 [keV]
-OPAL-X> * 11:02:00 Step    115 at 1.086 [m], t= 5.800 [ns], E=567.379 [keV]
-OPAL-X> * 11:02:00 Step    116 at 1.099 [m], t= 5.850 [ns], E=575.148 [keV]
-OPAL-X> * 11:02:00 Step    117 at 1.112 [m], t= 5.900 [ns], E=582.915 [keV]
-OPAL-X> * 11:02:00 Step    118 at 1.126 [m], t= 5.950 [ns], E=590.679 [keV]
-OPAL-X> * 11:02:00 Step    119 at 1.139 [m], t= 6.000 [ns], E=598.434 [keV]
-OPAL-X> * 11:02:00 Step    120 at 1.152 [m], t= 6.050 [ns], E=606.177 [keV]
-OPAL-X> * 11:02:00 Step    121 at 1.165 [m], t= 6.100 [ns], E=613.904 [keV]
-OPAL-X> * 11:02:00 Step    122 at 1.179 [m], t= 6.150 [ns], E=621.608 [keV]
-OPAL-X> * 11:02:00 Step    123 at 1.192 [m], t= 6.200 [ns], E=629.287 [keV]
-OPAL-X> * 11:02:00 Step    124 at 1.205 [m], t= 6.250 [ns], E=634.526 [keV]
-OPAL-X> * 11:02:00 Step    125 at 1.219 [m], t= 6.300 [ns], E=637.278 [keV]
-OPAL-X> * 11:02:00 Step    126 at 1.232 [m], t= 6.350 [ns], E=639.973 [keV]
-OPAL-X> * 11:02:00 Step    127 at 1.245 [m], t= 6.400 [ns], E=642.634 [keV]
-OPAL-X> * 11:02:00 Step    128 at 1.259 [m], t= 6.450 [ns], E=645.263 [keV]
-OPAL-X> * 11:02:00 Step    129 at 1.272 [m], t= 6.500 [ns], E=647.836 [keV]
-OPAL-X> * 11:02:00 Step    130 at 1.285 [m], t= 6.550 [ns], E=650.354 [keV]
-OPAL-X> * 11:02:00 Step    131 at 1.299 [m], t= 6.600 [ns], E=652.803 [keV]
-OPAL-X> * 11:02:00 Step    132 at 1.312 [m], t= 6.650 [ns], E=655.186 [keV]
-OPAL-X> * 11:02:01 Step    133 at 1.325 [m], t= 6.700 [ns], E=657.500 [keV]
-OPAL-X> * 11:02:01 Step    134 at 1.339 [m], t= 6.750 [ns], E=659.743 [keV]
-OPAL-X> * 11:02:01 Step    135 at 1.352 [m], t= 6.800 [ns], E=661.913 [keV]
-OPAL-X> * 11:02:01 Step    136 at 1.365 [m], t= 6.850 [ns], E=664.009 [keV]
-OPAL-X> * 11:02:01 Step    137 at 1.379 [m], t= 6.900 [ns], E=666.031 [keV]
-OPAL-X> * 11:02:01 Step    138 at 1.392 [m], t= 6.950 [ns], E=667.978 [keV]
-OPAL-X> * 11:02:01 Step    139 at 1.405 [m], t= 7.000 [ns], E=669.850 [keV]
-OPAL-X> * 11:02:01 Step    140 at 1.419 [m], t= 7.050 [ns], E=671.648 [keV]
-OPAL-X> * 11:02:01 Step    141 at 1.432 [m], t= 7.100 [ns], E=673.370 [keV]
-OPAL-X> * 11:02:01 Step    142 at 1.445 [m], t= 7.150 [ns], E=675.017 [keV]
-OPAL-X> * 11:02:01 Step    143 at 1.459 [m], t= 7.200 [ns], E=676.589 [keV]
-OPAL-X> * 11:02:01 Step    144 at 1.472 [m], t= 7.250 [ns], E=678.084 [keV]
-OPAL-X> * 11:02:01 Step    145 at 1.485 [m], t= 7.300 [ns], E=679.504 [keV]
-OPAL-X> * 11:02:01 Step    146 at 1.499 [m], t= 7.350 [ns], E=680.847 [keV]
-OPAL-X> * 11:02:01 Step    147 at 1.512 [m], t= 7.400 [ns], E=682.114 [keV]
-OPAL-X> * 11:02:01 Step    148 at 1.525 [m], t= 7.450 [ns], E=683.304 [keV]
-OPAL-X> * 11:02:01 Step    149 at 1.538 [m], t= 7.500 [ns], E=684.418 [keV]
-OPAL-X> * 11:02:01 Step    150 at 1.552 [m], t= 7.550 [ns], E=685.455 [keV]
-OPAL-X> * 11:02:01 Step    151 at 1.565 [m], t= 7.600 [ns], E=686.416 [keV]
-OPAL-X> * 11:02:01 Step    152 at 1.578 [m], t= 7.650 [ns], E=687.302 [keV]
-OPAL-X> * 11:02:01 Step    153 at 1.592 [m], t= 7.700 [ns], E=688.115 [keV]
-OPAL-X> * 11:02:01 Step    154 at 1.605 [m], t= 7.750 [ns], E=688.857 [keV]
-OPAL-X> * 11:02:01 Step    155 at 1.618 [m], t= 7.800 [ns], E=689.531 [keV]
-OPAL-X> * 11:02:01 Step    156 at 1.632 [m], t= 7.850 [ns], E=690.140 [keV]
-OPAL-X> * 11:02:01 Step    157 at 1.645 [m], t= 7.900 [ns], E=690.687 [keV]
-OPAL-X> * 11:02:01 Step    158 at 1.658 [m], t= 7.950 [ns], E=691.175 [keV]
-OPAL-X> * 11:02:01 Step    159 at 1.672 [m], t= 8.000 [ns], E=691.609 [keV]
-OPAL-X> * 11:02:01 Step    160 at 1.685 [m], t= 8.050 [ns], E=691.993 [keV]
-OPAL-X> * 11:02:01 Step    161 at 1.698 [m], t= 8.100 [ns], E=692.329 [keV]
-OPAL-X> * 11:02:01 Step    162 at 1.712 [m], t= 8.150 [ns], E=692.622 [keV]
-OPAL-X> * 11:02:02 Step    163 at 1.725 [m], t= 8.200 [ns], E=692.877 [keV]
-OPAL-X> * 11:02:02 Step    164 at 1.738 [m], t= 8.250 [ns], E=693.097 [keV]
-OPAL-X> * 11:02:02 Step    165 at 1.752 [m], t= 8.300 [ns], E=693.285 [keV]
-OPAL-X> * 11:02:02 Step    166 at 1.765 [m], t= 8.350 [ns], E=693.445 [keV]
-OPAL-X> * 11:02:02 Step    167 at 1.778 [m], t= 8.400 [ns], E=693.581 [keV]
-OPAL-X> * 11:02:02 Step    168 at 1.792 [m], t= 8.450 [ns], E=693.695 [keV]
-OPAL-X> * 11:02:02 Step    169 at 1.805 [m], t= 8.500 [ns], E=693.790 [keV]
-OPAL-X> * 11:02:02 Step    170 at 1.818 [m], t= 8.550 [ns], E=693.869 [keV]
-OPAL-X> * 11:02:02 Step    171 at 1.832 [m], t= 8.600 [ns], E=693.934 [keV]
-OPAL-X> * 11:02:02 Step    172 at 1.845 [m], t= 8.650 [ns], E=693.987 [keV]
-OPAL-X> * 11:02:02 Step    173 at 1.858 [m], t= 8.700 [ns], E=694.030 [keV]
-OPAL-X> * 11:02:02 Step    174 at 1.871 [m], t= 8.750 [ns], E=694.064 [keV]
-OPAL-X> * 11:02:02 Step    175 at 1.885 [m], t= 8.800 [ns], E=694.092 [keV]
-OPAL-X> * 11:02:02 Step    176 at 1.898 [m], t= 8.850 [ns], E=694.114 [keV]
-OPAL-X> * 11:02:02 Step    177 at 1.911 [m], t= 8.900 [ns], E=694.131 [keV]
-OPAL-X> * 11:02:02 Step    178 at 1.925 [m], t= 8.950 [ns], E=694.144 [keV]
-OPAL-X> * 11:02:02 Step    179 at 1.938 [m], t= 9.000 [ns], E=694.154 [keV]
-OPAL-X> * 11:02:02 Step    180 at 1.951 [m], t= 9.050 [ns], E=694.161 [keV]
-OPAL-X> * 11:02:02 Step    181 at 1.965 [m], t= 9.100 [ns], E=694.167 [keV]
-OPAL-X> * 11:02:02 Step    182 at 1.978 [m], t= 9.150 [ns], E=694.172 [keV]
-OPAL-X> * 11:02:02 Step    183 at 1.991 [m], t= 9.200 [ns], E=694.175 [keV]
-OPAL-X> * 11:02:02 Step    184 at 2.005 [m], t= 9.250 [ns], E=694.177 [keV]
+OPAL-X> ->         1.000000e-10        2.000000e+00                 100
+OPAL-X> * 11:27:33 Step      0;    -- no emission yet --     t= 100.000 [ps]
+OPAL-X> * 11:27:33 Step      1;    -- no emission yet --     t= 200.000 [ps]
+OPAL-X> * 11:27:33 Step      2;    -- no emission yet --     t= 300.000 [ps]
+OPAL-X> * 11:27:33 Step      3;    -- no emission yet --     t= 400.000 [ps]
+OPAL-X> * 11:27:33 Step      4;    -- no emission yet --     t= 500.000 [ps]
+OPAL-X> * 11:27:33 Step      5;    -- no emission yet --     t= 600.000 [ps]
+OPAL-X> * 11:27:33 Step      6 at 25.869 [mm], t= 700.000 [ps], E=60.315 [keV]
+OPAL-X> * 11:27:34 Step      7 at 33.572 [mm], t= 800.000 [ps], E=63.071 [keV]
+OPAL-X> * 11:27:34 Step      8 at 42.214 [mm], t= 900.000 [ps], E=65.898 [keV]
+OPAL-X> * 11:27:34 Step      9 at 51.769 [mm], t= 1.000 [ns], E=68.026 [keV]
+OPAL-X> * 11:27:34 Step     10 at 62.208 [mm], t= 1.100 [ns], E=69.788 [keV]
+OPAL-X> * 11:27:34 Step     11 at 73.500 [mm], t= 1.200 [ns], E=71.844 [keV]
+OPAL-X> * 11:27:34 Step     12 at 85.616 [mm], t= 1.300 [ns], E=73.588 [keV]
+OPAL-X> * 11:27:34 Step     13 at 98.523 [mm], t= 1.400 [ns], E=75.534 [keV]
+OPAL-X> * 11:27:34 Step     14 at 112.190 [mm], t= 1.500 [ns], E=77.378 [keV]
+OPAL-X> * 11:27:34 Step     15 at 126.584 [mm], t= 1.600 [ns], E=79.251 [keV]
+OPAL-X> * 11:27:34 Step     16 at 141.676 [mm], t= 1.700 [ns], E=81.199 [keV]
+OPAL-X> * 11:27:34 Step     17 at 157.432 [mm], t= 1.800 [ns], E=83.234 [keV]
+OPAL-X> * 11:27:34 Step     18 at 173.823 [mm], t= 1.900 [ns], E=85.525 [keV]
+OPAL-X> * 11:27:34 Step     19 at 190.818 [mm], t= 2.000 [ns], E=109.382 [keV]
+OPAL-X> * 11:27:34 Step     20 at 208.389 [mm], t= 2.100 [ns], E=113.410 [keV]
+OPAL-X> * 11:27:34 Step     21 at 226.508 [mm], t= 2.200 [ns], E=122.028 [keV]
+OPAL-X> * 11:27:34 Step     22 at 245.146 [mm], t= 2.300 [ns], E=130.581 [keV]
+OPAL-X> * 11:27:34 Step     23 at 264.279 [mm], t= 2.400 [ns], E=138.858 [keV]
+OPAL-X> * 11:27:34 Step     24 at 283.881 [mm], t= 2.500 [ns], E=147.042 [keV]
+OPAL-X> * 11:27:34 Step     25 at 303.928 [mm], t= 2.600 [ns], E=155.234 [keV]
+OPAL-X> * 11:27:34 Step     26 at 324.398 [mm], t= 2.700 [ns], E=163.410 [keV]
+OPAL-X> * 11:27:34 Step     27 at 345.269 [mm], t= 2.800 [ns], E=171.598 [keV]
+OPAL-X> * 11:27:34 Step     28 at 366.520 [mm], t= 2.900 [ns], E=179.789 [keV]
+OPAL-X> * 11:27:34 Step     29 at 388.131 [mm], t= 3.000 [ns], E=187.995 [keV]
+OPAL-X> * 11:27:34 Step     30 at 410.085 [mm], t= 3.100 [ns], E=196.247 [keV]
+OPAL-X> * 11:27:34 Step     31 at 432.364 [mm], t= 3.200 [ns], E=204.634 [keV]
+OPAL-X> * 11:27:34 Step     32 at 454.950 [mm], t= 3.300 [ns], E=213.290 [keV]
+OPAL-X> * 11:27:34 Step     33 at 477.829 [mm], t= 3.400 [ns], E=222.266 [keV]
+OPAL-X> * 11:27:34 Step     34 at 500.986 [mm], t= 3.500 [ns], E=231.670 [keV]
+OPAL-X> * 11:27:34 Step     35 at 524.406 [mm], t= 3.600 [ns], E=241.575 [keV]
+OPAL-X> * 11:27:34 Step     36 at 548.076 [mm], t= 3.700 [ns], E=251.960 [keV]
+OPAL-X> * 11:27:34 Step     37 at 571.984 [mm], t= 3.800 [ns], E=262.906 [keV]
+OPAL-X> * 11:27:34 Step     38 at 596.118 [mm], t= 3.900 [ns], E=274.347 [keV]
+OPAL-X> * 11:27:34 Step     39 at 620.467 [mm], t= 4.000 [ns], E=286.319 [keV]
+OPAL-X> * 11:27:34 Step     40 at 645.020 [mm], t= 4.100 [ns], E=298.742 [keV]
+OPAL-X> * 11:27:34 Step     41 at 669.768 [mm], t= 4.200 [ns], E=311.582 [keV]
+OPAL-X> * 11:27:34 Step     42 at 694.701 [mm], t= 4.300 [ns], E=324.800 [keV]
+OPAL-X> * 11:27:34 Step     43 at 719.810 [mm], t= 4.400 [ns], E=338.349 [keV]
+OPAL-X> * 11:27:34 Step     44 at 745.087 [mm], t= 4.500 [ns], E=352.171 [keV]
+OPAL-X> * 11:27:34 Step     45 at 770.525 [mm], t= 4.600 [ns], E=366.276 [keV]
+OPAL-X> * 11:27:34 Step     46 at 796.115 [mm], t= 4.700 [ns], E=380.593 [keV]
+OPAL-X> * 11:27:34 Step     47 at 821.851 [mm], t= 4.800 [ns], E=395.038 [keV]
+OPAL-X> * 11:27:34 Step     48 at 847.726 [mm], t= 4.900 [ns], E=409.694 [keV]
+OPAL-X> * 11:27:34 Step     49 at 873.734 [mm], t= 5.000 [ns], E=424.472 [keV]
+OPAL-X> * 11:27:34 Step     50 at 899.869 [mm], t= 5.100 [ns], E=439.366 [keV]
+OPAL-X> * 11:27:34 Step     51 at 926.126 [mm], t= 5.200 [ns], E=454.366 [keV]
+OPAL-X> * 11:27:34 Step     52 at 952.498 [mm], t= 5.300 [ns], E=469.462 [keV]
+OPAL-X> * 11:27:34 Step     53 at 978.981 [mm], t= 5.400 [ns], E=484.651 [keV]
+OPAL-X> * 11:27:34 Step     54 at 1.006 [m], t= 5.500 [ns], E=499.919 [keV]
+OPAL-X> * 11:27:34 Step     55 at 1.032 [m], t= 5.600 [ns], E=515.246 [keV]
+OPAL-X> * 11:27:34 Step     56 at 1.059 [m], t= 5.700 [ns], E=530.618 [keV]
+OPAL-X> * 11:27:34 Step     57 at 1.085 [m], t= 5.800 [ns], E=546.012 [keV]
+OPAL-X> * 11:27:34 Step     58 at 1.112 [m], t= 5.900 [ns], E=561.414 [keV]
+OPAL-X> * 11:27:34 Step     59 at 1.139 [m], t= 6.000 [ns], E=576.790 [keV]
+OPAL-X> * 11:27:34 Step     60 at 1.165 [m], t= 6.100 [ns], E=592.090 [keV]
+OPAL-X> * 11:27:34 Step     61 at 1.192 [m], t= 6.200 [ns], E=607.254 [keV]
+OPAL-X> * 11:27:34 Step     62 at 1.219 [m], t= 6.300 [ns], E=618.129 [keV]
+OPAL-X> * 11:27:34 Step     63 at 1.245 [m], t= 6.400 [ns], E=624.665 [keV]
+OPAL-X> * 11:27:34 Step     64 at 1.272 [m], t= 6.500 [ns], E=631.033 [keV]
+OPAL-X> * 11:27:34 Step     65 at 1.299 [m], t= 6.600 [ns], E=637.237 [keV]
+OPAL-X> * 11:27:34 Step     66 at 1.325 [m], t= 6.700 [ns], E=642.992 [keV]
+OPAL-X> * 11:27:34 Step     67 at 1.352 [m], t= 6.800 [ns], E=648.391 [keV]
+OPAL-X> * 11:27:34 Step     68 at 1.379 [m], t= 6.900 [ns], E=653.416 [keV]
+OPAL-X> * 11:27:34 Step     69 at 1.405 [m], t= 7.000 [ns], E=658.089 [keV]
+OPAL-X> * 11:27:34 Step     70 at 1.432 [m], t= 7.100 [ns], E=662.387 [keV]
+OPAL-X> * 11:27:34 Step     71 at 1.458 [m], t= 7.200 [ns], E=666.325 [keV]
+OPAL-X> * 11:27:34 Step     72 at 1.485 [m], t= 7.300 [ns], E=669.901 [keV]
+OPAL-X> * 11:27:34 Step     73 at 1.512 [m], t= 7.400 [ns], E=673.096 [keV]
+OPAL-X> * 11:27:34 Step     74 at 1.538 [m], t= 7.500 [ns], E=675.891 [keV]
+OPAL-X> * 11:27:34 Step     75 at 1.565 [m], t= 7.600 [ns], E=678.332 [keV]
+OPAL-X> * 11:27:34 Step     76 at 1.592 [m], t= 7.700 [ns], E=680.410 [keV]
+OPAL-X> * 11:27:34 Step     77 at 1.618 [m], t= 7.800 [ns], E=682.117 [keV]
+OPAL-X> * 11:27:34 Step     78 at 1.645 [m], t= 7.900 [ns], E=683.513 [keV]
+OPAL-X> * 11:27:34 Step     79 at 1.672 [m], t= 8.000 [ns], E=684.685 [keV]
+OPAL-X> * 11:27:34 Step     80 at 1.698 [m], t= 8.100 [ns], E=685.552 [keV]
+OPAL-X> * 11:27:34 Step     81 at 1.725 [m], t= 8.200 [ns], E=686.202 [keV]
+OPAL-X> * 11:27:34 Step     82 at 1.752 [m], t= 8.300 [ns], E=686.711 [keV]
+OPAL-X> * 11:27:34 Step     83 at 1.778 [m], t= 8.400 [ns], E=687.059 [keV]
+OPAL-X> * 11:27:34 Step     84 at 1.805 [m], t= 8.500 [ns], E=687.306 [keV]
+OPAL-X> * 11:27:34 Step     85 at 1.831 [m], t= 8.600 [ns], E=687.476 [keV]
+OPAL-X> * 11:27:34 Step     86 at 1.858 [m], t= 8.700 [ns], E=687.582 [keV]
+OPAL-X> * 11:27:34 Step     87 at 1.885 [m], t= 8.800 [ns], E=687.655 [keV]
+OPAL-X> * 11:27:34 Step     88 at 1.911 [m], t= 8.900 [ns], E=687.696 [keV]
+OPAL-X> * 11:27:34 Step     89 at 1.938 [m], t= 9.000 [ns], E=687.721 [keV]
+OPAL-X> * 11:27:34 Step     90 at 1.965 [m], t= 9.100 [ns], E=687.738 [keV]
+OPAL-X> * 11:27:34 Step     91 at 1.991 [m], t= 9.200 [ns], E=687.742 [keV]
 OPAL-X> * E1 gone off
 OPAL-X> * D1 gone off
 OPAL-X> 
-OPAL-X> * Done executing ParallelTracker at 11:02:02
+OPAL-X> * Done executing ParallelTracker at 11:27:34
 OPAL-X> 
 OPAL-X> * End of input stream 'Drift-4-multi-emit-open.in'
 Timings> ---------------------------------------------
 Timings>      Timing results for 1 rank(s):
 Timings> ---------------------------------------------
-Timings> mainTimer........... Wall tot =    6.93409
+Timings> mainTimer........... Wall tot =   0.928798
 Timings> 
-Timings> Write Stat.......... Wall max = 0.00484117
-Timings>                      Wall avg = 0.00484117
-Timings>                      Wall min = 0.00484117
+Timings> Write Stat.......... Wall max = 0.00184028
+Timings>                      Wall avg = 0.00184028
+Timings>                      Wall min = 0.00184028
 Timings> 
-Timings> Write H5-File....... Wall max =   0.015274
-Timings>                      Wall avg =   0.015274
-Timings>                      Wall min =   0.015274
+Timings> Write H5-File....... Wall max =  0.0117361
+Timings>                      Wall avg =  0.0117361
+Timings>                      Wall min =  0.0117361
 Timings> 
-Timings> bInitLimits......... Wall max =   0.010395
-Timings>                      Wall avg =   0.010395
-Timings>                      Wall min =   0.010395
+Timings> bInitLimits......... Wall max = 0.000653079
+Timings>                      Wall avg = 0.000653079
+Timings>                      Wall min = 0.000653079
 Timings> 
-Timings> bAllReduceLimits.... Wall max = 7.5541e-05
-Timings>                      Wall avg = 7.5541e-05
-Timings>                      Wall min = 7.5541e-05
+Timings> bAllReduceLimits.... Wall max = 2.6997e-05
+Timings>                      Wall avg = 2.6997e-05
+Timings>                      Wall min = 2.6997e-05
 Timings> 
-Timings> bAllReduceGlobalHis. Wall max = 3.5543e-05
-Timings>                      Wall avg = 3.5543e-05
-Timings>                      Wall min = 3.5543e-05
+Timings> bAllReduceGlobalHis. Wall max = 1.2656e-05
+Timings>                      Wall avg = 1.2656e-05
+Timings>                      Wall min = 1.2656e-05
 Timings> 
-Timings> bAssignUniformBins.. Wall max =  0.0114508
-Timings>                      Wall avg =  0.0114508
-Timings>                      Wall min =  0.0114508
+Timings> bAssignUniformBins.. Wall max = 0.000703443
+Timings>                      Wall avg = 0.000703443
+Timings>                      Wall min = 0.000703443
 Timings> 
-Timings> bExecuteHistoReduct. Wall max =  0.0119102
-Timings>                      Wall avg =  0.0119102
-Timings>                      Wall min =  0.0119102
+Timings> bExecuteHistoReduct. Wall max = 0.000898794
+Timings>                      Wall avg = 0.000898794
+Timings>                      Wall min = 0.000898794
 Timings> 
-Timings> bSortContainerByBin. Wall max =  0.0239955
-Timings>                      Wall avg =  0.0239955
-Timings>                      Wall min =  0.0239955
+Timings> bSortContainerByBin. Wall max = 0.00143433
+Timings>                      Wall avg = 0.00143433
+Timings>                      Wall min = 0.00143433
 Timings> 
 Timings> bVerifySorting...... Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> Initialize.......... Wall max = 0.00993543
-Timings>                      Wall avg = 0.00993543
-Timings>                      Wall min = 0.00993543
+Timings> Initialize.......... Wall max = 0.00350866
+Timings>                      Wall avg = 0.00350866
+Timings>                      Wall min = 0.00350866
 Timings> 
-Timings> Initialize: extra H. Wall max = 0.000937789
-Timings>                      Wall avg = 0.000937789
-Timings>                      Wall min = 0.000937789
+Timings> Initialize: extra H. Wall max = 0.000247891
+Timings>                      Wall avg = 0.000247891
+Timings>                      Wall min = 0.000247891
 Timings> 
-Timings> Warmup.............. Wall max = 0.00483592
-Timings>                      Wall avg = 0.00483592
-Timings>                      Wall min = 0.00483592
+Timings> Warmup.............. Wall max = 0.00179509
+Timings>                      Wall avg = 0.00179509
+Timings>                      Wall min = 0.00179509
 Timings> 
-Timings> Green Init.......... Wall max = 0.00261189
-Timings>                      Wall avg = 0.00261189
-Timings>                      Wall min = 0.00261189
+Timings> Green Init.......... Wall max = 0.000977805
+Timings>                      Wall avg = 0.000977805
+Timings>                      Wall min = 0.000977805
 Timings> 
-Timings> FFT: Green.......... Wall max =   0.660851
-Timings>                      Wall avg =   0.660851
-Timings>                      Wall min =   0.660851
+Timings> FFT: Green.......... Wall max =   0.111359
+Timings>                      Wall avg =   0.111359
+Timings>                      Wall min =   0.111359
 Timings> 
-Timings> Solve............... Wall max =    4.43591
-Timings>                      Wall avg =    4.43591
-Timings>                      Wall min =    4.43591
+Timings> Solve............... Wall max =   0.736548
+Timings>                      Wall avg =   0.736548
+Timings>                      Wall min =   0.736548
 Timings> 
-Timings> Solve: Physical to . Wall max = 0.00172701
-Timings>                      Wall avg = 0.00172701
-Timings>                      Wall min = 0.00172701
+Timings> Solve: Physical to . Wall max = 0.000322941
+Timings>                      Wall avg = 0.000322941
+Timings>                      Wall min = 0.000322941
 Timings> 
-Timings> FFT: Rho............ Wall max =   0.662021
-Timings>                      Wall avg =   0.662021
-Timings>                      Wall min =   0.662021
+Timings> FFT: Rho............ Wall max =   0.112495
+Timings>                      Wall avg =   0.112495
+Timings>                      Wall min =   0.112495
 Timings> 
-Timings> FFT: Convolution.... Wall max =   0.670449
-Timings>                      Wall avg =   0.670449
-Timings>                      Wall min =   0.670449
+Timings> FFT: Convolution.... Wall max =   0.111368
+Timings>                      Wall avg =   0.111368
+Timings>                      Wall min =   0.111368
 Timings> 
-Timings> Solve: Double to ph. Wall max = 0.00320429
-Timings>                      Wall avg = 0.00320429
-Timings>                      Wall min = 0.00320429
+Timings> Solve: Double to ph. Wall max = 0.000559464
+Timings>                      Wall avg = 0.000559464
+Timings>                      Wall min = 0.000559464
 Timings> 
-Timings> Solve: Electric fie. Wall max =    2.22464
-Timings>                      Wall avg =    2.22464
-Timings>                      Wall min =    2.22464
+Timings> Solve: Electric fie. Wall max =   0.368918
+Timings>                      Wall avg =   0.368918
+Timings>                      Wall min =   0.368918
 Timings> 
-Timings> FFT: Efield......... Wall max =     2.0035
-Timings>                      Wall avg =     2.0035
-Timings>                      Wall min =     2.0035
+Timings> FFT: Efield......... Wall max =    0.33374
+Timings>                      Wall avg =    0.33374
+Timings>                      Wall min =    0.33374
 Timings> 
-Timings> Efield: double to p. Wall max =  0.0109368
-Timings>                      Wall avg =  0.0109368
-Timings>                      Wall min =  0.0109368
+Timings> Efield: double to p. Wall max = 0.00181065
+Timings>                      Wall avg = 0.00181065
+Timings>                      Wall min = 0.00181065
 Timings> 
-Timings> samplingTime........ Wall max = 2.3105e-05
-Timings>                      Wall avg = 2.3105e-05
-Timings>                      Wall min = 2.3105e-05
+Timings> samplingTime........ Wall max = 1.7052e-05
+Timings>                      Wall avg = 1.7052e-05
+Timings>                      Wall min = 1.7052e-05
 Timings> 
-Timings> Sampling............ Wall max = 0.00778164
-Timings>                      Wall avg = 0.00778164
-Timings>                      Wall min = 0.00778164
+Timings> Sampling............ Wall max = 0.000941143
+Timings>                      Wall avg = 0.000941143
+Timings>                      Wall min = 0.000941143
 Timings> 
-Timings> particleBC.......... Wall max =  0.0688457
-Timings>                      Wall avg =  0.0688457
-Timings>                      Wall min =  0.0688457
+Timings> particleBC.......... Wall max = 0.00449248
+Timings>                      Wall avg = 0.00449248
+Timings>                      Wall min = 0.00449248
 Timings> 
 Timings> updateParticle...... Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> computeMoments...... Wall max =    1.11234
-Timings>                      Wall avg =    1.11234
-Timings>                      Wall min =    1.11234
+Timings> computeMoments...... Wall max =  0.0657011
+Timings>                      Wall avg =  0.0657011
+Timings>                      Wall min =  0.0657011
 Timings> 
-Timings> TIntegration1....... Wall max =  0.0233012
-Timings>                      Wall avg =  0.0233012
-Timings>                      Wall min =  0.0233012
+Timings> TIntegration1....... Wall max = 0.00145471
+Timings>                      Wall avg = 0.00145471
+Timings>                      Wall min = 0.00145471
 Timings> 
-Timings> TIntegration2....... Wall max =  0.0505636
-Timings>                      Wall avg =  0.0505636
-Timings>                      Wall min =  0.0505636
+Timings> TIntegration2....... Wall max = 0.00323163
+Timings>                      Wall avg = 0.00323163
+Timings>                      Wall min = 0.00323163
 Timings> 
-Timings> External field eval. Wall max =  0.0830733
-Timings>                      Wall avg =  0.0830733
-Timings>                      Wall min =  0.0830733
+Timings> External field eval. Wall max = 0.00781409
+Timings>                      Wall avg = 0.00781409
+Timings>                      Wall min = 0.00781409
 Timings> 
 Timings> Binaryrepart........ Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> OrbThreader......... Wall max = 0.00128596
-Timings>                      Wall avg = 0.00128596
-Timings>                      Wall min = 0.00128596
+Timings> OrbThreader......... Wall max = 0.000770774
+Timings>                      Wall avg = 0.000770774
+Timings>                      Wall min = 0.000770774
 Timings> 
-Timings> bDeviceSyncronizati. Wall max =  8.416e-05
-Timings>                      Wall avg =  8.416e-05
-Timings>                      Wall min =  8.416e-05
+Timings> bDeviceSyncronizati. Wall max = 3.9916e-05
+Timings>                      Wall avg = 3.9916e-05
+Timings>                      Wall min = 3.9916e-05
 Timings> 
-Timings> bHistogramInit...... Wall max = 0.00135516
-Timings>                      Wall avg = 0.00135516
-Timings>                      Wall min = 0.00135516
+Timings> bHistogramInit...... Wall max = 0.00054944
+Timings>                      Wall avg = 0.00054944
+Timings>                      Wall min = 0.00054944
 Timings> 
-Timings> bMergeBins.......... Wall max =  0.0100341
-Timings>                      Wall avg =  0.0100341
-Timings>                      Wall min =  0.0100341
+Timings> bMergeBins.......... Wall max = 0.00458341
+Timings>                      Wall avg = 0.00458341
+Timings>                      Wall min = 0.00458341
 Timings> 
-Timings> scatter............. Wall max =   0.261907
-Timings>                      Wall avg =   0.261907
-Timings>                      Wall min =   0.261907
+Timings> scatter............. Wall max =  0.0152793
+Timings>                      Wall avg =  0.0152793
+Timings>                      Wall min =  0.0152793
 Timings> 
-Timings> accumulateHalo...... Wall max = 2.1103e-05
-Timings>                      Wall avg = 2.1103e-05
-Timings>                      Wall min = 2.1103e-05
+Timings> accumulateHalo...... Wall max =  9.009e-06
+Timings>                      Wall avg =  9.009e-06
+Timings>                      Wall min =  9.009e-06
 Timings> 
-Timings> fillHalo............ Wall max = 2.1377e-05
-Timings>                      Wall avg = 2.1377e-05
-Timings>                      Wall min = 2.1377e-05
+Timings> fillHalo............ Wall max =  8.283e-06
+Timings>                      Wall avg =  8.283e-06
+Timings>                      Wall min =  8.283e-06
 Timings> 
-Timings> gather.............. Wall max =   0.285865
-Timings>                      Wall avg =   0.285865
-Timings>                      Wall min =   0.285865
+Timings> gather.............. Wall max =  0.0156711
+Timings>                      Wall avg =  0.0156711
+Timings>                      Wall min =  0.0156711
 Timings> 
 Timings> ---------------------------------------------
