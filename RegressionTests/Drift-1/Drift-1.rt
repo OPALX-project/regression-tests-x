@@ -1,0 +1,8 @@
+"Minimal Drift Test checking the stepper without solver, binning or elements."
+stat "rms_x" last 1E-9
+stat "rms_y" last 1E-9
+stat "rms_s" last 1E-9
+stat "rms_px" last 1E-9
+stat "rms_py" last 1E-9
+stat "rms_ps" last 1E-9
+stat "energy" last 1E-9
