@@ -1,10 +1,10 @@
 "Drift-4-multi-emit-open: FlatTop- and delayed Gaussian one-shot emissions into a 4 m drift + constant-E cavity with open field solver and binning. Checks basic beam stats and bin evolution."
 stat "rms_x"        last 1E-3
 stat "rms_y"        last 1E-3
-stat "rms_s"        last 1E-2
+stat "rms_s"        last 1E-3
 stat "rms_px"       last 1E-3
 stat "rms_py"       last 1E-3
-stat "rms_ps"       last 1E-2
-stat "energy"       last 1E3
+stat "rms_ps"       last 1E-3
+stat "energy"       last 1E-3
 stat "numParticles" avg 1E-9
-stat "nBins"        avg  1E-6
+stat "nBins"        avg 1E-6
