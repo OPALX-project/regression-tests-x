@@ -14,7 +14,7 @@
 
 OPTION, PSDUMPFREQ      = 300000;
 OPTION, STATDUMPFREQ    = 1;
-OPTION, BOUNDPDESTROY   = -1; // deactivate particle destruction
+OPTION, BOUNDPDESTROY   = 10;
 OPTION, AUTOPHASE       = 4;
 OPTION, EBDUMP          = true;
 OPTION, VERSION         = 10900;
@@ -88,6 +88,7 @@ DistGauss: DISTRIBUTION, TYPE=GAUSS,
 ES1: EMISSIONSOURCE, DISTRIBUTION = Dist1,
     P0Z = 0.5;
 ESGauss: EMISSIONSOURCE, DISTRIBUTION = DistGauss,
+    R0Z = 1e-2, // needed since the Gaussian is otherwise sampled half in/half out of the E cavity
     P0Z = 0.7,
     t0 = 2 * 1e-9; // 2.1ns
 mySources: EMISSIONSOURCELIST = (ES1, ESGauss);
