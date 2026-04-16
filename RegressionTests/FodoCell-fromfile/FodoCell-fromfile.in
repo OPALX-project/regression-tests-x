@@ -113,7 +113,7 @@ FS_SC: Fieldsolver, TYPE = NONE,
 //----------------------------------------------------------------------------
 // Electron Beam Definition
 
-BEAM1:  BEAM, PARTICLE = ELECTRON, pc = P0, NPART = n_particles,
+BEAM1:  BEAM, PARTICLE = ELECTRON, NPART = n_particles,
         BFREQ = rf_freq, BCURRENT = beam_bunch_charge * rf_freq * 1e6, SOURCES = mySources, CHARGE = -1;
 
 //----------------------------------------------------------------------------
