@@ -40,18 +40,34 @@ chmod +x ${FB}.local
 
 #
 mpirun -np ${RANKS} ${OPALX_EXE_PATH}/opalx ${F} --info 10 | tee ${FB}.out
-F1=`ls $FB.out`
-F2=`ls $FB.stat`
-F3=`ls timing.dat`
+
+# collect output files (supports single and multi-container runs)
+OUT_FILE=${FB}.out
+shopt -s nullglob
+STAT_FILES=(${FB}.stat ${FB}_c*.stat)
+shopt -u nullglob
+
+if [ ${#STAT_FILES[@]} -eq 0 ]; then
+    echo "Error: no .stat files found for ${FB}"
+    exit 1
+fi
+
+TIMING_FILE=timing.dat
+
 #
 mkdir -p reference
-cp $F1 reference/
-cp $F2 reference/
-cp $F3 reference/
-#
+cp ${OUT_FILE} reference/
+cp ${TIMING_FILE} reference/
 cd reference
-md5sum $F1 > $F1.md5
-md5sum $F2 > $F2.md5
-md5sum $F3 > $F3.md5
+md5sum ${OUT_FILE} > ${OUT_FILE}.md5
+md5sum ${TIMING_FILE} > ${TIMING_FILE}.md5
 cd ..
+
+for SF in "${STAT_FILES[@]}"; do
+    cp ${SF} reference/
+    cd reference
+    md5sum ${SF} > ${SF}.md5
+    cd ..
+done
+
 rm -rf data *.h5 *.out *.stat timing.dat
