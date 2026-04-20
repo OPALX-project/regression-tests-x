@@ -119,7 +119,7 @@ Fs_SC: Fieldsolver, TYPE=OPEN, BINS=BINS1,
 // Electron Beam Definition
 
 BEAM1:  BEAM, PARTICLE = ELECTRON, pc = P0, NPART = n_particles,
-        BFREQ = rf_freq, BCURRENT = beam_bunch_charge * rf_freq * 1E6, CHARGE = -1;
+        BCHARGE = beam_bunch_charge, CHARGE = -1;
 
 TRACK, LINE = GS, BEAM = BEAM1, MAXSTEPS = 2, DT = {dTg}, ZSTOP={1.0};
 RUN, METHOD = "PARALLEL", BEAM = BEAM1, FIELDSOLVER = FS_SC, DISTRIBUTION = Dist;
