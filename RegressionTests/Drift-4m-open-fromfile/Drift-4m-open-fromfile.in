@@ -67,7 +67,7 @@ ES1: EMISSIONSOURCE, DISTRIBUTION = Dist1_FF;
 mySources: EMISSIONSOURCELIST = (ES1);
 
 BEAM1:  BEAM, PARTICLE = ELECTRON, NPART = n_particles,
-        BFREQ = rf_freq, BCURRENT = beam_bunch_charge * rf_freq * 1E6, SOURCES = mySources, CHARGE = -1;
+        BCHARGE = beam_bunch_charge, SOURCES = mySources, CHARGE = -1;
 
 TRACK, LINE = L1, BEAM = BEAM1, MAXSTEPS = 300, DT = {6e-11}, ZSTOP=4.0; 
 RUN, METHOD = "PARALLEL", FIELDSOLVER = FS1;
