@@ -1,0 +1,111 @@
+/*      RFCavity.in
+        OPALX
+        Simple RF Cavity test, with Gaussian distribution loaded from file
+*/
+
+OPTION, PSDUMPFREQ      = 1000;  // 6d data written every 10th time step (h5).
+OPTION, STATDUMPFREQ    = 1;    // Beam Stats written every time step (stat).
+OPTION, BOUNDPDESTROY   = 10;   // Delete lost particles, if any out of 10 \sigma
+OPTION, AUTOPHASE       = 4;    // Autophase is on, and phase of max energy
+                                // gain will be found automatically for cavities.
+OPTION, VERSION = 10900;                     
+
+Title, string = "AWA RFCavity";
+
+Value, {OPALVERSION};
+
+// ----------------------------------------------------------------------------
+// Global Parameters
+
+REAL N                   = 32;        // SC grid size
+REAL rf_freq             = 1.3e3;     // RF frequency (MHz)
+REAL n_particles         = 1E4;       // Number of particles in simulation.
+REAL beam_bunch_charge   = 1e-9;      // Charge of bunch (C)
+                                      // Corresponds to ~6.24e9 electrons
+
+// Initial Momentum Calculation
+REAL Edes    = 1.4e-9;                // Initial Energy (GeV)
+REAL gamma   = (Edes+EMASS)/EMASS;
+REAL beta    = sqrt(1-(1/gamma^2));
+REAL P0      = gamma*beta*EMASS;      // Initial Momentum (GeV/c)
+
+//Printing initial energy parameters to terminal output.
+Value, {Edes, gamma, beta, P0, P0 * 3e8};
+
+// ----------------------------------------------------------------------------
+// RF photoinjector (Gun)
+//
+// Cavity/RF field.
+//
+// L:        Physical element length (m). Fieldmap length (m)
+// ELEMEDGE: Physical start of element (m)
+// VOLT:     RF field magnitude (MV/m). Field Scaling Factor (real)
+// TYPE:     Specifies "STANDING", "TRAVELLING" or "SINGLE GAP" Structure
+// FREQ:     RF frequency (MHz). Resonance frequency
+// LAG:      Cavity Phase (rad)
+// FMAPFN:   Fieldmap file (string)
+//
+
+REAL gun_inj_phase = 0.0;   // Rf injection phase (in degrees) with respect
+                            // to max phase. i.e. 0.0 inj phase corresponds
+                            // to running on crest (max energy).
+
+REAL rf_phase = gun_inj_phase * Pi / 180.0;
+
+
+GUN: RFCavity, L = 0.2927, VOLT = 60.0, ELEMEDGE = 0.0, TYPE = "STANDING",
+     FMAPFN = "fieldmaps/DriveGun.T7", FREQ = rf_freq, LAG = rf_phase;
+D1:  DRIFT, L = 0.5 - 0.2927, ELEMEDGE = 0.2927;
+
+// ----------------------------------------------------------------------------
+// DEFINE BEAM LINE
+
+// Complete accelerator - Only RF Cavity
+DRIVE: Line = (Gun, D1);
+
+// ----------------------------------------------------------------------------
+// INITIAL DISTRIBUTION FROM FILE
+
+Dist:   DISTRIBUTION, TYPE = FROMFILE, 
+        NPARTDIST = n_particles,
+        FNAME = "inputdistr.dat";
+
+ES1: EMISSIONSOURCE, DISTRIBUTION = Dist;
+mySources: EMISSIONSOURCELIST = (ES1);
+
+// ----------------------------------------------------------------------------
+// Define Field solvers
+// The mesh sizes should be a factor of 2
+// for most efficient space charge calculation.
+
+FS_SC:  Fieldsolver, TYPE = NONE, 
+        NX = N, NY = N, NZ = N, 
+        PARFFTX = false,
+        PARFFTY = false,
+        PARFFTZ = true,  // parallel in the z direction only
+        BCFFTX = open,
+        BCFFTY = open,
+        BCFFTZ = open,
+        BBOXINCR = 5,
+        GREENSF = INTEGRATED;
+
+// ----------------------------------------------------------------------------
+// Electron Beam Definition
+
+BEAM1:  BEAM, PARTICLE = ELECTRON, NPART = n_particles, 
+        SOURCES = mySources, BFREQ = rf_freq, 
+        BCURRENT = beam_bunch_charge * rf_freq * 1e6, 
+        CHARGE = -1;
+
+// ----------------------------------------------------------------------------
+// Start tracking
+
+TRACK,  LINE = DRIVE, BEAM = BEAM1, MAXSTEPS = 200, 
+        DT = 1.0e-11, ZSTOP = 0.5;
+
+RUN,    METHOD = "PARALLEL", FIELDSOLVER = FS_SC; 
+
+ENDTRACK;
+
+Stop;
+Quit;
