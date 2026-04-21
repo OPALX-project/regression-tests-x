@@ -118,7 +118,7 @@ Fs_SC: Fieldsolver, TYPE=OPEN, BINS=BINS1,
 //----------------------------------------------------------------------------
 // Electron Beam Definition
 
-BEAM1:  BEAM, PARTICLE = ELECTRON, pc = P0, NALLOC = n_particles,
+BEAM1:  BEAM, PARTICLE = ELECTRON, pc = P0, NPART = n_particles,
         BCHARGE = beam_bunch_charge, CHARGE = -1;
 
 TRACK, LINE = GS, BEAM = BEAM1, MAXSTEPS = 2, DT = {dTg}, ZSTOP={1.0};

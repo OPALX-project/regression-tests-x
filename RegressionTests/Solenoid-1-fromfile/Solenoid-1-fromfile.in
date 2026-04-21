@@ -113,7 +113,7 @@ FS1:    Fieldsolver, Type=NONE,
 
 BEAM0:  BEAM,
         PARTICLE = ELECTRON,
-        NALLOC = n_particles,
+        NPART = n_particles,
         BCHARGE = beam_bunch_charge,
         SOURCES = mySources,
         CHARGE = -1;
