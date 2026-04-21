@@ -1,0 +1,135 @@
+/*      TWCavity.in
+        OPALX
+        Simple Traveling wave RF Cavity test, with Gaussian distribution loaded from file
+*/
+
+OPTION, PSDUMPFREQ = 1000; // 6d data written every 10th time step (h5).
+
+Title, string = "SwissFEL TW Cavities"; 
+
+OPTION, VERSION = 20212;
+
+Value, {OPALVERSION};
+
+//------------------------------------------------------------------------ 
+// Global Parameters 
+//------------------------------------------------------------------------ 
+REAL N                   = 64;        // FS grid size
+REAL rf_freq             = 2997.912;  // RF frequency (MHz)
+REAL n_particles         = 1E4;       // Number of particles in simulation. //936329;
+REAL beam_bunch_charge   = 150e-15;   // Charge of bunch (C)
+REAL beam_current 		 = beam_bunch_charge * rf_freq * 1e6; 
+REAL fs_decomp 			 = 3; 
+
+//------------------------------------------------------------------------ 
+// Initial Momentum Calculation 
+//------------------------------------------------------------------------ 
+REAL Edes    = 6.6e-3;                // Initial Energy (GeV) (includes the effect of the first RF Cavity)
+REAL gamma   = (Edes+EMASS)/EMASS;
+REAL beta    = sqrt(1-(1/gamma^2));
+REAL P0      = gamma*beta*EMASS;      // Initial Momentum (GeV/c)
+
+//Printing initial energy parameters to terminal output.
+Value, {Edes, gamma, beta, P0, P0 * 3e8};
+
+//------------------------------------------------------------------------------------
+// Linac 1 & 2 
+REAL dz 	 = 0.05;
+REAL linac_f = rf_freq;
+
+REAL TW1_phi  = 0.0;
+REAL TW1_volt = 19.0;
+
+REAL TW2_phi  = 0.0;
+REAL TW2_volt = 20.0;
+
+REAL TW_length = 2.80;
+
+D1: 	DRIFT, L = 4.0 - 2.8, ELEMEDGE = 3.3;
+//D1: 	DRIFT, L = 1.0 + dz, ELEMEDGE = 0.0;
+//D2: 	DRIFT, L = 5.0 - TW_length, ELEMEDGE = 1.0 + dz + TW_length;
+//D3:		DRIFT, L = 1.0, ELEMEDGE = 6.0 + dz + TW_length;
+
+TW1: 	TravelingWave, L = TW_length, VOLT = TW1_volt, ELEMEDGE = 0.5, //1.0 + dz, // 3.3 + dz,
+		FMAPFN = "TWS_PSI_Sband_ASTRA.T7", NUMCELLS = 121, MODE = 1/3, 
+		FREQ = linac_f, LAG = TW1_phi;
+
+TW2: 	TravelingWave, L = TW_length, VOLT = TW2_volt, ELEMEDGE = 6.0 + dz,
+		FMAPFN = "TWS_PSI_Sband_ASTRA.T7", NUMCELLS = 121, 
+		MODE = 1/3, FREQ = linac_f, LAG = TW2_phi;
+//------------------------------------------------------------------------------------
+
+//SWISSFEL: Line = (D1, TW1, D2, TW2, D3);
+SWISSFEL: Line = (TW1, D1);
+
+//-------------------------------------------------------------------------------------
+// DISTRIBUTION: FLATTOP
+//
+// SIGMAX/Y:  	RMS radius of transverse (m).
+// TRISE/FALL:	Rise time and fall time of longitudinal guassian (s).
+// TPULSEFWHM:	FWHM of longitudinal guassian (s).
+// CUTOFFLONG:		Longitudinal cuttoff in units of sigma.
+// NBIN:		Number of energy bins to use during emission.
+// DEBIN: 		Min energy band for a bin in KeV. Defines when to combine bins.
+// EMISSIONMODEL:	NOEQUIL emission mode simulates photoinjector. 
+// EMISSIONSTEPS: 	Number of steps during emission. 
+//			Emission time step is adjusted to fit this number.
+// EKIN:	Kinetic energy of electrons at emission (eV). Used for emission model.
+// ELASER:	Energy of laser (eV). Used for NONEQUIL mode.
+// W:		Photocathode work function (eV). Used for NONEQUIL mode.
+// FE:		Fermi energy of photocathode (eV). Used for NONEQUIL mode.
+// CATHTEMP:	Temperature of photocathode (K). Used for NONEQUIL mode.
+
+
+REAL xy      = 200e-6;  // ~Astra values      
+REAL TPULSEW = 4e-12; 	// ~Astra values
+
+Dist: 	DISTRIBUTION, TYPE = GAUSS,
+		SIGMAX  = xy,
+		SIGMAY  = xy,
+		SIGMAZ = 1e-12, 
+		SIGMAPX = 1e-9, 
+        SIGMAPY = 1e-9, 
+		//SIGMAT  = TPULSEW,
+		NBIN = 1.0,   
+		//EKIN = 6.6e6,
+		WRITETOFILE = True;
+
+// NOTE: FWHM pulse width divided by emission steps gives the time step for the 
+// 	 emissions process. i.e 2e-12 / 100 gives a time step of 0.2e-13 (s) 
+//	 during emission.This is the not the same as the time step used in rest of the file. 
+//-------------------------------------------------------------------------------------		   
+
+//------------------------------------------------------------------------
+// Define Field solvers
+//------------------------------------------------------------------------ 
+REAL inter_rad = 3.125e-5;
+
+FS_P3M: Fieldsolver, FSTYPE = NONE, 
+		MX = N, MY = N, MT = N, 
+		PARFFTX = false, 
+		PARFFTY = false, 
+       	PARFFTT = true, 
+		BCFFTX = open, 
+		BCFFTY = open, 
+		BCFFTT = open, 
+		RC = inter_rad, 
+		GREENSF = INTEGRATED;
+
+//------------------------------------------------------------------------
+// Electron Beam Definition
+//------------------------------------------------------------------------
+BEAM1:  BEAM, PARTICLE = ELECTRON, NPART = n_particles,
+		pc = P0, BFREQ = rf_freq, 
+        BCURRENT = beam_current, CHARGE = -1;
+//-------------------------------------------------------------------------------------
+
+
+TRACK, 	LINE = SWISSFEL, BEAM = BEAM1, MAXSTEPS = 2000, 
+		DT = 2.0e-11, ZSTOP = 5.0;
+
+RUN, 	METHOD = "PARALLEL-T", BEAM = BEAM1, FIELDSOLVER = FS_P3M, DISTRIBUTION = Dist;
+
+ENDTRACK;
+
+STOP;
