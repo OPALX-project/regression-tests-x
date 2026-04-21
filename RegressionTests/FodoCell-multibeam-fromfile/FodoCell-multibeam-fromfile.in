@@ -107,10 +107,10 @@ FS_SC: Fieldsolver, TYPE = NONE,
 //----------------------------------------------------------------------------
 // Beam Definitions
 
-BEAM1:  BEAM, PARTICLE = ELECTRON, NPART = n_particles,
+BEAM1:  BEAM, PARTICLE = ELECTRON, NALLOC = n_particles,
         BCHARGE = beam_bunch_charge, SOURCES = mySources, CHARGE = -1;
 
-BEAM2:  BEAM, PARTICLE = ELECTRON, NPART = n_particles,
+BEAM2:  BEAM, PARTICLE = ELECTRON, NALLOC = n_particles,
         BCHARGE = beam_bunch_charge, SOURCES = mySources, CHARGE = +1;
 
 //----------------------------------------------------------------------------
