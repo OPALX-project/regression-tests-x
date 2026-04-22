@@ -111,11 +111,10 @@ FS1:    Fieldsolver, Type=NONE,
 //----------------------------------------------------------------------------
 // Define Beam Properties
 
-BEAM0:  BEAM, 
-        PARTICLE = ELECTRON, 
-        NPART = n_particles,
-        BFREQ = rf_freq, 
-        BCURRENT = beam_bunch_charge * rf_freq * 1e6, 
+BEAM0:  BEAM,
+        PARTICLE = ELECTRON,
+        NALLOC = n_particles,
+        BCHARGE = beam_bunch_charge,
         SOURCES = mySources,
         CHARGE = -1;
 
