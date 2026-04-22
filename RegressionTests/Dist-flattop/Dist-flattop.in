@@ -60,8 +60,8 @@ Dist1: DISTRIBUTION, TYPE=FLATTOP,
 ES1: EMISSIONSOURCE, DISTRIBUTION = Dist1;
 mySources: EMISSIONSOURCELIST = (ES1);
 
-BEAM1:  BEAM, PARTICLE = ELECTRON, pc = P0, NPART = n_particles,
-        BFREQ = rf_freq, BCURRENT = beam_bunch_charge * rf_freq * 1E6, SOURCES = mySources, CHARGE = -1;
+BEAM1:  BEAM, PARTICLE = ELECTRON, pc = P0, NALLOC = n_particles,
+        BCHARGE = beam_bunch_charge, SOURCES = mySources, CHARGE = -1;
 
 TRACK, LINE = myLine, BEAM = BEAM1, MAXSTEPS = 40, DT = {5e-11}, ZSTOP=1.0; 
 RUN, METHOD = "PARALLEL", FIELDSOLVER = FS1;
