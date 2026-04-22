@@ -1,9 +1,11 @@
 /*      TWCavity.in
         OPALX
-        Simple Traveling wave RF Cavity test, with Gaussian distribution loaded from file
+        Simple traveling wave RF Cavity test, with Gaussian distribution loaded from file
 */
 
-OPTION, PSDUMPFREQ = 1000; // 6d data written every 10th time step (h5).
+OPTION, PSDUMPFREQ    = 100000;
+OPTION, STATDUMPFREQ  = 1;
+OPTION, BOUNDPDESTROY = 10;
 
 Title, string = "SwissFEL TW Cavities"; 
 
@@ -14,20 +16,18 @@ Value, {OPALVERSION};
 //------------------------------------------------------------------------ 
 // Global Parameters 
 //------------------------------------------------------------------------ 
-REAL N                   = 64;        // FS grid size
+REAL N                   = 16;        // FS grid size
 REAL rf_freq             = 2997.912;  // RF frequency (MHz)
 REAL n_particles         = 1E4;       // Number of particles in simulation.
 REAL beam_bunch_charge   = 150e-15;   // Charge of bunch (C)
-REAL beam_current 		 = beam_bunch_charge * rf_freq * 1e6;  
-REAL fs_decomp 			 = 3; 
 
 //------------------------------------------------------------------------ 
 // Initial Momentum Calculation  
 //------------------------------------------------------------------------ 
-REAL Edes    = 6.6e-3;                // Initial Energy (GeV) (includes the effect of the first RF Cavity)
+REAL Edes    = 6.6e-3; // Initial Energy (GeV) (includes the effect of the first RF Cavity)
 REAL gamma   = (Edes+EMASS)/EMASS;
 REAL beta    = sqrt(1-(1/gamma^2));
-REAL P0      = gamma*beta*EMASS;      // Initial Momentum (GeV/c)
+REAL P0      = gamma*beta*EMASS; // Initial Momentum (GeV/c) --> not used in the simulation, but was used to generate the FROMFILE
 
 // Printing initial energy parameters to terminal output.
 Value, {Edes, gamma, beta, P0, P0 * 3e8};
@@ -40,6 +40,7 @@ REAL linac_f = rf_freq;
 REAL TW1_phi  = 0.0;
 REAL TW1_volt = 19.0;
 
+D0: 	DRIFT, L = 0.5, ELEMEDGE = 0.0;
 TW1: 	TravelingWave, L = 2.8, VOLT = TW1_volt, ELEMEDGE = 0.5,
 		FMAPFN = "fieldmaps/TWS_PSI_Sband_ASTRA.T7", NUMCELLS = 121, 
 		MODE = 1/3, FREQ = linac_f, LAG = TW1_phi;
@@ -49,7 +50,7 @@ D1: 	DRIFT, L = 4.0 - 2.8, ELEMEDGE = 3.3;
 // DEFINE BEAM LINE
 // ----------------------------------------------------------------------------
 // Only the SwissFEL TW Cavities
-SWISSFEL: Line = (TW1, D1);
+SWISSFEL: Line = (D0, TW1, D1);
 
 // ----------------------------------------------------------------------------
 // INITIAL DISTRIBUTION FROM FILE
@@ -64,7 +65,7 @@ mySources: EMISSIONSOURCELIST = (ES1);
 //------------------------------------------------------------------------
 // Define Field solvers
 //------------------------------------------------------------------------ 
-FS_P3M: Fieldsolver, TYPE = NONE, 
+FS: Fieldsolver, TYPE = NONE, 
 		NX = N, NY = N, NZ = N, 
 		PARFFTX = false, 
 		PARFFTY = false, 
@@ -72,7 +73,7 @@ FS_P3M: Fieldsolver, TYPE = NONE,
 		BCFFTX = open, 
 		BCFFTY = open, 
 		BCFFTZ = open, 
-		GREENSF = INTEGRATED;
+		GREENSF = STANDARD;
 
 //------------------------------------------------------------------------
 // Electron Beam Definition
@@ -85,8 +86,6 @@ BEAM1:  BEAM, PARTICLE = ELECTRON, NALLOC = n_particles,
 TRACK, 	LINE = SWISSFEL, BEAM = BEAM1, MAXSTEPS = 2000, 
 		DT = 2.0e-11, ZSTOP = 5.0;
 
-RUN, 	METHOD = "PARALLEL", FIELDSOLVER = FS_P3M;
-
+RUN, METHOD = "PARALLEL", FIELDSOLVER = FS;
 ENDTRACK;
-
 STOP;
