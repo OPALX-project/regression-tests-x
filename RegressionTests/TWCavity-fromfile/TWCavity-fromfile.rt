@@ -1,0 +1,11 @@
+"SwissFEL only first TravelingWave Cavity without Space Charge"
+stat "rms_x" avg 1E-9
+stat "rms_y" avg 1E-9  
+stat "rms_s" avg 1E-9 
+stat "rms_px" avg 1E-9 
+stat "rms_py" avg 1E-9 
+stat "rms_ps" avg 1E-9 
+stat "emit_x" avg 1E-9 
+stat "emit_y" avg 1E-9 
+stat "emit_s" avg 1E-12 
+stat "energy" avg 1E-3 
