@@ -1,0 +1,142 @@
+/*
+    Pion -> Muon -> Electron decay chain
+
+    Three particle containers:
+      c0: PION     -- decays to muon (pi -> mu + nu_mu)
+      c1: MUON     -- daughter of pion; in turn decays to electron (mu -> e + nu_e + nu_mu)
+      c2: ELECTRON -- daughter of muon; stable here
+
+    Lab-frame lifetimes at gamma = 4:
+      tau_pi_lab  ~ 4 * 26 ns   ~ 104 ns
+      tau_mu_lab  ~ 4 * 2197 ns ~ 8800 ns
+
+    DT = 5 ns gives ~5% of the pion lab lifetime per step (good resolution
+    on the fast cascade) and MAXSTEPS = 2000 covers 10 us total -- about
+    100 pion lab lifetimes (full pion decay) and ~1.1 muon lab lifetimes
+    (~70% of muons decayed, ~70% electron buildup). Trimmed from 10000
+    steps so the regression test stays under typical nightly-build budget.
+*/
+
+OPTION, PSDUMPFREQ   = 100;
+OPTION, STATDUMPFREQ = 1;
+OPTION, BOUNDPDESTROY = 0;        // disabled: boundary cull silently kills sparse daughters
+OPTION, VERSION       = 10900;
+
+Title, string="Pion -> Muon -> Electron decay chain";
+
+Value, {OPALVERSION};
+
+// ----------------------------------------------------------------------------
+// Parameters
+
+REAL n_pions           = 10000;
+REAL bunch_charge      = 1.602176634e-15;
+
+REAL gamma_initial = 4;
+
+// ----------------------------------------------------------------------------
+// Beamline: long drift so particles never reach the end
+
+D1: DRIFT, L = 1000000, ELEMEDGE = 0.0;
+myLine: Line = (D1);
+
+// ----------------------------------------------------------------------------
+// Distributions
+
+DistPion: DISTRIBUTION, TYPE = GAUSS,
+    SIGMAX    = 1e-3,
+    SIGMAY    = 1e-3,
+    SIGMAZ    = 1e-3,
+    SIGMAPX   = 1e-4,
+    SIGMAPY   = 1e-4,
+    SIGMAPZ   = 1e-4,
+    NPARTDIST = n_pions;
+
+// Empty placeholders for the daughter containers; populated at runtime by decay.
+DistMuon: DISTRIBUTION, TYPE = GAUSS,
+    SIGMAX = 1e-3, SIGMAY = 1e-3, SIGMAZ = 1e-3,
+    SIGMAPX = 1e-4, SIGMAPY = 1e-4, SIGMAPZ = 1e-4,
+    NPARTDIST = 0;
+
+DistElectron: DISTRIBUTION, TYPE = GAUSS,
+    SIGMAX = 1e-3, SIGMAY = 1e-3, SIGMAZ = 1e-3,
+    SIGMAPX = 1e-4, SIGMAPY = 1e-4, SIGMAPZ = 1e-4,
+    NPARTDIST = 0;
+
+// ----------------------------------------------------------------------------
+// Emission Sources
+
+ES_Pion:     EMISSIONSOURCE, DISTRIBUTION = DistPion;
+ES_Muon:     EMISSIONSOURCE, DISTRIBUTION = DistMuon;
+ES_Electron: EMISSIONSOURCE, DISTRIBUTION = DistElectron;
+
+Sources_Pion:     EMISSIONSOURCELIST = (ES_Pion);
+Sources_Muon:     EMISSIONSOURCELIST = (ES_Muon);
+Sources_Electron: EMISSIONSOURCELIST = (ES_Electron);
+
+// ----------------------------------------------------------------------------
+// Beam Definitions
+
+// Pion beam: decays into muons (DAUGHTERBEAM = MBEAM).
+PBEAM: BEAM,
+    PARTICLE        = PION,
+    GAMMA           = gamma_initial,
+    NALLOC          = n_pions,
+    BCHARGE         = bunch_charge,
+    SOURCES         = Sources_Pion,
+    CHARGE          = -1,
+    GLOBALPROCESSES = {"DECAY"},
+    DAUGHTERBEAM    = "MBEAM";
+
+// Muon beam: receives pion daughters, then itself decays into electrons.
+MBEAM: BEAM,
+    PARTICLE        = MUON,
+    GAMMA           = gamma_initial,
+    NALLOC          = n_pions,
+    BCHARGE         = bunch_charge,
+    SOURCES         = Sources_Muon,
+    CHARGE          = -1,
+    GLOBALPROCESSES = {"DECAY"},
+    DAUGHTERBEAM    = "EBEAM";
+
+// Electron beam: receives muon daughters; stable.
+EBEAM: BEAM,
+    PARTICLE = ELECTRON,
+    GAMMA    = gamma_initial,
+    NALLOC   = n_pions,
+    BCHARGE  = bunch_charge,
+    SOURCES  = Sources_Electron,
+    CHARGE   = -1;
+
+// ----------------------------------------------------------------------------
+// Field Solver (space charge off)
+
+FS1: Fieldsolver, TYPE = NONE,
+    NX     = 2,
+    NY     = 2,
+    NZ     = 2,
+    PARFFTX = true,
+    PARFFTY = true,
+    PARFFTZ = false,
+    BCFFTX = OPEN,
+    BCFFTY = OPEN,
+    BCFFTZ = OPEN,
+    BBOXINCR = 5,
+    GREENSF  = STANDARD;
+
+// ----------------------------------------------------------------------------
+// Tracking
+//
+// DT = 5 ns; MAXSTEPS = 2000 -> 10 us total.
+//   tau_pi_lab  ~ 104 ns   -> ~20 steps per lifetime, pion population fully gone by step ~150
+//   tau_mu_lab  ~ 8800 ns  -> total run covers ~1.1 muon lifetimes (~70% decayed)
+
+TRACK, LINE      = myLine,
+       BEAMS     = {PBEAM, MBEAM, EBEAM},
+       MAXSTEPS  = 2000,
+       DT        = {5e-9},
+       ZSTOP     = 1000000;
+
+RUN, METHOD = "PARALLEL", FIELDSOLVER = FS1;
+ENDTRACK;
+QUIT;

@@ -1,0 +1,8 @@
+"Decay: pi -> mu -> e cascade through three containers (CPU + GPU tolerant)."
+stat "numParticles" last 1E+2
+stat "energy"       avg  1E-2
+stat "rms_x"        avg  1E-4
+stat "rms_y"        avg  1E-4
+stat "rms_s"        avg  1E-3
+stat "mean_x"       avg  1E-4
+stat "mean_y"       avg  1E-4
