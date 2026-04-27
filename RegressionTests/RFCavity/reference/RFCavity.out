@@ -1,0 +1,353 @@
+OPAL-X>               ____  _____        _       __   __
+OPAL-X> [1;32m
+OPAL-X> 
+OPAL-X>   ██████  ██████   █████  ██      ██   ██
+OPAL-X>  ██    ██ ██   ██ ██   ██ ██       ██ ██
+OPAL-X>  ██    ██ ██████  ███████ ██        ███
+OPAL-X>  ██    ██ ██      ██   ██ ██       ██ ██
+OPAL-X>   ██████  ██      ██   ██ ███████ ██   ██
+OPAL-X> 
+OPAL-X>          This is OPALX (Object Oriented Parallel Accelerator Library for Exascale)
+OPAL-X> 
+OPAL-X> [0m
+OPAL-X> 
+OPAL-X> OPALX is the performance portable version of OPAL :: Version 0.9
+OPAL-X>             git rev. 2eb8a1da9a911b3d15666f7fd803bd85c5c8c9fb
+OPAL-X> 
+OPAL-X> 
+OPAL-X>              (c) PSI, https://github.com/OPALX-project/OPALX
+OPAL-X> 
+OPAL-X> 
+OPAL-X> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL-X> to the OPAL developers https://github.com/OPALX-project/OPALX/issues
+OPAL-X> 
+OPAL-X> Time: 00:51:04 date: 13/04/2026
+OPAL-X> 
+OPAL-X> * Host:   Serial
+OPAL-X> * Device: Serial execution
+OPAL-X> 
+OPAL-X> * Reading input stream 'RFCavity.in'
+OPAL-X> 
+OPAL-X> value: {OPALVERSION} = {900}
+OPAL-X> 
+OPAL-X> 
+OPAL-X> value: {EDES,GAMMA,BETA,P0,P0*3e+08} = {1.4e-09, 1, 0.00234082, 1.19616e-06, 358.848}
+OPAL-X> 
+OPAL-X> * ************* F I E L D S O L V E R ********************************************** 
+OPAL-X> * FIELDSOLVER  FS_SC
+OPAL-X> * BINS         NONE
+OPAL-X> * TYPE         NONE
+OPAL-X> * RANKS        1
+OPAL-X> * NX           32
+OPAL-X> * NY           32
+OPAL-X> * NZ           32
+OPAL-X> * BBOXINCR     5
+OPAL-X> * GREENSF      INTEGRATED
+OPAL-X> * XDIM         serial  
+OPAL-X> * YDIM         serial  
+OPAL-X> * ZDIM         parallel  
+OPAL-X> * ********************************************************************************** 
+OPAL-X> 
+OPAL-X> * RUN resolved beams: BEAM1
+OPAL-X> * ************* B E A M ************************************************************ 
+OPAL-X> * BEAM        BEAM1
+OPAL-X> * PARTICLE    ELECTRON
+OPAL-X> * REST MASS   0.000510999 [GeV]
+OPAL-X> * CHARGE      -e * 1 
+OPAL-X> * MOMENTUM    1196.16 [eV/c]
+OPAL-X> * MOMENTUM    1.19616e-06 [GeV/c]
+OPAL-X> * CURRENT     1.3 [A]
+OPAL-X> * FREQUENCY   1300 [MHz]
+OPAL-X> * NPART       10000
+OPAL-X> * ********************************************************************************** 
+OPAL-X> 
+OPAL-X> 
+OPAL-X> * Creating new file for data: 'RFCavity.stat'
+OPAL-X> * Creating new file for data: 'RFCavity.lbal'
+FromFile::generateParticles> FromFile: Loaded 10000 particles from file 'inputdistr.dat'
+FromFile::generateParticles> Rank 0: 10000 local particles
+OPAL-X> 
+OPAL-X> * ************** B U N C H ********************************************************* 
+OPAL-X> * CONTAINER       = 0
+OPAL-X> * PARTICLES       = 10000
+OPAL-X> * CHARGE          = -1.000000e-09 (Cb) 
+OPAL-X> * QM STORAGE MODE = SINGLE
+OPAL-X> * <EKIN>          = 1.400 [eV]
+OPAL-X> * <dEKIN>         = 0.000 [eV]
+OPAL-X> * INTEGRATOR      = LF2
+OPAL-X> * MIN R (origin)  = (     -2.22534 ,     -2.23449 ,     -0.00000 ) [mm]
+OPAL-X> * MAX R (max ext) = (      2.22831 ,      2.24154 ,      0.00000 ) [mm]
+OPAL-X> * RMS R           = (    731.24900 ,    729.39175 ,      0.00000 ) [um]
+OPAL-X> * RMS P           = ( 9.751154e-10 , 9.754240e-10 , 3.651593e-16 ) [beta gamma]
+OPAL-X> * Mean R          = ( -1.021128e-06 , 9.416147e-06 , -6.498529e-15 ) [m]
+OPAL-X> * Mean P          = ( 9.067294e-12 , -5.072978e-12 , 2.340827e-03 ) [beta gamma]
+OPAL-X> * MESH SPACING    = (    153.09417 ,    153.86373 ,      0.00313 ) [um]
+OPAL-X> * COMPDOM INCR    = 5.000000e+00 (%) 
+OPAL-X> * FIELD LAYOUT    = Domain = {[0:31:1],[0:31:1],[0:31:1]}
+OPAL-X> Total number of boxes = 1
+OPAL-X>     Box 0 {[0:31:1],[0:31:1],[0:31:1]}
+OPAL-X> 
+OPAL-X> * Centroid : 
+OPAL-X> * -1.021128e-02 9.067294e-08 9.416147e-02 -5.072978e-08 -6.498529e-11 2.340827e+01 
+OPAL-X> * Cov Matrix : 
+OPAL-X> * 5.347251e-07 -2.413596e-15 7.225587e-09 -1.447017e-15 -4.622634e-18 2.445931e-35 
+OPAL-X> * -2.413596e-15 9.508501e-19 -6.840686e-15 1.072396e-20 -1.970386e-23 1.715028e-42 
+OPAL-X> * 7.225587e-09 -6.840686e-15 5.320123e-07 -6.606395e-15 3.370843e-18 2.320746e-36 
+OPAL-X> * -1.447017e-15 1.072396e-20 -6.606395e-15 9.514521e-19 -2.012973e-24 9.812623e-42 
+OPAL-X> * -4.622634e-18 -1.970386e-23 3.370843e-18 -2.012973e-24 9.831134e-25 2.766724e-45 
+OPAL-X> * 2.445931e-35 1.715028e-42 2.320746e-36 9.812623e-42 2.766724e-45 1.333413e-31 
+OPAL-X> * * ********************************************************************************** 
+OPAL-X> 
+OPAL-X> * GUN gone live
+OPAL-X> * D1 gone live
+OPAL-X> * OrbitThreader dt_m= 1e-11
+Ippl> 
+Ippl> * ************* G U N **************************************************************
+Ippl> GUN_phi1 = 140.4391 [deg], corresp. in Astra = 230.4391 [deg],
+Ippl> E = 6.2868 [MeV], phi_nom = 0.0000 [deg]
+Ippl> Ez_0 = 60.0000 [MV/m]
+Ippl> time = 0.0000 [ns], dt = 10.0000 [ps]
+Ippl> * **********************************************************************************
+Ippl> 
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.29237
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 1.49864
+OPAL-X> * OrbitThreader #elements  = 0
+OPAL-X> 
+OPAL-X> * Size of map 3 sections 
+OPAL-X> * Key: (0.000000 - 0.292296) number of overlapping elements 1
+OPAL-X> *                            GUN
+OPAL-X> * Key: (0.292296 - 0.498568) number of overlapping elements 1
+OPAL-X> *                            D1
+OPAL-X> * Key: (0.498568 - 6.500000) number of overlapping elements 0
+OPAL-X> 
+OPAL-X> * Creating new file for data: 'data/RFCavity_ElementPositions.sdds'
+OPAL-X> * Track start at: 00:51:04, t= 0.000 [fs]; zstart at: 0.000 [um]
+OPAL-X> * Initial dt = 10.000 [ps]
+OPAL-X> * Max integration steps = 200, next step = 0
+OPAL-X>                dt [ns]           zStop [m]        num Steps [1]
+OPAL-X> ->         1.000000e-11        5.000000e-01                 200
+OPAL-X> * 00:51:04 Step      0 at 411.214 [um], t= 10.000 [ps], E=19.995 [keV]
+OPAL-X> * 00:51:04 Step      1 at 1.570 [mm], t= 20.000 [ps], E=79.475 [keV]
+OPAL-X> * 00:51:04 Step      2 at 3.319 [mm], t= 30.000 [ps], E=173.030 [keV]
+OPAL-X> * 00:51:04 Step      3 at 5.472 [mm], t= 40.000 [ps], E=292.239 [keV]
+OPAL-X> * 00:51:04 Step      4 at 7.888 [mm], t= 50.000 [ps], E=429.548 [keV]
+OPAL-X> * 00:51:04 Step      5 at 10.471 [mm], t= 60.000 [ps], E=579.213 [keV]
+OPAL-X> * 00:51:04 Step      6 at 13.163 [mm], t= 70.000 [ps], E=736.965 [keV]
+OPAL-X> * 00:51:04 Step      7 at 15.928 [mm], t= 80.000 [ps], E=899.499 [keV]
+OPAL-X> * 00:51:04 Step      8 at 18.743 [mm], t= 90.000 [ps], E=1.064 [MeV]
+OPAL-X> * 00:51:04 Step      9 at 21.594 [mm], t= 100.000 [ps], E=1.228 [MeV]
+OPAL-X> * 00:51:04 Step     10 at 24.471 [mm], t= 110.000 [ps], E=1.390 [MeV]
+OPAL-X> * 00:51:04 Step     11 at 27.366 [mm], t= 120.000 [ps], E=1.548 [MeV]
+OPAL-X> * 00:51:04 Step     12 at 30.277 [mm], t= 130.000 [ps], E=1.699 [MeV]
+OPAL-X> * 00:51:04 Step     13 at 33.199 [mm], t= 140.000 [ps], E=1.843 [MeV]
+OPAL-X> * 00:51:04 Step     14 at 36.129 [mm], t= 150.000 [ps], E=1.976 [MeV]
+OPAL-X> * 00:51:04 Step     15 at 39.066 [mm], t= 160.000 [ps], E=2.098 [MeV]
+OPAL-X> * 00:51:04 Step     16 at 42.008 [mm], t= 170.000 [ps], E=2.208 [MeV]
+OPAL-X> * 00:51:04 Step     17 at 44.954 [mm], t= 180.000 [ps], E=2.303 [MeV]
+OPAL-X> * 00:51:04 Step     18 at 47.904 [mm], t= 190.000 [ps], E=2.384 [MeV]
+OPAL-X> * 00:51:04 Step     19 at 50.856 [mm], t= 200.000 [ps], E=2.448 [MeV]
+OPAL-X> * 00:51:04 Step     20 at 53.809 [mm], t= 210.000 [ps], E=2.498 [MeV]
+OPAL-X> * 00:51:04 Step     21 at 56.764 [mm], t= 220.000 [ps], E=2.532 [MeV]
+OPAL-X> * 00:51:04 Step     22 at 59.720 [mm], t= 230.000 [ps], E=2.553 [MeV]
+OPAL-X> * 00:51:04 Step     23 at 62.676 [mm], t= 240.000 [ps], E=2.563 [MeV]
+OPAL-X> * 00:51:04 Step     24 at 65.632 [mm], t= 250.000 [ps], E=2.565 [MeV]
+OPAL-X> * 00:51:04 Step     25 at 68.588 [mm], t= 260.000 [ps], E=2.562 [MeV]
+OPAL-X> * 00:51:04 Step     26 at 71.545 [mm], t= 270.000 [ps], E=2.559 [MeV]
+OPAL-X> * 00:51:04 Step     27 at 74.501 [mm], t= 280.000 [ps], E=2.558 [MeV]
+OPAL-X> * 00:51:04 Step     28 at 77.457 [mm], t= 290.000 [ps], E=2.563 [MeV]
+OPAL-X> * 00:51:04 Step     29 at 80.413 [mm], t= 300.000 [ps], E=2.577 [MeV]
+OPAL-X> * 00:51:04 Step     30 at 83.370 [mm], t= 310.000 [ps], E=2.603 [MeV]
+OPAL-X> * 00:51:04 Step     31 at 86.328 [mm], t= 320.000 [ps], E=2.641 [MeV]
+OPAL-X> * 00:51:04 Step     32 at 89.287 [mm], t= 330.000 [ps], E=2.693 [MeV]
+OPAL-X> * 00:51:04 Step     33 at 92.247 [mm], t= 340.000 [ps], E=2.759 [MeV]
+OPAL-X> * 00:51:04 Step     34 at 95.209 [mm], t= 350.000 [ps], E=2.839 [MeV]
+OPAL-X> * 00:51:04 Step     35 at 98.173 [mm], t= 360.000 [ps], E=2.933 [MeV]
+OPAL-X> * 00:51:04 Step     36 at 101.139 [mm], t= 370.000 [ps], E=3.041 [MeV]
+OPAL-X> * 00:51:04 Step     37 at 104.106 [mm], t= 380.000 [ps], E=3.161 [MeV]
+OPAL-X> * 00:51:04 Step     38 at 107.076 [mm], t= 390.000 [ps], E=3.292 [MeV]
+OPAL-X> * 00:51:04 Step     39 at 110.048 [mm], t= 400.000 [ps], E=3.434 [MeV]
+OPAL-X> * 00:51:04 Step     40 at 113.021 [mm], t= 410.000 [ps], E=3.586 [MeV]
+OPAL-X> * 00:51:04 Step     41 at 115.997 [mm], t= 420.000 [ps], E=3.745 [MeV]
+OPAL-X> * 00:51:04 Step     42 at 118.974 [mm], t= 430.000 [ps], E=3.911 [MeV]
+OPAL-X> * 00:51:04 Step     43 at 121.952 [mm], t= 440.000 [ps], E=4.083 [MeV]
+OPAL-X> * 00:51:04 Step     44 at 124.932 [mm], t= 450.000 [ps], E=4.257 [MeV]
+OPAL-X> * 00:51:04 Step     45 at 127.914 [mm], t= 460.000 [ps], E=4.434 [MeV]
+OPAL-X> * 00:51:04 Step     46 at 130.896 [mm], t= 470.000 [ps], E=4.612 [MeV]
+OPAL-X> * 00:51:04 Step     47 at 133.880 [mm], t= 480.000 [ps], E=4.788 [MeV]
+OPAL-X> * 00:51:04 Step     48 at 136.864 [mm], t= 490.000 [ps], E=4.962 [MeV]
+OPAL-X> * 00:51:04 Step     49 at 139.849 [mm], t= 500.000 [ps], E=5.130 [MeV]
+OPAL-X> * 00:51:04 Step     50 at 142.835 [mm], t= 510.000 [ps], E=5.293 [MeV]
+OPAL-X> * 00:51:04 Step     51 at 145.822 [mm], t= 520.000 [ps], E=5.447 [MeV]
+OPAL-X> * 00:51:04 Step     52 at 148.809 [mm], t= 530.000 [ps], E=5.591 [MeV]
+OPAL-X> * 00:51:04 Step     53 at 151.796 [mm], t= 540.000 [ps], E=5.724 [MeV]
+OPAL-X> * 00:51:04 Step     54 at 154.785 [mm], t= 550.000 [ps], E=5.844 [MeV]
+OPAL-X> * 00:51:04 Step     55 at 157.773 [mm], t= 560.000 [ps], E=5.949 [MeV]
+OPAL-X> * 00:51:04 Step     56 at 160.762 [mm], t= 570.000 [ps], E=6.040 [MeV]
+OPAL-X> * 00:51:04 Step     57 at 163.750 [mm], t= 580.000 [ps], E=6.115 [MeV]
+OPAL-X> * 00:51:04 Step     58 at 166.740 [mm], t= 590.000 [ps], E=6.175 [MeV]
+OPAL-X> * 00:51:04 Step     59 at 169.729 [mm], t= 600.000 [ps], E=6.221 [MeV]
+OPAL-X> * 00:51:04 Step     60 at 172.718 [mm], t= 610.000 [ps], E=6.255 [MeV]
+OPAL-X> * 00:51:04 Step     61 at 175.707 [mm], t= 620.000 [ps], E=6.279 [MeV]
+OPAL-X> * 00:51:04 Step     62 at 178.697 [mm], t= 630.000 [ps], E=6.294 [MeV]
+OPAL-X> * 00:51:04 Step     63 at 181.686 [mm], t= 640.000 [ps], E=6.303 [MeV]
+OPAL-X> * 00:51:04 Step     64 at 184.676 [mm], t= 650.000 [ps], E=6.307 [MeV]
+OPAL-X> * 00:51:04 Step     65 at 187.665 [mm], t= 660.000 [ps], E=6.309 [MeV]
+OPAL-X> * 00:51:04 Step     66 at 190.655 [mm], t= 670.000 [ps], E=6.308 [MeV]
+OPAL-X> * 00:51:04 Step     67 at 193.644 [mm], t= 680.000 [ps], E=6.306 [MeV]
+OPAL-X> * 00:51:04 Step     68 at 196.634 [mm], t= 690.000 [ps], E=6.304 [MeV]
+OPAL-X> * 00:51:04 Step     69 at 199.623 [mm], t= 700.000 [ps], E=6.302 [MeV]
+OPAL-X> * 00:51:04 Step     70 at 202.613 [mm], t= 710.000 [ps], E=6.299 [MeV]
+OPAL-X> * 00:51:04 Step     71 at 205.602 [mm], t= 720.000 [ps], E=6.297 [MeV]
+OPAL-X> * 00:51:04 Step     72 at 208.592 [mm], t= 730.000 [ps], E=6.295 [MeV]
+OPAL-X> * 00:51:04 Step     73 at 211.581 [mm], t= 740.000 [ps], E=6.293 [MeV]
+OPAL-X> * 00:51:04 Step     74 at 214.571 [mm], t= 750.000 [ps], E=6.292 [MeV]
+OPAL-X> * 00:51:04 Step     75 at 217.560 [mm], t= 760.000 [ps], E=6.291 [MeV]
+OPAL-X> * 00:51:04 Step     76 at 220.550 [mm], t= 770.000 [ps], E=6.290 [MeV]
+OPAL-X> * 00:51:04 Step     77 at 223.539 [mm], t= 780.000 [ps], E=6.289 [MeV]
+OPAL-X> * 00:51:04 Step     78 at 226.528 [mm], t= 790.000 [ps], E=6.288 [MeV]
+OPAL-X> * 00:51:04 Step     79 at 229.518 [mm], t= 800.000 [ps], E=6.288 [MeV]
+OPAL-X> * 00:51:04 Step     80 at 232.507 [mm], t= 810.000 [ps], E=6.287 [MeV]
+OPAL-X> * 00:51:04 Step     81 at 235.497 [mm], t= 820.000 [ps], E=6.287 [MeV]
+OPAL-X> * 00:51:04 Step     82 at 238.486 [mm], t= 830.000 [ps], E=6.287 [MeV]
+OPAL-X> * 00:51:04 Step     83 at 241.476 [mm], t= 840.000 [ps], E=6.287 [MeV]
+OPAL-X> * 00:51:04 Step     84 at 244.465 [mm], t= 850.000 [ps], E=6.287 [MeV]
+OPAL-X> * 00:51:04 Step     85 at 247.455 [mm], t= 860.000 [ps], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step     86 at 250.444 [mm], t= 870.000 [ps], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step     87 at 253.433 [mm], t= 880.000 [ps], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step     88 at 256.423 [mm], t= 890.000 [ps], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step     89 at 259.412 [mm], t= 900.000 [ps], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step     90 at 262.402 [mm], t= 910.000 [ps], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step     91 at 265.391 [mm], t= 920.000 [ps], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step     92 at 268.381 [mm], t= 930.000 [ps], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step     93 at 271.370 [mm], t= 940.000 [ps], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step     94 at 274.360 [mm], t= 950.000 [ps], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step     95 at 277.349 [mm], t= 960.000 [ps], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step     96 at 280.338 [mm], t= 970.000 [ps], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step     97 at 283.328 [mm], t= 980.000 [ps], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step     98 at 286.317 [mm], t= 990.000 [ps], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step     99 at 289.307 [mm], t= 1000.000 [ps], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    100 at 292.296 [mm], t= 1.010 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    101 at 295.286 [mm], t= 1.020 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    102 at 298.275 [mm], t= 1.030 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    103 at 301.265 [mm], t= 1.040 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    104 at 304.254 [mm], t= 1.050 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    105 at 307.243 [mm], t= 1.060 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    106 at 310.233 [mm], t= 1.070 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    107 at 313.222 [mm], t= 1.080 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    108 at 316.212 [mm], t= 1.090 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    109 at 319.201 [mm], t= 1.100 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    110 at 322.191 [mm], t= 1.110 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    111 at 325.180 [mm], t= 1.120 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    112 at 328.170 [mm], t= 1.130 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    113 at 331.159 [mm], t= 1.140 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    114 at 334.148 [mm], t= 1.150 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    115 at 337.138 [mm], t= 1.160 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    116 at 340.127 [mm], t= 1.170 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    117 at 343.117 [mm], t= 1.180 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    118 at 346.106 [mm], t= 1.190 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    119 at 349.096 [mm], t= 1.200 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    120 at 352.085 [mm], t= 1.210 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    121 at 355.075 [mm], t= 1.220 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    122 at 358.064 [mm], t= 1.230 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    123 at 361.053 [mm], t= 1.240 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    124 at 364.043 [mm], t= 1.250 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    125 at 367.032 [mm], t= 1.260 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    126 at 370.022 [mm], t= 1.270 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    127 at 373.011 [mm], t= 1.280 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    128 at 376.001 [mm], t= 1.290 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    129 at 378.990 [mm], t= 1.300 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    130 at 381.980 [mm], t= 1.310 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    131 at 384.969 [mm], t= 1.320 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    132 at 387.958 [mm], t= 1.330 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    133 at 390.948 [mm], t= 1.340 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    134 at 393.937 [mm], t= 1.350 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    135 at 396.927 [mm], t= 1.360 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    136 at 399.916 [mm], t= 1.370 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    137 at 402.906 [mm], t= 1.380 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    138 at 405.895 [mm], t= 1.390 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    139 at 408.884 [mm], t= 1.400 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    140 at 411.874 [mm], t= 1.410 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    141 at 414.863 [mm], t= 1.420 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    142 at 417.853 [mm], t= 1.430 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    143 at 420.842 [mm], t= 1.440 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    144 at 423.832 [mm], t= 1.450 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    145 at 426.821 [mm], t= 1.460 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    146 at 429.811 [mm], t= 1.470 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    147 at 432.800 [mm], t= 1.480 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    148 at 435.789 [mm], t= 1.490 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    149 at 438.779 [mm], t= 1.500 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    150 at 441.768 [mm], t= 1.510 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    151 at 444.758 [mm], t= 1.520 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    152 at 447.747 [mm], t= 1.530 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    153 at 450.737 [mm], t= 1.540 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    154 at 453.726 [mm], t= 1.550 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    155 at 456.716 [mm], t= 1.560 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    156 at 459.705 [mm], t= 1.570 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    157 at 462.694 [mm], t= 1.580 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    158 at 465.684 [mm], t= 1.590 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    159 at 468.673 [mm], t= 1.600 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    160 at 471.663 [mm], t= 1.610 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    161 at 474.652 [mm], t= 1.620 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    162 at 477.642 [mm], t= 1.630 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    163 at 480.631 [mm], t= 1.640 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    164 at 483.621 [mm], t= 1.650 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    165 at 486.610 [mm], t= 1.660 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    166 at 489.599 [mm], t= 1.670 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    167 at 492.589 [mm], t= 1.680 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    168 at 495.578 [mm], t= 1.690 [ns], E=6.286 [MeV]
+OPAL-X> * 00:51:04 Step    169 at 498.568 [mm], t= 1.700 [ns], E=6.286 [MeV]
+OPAL-X> * GUN gone off
+OPAL-X> * D1 gone off
+OPAL-X> 
+OPAL-X> * Done executing ParallelTracker at 00:51:04
+OPAL-X> 
+OPAL-X> * End of input stream 'RFCavity.in'
+Timings> ---------------------------------------------
+Timings>      Timing results for 1 rank(s):
+Timings> ---------------------------------------------
+Timings> mainTimer........... Wall tot =   0.534299
+Timings> 
+Timings> Write Stat.......... Wall max =   0.012462
+Timings>                      Wall avg =   0.012462
+Timings>                      Wall min =   0.012462
+Timings> 
+Timings> Write H5-File....... Wall max =   0.001539
+Timings>                      Wall avg =   0.001539
+Timings>                      Wall min =   0.001539
+Timings> 
+Timings> samplingTime........ Wall max =    0.02289
+Timings>                      Wall avg =    0.02289
+Timings>                      Wall min =    0.02289
+Timings> 
+Timings> particleBC.......... Wall max =   0.010346
+Timings>                      Wall avg =   0.010346
+Timings>                      Wall min =   0.010346
+Timings> 
+Timings> updateParticle...... Wall max =          0
+Timings>                      Wall avg =          0
+Timings>                      Wall min =          0
+Timings> 
+Timings> TIntegration1....... Wall max =   0.003867
+Timings>                      Wall avg =   0.003867
+Timings>                      Wall min =   0.003867
+Timings> 
+Timings> TIntegration2....... Wall max =   0.008664
+Timings>                      Wall avg =   0.008664
+Timings>                      Wall min =   0.008664
+Timings> 
+Timings> External field eval. Wall max =   0.013134
+Timings>                      Wall avg =   0.013134
+Timings>                      Wall min =   0.013134
+Timings> 
+Timings> Binaryrepart........ Wall max =          0
+Timings>                      Wall avg =          0
+Timings>                      Wall min =          0
+Timings> 
+Timings> OrbThreader......... Wall max =   0.001526
+Timings>                      Wall avg =   0.001526
+Timings>                      Wall min =   0.001526
+Timings> 
+Timings> ---------------------------------------------

@@ -1,0 +1,91 @@
+/*      TWCavity.in
+        OPALX
+        Simple traveling wave RF Cavity test, with Gaussian distribution loaded from file
+*/
+
+OPTION, PSDUMPFREQ    = 100000;
+OPTION, STATDUMPFREQ  = 1;
+OPTION, BOUNDPDESTROY = 10;
+
+Title, string = "SwissFEL TW Cavities"; 
+
+OPTION, VERSION = 20212;
+
+Value, {OPALVERSION};
+
+//------------------------------------------------------------------------ 
+// Global Parameters 
+//------------------------------------------------------------------------ 
+REAL N                   = 16;        // FS grid size
+REAL rf_freq             = 2997.912;  // RF frequency (MHz)
+REAL n_particles         = 1E4;       // Number of particles in simulation.
+REAL beam_bunch_charge   = 150e-15;   // Charge of bunch (C)
+
+//------------------------------------------------------------------------ 
+// Initial Momentum Calculation  
+//------------------------------------------------------------------------ 
+REAL Edes    = 6.6e-3; // Initial Energy (GeV) (includes the effect of the first RF Cavity)
+REAL gamma   = (Edes+EMASS)/EMASS;
+REAL beta    = sqrt(1-(1/gamma^2));
+REAL P0      = gamma*beta*EMASS; // Initial Momentum (GeV/c) --> not used in the simulation, but was used to generate the FROMFILE
+
+// Printing initial energy parameters to terminal output.
+Value, {Edes, gamma, beta, P0, P0 * 3e8};
+
+//------------------------------------------------------------------------ 
+// Linac 1 & 2 
+//------------------------------------------------------------------------ 
+REAL linac_f = rf_freq;
+
+REAL TW1_phi  = 0.0;
+REAL TW1_volt = 19.0;
+
+D0: 	DRIFT, L = 0.5, ELEMEDGE = 0.0;
+TW1: 	TravelingWave, L = 2.8, VOLT = TW1_volt, ELEMEDGE = 0.5,
+		FMAPFN = "fieldmaps/TWS_PSI_Sband_ASTRA.T7", NUMCELLS = 121, 
+		MODE = 1/3, FREQ = linac_f, LAG = TW1_phi;
+D1: 	DRIFT, L = 4.0 - 2.8, ELEMEDGE = 3.3;
+
+// ----------------------------------------------------------------------------
+// DEFINE BEAM LINE
+// ----------------------------------------------------------------------------
+// Only the SwissFEL TW Cavities
+SWISSFEL: Line = (D0, TW1, D1);
+
+// ----------------------------------------------------------------------------
+// INITIAL DISTRIBUTION FROM FILE
+// ----------------------------------------------------------------------------
+Dist:   DISTRIBUTION, TYPE = FROMFILE, 
+        NPARTDIST = n_particles,
+        FNAME = "inputdistr.dat";
+
+ES1: EMISSIONSOURCE, DISTRIBUTION = Dist;
+mySources: EMISSIONSOURCELIST = (ES1);
+	
+//------------------------------------------------------------------------
+// Define Field solvers
+//------------------------------------------------------------------------ 
+FS: Fieldsolver, TYPE = NONE, 
+		NX = N, NY = N, NZ = N, 
+		PARFFTX = false, 
+		PARFFTY = false, 
+       	PARFFTZ = true, 
+		BCFFTX = open, 
+		BCFFTY = open, 
+		BCFFTZ = open, 
+		GREENSF = STANDARD;
+
+//------------------------------------------------------------------------
+// Electron Beam Definition
+//------------------------------------------------------------------------
+BEAM1:  BEAM, PARTICLE = ELECTRON, NALLOC = n_particles,
+		SOURCES = mySources, BCHARGE = beam_bunch_charge,
+		CHARGE = -1;
+//-------------------------------------------------------------------------------------
+
+TRACK, 	LINE = SWISSFEL, BEAM = BEAM1, MAXSTEPS = 2000, 
+		DT = 2.0e-11, ZSTOP = 5.0;
+
+RUN, METHOD = "PARALLEL", FIELDSOLVER = FS;
+ENDTRACK;
+STOP;
