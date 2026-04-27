@@ -18,7 +18,7 @@ Value,{OPALVERSION};
 
 // ----------------------------------------------------------------------------
 // Global Parameters
-REAL N                   = 32;
+REAL N                   = 16;
 REAL rf_freq             = 1.3e9;    // RF frequency. (Hz)
 REAL n_particles         = N*N*N;    // Number of particles in simulation.
 REAL beam_bunch_charge   = 1e-9;     // Charge of bunch. (C)
@@ -58,7 +58,7 @@ Dist1: DISTRIBUTION, TYPE=FLATTOP,
     NPARTDIST = n_particles;
 
 ES1: EMISSIONSOURCE, DISTRIBUTION = Dist1,
-    P0Z = 1.0; // otherwise it would stand still at the center with zero z extent
+    P0Z = 0.1; // otherwise it would stand still at the center with zero z extent
 mySources: EMISSIONSOURCELIST = (ES1);
 
 BEAM1:  BEAM, PARTICLE = ELECTRON, pc = P0, NALLOC = n_particles,
