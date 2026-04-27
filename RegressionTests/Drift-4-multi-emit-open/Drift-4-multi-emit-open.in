@@ -26,7 +26,7 @@ Value,{OPALVERSION};
 // ----------------------------------------------------------------------------
 // Global Parameters
 
-REAL N                   = 12; 
+REAL N                   = 16; 
 REAL rf_freq             = 1.3e9;    // RF frequency. (Hz)
 REAL n_particles         = 10000;    // Number of particles in simulation.
 REAL beam_bunch_charge   = 1e-9;    // Charge of bunch. (C)
