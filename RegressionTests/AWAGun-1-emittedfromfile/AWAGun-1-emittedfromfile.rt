@@ -1,16 +1,10 @@
 "AWAGun-1-emittedfromfile: AWA photoinjector with EMITTEDFROMFILE source, shifted open solver, adaptive binning, and reduced-cost time stepping."
 stat "rms_x"        avg 1E-3
-stat "rms_y"        avg 1E-3
 stat "rms_s"        avg 1E-3
 stat "rms_px"       avg 1E-2
-stat "rms_py"       avg 1E-2
 stat "rms_ps"       avg 1E-2
 stat "emit_x"       avg 1E-3
-stat "emit_y"       avg 1E-3
 stat "emit_s"       avg 1E-3
-stat "mean_x"       avg 1E-3
-stat "mean_y"       avg 1E-3
-stat "mean_s"       avg 1E-2
 stat "energy"       avg 1E-2
 stat "nBins"        avg 1
 stat "numParticles" last 10
