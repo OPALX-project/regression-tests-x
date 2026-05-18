@@ -126,7 +126,7 @@ BEAM1: BEAM, PARTICLE = ELECTRON,
 // Simulate the beamline using fewer, larger time steps than AWAGun-1.in.
 
 TRACK, LINE = DRIVE, BEAM = BEAM1, MAXSTEPS = 2000,
-    DT = {1.0e-12, 2.0e-11}, ZSTOP = {0.4, 2.0};
+    DT = {1.5e-12, 3.0e-11}, ZSTOP = {0.4, 2.0};
 
 RUN, METHOD = "PARALLEL", FIELDSOLVER = FS_SC;
 ENDTRACK;
