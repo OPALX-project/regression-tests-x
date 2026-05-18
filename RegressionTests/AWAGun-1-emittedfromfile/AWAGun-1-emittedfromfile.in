@@ -1,0 +1,135 @@
+/*
+    AWA gun emitted-from-file regression input.
+    Based on tests/AWAGun-1/AWAGun-1.in, but configured to use the
+    EMITTEDFROMFILE source with fewer, larger time steps.
+*/
+
+OPTION, PSDUMPFREQ      = 10000;  // 6d data written infrequently (h5).
+OPTION, STATDUMPFREQ    = 10;     // Beam Stats written every 10 time steps (stat).
+OPTION, BOUNDPDESTROY   = 10;     // Delete lost particles, if any.
+OPTION, AUTOPHASE       = 4;      // Autophase is on.
+OPTION, STEPINFOFQ      = 50;
+OPTION, REPARTFREQ      = 10000;
+OPTION, VERSION         = 10900;
+OPTION, EBDUMP          = false;
+
+Title, string="AWA Photoinjector EmittedFromFile";
+
+//----------------------------------------------------------------------------
+// Global Parameters
+
+REAL N                   = 16;
+REAL rf_freq             = 1.3e3;  // RF frequency (MHz)
+REAL n_particles         = 1E4;    // Number of particles in simulation
+REAL beam_bunch_charge   = 1e-9;   // Charge of bunch (C)
+
+//----------------------------------------------------------------------------
+// Initial Momentum Calculation
+
+REAL Edes    = 1.4e-9; // initial energy in GeV
+REAL gamma   = (Edes+EMASS)/EMASS;
+REAL beta    = sqrt(1-(1/gamma^2));
+REAL P0      = gamma*beta*EMASS;    // initial z momentum (GeV/c)
+
+// Printing initial energy and momentum to terminal output.
+value, {Edes, P0, OPALVERSION};
+
+//----------------------------------------------------------------------------
+// RF photoinjector (Gun)
+
+REAL gun_inj_phase = 0.0;  // RF injection phase (deg) w.r.t. crest
+REAL rf_phase = (gun_inj_phase*Pi)/180.0;
+
+GUN: RFCavity, L = 0.2927, VOLT = 60.0, ELEMEDGE = 0.0, TYPE = "STANDING",
+    FMAPFN = "DriveGun.T7", FREQ = rf_freq, LAG = rf_phase;
+
+//----------------------------------------------------------------------------
+// Solenoids
+
+REAL KSBF = 0.162544398;
+KSBF = KSBF/1.3528;
+
+BF: Solenoid, L = 0.5, ELEMEDGE=0.0, KS = KSBF,
+    FMAPFN = "BF_550.T7";
+
+REAL I  = 273; // [A]
+REAL SF = (I/440)*1.973966;
+SF = SF/3.2306;
+
+M: Solenoid, L = 0.5, ELEMEDGE=0.0, KS = SF,
+    FMAPFN = "M_440.T7";
+
+value, {KSBF, SF};
+
+//----------------------------------------------------------------------------
+// Drift after gun
+
+DR1: DRIFT, L = 10.0, ELEMEDGE = 0.5;
+
+//----------------------------------------------------------------------------
+// Define beam line
+
+GunLine: Line = (GUN, BF, M);
+DRIVE: Line = (GunLine, DR1);
+
+//----------------------------------------------------------------------------
+// Initial distribution from emitted OPAL dump
+
+DistFromFile: DISTRIBUTION, TYPE = EMITTEDFROMFILE,
+    FNAME = "opal-AWAGun-1_DIST.dat",
+    EMITTED = true,
+    EMISSIONSTEPS = 25,
+    NPARTDIST = n_particles;
+
+ESFromFile: EMISSIONSOURCE, DISTRIBUTION = DistFromFile,
+    P0Z = 0.0,
+    ZEROFACE_R0Z = false,
+    ZEROFACE_MAXSTEPS = 4000,
+    EMISSIONMODEL = NONE,
+    SHIFTED_GREENS_FUNCTION = true;
+
+mySources: EMISSIONSOURCELIST = (ESFromFile);
+
+//----------------------------------------------------------------------------
+// Define Field solver and binning
+
+BINS1: BINNING,
+    MAXBINS = 10,
+    DESIREDWIDTH = 0.2,
+    TABLEPRINTFREQ = 100,
+    PARAMETER = GAMMAZ,
+    ADAPTIVEBINNING = false;
+
+FS_SC: Fieldsolver, TYPE = OPEN, BINS = BINS1,
+    NX = N,
+    NY = N,
+    NZ = N,
+    PARFFTX = false,
+    PARFFTY = false,
+    PARFFTZ = true,
+    BCFFTX = open,
+    BCFFTY = open,
+    BCFFTZ = open,
+    BBOXINCR = 5,
+    GREENSF = STANDARD;
+
+//----------------------------------------------------------------------------
+// Electron Beam Definition
+
+BEAM1: BEAM, PARTICLE = ELECTRON,
+    NALLOC = n_particles,
+    SOURCES = mySources,
+    BCHARGE = beam_bunch_charge,
+    CHARGE = -1;
+
+//----------------------------------------------------------------------------
+// Simulate the beamline using fewer, larger time steps than AWAGun-1.in.
+
+TRACK, LINE = DRIVE, BEAM = BEAM1, MAXSTEPS = 4000,
+    DT = {5.0e-13, 1.0e-11}, ZSTOP = {0.4, 2.0};
+
+RUN, METHOD = "PARALLEL", FIELDSOLVER = FS_SC;
+ENDTRACK;
+
+Stop;
+Quit;

@@ -1,0 +1,69 @@
+/*
+    Sanity check of an OPALFLATTOP distribution without space charge.
+    Mirrors Dist-flattop, but uses the OPAL-like emitted flat-top sampler.
+*/
+
+OPTION, PSDUMPFREQ      = 100;   // 6d data written every 100th time step (h5).
+OPTION, STATDUMPFREQ    = 1;     // Beam Stats written every time step (stat).
+OPTION, BOUNDPDESTROY   = 10;    // Delete lost particles, if any out of 10 sigma.
+OPTION, AUTOPHASE       = 4;     // Autophase is on, and phase of max energy
+                                 // gain will be found automatically for cavities.
+OPTION, VERSION=10900;
+
+Title, string="Dist OpalFlatTop";
+
+Value,{OPALVERSION};
+
+//----------------------------------------------------------------------------
+// Global Parameters
+REAL N                   = 16;
+REAL rf_freq             = 1.3e9;    // RF frequency. (Hz)
+REAL n_particles         = N*N*N;    // Number of particles in simulation.
+REAL beam_bunch_charge   = 1e-9;     // Charge of bunch. (C)
+
+//----------------------------------------------------------------------------
+// Initial Momentum Calculation
+REAL Edes    = 1e-9; // not applied anyways
+REAL gamma   = (Edes+EMASS)/EMASS;
+REAL beta    = sqrt(1-(1/gamma^2));
+REAL P0      = gamma*beta*EMASS;
+
+// Printing initial energy and momentum to terminal output.
+value, {Edes, P0};
+
+D1: DRIFT, L = 1.0, ELEMEDGE = 0.0; // drift: particles enter with similar v
+myLine: Line = (D1);
+
+FS1: Fieldsolver, TYPE=NONE,
+    NX=N,
+    NY=N,
+    NZ=N,
+    PARFFTX = true,
+    PARFFTY = true,
+    PARFFTZ = false,
+    BCFFTX=OPEN,
+    BCFFTY=OPEN,
+    BCFFTZ=OPEN, BBOXINCR = 5;
+
+Dist1: DISTRIBUTION, TYPE=OPALFLATTOP,
+    SIGMAX = 0.00075,
+    SIGMAY = 0.00075,
+    TRISE = 25.0e-11,
+    TFALL = 25.0e-11,
+    TPULSEFWHM = 60.0e-11,
+    CUTOFFLONG = 4.0,
+    EMITTED = true,
+    EMISSIONSTEPS = 40,
+    NPARTDIST = n_particles;
+
+ES1: EMISSIONSOURCE, DISTRIBUTION = Dist1,
+    P0Z = 0.1; // otherwise it would stand still at the center with zero z extent
+mySources: EMISSIONSOURCELIST = (ES1);
+
+BEAM1: BEAM, PARTICLE = ELECTRON, pc = P0, NALLOC = n_particles,
+    BCHARGE = beam_bunch_charge, SOURCES = mySources, CHARGE = -1;
+
+TRACK, LINE = myLine, BEAM = BEAM1, MAXSTEPS = 40, DT = {5e-11}, ZSTOP=1.0;
+RUN, METHOD = "PARALLEL", FIELDSOLVER = FS1;
+ENDTRACK;
+QUIT;
