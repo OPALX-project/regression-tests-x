@@ -1,0 +1,337 @@
+OPAL-X>               ____  _____        _       __   __
+OPAL-X> [1;32m
+OPAL-X> 
+OPAL-X>   ██████  ██████   █████  ██      ██   ██
+OPAL-X>  ██    ██ ██   ██ ██   ██ ██       ██ ██
+OPAL-X>  ██    ██ ██████  ███████ ██        ███
+OPAL-X>  ██    ██ ██      ██   ██ ██       ██ ██
+OPAL-X>   ██████  ██      ██   ██ ███████ ██   ██
+OPAL-X> 
+OPAL-X>          This is OPALX (Object Oriented Parallel Accelerator Library for Exascale)
+OPAL-X> 
+OPAL-X> [0m
+OPAL-X> 
+OPAL-X> OPALX is the performance portable version of OPAL :: Version 0.9
+OPAL-X>             git rev. 889e707fbaeb7677e799b1a6445655bfdd66dd51
+OPAL-X> 
+OPAL-X> 
+OPAL-X>              (c) PSI, https://github.com/OPALX-project/OPALX
+OPAL-X> 
+OPAL-X> 
+OPAL-X> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL-X> to the OPAL developers https://github.com/OPALX-project/OPALX/issues
+OPAL-X> 
+OPAL-X> Time: 14:36:22 date: 18/05/2026
+OPAL-X> 
+OPAL-X> * Host:   Serial
+OPAL-X> * Device: Serial execution
+OPAL-X> 
+OPAL-X> * Reading input stream 'AWAGun-1-emittedfromfile.in'
+OPAL-X> 
+OPAL-X> value: {EDES,P0,OPALVERSION} = {1.4e-09, 1.19616e-06, 900}
+OPAL-X> 
+OPAL-X> 
+OPAL-X> value: {KSBF,SF} = {0.120154, 0.379111}
+OPAL-X> 
+OPAL-X> * ************* F I E L D S O L V E R ********************************************** 
+OPAL-X> * FIELDSOLVER  FS_SC
+OPAL-X> * BINS         BINS1
+OPAL-X> * TYPE         OPEN
+OPAL-X> * RANKS        1
+OPAL-X> * NX           8
+OPAL-X> * NY           8
+OPAL-X> * NZ           8
+OPAL-X> * BBOXINCR     5
+OPAL-X> * GREENSF      STANDARD
+OPAL-X> * XDIM         serial  
+OPAL-X> * YDIM         serial  
+OPAL-X> * ZDIM         parallel  
+OPAL-X> * ********************************************************************************** 
+OPAL-X> 
+OPAL-X> * ************* B I N N I N G ****************************************************** 
+OPAL-X> * BINNING        BINS1
+OPAL-X> * MAXBINS        128
+OPAL-X> * DESIREDWIDTH   0.2
+OPAL-X> * BINNINGALPHA   1
+OPAL-X> * BINNINGBETA    1.5
+OPAL-X> * ADAPTIVEBINNING TRUE
+OPAL-X> * PARAMETER      GAMMAZ
+OPAL-X> * TABLEPRINTFREQ 100
+OPAL-X> * ********************************************************************************** 
+OPAL-X> 
+OPAL-X> * RUN resolved beams: BEAM1
+OPAL-X> * ************* B E A M ************************************************************ 
+OPAL-X> * BEAM        BEAM1
+OPAL-X> * PARTICLE    ELECTRON
+OPAL-X> * REST MASS   0.000510999 [GeV]
+OPAL-X> * CHARGE      -e * 1 
+OPAL-X> * MOMENTUM    1 [eV/c]
+OPAL-X> * MOMENTUM    0 [GeV/c]
+OPAL-X> * BCHARGE     1e-09 [C]
+OPAL-X> * NALLOC      4096
+OPAL-X> * ********************************************************************************** 
+OPAL-X> 
+OPAL-X> 
+OPAL-X> * Creating new file for data: 'AWAGun-1-emittedfromfile.stat'
+OPAL-X> * Creating new file for data: 'AWAGun-1-emittedfromfile.lbal'
+OPAL-X> 
+OPAL-X> * ************** B U N C H ********************************************************* 
+OPAL-X> * CONTAINER       = 0
+OPAL-X> * PARTICLES       = 0
+OPAL-X> * CHARGE          = -0.000000e+00 (Cb) 
+OPAL-X> * QM STORAGE MODE = SINGLE
+OPAL-X> * <EKIN>          = 0.000 [eV]
+OPAL-X> * <dEKIN>         = 0.000 [eV]
+OPAL-X> * INTEGRATOR      = LF2
+OPAL-X> * MIN R (origin)  = (      0.00000 ,      0.00000 ,      0.00000 ) [um]
+OPAL-X> * MAX R (max ext) = (      0.00000 ,      0.00000 ,      0.00000 ) [um]
+OPAL-X> * RMS R           = (      0.00000 ,      0.00000 ,      0.00000 ) [um]
+OPAL-X> * RMS P           = ( 0.000000e+00 , 0.000000e+00 , 0.000000e+00 ) [beta gamma]
+OPAL-X> * Mean R          = ( 0.000000e+00 , 0.000000e+00 , 0.000000e+00 ) [m]
+OPAL-X> * Mean P          = ( 0.000000e+00 , 0.000000e+00 , 0.000000e+00 ) [beta gamma]
+OPAL-X> * MESH SPACING    = (      0.01250 ,      0.01250 ,      0.01250 ) [um]
+OPAL-X> * COMPDOM INCR    = 5.000000e+00 (%) 
+OPAL-X> * FIELD LAYOUT    = Domain = {[0:7:1],[0:7:1],[0:7:1]}
+OPAL-X> Total number of boxes = 1
+OPAL-X>     Box 0 {[0:7:1],[0:7:1],[0:7:1]}
+OPAL-X> 
+OPAL-X> * Centroid : 
+OPAL-X> * 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 
+OPAL-X> * Cov Matrix : 
+OPAL-X> * 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 
+OPAL-X> * 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 
+OPAL-X> * 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 
+OPAL-X> * 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 
+OPAL-X> * 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 
+OPAL-X> * 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 
+OPAL-X> * * ********************************************************************************** 
+OPAL-X> 
+OPAL-X> * BF gone live
+OPAL-X> * GUN gone live
+OPAL-X> * M gone live
+OPAL-X> * DR1 gone live
+OPAL-X> * OrbitThreader dt_m= 1.5e-12
+Ippl> 
+Ippl> * ************* G U N **************************************************************
+Ippl> GUN_phi1 = 140.4697 [deg], corresp. in Astra = 230.4697 [deg],
+Ippl> E = 6.2831 [MeV], phi_nom = 0.0000 [deg]
+Ippl> Ez_0 = 60.0000 [MV/m]
+Ippl> time = 0.0000 [ns], dt = 1.5000 [ps]
+Ippl> * **********************************************************************************
+Ippl> 
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 3
+OPAL-X> * OrbitThreader maxDistance= 1.79769e+308
+OPAL-X> * OrbitThreader #elements  = 2
+OPAL-X> * OrbitThreader maxDistance= 1.49981
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> * OrbitThreader maxDistance= 11.4999
+OPAL-X> * OrbitThreader #elements  = 0
+OPAL-X> 
+OPAL-X> * Size of map 4 sections 
+OPAL-X> * Key: ( 0.000000 -  0.292644) number of overlapping elements 3
+OPAL-X> *                              BF
+OPAL-X> *                              M
+OPAL-X> *                              GUN
+OPAL-X> * Key: ( 0.292644 -  0.499811) number of overlapping elements 2
+OPAL-X> *                              BF
+OPAL-X> *                              M
+OPAL-X> * Key: ( 0.499811 - 10.499914) number of overlapping elements 1
+OPAL-X> *                              DR1
+OPAL-X> * Key: (10.499914 - 10.500362) number of overlapping elements 0
+OPAL-X> 
+OPAL-X> * Creating new file for data: 'data/AWAGun-1-emittedfromfile_ElementPositions.sdds'
+OPAL-X> * Track start at: 14:36:22, t= -17.104 [ps]; zstart at: 0.000 [um]
+OPAL-X> * Initial dt = 62500.000 [ms]
+OPAL-X> * Max integration steps = 4000, next step = 0
+OPAL-X>                dt [ns]           zStop [m]        num Steps [1]
+OPAL-X> ->         1.500000e-12        4.000000e-01                2000
+OPAL-X>            3.000000e-11        2.000000e+00                2000
+OPAL-X> * 14:36:22 Step      0 container[0] at 0.000 [um], t= -16.762 [ps], E=22.491 [eV]
+ParticleContainer::deleteInvalidParticles> New total number:               18 (local: 18)
+ParticleContainer::deleteInvalidParticles> New total number:               19 (local: 19)
+OPAL-X> * 14:36:22 Step     50 container[0] at 0.553 [um], t= 342.089 [fs], E=6.994 [keV]
+OPAL-X> * 14:36:22 Step    100 container[0] at 1.218 [mm], t= 17.447 [ps], E=61.359 [keV]
+OPAL-X> * 14:36:22 Step    150 container[0] at 19.487 [mm], t= 92.447 [ps], E=1.091 [MeV]
+OPAL-X> * 14:36:23 Step    200 container[0] at 41.307 [mm], t= 167.447 [ps], E=2.168 [MeV]
+OPAL-X> * 14:36:23 Step    250 container[0] at 63.449 [mm], t= 242.447 [ps], E=2.556 [MeV]
+OPAL-X> * 14:36:23 Step    300 container[0] at 85.622 [mm], t= 317.447 [ps], E=2.623 [MeV]
+OPAL-X> * 14:36:23 Step    350 container[0] at 107.852 [mm], t= 392.447 [ps], E=3.317 [MeV]
+OPAL-X> * 14:36:23 Step    400 container[0] at 130.183 [mm], t= 467.447 [ps], E=4.555 [MeV]
+OPAL-X> * 14:36:23 Step    450 container[0] at 152.577 [mm], t= 542.447 [ps], E=5.743 [MeV]
+OPAL-X> * 14:36:23 Step    500 container[0] at 174.993 [mm], t= 617.447 [ps], E=6.266 [MeV]
+OPAL-X> * 14:36:24 Step    550 container[0] at 197.414 [mm], t= 692.447 [ps], E=6.297 [MeV]
+OPAL-X> * 14:36:24 Step    600 container[0] at 219.835 [mm], t= 767.447 [ps], E=6.283 [MeV]
+OPAL-X> * 14:36:24 Step    650 container[0] at 242.256 [mm], t= 842.447 [ps], E=6.280 [MeV]
+OPAL-X> * 14:36:24 Step    700 container[0] at 264.677 [mm], t= 917.447 [ps], E=6.279 [MeV]
+OPAL-X> * 14:36:24 Step    750 container[0] at 287.097 [mm], t= 992.447 [ps], E=6.279 [MeV]
+OPAL-X> * 14:36:24 Step    800 container[0] at 309.518 [mm], t= 1.067 [ns], E=6.279 [MeV]
+OPAL-X> * 14:36:24 Step    850 container[0] at 331.939 [mm], t= 1.142 [ns], E=6.279 [MeV]
+OPAL-X> * 14:36:24 Step    900 container[0] at 354.360 [mm], t= 1.217 [ns], E=6.279 [MeV]
+OPAL-X> * 14:36:24 Step    950 container[0] at 376.780 [mm], t= 1.292 [ns], E=6.279 [MeV]
+OPAL-X> * 14:36:25 Step   1000 container[0] at 399.201 [mm], t= 1.367 [ns], E=6.279 [MeV]
+OPAL-X> * 14:36:25 Step   1050 container[0] at 830.576 [mm], t= 2.810 [ns], E=6.279 [MeV]
+OPAL-X> * 14:36:25 Step   1100 container[0] at 1.279 [m], t= 4.310 [ns], E=6.278 [MeV]
+OPAL-X> * 14:36:25 Step   1150 container[0] at 1.727 [m], t= 5.810 [ns], E=6.278 [MeV]
+OPAL-X> * BF gone off
+OPAL-X> * GUN gone off
+OPAL-X> * M gone off
+OPAL-X> * DR1 gone off
+OPAL-X> 
+OPAL-X> * Done executing ParallelTracker at 14:36:25
+OPAL-X> 
+OPAL-X> * End of input stream 'AWAGun-1-emittedfromfile.in'
+Timings> ---------------------------------------------
+Timings>      Timing results for 1 rank(s):
+Timings> ---------------------------------------------
+Timings> mainTimer........... Wall tot =    2.71742
+Timings> 
+Timings> Write Stat.......... Wall max =   0.037604
+Timings>                      Wall avg =   0.037604
+Timings>                      Wall min =   0.037604
+Timings> 
+Timings> Write H5-File....... Wall max = 0.00101154
+Timings>                      Wall avg = 0.00101154
+Timings>                      Wall min = 0.00101154
+Timings> 
+Timings> bInitLimits......... Wall max = 0.00742704
+Timings>                      Wall avg = 0.00742704
+Timings>                      Wall min = 0.00742704
+Timings> 
+Timings> bAllReduceLimits.... Wall max = 8.3502e-05
+Timings>                      Wall avg = 8.3502e-05
+Timings>                      Wall min = 8.3502e-05
+Timings> 
+Timings> bAllReduceGlobalHis. Wall max = 0.000114278
+Timings>                      Wall avg = 0.000114278
+Timings>                      Wall min = 0.000114278
+Timings> 
+Timings> bAssignUniformBins.. Wall max = 0.00480589
+Timings>                      Wall avg = 0.00480589
+Timings>                      Wall min = 0.00480589
+Timings> 
+Timings> bExecuteHistoReduct. Wall max =  0.0126852
+Timings>                      Wall avg =  0.0126852
+Timings>                      Wall min =  0.0126852
+Timings> 
+Timings> bSortContainerByBin. Wall max = 0.00806193
+Timings>                      Wall avg = 0.00806193
+Timings>                      Wall min = 0.00806193
+Timings> 
+Timings> bVerifySorting...... Wall max =          0
+Timings>                      Wall avg =          0
+Timings>                      Wall min =          0
+Timings> 
+Timings> Initialize.......... Wall max =   0.000203
+Timings>                      Wall avg =   0.000203
+Timings>                      Wall min =   0.000203
+Timings> 
+Timings> Initialize: extra H. Wall max = 1.7667e-05
+Timings>                      Wall avg = 1.7667e-05
+Timings>                      Wall min = 1.7667e-05
+Timings> 
+Timings> Warmup.............. Wall max = 8.8667e-05
+Timings>                      Wall avg = 8.8667e-05
+Timings>                      Wall min = 8.8667e-05
+Timings> 
+Timings> Green Init.......... Wall max = 5.5041e-05
+Timings>                      Wall avg = 5.5041e-05
+Timings>                      Wall min = 5.5041e-05
+Timings> 
+Timings> FFT: Green.......... Wall max =   0.183144
+Timings>                      Wall avg =   0.183144
+Timings>                      Wall min =   0.183144
+Timings> 
+Timings> Solve............... Wall max =    1.24713
+Timings>                      Wall avg =    1.24713
+Timings>                      Wall min =    1.24713
+Timings> 
+Timings> Solve: Physical to . Wall max = 0.00205009
+Timings>                      Wall avg = 0.00205009
+Timings>                      Wall min = 0.00205009
+Timings> 
+Timings> FFT: Rho............ Wall max =   0.183649
+Timings>                      Wall avg =   0.183649
+Timings>                      Wall min =   0.183649
+Timings> 
+Timings> FFT: Convolution.... Wall max =   0.184844
+Timings>                      Wall avg =   0.184844
+Timings>                      Wall min =   0.184844
+Timings> 
+Timings> Solve: Double to ph. Wall max = 0.00246147
+Timings>                      Wall avg = 0.00246147
+Timings>                      Wall min = 0.00246147
+Timings> 
+Timings> Solve: Electric fie. Wall max =    0.69669
+Timings>                      Wall avg =    0.69669
+Timings>                      Wall min =    0.69669
+Timings> 
+Timings> FFT: Efield......... Wall max =   0.554136
+Timings>                      Wall avg =   0.554136
+Timings>                      Wall min =   0.554136
+Timings> 
+Timings> Efield: double to p. Wall max = 0.00702752
+Timings>                      Wall avg = 0.00702752
+Timings>                      Wall min = 0.00702752
+Timings> 
+Timings> samplingTime........ Wall max = 0.00659829
+Timings>                      Wall avg = 0.00659829
+Timings>                      Wall min = 0.00659829
+Timings> 
+Timings> particleBC.......... Wall max =  0.0359073
+Timings>                      Wall avg =  0.0359073
+Timings>                      Wall min =  0.0359073
+Timings> 
+Timings> updateParticle...... Wall max =          0
+Timings>                      Wall avg =          0
+Timings>                      Wall min =          0
+Timings> 
+Timings> computeMoments...... Wall max =   0.488596
+Timings>                      Wall avg =   0.488596
+Timings>                      Wall min =   0.488596
+Timings> 
+Timings> TIntegration1....... Wall max = 0.00990973
+Timings>                      Wall avg = 0.00990973
+Timings>                      Wall min = 0.00990973
+Timings> 
+Timings> TIntegration2....... Wall max =  0.0263746
+Timings>                      Wall avg =  0.0263746
+Timings>                      Wall min =  0.0263746
+Timings> 
+Timings> External field eval. Wall max =   0.101701
+Timings>                      Wall avg =   0.101701
+Timings>                      Wall min =   0.101701
+Timings> 
+Timings> Binaryrepart........ Wall max =          0
+Timings>                      Wall avg =          0
+Timings>                      Wall min =          0
+Timings> 
+Timings> OrbThreader......... Wall max =   0.040883
+Timings>                      Wall avg =   0.040883
+Timings>                      Wall min =   0.040883
+Timings> 
+Timings> bDeviceSyncronizati. Wall max = 0.000362017
+Timings>                      Wall avg = 0.000362017
+Timings>                      Wall min = 0.000362017
+Timings> 
+Timings> bHistogramInit...... Wall max = 0.00143337
+Timings>                      Wall avg = 0.00143337
+Timings>                      Wall min = 0.00143337
+Timings> 
+Timings> bMergeBins.......... Wall max =  0.0471281
+Timings>                      Wall avg =  0.0471281
+Timings>                      Wall min =  0.0471281
+Timings> 
+Timings> FFT: Shifted Green.. Wall max =   0.085128
+Timings>                      Wall avg =   0.085128
+Timings>                      Wall min =   0.085128
+Timings> 
+Timings> fillHalo............ Wall max =  6.747e-05
+Timings>                      Wall avg =  6.747e-05
+Timings>                      Wall min =  6.747e-05
+Timings> 
+Timings> gather.............. Wall max =  0.0438119
+Timings>                      Wall avg =  0.0438119
+Timings>                      Wall min =  0.0438119
+Timings> 
+Timings> ---------------------------------------------

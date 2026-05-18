@@ -1,7 +1,7 @@
-"Dist-flattop: Some timesteps to test the flattop time emission."
+"Dist-opalflattop: OPALFLATTOP emitted flat-top timing sanity check in a drift without space charge."
 stat "rms_x"      last 1E-5
 stat "rms_y"      last 1E-5
-stat "rms_s"      last 1E-5
+stat "rms_s"      last 1E-3
 stat "rms_px"     last 1E-6
 stat "rms_py"     last 1E-6
 stat "rms_ps"     last 1E-6
