@@ -153,7 +153,7 @@ BEAM1:  BEAM, PARTICLE = ELECTRON,
 //------------------------------------------------------------------------
 // Run Simulation
 //------------------------------------------------------------------------
-TRACK, LINE = SWISSFEL, BEAM = BEAM1, MAXSTEPS = 1900000, 
+TRACK, LINE = SWISSFEL, BEAM = BEAM1, MAXSTEPS = 40000, 
 			  DT = {1.0e-13, 2.0e-12}, ZSTOP={0.20, 13.0};
 
 RUN, METHOD = "PARALLEL", FIELDSOLVER = FS_SC;
