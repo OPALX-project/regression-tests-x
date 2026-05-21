@@ -112,7 +112,7 @@ SWISSFEL: Line = (GUN, BF, TW1, S1TW1, S2TW1, S3TW1, S4TW1,
 //------------------------------------------------------------------------
 
 Dist: 	DISTRIBUTION, TYPE = EMITTEDFROMFILE,
-    	FNAME = "OPAL_swissfel-booster_DIST.dat",
+    	FNAME = "OPAL_SwissFEL-booster_DIST.dat",
     	EMITTED = true,
     	EMISSIONSTEPS = 100,
     	NPARTDIST = n_particles;
