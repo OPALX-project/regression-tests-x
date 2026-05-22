@@ -1,0 +1,42 @@
+                      ranks  Wall tot
+=====================================
+mainTimer...........      8     65.75
+
+                      ranks  Wall max  Wall min  Wall avg
+=========================================================
+mainTimer...........      8     65.75     65.75     65.75
+Write Stat..........      8     2.162     2.156     2.159
+Write H5-File.......      8  0.005015  0.004947  0.004958
+findInternal........      8 3.918e-06 1.168e-06 1.829e-06
+findPeriodic........      8 1.461e-06  5.84e-07 8.646e-07
+Initialize..........      8  0.004188  0.004115  0.004162
+Initialize: extra H.      8 8.375e-05 6.575e-05 7.273e-05
+Warmup..............      8 0.0006777 0.0004883 0.0005463
+Green Init..........      8  0.003332  0.003195  0.003301
+FFT: Green..........      8     3.393     3.372     3.384
+Solve...............      8     20.86     20.44     20.66
+Solve: Physical to .      8    0.4115    0.1697    0.2681
+FFT: Rho............      8     3.251     2.992     3.096
+FFT: Convolution....      8     2.265     2.217     2.236
+Solve: Double to ph.      8    0.6768    0.2533    0.4032
+Solve: Electric fie.      8     10.71      10.7     10.71
+FFT: Efield.........      8     9.365     8.117      8.92
+Efield: double to p.      8     2.004    0.7456     1.191
+samplingTime........      8   0.02121    0.0195   0.02007
+particleBC..........      8    0.2423   0.04366    0.1728
+updateParticle......      8      1.97     1.816     1.871
+locateParticles.....      8    0.8839    0.3438    0.6953
+neighborSearch......      8    0.3872   0.05492     0.265
+nonNeighboringParti.      8  0.002663  0.002464  0.002565
+sendPreprocess......      8     1.569    0.8358      1.09
+particleSend........      8   0.02531  0.008839    0.0185
+particleDestroy.....      8   0.01554  0.006419   0.01175
+particleRecv........      8   0.02994  0.007169   0.02194
+computeMoments......      8     6.069     5.973     6.007
+TIntegration1.......      8      1.06     0.115    0.2953
+TIntegration2.......      8     22.86     9.859     14.37
+External field eval.      8     15.41      2.41      10.9
+Binaryrepart........      8         0         0         0
+OrbThreader.........      8     4.443     3.704     4.302
+fillHalo............      8     1.057    0.4528    0.7938
+gather..............      8    0.1667    0.0266    0.1174
