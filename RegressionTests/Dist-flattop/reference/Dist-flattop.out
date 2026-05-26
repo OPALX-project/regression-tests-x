@@ -12,7 +12,7 @@ OPAL-X>
 OPAL-X> [0m
 OPAL-X> 
 OPAL-X> OPALX is the performance portable version of OPAL :: Version 0.9
-OPAL-X>             git rev. 889e707fbaeb7677e799b1a6445655bfdd66dd51
+OPAL-X>             git rev. 2724f9f73a1b366cf56feb21f1321b484905bc95
 OPAL-X> 
 OPAL-X> 
 OPAL-X>              (c) PSI, https://github.com/OPALX-project/OPALX
@@ -21,7 +21,7 @@ OPAL-X>
 OPAL-X> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL-X> to the OPAL developers https://github.com/OPALX-project/OPALX/issues
 OPAL-X> 
-OPAL-X> Time: 14:15:07 date: 18/05/2026
+OPAL-X> Time: 14:11:36 date: 26/05/2026
 OPAL-X> 
 OPAL-X> * Host:   Serial
 OPAL-X> * Device: Serial execution
@@ -105,103 +105,103 @@ OPAL-X> * Key: (0.000000 - 0.999990) number of overlapping elements 1
 OPAL-X> *                            D1
 OPAL-X> 
 OPAL-X> * Creating new file for data: 'data/Dist-flattop_ElementPositions.sdds'
-OPAL-X> * Track start at: 14:15:08, t= 0.000 [fs]; zstart at: 0.000 [um]
+OPAL-X> * Track start at: 14:11:36, t= 0.000 [fs]; zstart at: 0.000 [um]
 OPAL-X> * Initial dt = 31250.000 [ms]
 OPAL-X> * Max integration steps = 40, next step = 0
 OPAL-X>                dt [ns]           zStop [m]        num Steps [1]
 OPAL-X> ->         5.000000e-11        1.000000e+00                  40
-OPAL-X> * 14:15:08 Step      0;    -- no emission yet --     t= 50.000 [ps]
-OPAL-X> * 14:15:08 Step      1;    -- no emission yet --     t= 100.000 [ps]
-OPAL-X> * 14:15:08 Step      2 container[0] at 88.964 [um], t= 150.000 [ps], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step      3 container[0] at 118.619 [um], t= 200.000 [ps], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step      4 container[0] at 148.274 [um], t= 250.000 [ps], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step      5 container[0] at 177.929 [um], t= 300.000 [ps], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step      6 container[0] at 207.584 [um], t= 350.000 [ps], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step      7 container[0] at 237.238 [um], t= 400.000 [ps], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step      8 container[0] at 266.893 [um], t= 450.000 [ps], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step      9 container[0] at 296.548 [um], t= 500.000 [ps], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     10 container[0] at 326.203 [um], t= 550.000 [ps], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     11 container[0] at 355.858 [um], t= 600.000 [ps], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     12 container[0] at 385.512 [um], t= 650.000 [ps], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     13 container[0] at 415.167 [um], t= 700.000 [ps], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     14 container[0] at 444.822 [um], t= 750.000 [ps], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     15 container[0] at 474.477 [um], t= 800.000 [ps], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     16 container[0] at 504.132 [um], t= 850.000 [ps], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     17 container[0] at 533.786 [um], t= 900.000 [ps], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     18 container[0] at 563.441 [um], t= 950.000 [ps], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     19 container[0] at 593.096 [um], t= 1.000 [ns], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     20 container[0] at 622.751 [um], t= 1.050 [ns], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     21 container[0] at 652.406 [um], t= 1.100 [ns], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     22 container[0] at 682.061 [um], t= 1.150 [ns], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     23 container[0] at 711.715 [um], t= 1.200 [ns], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     24 container[0] at 741.370 [um], t= 1.250 [ns], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     25 container[0] at 771.025 [um], t= 1.300 [ns], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     26 container[0] at 800.680 [um], t= 1.350 [ns], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     27 container[0] at 830.335 [um], t= 1.400 [ns], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     28 container[0] at 859.989 [um], t= 1.450 [ns], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     29 container[0] at 889.644 [um], t= 1.500 [ns], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     30 container[0] at 919.299 [um], t= 1.550 [ns], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     31 container[0] at 948.954 [um], t= 1.600 [ns], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     32 container[0] at 978.609 [um], t= 1.650 [ns], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     33 container[0] at 1.008 [mm], t= 1.700 [ns], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     34 container[0] at 1.038 [mm], t= 1.750 [ns], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     35 container[0] at 1.068 [mm], t= 1.800 [ns], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     36 container[0] at 1.097 [mm], t= 1.850 [ns], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     37 container[0] at 1.127 [mm], t= 1.900 [ns], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     38 container[0] at 1.157 [mm], t= 1.950 [ns], E=2.549 [keV]
-OPAL-X> * 14:15:08 Step     39 container[0] at 1.186 [mm], t= 2.000 [ns], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step      0;    -- no emission yet --     t= 50.000 [ps]
+OPAL-X> * 14:11:36 Step      1;    -- no emission yet --     t= 100.000 [ps]
+OPAL-X> * 14:11:36 Step      2 container[0] at 88.964 [um], t= 150.000 [ps], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step      3 container[0] at 118.619 [um], t= 200.000 [ps], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step      4 container[0] at 148.274 [um], t= 250.000 [ps], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step      5 container[0] at 177.929 [um], t= 300.000 [ps], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step      6 container[0] at 207.584 [um], t= 350.000 [ps], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step      7 container[0] at 237.238 [um], t= 400.000 [ps], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step      8 container[0] at 266.893 [um], t= 450.000 [ps], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step      9 container[0] at 296.548 [um], t= 500.000 [ps], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     10 container[0] at 326.203 [um], t= 550.000 [ps], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     11 container[0] at 355.858 [um], t= 600.000 [ps], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     12 container[0] at 385.512 [um], t= 650.000 [ps], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     13 container[0] at 415.167 [um], t= 700.000 [ps], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     14 container[0] at 444.822 [um], t= 750.000 [ps], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     15 container[0] at 474.477 [um], t= 800.000 [ps], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     16 container[0] at 504.132 [um], t= 850.000 [ps], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     17 container[0] at 533.786 [um], t= 900.000 [ps], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     18 container[0] at 563.441 [um], t= 950.000 [ps], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     19 container[0] at 593.096 [um], t= 1.000 [ns], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     20 container[0] at 622.751 [um], t= 1.050 [ns], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     21 container[0] at 652.406 [um], t= 1.100 [ns], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     22 container[0] at 682.061 [um], t= 1.150 [ns], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     23 container[0] at 711.715 [um], t= 1.200 [ns], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     24 container[0] at 741.370 [um], t= 1.250 [ns], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     25 container[0] at 771.025 [um], t= 1.300 [ns], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     26 container[0] at 800.680 [um], t= 1.350 [ns], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     27 container[0] at 830.335 [um], t= 1.400 [ns], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     28 container[0] at 859.989 [um], t= 1.450 [ns], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     29 container[0] at 889.644 [um], t= 1.500 [ns], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     30 container[0] at 919.299 [um], t= 1.550 [ns], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     31 container[0] at 948.954 [um], t= 1.600 [ns], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     32 container[0] at 978.609 [um], t= 1.650 [ns], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     33 container[0] at 1.008 [mm], t= 1.700 [ns], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     34 container[0] at 1.038 [mm], t= 1.750 [ns], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     35 container[0] at 1.068 [mm], t= 1.800 [ns], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     36 container[0] at 1.097 [mm], t= 1.850 [ns], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     37 container[0] at 1.127 [mm], t= 1.900 [ns], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     38 container[0] at 1.157 [mm], t= 1.950 [ns], E=2.549 [keV]
+OPAL-X> * 14:11:36 Step     39 container[0] at 1.186 [mm], t= 2.000 [ns], E=2.549 [keV]
 OPAL-X> * D1 gone off
 OPAL-X> 
-OPAL-X> * Done executing ParallelTracker at 14:15:08
+OPAL-X> * Done executing ParallelTracker at 14:11:36
 OPAL-X> 
 OPAL-X> * End of input stream 'Dist-flattop.in'
 Timings> ---------------------------------------------
 Timings>      Timing results for 1 rank(s):
 Timings> ---------------------------------------------
-Timings> mainTimer........... Wall tot =   0.146123
+Timings> mainTimer........... Wall tot =    0.13307
 Timings> 
-Timings> Write Stat.......... Wall max = 0.00541942
-Timings>                      Wall avg = 0.00541942
-Timings>                      Wall min = 0.00541942
+Timings> Write Stat.......... Wall max = 0.00474675
+Timings>                      Wall avg = 0.00474675
+Timings>                      Wall min = 0.00474675
 Timings> 
-Timings> Write H5-File....... Wall max = 0.00222721
-Timings>                      Wall avg = 0.00222721
-Timings>                      Wall min = 0.00222721
+Timings> Write H5-File....... Wall max = 0.00118842
+Timings>                      Wall avg = 0.00118842
+Timings>                      Wall min = 0.00118842
 Timings> 
-Timings> samplingTime........ Wall max = 3.4333e-05
-Timings>                      Wall avg = 3.4333e-05
-Timings>                      Wall min = 3.4333e-05
+Timings> samplingTime........ Wall max = 3.2417e-05
+Timings>                      Wall avg = 3.2417e-05
+Timings>                      Wall min = 3.2417e-05
 Timings> 
-Timings> particleBC.......... Wall max = 0.00079538
-Timings>                      Wall avg = 0.00079538
-Timings>                      Wall min = 0.00079538
+Timings> particleBC.......... Wall max = 0.000828329
+Timings>                      Wall avg = 0.000828329
+Timings>                      Wall min = 0.000828329
 Timings> 
 Timings> updateParticle...... Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> computeMoments...... Wall max =  0.0105744
-Timings>                      Wall avg =  0.0105744
-Timings>                      Wall min =  0.0105744
+Timings> computeMoments...... Wall max =  0.0109523
+Timings>                      Wall avg =  0.0109523
+Timings>                      Wall min =  0.0109523
 Timings> 
-Timings> TIntegration1....... Wall max = 0.00026096
-Timings>                      Wall avg = 0.00026096
-Timings>                      Wall min = 0.00026096
+Timings> TIntegration1....... Wall max = 0.000260204
+Timings>                      Wall avg = 0.000260204
+Timings>                      Wall min = 0.000260204
 Timings> 
-Timings> TIntegration2....... Wall max = 0.00056879
-Timings>                      Wall avg = 0.00056879
-Timings>                      Wall min = 0.00056879
+Timings> TIntegration2....... Wall max = 0.000582211
+Timings>                      Wall avg = 0.000582211
+Timings>                      Wall min = 0.000582211
 Timings> 
-Timings> External field eval. Wall max = 0.000565378
-Timings>                      Wall avg = 0.000565378
-Timings>                      Wall min = 0.000565378
+Timings> External field eval. Wall max = 0.000595167
+Timings>                      Wall avg = 0.000595167
+Timings>                      Wall min = 0.000595167
 Timings> 
 Timings> Binaryrepart........ Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> OrbThreader......... Wall max =   0.103803
-Timings>                      Wall avg =   0.103803
-Timings>                      Wall min =   0.103803
+Timings> OrbThreader......... Wall max =   0.102429
+Timings>                      Wall avg =   0.102429
+Timings>                      Wall min =   0.102429
 Timings> 
 Timings> ---------------------------------------------
