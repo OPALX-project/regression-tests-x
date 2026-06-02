@@ -1,0 +1,6 @@
+"Spin benchmark: single muon in a longitudinal 1 T solenoid field with transverse initial spin. Validates the Thomas-BMT integrator (constant gamma, in-plane spin rotation)."
+stat "mean_pol_mag" avg 1E-5
+stat "mean_polx"    last 1E-5
+stat "mean_poly"    last 1E-5
+stat "mean_polz"    avg  1E-5
+stat "energy"       avg  1E-6
