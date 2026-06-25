@@ -12,7 +12,7 @@ OPAL-X>
 OPAL-X> [0m
 OPAL-X> 
 OPAL-X> OPALX is the performance portable version of OPAL :: Version 0.9
-OPAL-X>             git rev. d5667df15f75705f858ac4531f7a6dd2cfe3daa0
+OPAL-X>             git rev. eacf23fef07b4540f2e4f3d249d0a29bb4be1d2d
 OPAL-X> 
 OPAL-X> 
 OPAL-X>              (c) PSI, https://github.com/OPALX-project/OPALX
@@ -21,10 +21,10 @@ OPAL-X>
 OPAL-X> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL-X> to the OPAL developers https://github.com/OPALX-project/OPALX/issues
 OPAL-X> 
-OPAL-X> Time: 09:42:15 date: 09/04/2026
+OPAL-X> Time: 08:55:22 date: 25/06/2026
 OPAL-X> 
-OPAL-X> * Host:   OpenMP
-OPAL-X> * Device: OpenMP
+OPAL-X> * Host:   Serial
+OPAL-X> * Device: Serial execution
 OPAL-X> 
 OPAL-X> * Reading input stream 'Dist-fromfile.in'
 OPAL-X> 
@@ -54,11 +54,10 @@ OPAL-X> * BEAM        BEAM1
 OPAL-X> * PARTICLE    ELECTRON
 OPAL-X> * REST MASS   0.000510999 [GeV]
 OPAL-X> * CHARGE      -e * 1 
-OPAL-X> * MOMENTUM    1010.94 [eV/c]
-OPAL-X> * MOMENTUM    1.01094e-06 [GeV/c]
-OPAL-X> * CURRENT     1.3e+06 [A]
-OPAL-X> * FREQUENCY   1.3e+09 [MHz]
-OPAL-X> * NPART       1000
+OPAL-X> * MOMENTUM    1 [eV/c]
+OPAL-X> * MOMENTUM    0 [GeV/c]
+OPAL-X> * BCHARGE     1e-09 [C]
+OPAL-X> * NALLOC      1000
 OPAL-X> * ********************************************************************************** 
 OPAL-X> 
 OPAL-X> 
@@ -108,60 +107,64 @@ OPAL-X> * Key: (0.000000 - 0.999990) number of overlapping elements 1
 OPAL-X> *                            D1
 OPAL-X> 
 OPAL-X> * Creating new file for data: 'data/Dist-fromfile_ElementPositions.sdds'
-OPAL-X> * Track start at: 09:42:15, t= 0.000 [fs]; zstart at: 0.000 [um]
+OPAL-X> * Track start at: 08:55:22, t= 0.000 [fs]; zstart at: 0.000 [um]
 OPAL-X> * Initial dt = 50.000 [ps]
 OPAL-X> * Max integration steps = 1, next step = 0
 OPAL-X>                dt [ns]           zStop [m]        num Steps [1]
 OPAL-X> ->         5.000000e-11        1.000000e+00                   1
-OPAL-X> * 09:42:15 Step      0 at 29.655 [um], t= 50.000 [ps], E=587.741 [eV]
+OPAL-X> * 08:55:22 Step      0 container[0] at 29.659 [um], t= 50.000 [ps], E=587.741 [eV]
 OPAL-X> * D1 gone off
 OPAL-X> 
-OPAL-X> * Done executing ParallelTracker at 09:42:15
+OPAL-X> * Done executing ParallelTracker at 08:55:22
 OPAL-X> 
 OPAL-X> * End of input stream 'Dist-fromfile.in'
 Timings> ---------------------------------------------
 Timings>      Timing results for 1 rank(s):
 Timings> ---------------------------------------------
-Timings> mainTimer........... Wall tot =   0.111683
+Timings> mainTimer........... Wall tot =   0.133681
 Timings> 
-Timings> Write Stat.......... Wall max =   0.000294
-Timings>                      Wall avg =   0.000294
-Timings>                      Wall min =   0.000294
+Timings> Write Stat.......... Wall max = 0.000187917
+Timings>                      Wall avg = 0.000187917
+Timings>                      Wall min = 0.000187917
 Timings> 
-Timings> Write H5-File....... Wall max =     0.0019
-Timings>                      Wall avg =     0.0019
-Timings>                      Wall min =     0.0019
+Timings> Write H5-File....... Wall max = 0.00206358
+Timings>                      Wall avg = 0.00206358
+Timings>                      Wall min = 0.00206358
 Timings> 
-Timings> samplingTime........ Wall max =   0.003888
-Timings>                      Wall avg =   0.003888
-Timings>                      Wall min =   0.003888
+Timings> samplingTime........ Wall max = 0.00253421
+Timings>                      Wall avg = 0.00253421
+Timings>                      Wall min = 0.00253421
 Timings> 
-Timings> particleBC.......... Wall max =   0.001012
-Timings>                      Wall avg =   0.001012
-Timings>                      Wall min =   0.001012
+Timings> particleBC.......... Wall max = 4.5916e-05
+Timings>                      Wall avg = 4.5916e-05
+Timings>                      Wall min = 4.5916e-05
 Timings> 
 Timings> updateParticle...... Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> TIntegration1....... Wall max =   0.000198
-Timings>                      Wall avg =   0.000198
-Timings>                      Wall min =   0.000198
+Timings> computeMoments...... Wall max = 0.000125959
+Timings>                      Wall avg = 0.000125959
+Timings>                      Wall min = 0.000125959
 Timings> 
-Timings> TIntegration2....... Wall max =   0.000199
-Timings>                      Wall avg =   0.000199
-Timings>                      Wall min =   0.000199
+Timings> TIntegration1....... Wall max = 1.6792e-05
+Timings>                      Wall avg = 1.6792e-05
+Timings>                      Wall min = 1.6792e-05
 Timings> 
-Timings> External field eval. Wall max =   0.000368
-Timings>                      Wall avg =   0.000368
-Timings>                      Wall min =   0.000368
+Timings> TIntegration2....... Wall max =  6.875e-06
+Timings>                      Wall avg =  6.875e-06
+Timings>                      Wall min =  6.875e-06
+Timings> 
+Timings> External field eval. Wall max =  6.875e-06
+Timings>                      Wall avg =  6.875e-06
+Timings>                      Wall min =  6.875e-06
 Timings> 
 Timings> Binaryrepart........ Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> OrbThreader......... Wall max =   0.089947
-Timings>                      Wall avg =   0.089947
-Timings>                      Wall min =   0.089947
+Timings> OrbThreader......... Wall max =   0.111158
+Timings>                      Wall avg =   0.111158
+Timings>                      Wall min =   0.111158
 Timings> 
 Timings> ---------------------------------------------
