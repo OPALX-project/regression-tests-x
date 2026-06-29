@@ -21,12 +21,12 @@ OPAL-X>
 OPAL-X> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL-X> to the OPAL developers https://github.com/OPALX-project/OPALX/issues
 OPAL-X> 
-OPAL-X> Time: 13:59:05 date: 29/06/2026
+OPAL-X> Time: 14:05:08 date: 29/06/2026
 OPAL-X> 
 OPAL-X> * Host:   Serial
 OPAL-X> * Device: Serial execution
 OPAL-X> 
-OPAL-X> * Reading input stream 'Drift-3-open-fromfile.in'
+OPAL-X> * Reading input stream 'Drift-3-open-integrated-fromfile.in'
 OPAL-X> 
 OPAL-X> value: {OPALVERSION} = {900}
 OPAL-X> 
@@ -61,8 +61,8 @@ OPAL-X> * NALLOC      32768
 OPAL-X> * ********************************************************************************** 
 OPAL-X> 
 OPAL-X> 
-OPAL-X> * Creating new file for data: 'Drift-3-open-fromfile.stat'
-OPAL-X> * Creating new file for data: 'Drift-3-open-fromfile.lbal'
+OPAL-X> * Creating new file for data: 'Drift-3-open-integrated-fromfile.stat'
+OPAL-X> * Creating new file for data: 'Drift-3-open-integrated-fromfile.lbal'
 FromFile::generateParticles> FromFile: Loaded 32768 particles from file 'input-distr-gauss-drift.txt'
 FromFile::generateParticles> Rank 0: 32768 local particles
 OPAL-X> 
@@ -106,172 +106,172 @@ OPAL-X> * Size of map 1 sections
 OPAL-X> * Key: (0.000000 - 1.250009) number of overlapping elements 1
 OPAL-X> *                            D1
 OPAL-X> 
-OPAL-X> * Creating new file for data: 'data/Drift-3-open-fromfile_ElementPositions.sdds'
-OPAL-X> * Track start at: 13:59:05, t= 0.000 [fs]; zstart at: 0.000 [um]
+OPAL-X> * Creating new file for data: 'data/Drift-3-open-integrated-fromfile_ElementPositions.sdds'
+OPAL-X> * Track start at: 14:05:08, t= 0.000 [fs]; zstart at: 0.000 [um]
 OPAL-X> * Initial dt = 50.000 [ps]
 OPAL-X> * Max integration steps = 20, next step = 0
 OPAL-X>                dt [ns]           zStop [m]        num Steps [1]
 OPAL-X> ->         5.000000e-11        1.250000e+00                  20
-OPAL-X> * 13:59:05 Step      0 container[0] at 29.655 [um], t= 50.000 [ps], E=1.204 [eV]
-OPAL-X> * 13:59:05 Step      1 container[0] at 59.310 [um], t= 100.000 [ps], E=1.468 [eV]
+OPAL-X> * 14:05:08 Step      0 container[0] at 29.655 [um], t= 50.000 [ps], E=1.204 [eV]
+OPAL-X> * 14:05:09 Step      1 container[0] at 59.310 [um], t= 100.000 [ps], E=1.468 [eV]
 ParticleContainer::deleteInvalidParticles> New total number:               32604 (local: 32604)
-OPAL-X> * 13:59:05 Step      2 container[0] at 88.964 [um], t= 150.000 [ps], E=1.837 [eV]
+OPAL-X> * 14:05:09 Step      2 container[0] at 88.964 [um], t= 150.000 [ps], E=1.837 [eV]
 ParticleContainer::deleteInvalidParticles> New total number:               30712 (local: 30712)
-OPAL-X> * 13:59:05 Step      3 container[0] at 118.619 [um], t= 200.000 [ps], E=2.399 [eV]
+OPAL-X> * 14:05:09 Step      3 container[0] at 118.619 [um], t= 200.000 [ps], E=2.399 [eV]
 ParticleContainer::deleteInvalidParticles> New total number:               28744 (local: 28744)
-OPAL-X> * 13:59:05 Step      4 container[0] at 148.274 [um], t= 250.000 [ps], E=3.020 [eV]
+OPAL-X> * 14:05:09 Step      4 container[0] at 148.274 [um], t= 250.000 [ps], E=3.020 [eV]
 ParticleContainer::deleteInvalidParticles> New total number:               26996 (local: 26996)
-OPAL-X> * 13:59:05 Step      5 container[0] at 177.929 [um], t= 300.000 [ps], E=3.660 [eV]
+OPAL-X> * 14:05:09 Step      5 container[0] at 177.929 [um], t= 300.000 [ps], E=3.660 [eV]
 ParticleContainer::deleteInvalidParticles> New total number:               25568 (local: 25568)
-OPAL-X> * 13:59:05 Step      6 container[0] at 207.584 [um], t= 350.000 [ps], E=4.291 [eV]
+OPAL-X> * 14:05:09 Step      6 container[0] at 207.584 [um], t= 350.000 [ps], E=4.291 [eV]
 ParticleContainer::deleteInvalidParticles> New total number:               24296 (local: 24296)
-OPAL-X> * 13:59:05 Step      7 container[0] at 237.238 [um], t= 400.000 [ps], E=4.915 [eV]
+OPAL-X> * 14:05:09 Step      7 container[0] at 237.238 [um], t= 400.000 [ps], E=4.915 [eV]
 ParticleContainer::deleteInvalidParticles> New total number:               23322 (local: 23322)
-OPAL-X> * 13:59:05 Step      8 container[0] at 266.893 [um], t= 450.000 [ps], E=5.510 [eV]
+OPAL-X> * 14:05:09 Step      8 container[0] at 266.893 [um], t= 450.000 [ps], E=5.510 [eV]
 ParticleContainer::deleteInvalidParticles> New total number:               22482 (local: 22482)
-OPAL-X> * 13:59:05 Step      9 container[0] at 296.548 [um], t= 500.000 [ps], E=6.081 [eV]
+OPAL-X> * 14:05:09 Step      9 container[0] at 296.548 [um], t= 500.000 [ps], E=6.081 [eV]
 ParticleContainer::deleteInvalidParticles> New total number:               22481 (local: 22481)
 ParticleContainer::deleteInvalidParticles> New total number:               21795 (local: 21795)
-OPAL-X> * 13:59:05 Step     10 container[0] at 326.203 [um], t= 550.000 [ps], E=6.619 [eV]
+OPAL-X> * 14:05:09 Step     10 container[0] at 326.203 [um], t= 550.000 [ps], E=6.619 [eV]
 ParticleContainer::deleteInvalidParticles> New total number:               21790 (local: 21790)
 ParticleContainer::deleteInvalidParticles> New total number:               21265 (local: 21265)
-OPAL-X> * 13:59:05 Step     11 container[0] at 355.858 [um], t= 600.000 [ps], E=7.120 [eV]
+OPAL-X> * 14:05:09 Step     11 container[0] at 355.858 [um], t= 600.000 [ps], E=7.120 [eV]
 ParticleContainer::deleteInvalidParticles> New total number:               21251 (local: 21251)
 ParticleContainer::deleteInvalidParticles> New total number:               20843 (local: 20843)
-OPAL-X> * 13:59:05 Step     12 container[0] at 385.512 [um], t= 650.000 [ps], E=7.598 [eV]
+OPAL-X> * 14:05:09 Step     12 container[0] at 385.512 [um], t= 650.000 [ps], E=7.598 [eV]
 ParticleContainer::deleteInvalidParticles> New total number:               20827 (local: 20827)
 ParticleContainer::deleteInvalidParticles> New total number:               20527 (local: 20527)
-OPAL-X> * 13:59:05 Step     13 container[0] at 415.167 [um], t= 700.000 [ps], E=8.046 [eV]
+OPAL-X> * 14:05:09 Step     13 container[0] at 415.167 [um], t= 700.000 [ps], E=8.046 [eV]
 ParticleContainer::deleteInvalidParticles> New total number:               20515 (local: 20515)
 ParticleContainer::deleteInvalidParticles> New total number:               20295 (local: 20295)
-OPAL-X> * 13:59:05 Step     14 container[0] at 444.822 [um], t= 750.000 [ps], E=8.473 [eV]
+OPAL-X> * 14:05:09 Step     14 container[0] at 444.822 [um], t= 750.000 [ps], E=8.473 [eV]
 ParticleContainer::deleteInvalidParticles> New total number:               20278 (local: 20278)
 ParticleContainer::deleteInvalidParticles> New total number:               20067 (local: 20067)
-OPAL-X> * 13:59:05 Step     15 container[0] at 474.477 [um], t= 800.000 [ps], E=8.887 [eV]
+OPAL-X> * 14:05:09 Step     15 container[0] at 474.477 [um], t= 800.000 [ps], E=8.887 [eV]
 ParticleContainer::deleteInvalidParticles> New total number:               20045 (local: 20045)
 ParticleContainer::deleteInvalidParticles> New total number:               19884 (local: 19884)
-OPAL-X> * 13:59:06 Step     16 container[0] at 504.132 [um], t= 850.000 [ps], E=9.283 [eV]
+OPAL-X> * 14:05:09 Step     16 container[0] at 504.132 [um], t= 850.000 [ps], E=9.283 [eV]
 ParticleContainer::deleteInvalidParticles> New total number:               19857 (local: 19857)
 ParticleContainer::deleteInvalidParticles> New total number:               19697 (local: 19697)
-OPAL-X> * 13:59:06 Step     17 container[0] at 533.786 [um], t= 900.000 [ps], E=9.669 [eV]
+OPAL-X> * 14:05:09 Step     17 container[0] at 533.786 [um], t= 900.000 [ps], E=9.669 [eV]
 ParticleContainer::deleteInvalidParticles> New total number:               19664 (local: 19664)
 ParticleContainer::deleteInvalidParticles> New total number:               19535 (local: 19535)
-OPAL-X> * 13:59:06 Step     18 container[0] at 563.441 [um], t= 950.000 [ps], E=10.035 [eV]
+OPAL-X> * 14:05:09 Step     18 container[0] at 563.441 [um], t= 950.000 [ps], E=10.035 [eV]
 ParticleContainer::deleteInvalidParticles> New total number:               19497 (local: 19497)
 ParticleContainer::deleteInvalidParticles> New total number:               19390 (local: 19390)
-OPAL-X> * 13:59:06 Step     19 container[0] at 593.096 [um], t= 1.000 [ns], E=10.385 [eV]
+OPAL-X> * 14:05:09 Step     19 container[0] at 593.096 [um], t= 1.000 [ns], E=10.385 [eV]
 OPAL-X> * D1 gone off
 OPAL-X> 
-OPAL-X> * Done executing ParallelTracker at 13:59:06
+OPAL-X> * Done executing ParallelTracker at 14:05:09
 OPAL-X> 
-OPAL-X> * End of input stream 'Drift-3-open-fromfile.in'
+OPAL-X> * End of input stream 'Drift-3-open-integrated-fromfile.in'
 Timings> ---------------------------------------------
 Timings>      Timing results for 1 rank(s):
 Timings> ---------------------------------------------
-Timings> mainTimer........... Wall tot =   0.860496
+Timings> mainTimer........... Wall tot =   0.847549
 Timings> 
-Timings> Write Stat.......... Wall max = 0.00938487
-Timings>                      Wall avg = 0.00938487
-Timings>                      Wall min = 0.00938487
+Timings> Write Stat.......... Wall max = 0.00921296
+Timings>                      Wall avg = 0.00921296
+Timings>                      Wall min = 0.00921296
 Timings> 
-Timings> Write H5-File....... Wall max = 0.00244796
-Timings>                      Wall avg = 0.00244796
-Timings>                      Wall min = 0.00244796
+Timings> Write H5-File....... Wall max = 0.00254504
+Timings>                      Wall avg = 0.00254504
+Timings>                      Wall min = 0.00254504
 Timings> 
-Timings> Initialize.......... Wall max =  0.0154947
-Timings>                      Wall avg =  0.0154947
-Timings>                      Wall min =  0.0154947
+Timings> Initialize.......... Wall max =  0.0150498
+Timings>                      Wall avg =  0.0150498
+Timings>                      Wall min =  0.0150498
 Timings> 
-Timings> Initialize: extra H. Wall max = 0.000795083
-Timings>                      Wall avg = 0.000795083
-Timings>                      Wall min = 0.000795083
+Timings> Initialize: extra H. Wall max = 0.000742209
+Timings>                      Wall avg = 0.000742209
+Timings>                      Wall min = 0.000742209
 Timings> 
-Timings> Warmup.............. Wall max = 0.00837163
-Timings>                      Wall avg = 0.00837163
-Timings>                      Wall min = 0.00837163
+Timings> Warmup.............. Wall max = 0.00822133
+Timings>                      Wall avg = 0.00822133
+Timings>                      Wall min = 0.00822133
 Timings> 
-Timings> Green Init.......... Wall max = 0.00491283
-Timings>                      Wall avg = 0.00491283
-Timings>                      Wall min = 0.00491283
+Timings> Green Init.......... Wall max = 0.00472287
+Timings>                      Wall avg = 0.00472287
+Timings>                      Wall min = 0.00472287
 Timings> 
-Timings> FFT: Green.......... Wall max =  0.0837675
-Timings>                      Wall avg =  0.0837675
-Timings>                      Wall min =  0.0837675
+Timings> FFT: Green.......... Wall max =   0.081972
+Timings>                      Wall avg =   0.081972
+Timings>                      Wall min =   0.081972
 Timings> 
-Timings> Solve............... Wall max =   0.547107
-Timings>                      Wall avg =   0.547107
-Timings>                      Wall min =   0.547107
+Timings> Solve............... Wall max =   0.542714
+Timings>                      Wall avg =   0.542714
+Timings>                      Wall min =   0.542714
 Timings> 
-Timings> Solve: Physical to . Wall max = 0.000234208
-Timings>                      Wall avg = 0.000234208
-Timings>                      Wall min = 0.000234208
+Timings> Solve: Physical to . Wall max = 0.000207041
+Timings>                      Wall avg = 0.000207041
+Timings>                      Wall min = 0.000207041
 Timings> 
-Timings> FFT: Rho............ Wall max =  0.0867932
-Timings>                      Wall avg =  0.0867932
-Timings>                      Wall min =  0.0867932
+Timings> FFT: Rho............ Wall max =  0.0852111
+Timings>                      Wall avg =  0.0852111
+Timings>                      Wall min =  0.0852111
 Timings> 
-Timings> FFT: Convolution.... Wall max =  0.0853141
-Timings>                      Wall avg =  0.0853141
-Timings>                      Wall min =  0.0853141
+Timings> FFT: Convolution.... Wall max =  0.0847295
+Timings>                      Wall avg =  0.0847295
+Timings>                      Wall min =  0.0847295
 Timings> 
-Timings> Solve: Double to ph. Wall max = 0.000209918
-Timings>                      Wall avg = 0.000209918
-Timings>                      Wall min = 0.000209918
+Timings> Solve: Double to ph. Wall max = 0.000217999
+Timings>                      Wall avg = 0.000217999
+Timings>                      Wall min = 0.000217999
 Timings> 
-Timings> Solve: Electric fie. Wall max =   0.274757
-Timings>                      Wall avg =   0.274757
-Timings>                      Wall min =   0.274757
+Timings> Solve: Electric fie. Wall max =   0.273322
+Timings>                      Wall avg =   0.273322
+Timings>                      Wall min =   0.273322
 Timings> 
-Timings> FFT: Efield......... Wall max =   0.248797
-Timings>                      Wall avg =   0.248797
-Timings>                      Wall min =   0.248797
+Timings> FFT: Efield......... Wall max =   0.246981
+Timings>                      Wall avg =   0.246981
+Timings>                      Wall min =   0.246981
 Timings> 
-Timings> Efield: double to p. Wall max = 0.00109408
-Timings>                      Wall avg = 0.00109408
-Timings>                      Wall min = 0.00109408
+Timings> Efield: double to p. Wall max = 0.00110316
+Timings>                      Wall avg = 0.00110316
+Timings>                      Wall min = 0.00110316
 Timings> 
-Timings> samplingTime........ Wall max =  0.0419568
-Timings>                      Wall avg =  0.0419568
-Timings>                      Wall min =  0.0419568
+Timings> samplingTime........ Wall max =  0.0421153
+Timings>                      Wall avg =  0.0421153
+Timings>                      Wall min =  0.0421153
 Timings> 
-Timings> particleBC.......... Wall max = 0.00395903
-Timings>                      Wall avg = 0.00395903
-Timings>                      Wall min = 0.00395903
+Timings> particleBC.......... Wall max = 0.00396721
+Timings>                      Wall avg = 0.00396721
+Timings>                      Wall min = 0.00396721
 Timings> 
 Timings> updateParticle...... Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> computeMoments...... Wall max =   0.049155
-Timings>                      Wall avg =   0.049155
-Timings>                      Wall min =   0.049155
+Timings> computeMoments...... Wall max =  0.0496543
+Timings>                      Wall avg =  0.0496543
+Timings>                      Wall min =  0.0496543
 Timings> 
-Timings> TIntegration1....... Wall max = 0.00101163
-Timings>                      Wall avg = 0.00101163
-Timings>                      Wall min = 0.00101163
+Timings> TIntegration1....... Wall max = 0.000978083
+Timings>                      Wall avg = 0.000978083
+Timings>                      Wall min = 0.000978083
 Timings> 
-Timings> TIntegration2....... Wall max = 0.00256025
-Timings>                      Wall avg = 0.00256025
-Timings>                      Wall min = 0.00256025
+Timings> TIntegration2....... Wall max = 0.00254833
+Timings>                      Wall avg = 0.00254833
+Timings>                      Wall min = 0.00254833
 Timings> 
-Timings> External field eval. Wall max = 0.00234925
-Timings>                      Wall avg = 0.00234925
-Timings>                      Wall min = 0.00234925
+Timings> External field eval. Wall max = 0.00238421
+Timings>                      Wall avg = 0.00238421
+Timings>                      Wall min = 0.00238421
 Timings> 
 Timings> Binaryrepart........ Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> OrbThreader......... Wall max =   0.145198
-Timings>                      Wall avg =   0.145198
-Timings>                      Wall min =   0.145198
+Timings> OrbThreader......... Wall max =   0.135899
+Timings>                      Wall avg =   0.135899
+Timings>                      Wall min =   0.135899
 Timings> 
-Timings> fillHalo............ Wall max =  3.251e-06
-Timings>                      Wall avg =  3.251e-06
-Timings>                      Wall min =  3.251e-06
+Timings> fillHalo............ Wall max =  1.747e-06
+Timings>                      Wall avg =  1.747e-06
+Timings>                      Wall min =  1.747e-06
 Timings> 
-Timings> gather.............. Wall max = 0.00269342
-Timings>                      Wall avg = 0.00269342
-Timings>                      Wall min = 0.00269342
+Timings> gather.............. Wall max = 0.00272625
+Timings>                      Wall avg = 0.00272625
+Timings>                      Wall min = 0.00272625
 Timings> 
 Timings> ---------------------------------------------
