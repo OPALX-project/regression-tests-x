@@ -1,0 +1,9 @@
+"Drift with open space charge solver and integrated Green's function. Small P0Z and no acceleration ensures that particles are moving backwards: additionally tests deletion of cathode crossing particles.
+stat "rms_x" last 1E-5
+stat "rms_s" last 1E-5
+stat "rms_px" last 1E-5
+stat "rms_ps" last 1E-5
+stat "emit_x" last 1E-5
+stat "emit_s" last 1E-5
+stat "energy" last 1E-3
+stat "numParticles" avg 5
