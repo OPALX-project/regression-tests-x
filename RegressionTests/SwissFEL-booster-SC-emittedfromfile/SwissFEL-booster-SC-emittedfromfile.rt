@@ -1,0 +1,10 @@
+"swissfel-booster: SwissFEL Gun and Booster with EMITTEDFROMFILE source. Including space charge and source plane at the cathode, 1bin."
+stat "rms_x"        avg 1E-4
+stat "rms_s"        avg 1E-4
+stat "rms_px"       avg 1E-4
+stat "rms_ps"       avg 1E-4
+stat "emit_x"       avg 1E-4
+stat "emit_s"       avg 1E-4
+stat "mean_s"       last 1E-4
+stat "energy"       avg 1E-2
+stat "numParticles" last 10
