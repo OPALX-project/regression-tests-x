@@ -1,0 +1,73 @@
+/*      Drinft-3-open.in
+	OPALX
+    Test meaningful drift with open solver.
+*/
+
+OPTION, PSDUMPFREQ      = 1000;   // 6d data written every 10th time step (h5).
+OPTION, STATDUMPFREQ    = 1;     // Beam Stats written every time step (stat).
+OPTION, BOUNDPDESTROY   = 10;    // Delete lost particles, if any out of 10 \sigma
+OPTION, AUTOPHASE       = 4;     // Autophase is on, and phase of max energy
+                                 // gain will be found automatically for cavities.
+OPTION, VERSION=10900;
+
+Title, string="Test simple Gaussian distribution with space charge";
+
+Value,{OPALVERSION};
+
+// ----------------------------------------------------------------------------
+// Global Parameters
+
+REAL N                   = 32; 
+REAL rf_freq             = 1.3e9;    // RF frequency. (Hz)
+REAL n_particles         = N*N*N;      // Number of particles in simulation.
+REAL beam_bunch_charge   = 1e-11;     // Charge of bunch. (C)
+
+// ----------------------------------------------------------------------------
+// Initial Momentum Calculation
+
+REAL Edes    = 1e-9; //initial energy in GeV
+REAL gamma   = (Edes+EMASS)/EMASS; 
+REAL beta    = sqrt(1-(1/gamma^2));
+REAL P0      = gamma*beta*EMASS;    //inital z momentum
+
+//Printing initial energy and momentum to terminal output.
+value, {Edes, P0};
+
+D1: DRIFT, L = 1.25, ELEMEDGE = 0.0;
+myLine: Line = (D1);
+
+FS1: Fieldsolver, TYPE=OPEN,
+    NX=N, 
+    NY=N, 
+    NZ=N,  
+    PARFFTX = true, 
+    PARFFTY = true, 
+    PARFFTZ = false,
+    BCFFTX=OPEN, 
+    BCFFTY=OPEN, 
+    BCFFTZ=OPEN, BBOXINCR = 5, GREENSF = INTEGRATED;
+
+//Dist1: DISTRIBUTION, TYPE=GAUSS, 
+//    SIGMAX=1e-3, 
+//    SIGMAY=1e-3, 
+//    SIGMAZ=1e-3, 
+//    SIGMAPX=1e-9, 
+//    SIGMAPY=1e-9, 
+//    SIGMAPZ=1e-9,
+//    NPARTDIST = n_particles;
+
+Dist1: DISTRIBUTION, TYPE = FROMFILE,
+    FNAME = "input-distr-gauss-drift.txt",
+    NPARTDIST = n_particles;
+
+ES1: EMISSIONSOURCE, DISTRIBUTION = Dist1,
+    	ZEROFACE_MAXSTEPS = 1000,
+    	SHIFTED_GREENS_FUNCTION = true;
+mySources: EMISSIONSOURCELIST = (ES1);
+
+BEAM1:  BEAM, PARTICLE = ELECTRON, NALLOC = n_particles,
+        BCHARGE = beam_bunch_charge, SOURCES = mySources, CHARGE = -1;
+
+TRACK, LINE = myLine, BEAM = BEAM1, MAXSTEPS = 20, DT = {5e-11}, ZSTOP=1.25; 
+RUN, METHOD = "PARALLEL", FIELDSOLVER = FS1;ENDTRACK;
+QUIT;

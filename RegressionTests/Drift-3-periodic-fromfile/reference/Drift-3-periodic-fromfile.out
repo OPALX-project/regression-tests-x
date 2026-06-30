@@ -12,7 +12,7 @@ OPAL-X>
 OPAL-X> [0m
 OPAL-X> 
 OPAL-X> OPALX is the performance portable version of OPAL :: Version 0.9
-OPAL-X>             git rev. 80432d1bddecbc9a7377e40242a079ebf3851b7f
+OPAL-X>             git rev. 798cfbfeae78eb38151624d74b21bef4bbdfde28
 OPAL-X> 
 OPAL-X> 
 OPAL-X>              (c) PSI, https://github.com/OPALX-project/OPALX
@@ -21,10 +21,10 @@ OPAL-X>
 OPAL-X> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL-X> to the OPAL developers https://github.com/OPALX-project/OPALX/issues
 OPAL-X> 
-OPAL-X> Time: 07:37:40 date: 15/04/2026
+OPAL-X> Time: 11:36:33 date: 30/06/2026
 OPAL-X> 
-OPAL-X> * Host:   OpenMP
-OPAL-X> * Device: OpenMP
+OPAL-X> * Host:   Serial
+OPAL-X> * Device: Serial execution
 OPAL-X> 
 OPAL-X> * Reading input stream 'Drift-3-periodic-fromfile.in'
 OPAL-X> 
@@ -54,11 +54,10 @@ OPAL-X> * BEAM        BEAM1
 OPAL-X> * PARTICLE    ELECTRON
 OPAL-X> * REST MASS   0.000510999 [GeV]
 OPAL-X> * CHARGE      -e * 1 
-OPAL-X> * MOMENTUM    1010.94 [eV/c]
-OPAL-X> * MOMENTUM    1.01094e-06 [GeV/c]
-OPAL-X> * CURRENT     13000 [A]
-OPAL-X> * FREQUENCY   1.3e+09 [MHz]
-OPAL-X> * NPART       32768
+OPAL-X> * MOMENTUM    1 [eV/c]
+OPAL-X> * MOMENTUM    0 [GeV/c]
+OPAL-X> * BCHARGE     1e-11 [C]
+OPAL-X> * NALLOC      32768
 OPAL-X> * ********************************************************************************** 
 OPAL-X> 
 OPAL-X> 
@@ -81,7 +80,7 @@ OPAL-X> * RMS R           = (      0.99368 ,      0.98561 ,      1.00078 ) [mm]
 OPAL-X> * RMS P           = ( 2.452441e-04 , 2.459081e-04 , 2.439457e-04 ) [beta gamma]
 OPAL-X> * Mean R          = ( 2.640164e-15 , -1.490943e-15 , -2.217489e-12 ) [m]
 OPAL-X> * Mean P          = ( -7.598699e-12 , 3.152198e-12 , 1.978359e-03 ) [beta gamma]
-OPAL-X> * MESH SPACING    = (    205.99303 ,    205.20730 ,    205.58830 ) [um]
+OPAL-X> * MESH SPACING    = (    212.63797 ,    211.82689 ,    212.22018 ) [um]
 OPAL-X> * COMPDOM INCR    = 5.000000e+00 (%) 
 OPAL-X> * FIELD LAYOUT    = Domain = {[0:31:1],[0:31:1],[0:31:1]}
 OPAL-X> Total number of boxes = 1
@@ -108,95 +107,91 @@ OPAL-X> * Key: (0.000000 - 1.250009) number of overlapping elements 1
 OPAL-X> *                            D1
 OPAL-X> 
 OPAL-X> * Creating new file for data: 'data/Drift-3-periodic-fromfile_ElementPositions.sdds'
-OPAL-X> * Track start at: 07:37:40, t= 0.000 [fs]; zstart at: 0.000 [um]
+OPAL-X> * Track start at: 11:36:33, t= 0.000 [fs]; zstart at: 0.000 [um]
 OPAL-X> * Initial dt = 50.000 [ps]
 OPAL-X> * Max integration steps = 20, next step = 0
 OPAL-X>                dt [ns]           zStop [m]        num Steps [1]
 OPAL-X> ->         5.000000e-11        1.250000e+00                  20
-OPAL-X> * 07:37:40 Step      0 at 29.655 [um], t= 50.000 [ps], E=1.182 [eV]
-OPAL-X> * 07:37:40 Step      1 at 59.310 [um], t= 100.000 [ps], E=1.402 [eV]
-OPAL-X> * 07:37:40 Step      2 at 88.964 [um], t= 150.000 [ps], E=1.696 [eV]
-OPAL-X> * 07:37:40 Step      3 at 118.619 [um], t= 200.000 [ps], E=2.052 [eV]
-OPAL-X> * 07:37:40 Step      4 at 148.274 [um], t= 250.000 [ps], E=2.458 [eV]
-OPAL-X> * 07:37:40 Step      5 at 177.929 [um], t= 300.000 [ps], E=2.900 [eV]
-OPAL-X> * 07:37:40 Step      6 at 207.584 [um], t= 350.000 [ps], E=3.366 [eV]
-OPAL-X> * 07:37:40 Step      7 at 237.238 [um], t= 400.000 [ps], E=3.845 [eV]
-OPAL-X> * 07:37:40 Step      8 at 266.893 [um], t= 450.000 [ps], E=4.326 [eV]
-OPAL-X> * 07:37:40 Step      9 at 296.548 [um], t= 500.000 [ps], E=4.802 [eV]
-OPAL-X> * 07:37:40 Step     10 at 326.203 [um], t= 550.000 [ps], E=5.266 [eV]
-OPAL-X> * 07:37:40 Step     11 at 355.858 [um], t= 600.000 [ps], E=5.713 [eV]
-OPAL-X> * 07:37:40 Step     12 at 385.512 [um], t= 650.000 [ps], E=6.139 [eV]
-OPAL-X> * 07:37:40 Step     13 at 415.167 [um], t= 700.000 [ps], E=6.541 [eV]
-OPAL-X> * 07:37:40 Step     14 at 444.822 [um], t= 750.000 [ps], E=6.918 [eV]
-OPAL-X> * 07:37:40 Step     15 at 474.477 [um], t= 800.000 [ps], E=7.268 [eV]
-OPAL-X> * 07:37:40 Step     16 at 504.132 [um], t= 850.000 [ps], E=7.593 [eV]
-OPAL-X> * 07:37:40 Step     17 at 533.786 [um], t= 900.000 [ps], E=7.891 [eV]
-OPAL-X> * 07:37:40 Step     18 at 563.441 [um], t= 950.000 [ps], E=8.163 [eV]
-OPAL-X> * 07:37:40 Step     19 at 593.096 [um], t= 1.000 [ns], E=8.411 [eV]
+OPAL-X> * 11:36:33 Step      0 container[0] at 29.655 [um], t= 50.000 [ps], E=1.184 [eV]
+OPAL-X> * 11:36:33 Step      1 container[0] at 59.310 [um], t= 100.000 [ps], E=1.408 [eV]
+OPAL-X> * 11:36:33 Step      2 container[0] at 88.964 [um], t= 150.000 [ps], E=1.708 [eV]
+OPAL-X> * 11:36:33 Step      3 container[0] at 118.619 [um], t= 200.000 [ps], E=2.072 [eV]
+OPAL-X> * 11:36:33 Step      4 container[0] at 148.274 [um], t= 250.000 [ps], E=2.487 [eV]
+OPAL-X> * 11:36:33 Step      5 container[0] at 177.929 [um], t= 300.000 [ps], E=2.941 [eV]
+OPAL-X> * 11:36:33 Step      6 container[0] at 207.584 [um], t= 350.000 [ps], E=3.419 [eV]
+OPAL-X> * 11:36:33 Step      7 container[0] at 237.238 [um], t= 400.000 [ps], E=3.912 [eV]
+OPAL-X> * 11:36:33 Step      8 container[0] at 266.893 [um], t= 450.000 [ps], E=4.409 [eV]
+OPAL-X> * 11:36:33 Step      9 container[0] at 296.548 [um], t= 500.000 [ps], E=4.901 [eV]
+OPAL-X> * 11:36:33 Step     10 container[0] at 326.203 [um], t= 550.000 [ps], E=5.382 [eV]
+OPAL-X> * 11:36:33 Step     11 container[0] at 355.858 [um], t= 600.000 [ps], E=5.848 [eV]
+OPAL-X> * 11:36:33 Step     12 container[0] at 385.512 [um], t= 650.000 [ps], E=6.293 [eV]
+OPAL-X> * 11:36:33 Step     13 container[0] at 415.167 [um], t= 700.000 [ps], E=6.716 [eV]
+OPAL-X> * 11:36:33 Step     14 container[0] at 444.822 [um], t= 750.000 [ps], E=7.115 [eV]
+OPAL-X> * 11:36:33 Step     15 container[0] at 474.477 [um], t= 800.000 [ps], E=7.489 [eV]
+OPAL-X> * 11:36:33 Step     16 container[0] at 504.132 [um], t= 850.000 [ps], E=7.837 [eV]
+OPAL-X> * 11:36:33 Step     17 container[0] at 533.786 [um], t= 900.000 [ps], E=8.160 [eV]
+OPAL-X> * 11:36:33 Step     18 container[0] at 563.441 [um], t= 950.000 [ps], E=8.459 [eV]
+OPAL-X> * 11:36:33 Step     19 container[0] at 593.096 [um], t= 1.000 [ns], E=8.733 [eV]
 OPAL-X> * D1 gone off
 OPAL-X> 
-OPAL-X> * Done executing ParallelTracker at 07:37:40
+OPAL-X> * Done executing ParallelTracker at 11:36:33
 OPAL-X> 
 OPAL-X> * End of input stream 'Drift-3-periodic-fromfile.in'
 Timings> ---------------------------------------------
 Timings>      Timing results for 1 rank(s):
 Timings> ---------------------------------------------
-Timings> mainTimer........... Wall tot =    0.67412
+Timings> mainTimer........... Wall tot =   0.379885
 Timings> 
-Timings> Write Stat.......... Wall max = 0.000459067
-Timings>                      Wall avg = 0.000459067
-Timings>                      Wall min = 0.000459067
+Timings> Write Stat.......... Wall max =  0.0110352
+Timings>                      Wall avg =  0.0110352
+Timings>                      Wall min =  0.0110352
 Timings> 
-Timings> Write H5-File....... Wall max =  0.0141293
-Timings>                      Wall avg =  0.0141293
-Timings>                      Wall min =  0.0141293
+Timings> Write H5-File....... Wall max = 0.00223225
+Timings>                      Wall avg = 0.00223225
+Timings>                      Wall min = 0.00223225
 Timings> 
-Timings> samplingTime........ Wall max =  0.0404102
-Timings>                      Wall avg =  0.0404102
-Timings>                      Wall min =  0.0404102
+Timings> samplingTime........ Wall max =   0.044296
+Timings>                      Wall avg =   0.044296
+Timings>                      Wall min =   0.044296
 Timings> 
-Timings> particleBC.......... Wall max = 0.00955968
-Timings>                      Wall avg = 0.00955968
-Timings>                      Wall min = 0.00955968
+Timings> particleBC.......... Wall max = 0.00518275
+Timings>                      Wall avg = 0.00518275
+Timings>                      Wall min = 0.00518275
 Timings> 
 Timings> updateParticle...... Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> TIntegration1....... Wall max =  0.0031105
-Timings>                      Wall avg =  0.0031105
-Timings>                      Wall min =  0.0031105
+Timings> computeMoments...... Wall max =  0.0675082
+Timings>                      Wall avg =  0.0675082
+Timings>                      Wall min =  0.0675082
 Timings> 
-Timings> TIntegration2....... Wall max = 0.00690686
-Timings>                      Wall avg = 0.00690686
-Timings>                      Wall min = 0.00690686
+Timings> TIntegration1....... Wall max = 0.00129833
+Timings>                      Wall avg = 0.00129833
+Timings>                      Wall min = 0.00129833
 Timings> 
-Timings> External field eval. Wall max = 0.00593536
-Timings>                      Wall avg = 0.00593536
-Timings>                      Wall min = 0.00593536
+Timings> TIntegration2....... Wall max = 0.00355321
+Timings>                      Wall avg = 0.00355321
+Timings>                      Wall min = 0.00355321
+Timings> 
+Timings> External field eval. Wall max = 0.00330192
+Timings>                      Wall avg = 0.00330192
+Timings>                      Wall min = 0.00330192
 Timings> 
 Timings> Binaryrepart........ Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> OrbThreader......... Wall max =   0.232464
-Timings>                      Wall avg =   0.232464
-Timings>                      Wall min =   0.232464
+Timings> OrbThreader......... Wall max =   0.140276
+Timings>                      Wall avg =   0.140276
+Timings>                      Wall min =   0.140276
 Timings> 
-Timings> scatter............. Wall max =  0.0376233
-Timings>                      Wall avg =  0.0376233
-Timings>                      Wall min =  0.0376233
+Timings> fillHalo............ Wall max = 0.000314581
+Timings>                      Wall avg = 0.000314581
+Timings>                      Wall min = 0.000314581
 Timings> 
-Timings> accumulateHalo...... Wall max = 0.000251831
-Timings>                      Wall avg = 0.000251831
-Timings>                      Wall min = 0.000251831
-Timings> 
-Timings> fillHalo............ Wall max = 0.000293861
-Timings>                      Wall avg = 0.000293861
-Timings>                      Wall min = 0.000293861
-Timings> 
-Timings> gather.............. Wall max =  0.0204843
-Timings>                      Wall avg =  0.0204843
-Timings>                      Wall min =  0.0204843
+Timings> gather.............. Wall max = 0.00378508
+Timings>                      Wall avg = 0.00378508
+Timings>                      Wall min = 0.00378508
 Timings> 
 Timings> ---------------------------------------------

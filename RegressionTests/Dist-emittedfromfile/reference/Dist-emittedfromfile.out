@@ -12,7 +12,7 @@ OPAL-X>
 OPAL-X> [0m
 OPAL-X> 
 OPAL-X> OPALX is the performance portable version of OPAL :: Version 0.9
-OPAL-X>             git rev. 889e707fbaeb7677e799b1a6445655bfdd66dd51
+OPAL-X>             git rev. 798cfbfeae78eb38151624d74b21bef4bbdfde28
 OPAL-X> 
 OPAL-X> 
 OPAL-X>              (c) PSI, https://github.com/OPALX-project/OPALX
@@ -21,7 +21,7 @@ OPAL-X>
 OPAL-X> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL-X> to the OPAL developers https://github.com/OPALX-project/OPALX/issues
 OPAL-X> 
-OPAL-X> Time: 14:23:15 date: 18/05/2026
+OPAL-X> Time: 11:32:15 date: 30/06/2026
 OPAL-X> 
 OPAL-X> * Host:   Serial
 OPAL-X> * Device: Serial execution
@@ -78,7 +78,7 @@ OPAL-X> * RMS R           = (      0.00000 ,      0.00000 ,      0.00000 ) [um]
 OPAL-X> * RMS P           = ( 0.000000e+00 , 0.000000e+00 , 0.000000e+00 ) [beta gamma]
 OPAL-X> * Mean R          = ( 0.000000e+00 , 0.000000e+00 , 0.000000e+00 ) [m]
 OPAL-X> * Mean P          = ( 0.000000e+00 , 0.000000e+00 , 0.000000e+00 ) [beta gamma]
-OPAL-X> * MESH SPACING    = (      0.00625 ,      0.00625 ,      0.00625 ) [um]
+OPAL-X> * MESH SPACING    = (      0.00667 ,      0.00667 ,      0.00667 ) [um]
 OPAL-X> * COMPDOM INCR    = 5.000000e+00 (%) 
 OPAL-X> * FIELD LAYOUT    = Domain = {[0:15:1],[0:15:1],[0:15:1]}
 OPAL-X> Total number of boxes = 1
@@ -105,213 +105,213 @@ OPAL-X> * Key: (0.000000 - 1.000142) number of overlapping elements 1
 OPAL-X> *                            D1
 OPAL-X> 
 OPAL-X> * Creating new file for data: 'data/Dist-emittedfromfile_ElementPositions.sdds'
-OPAL-X> * Track start at: 14:23:15, t= -17.104 [ps]; zstart at: 0.000 [um]
+OPAL-X> * Track start at: 11:32:15, t= -20.038 [ps]; zstart at: 0.000 [um]
 OPAL-X> * Initial dt = 31250.000 [ms]
 OPAL-X> * Max integration steps = 150, next step = 0
 OPAL-X>                dt [ns]           zStop [m]        num Steps [1]
 OPAL-X> ->         5.000000e-11        1.000000e+00                 150
-OPAL-X> * 14:23:15 Step      0 container[0] at 0.000 [um], t= -16.762 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step      1 container[0] at 0.000 [um], t= -16.420 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step      2 container[0] at 0.000 [um], t= -16.078 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step      3 container[0] at 0.000 [um], t= -15.736 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step      4 container[0] at 0.000 [um], t= -15.394 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step      5 container[0] at 0.000 [um], t= -15.052 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step      6 container[0] at 0.000 [um], t= -14.710 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step      7 container[0] at 0.000 [um], t= -14.368 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step      8 container[0] at 0.000 [um], t= -14.026 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step      9 container[0] at 0.000 [um], t= -13.684 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     10 container[0] at 0.000 [um], t= -13.341 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     11 container[0] at 0.000 [um], t= -12.999 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     12 container[0] at 0.000 [um], t= -12.657 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     13 container[0] at 0.000 [um], t= -12.315 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     14 container[0] at 0.000 [um], t= -11.973 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     15 container[0] at 0.000 [um], t= -11.631 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     16 container[0] at 0.000 [um], t= -11.289 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     17 container[0] at 0.000 [um], t= -10.947 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     18 container[0] at 0.000 [um], t= -10.605 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     19 container[0] at 0.000 [um], t= -10.263 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     20 container[0] at 0.000 [um], t= -9.921 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     21 container[0] at 0.000 [um], t= -9.578 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     22 container[0] at 0.000 [um], t= -9.236 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     23 container[0] at 0.000 [um], t= -8.894 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     24 container[0] at 0.000 [um], t= -8.552 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     25 container[0] at 0.000 [um], t= -8.210 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     26 container[0] at 0.000 [um], t= -7.868 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     27 container[0] at 0.000 [um], t= -7.526 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     28 container[0] at 0.000 [um], t= -7.184 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     29 container[0] at 0.000 [um], t= -6.842 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     30 container[0] at 0.000 [um], t= -6.500 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     31 container[0] at 0.000 [um], t= -6.158 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     32 container[0] at 0.000 [um], t= -5.816 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     33 container[0] at 0.000 [um], t= -5.473 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     34 container[0] at 0.000 [um], t= -5.131 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     35 container[0] at 0.000 [um], t= -4.789 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     36 container[0] at 0.000 [um], t= -4.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     37 container[0] at 0.000 [um], t= -4.105 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     38 container[0] at 0.000 [um], t= -3.763 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     39 container[0] at 0.000 [um], t= -3.421 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     40 container[0] at 0.000 [um], t= -3.079 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     41 container[0] at 0.000 [um], t= -2.737 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     42 container[0] at 0.000 [um], t= -2.395 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     43 container[0] at 0.000 [um], t= -2.053 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     44 container[0] at 0.000 [um], t= -1.710 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     45 container[0] at 0.000 [um], t= -1.368 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     46 container[0] at 0.000 [um], t= -1.026 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     47 container[0] at 0.000 [um], t= -684.178 [fs], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     48 container[0] at 0.000 [um], t= -342.089 [fs], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     49 container[0] at 0.000 [um], t= -0.000 [fs], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     50 container[0] at 0.076 [um], t= 342.089 [fs], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     51 container[0] at 0.152 [um], t= 684.178 [fs], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     52 container[0] at 0.228 [um], t= 1.026 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     53 container[0] at 0.304 [um], t= 1.368 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     54 container[0] at 0.381 [um], t= 1.710 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     55 container[0] at 0.457 [um], t= 2.053 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     56 container[0] at 0.533 [um], t= 2.395 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     57 container[0] at 0.609 [um], t= 2.737 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     58 container[0] at 0.685 [um], t= 3.079 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     59 container[0] at 0.761 [um], t= 3.421 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     60 container[0] at 0.837 [um], t= 3.763 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     61 container[0] at 0.913 [um], t= 4.105 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     62 container[0] at 0.989 [um], t= 4.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     63 container[0] at 1.065 [um], t= 4.789 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     64 container[0] at 1.142 [um], t= 5.131 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     65 container[0] at 1.218 [um], t= 5.473 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     66 container[0] at 1.294 [um], t= 5.816 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     67 container[0] at 1.370 [um], t= 6.158 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     68 container[0] at 1.446 [um], t= 6.500 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     69 container[0] at 1.522 [um], t= 6.842 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     70 container[0] at 1.598 [um], t= 7.184 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     71 container[0] at 1.674 [um], t= 7.526 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     72 container[0] at 1.750 [um], t= 7.868 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     73 container[0] at 1.826 [um], t= 8.210 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     74 container[0] at 1.903 [um], t= 8.552 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     75 container[0] at 1.979 [um], t= 8.894 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     76 container[0] at 2.055 [um], t= 9.236 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     77 container[0] at 2.131 [um], t= 9.578 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     78 container[0] at 2.207 [um], t= 9.921 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     79 container[0] at 2.283 [um], t= 10.263 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     80 container[0] at 2.359 [um], t= 10.605 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     81 container[0] at 2.435 [um], t= 10.947 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     82 container[0] at 2.511 [um], t= 11.289 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     83 container[0] at 2.587 [um], t= 11.631 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     84 container[0] at 2.664 [um], t= 11.973 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     85 container[0] at 2.740 [um], t= 12.315 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     86 container[0] at 2.816 [um], t= 12.657 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     87 container[0] at 2.892 [um], t= 12.999 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     88 container[0] at 2.968 [um], t= 13.341 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     89 container[0] at 3.044 [um], t= 13.684 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     90 container[0] at 3.120 [um], t= 14.026 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     91 container[0] at 3.196 [um], t= 14.368 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     92 container[0] at 3.272 [um], t= 14.710 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     93 container[0] at 3.349 [um], t= 15.052 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     94 container[0] at 3.425 [um], t= 15.394 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     95 container[0] at 3.501 [um], t= 15.736 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     96 container[0] at 3.577 [um], t= 16.078 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     97 container[0] at 3.653 [um], t= 16.420 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     98 container[0] at 3.729 [um], t= 16.762 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step     99 container[0] at 3.805 [um], t= 17.104 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    100 container[0] at 3.881 [um], t= 17.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    101 container[0] at 15.004 [um], t= 67.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    102 container[0] at 26.128 [um], t= 117.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    103 container[0] at 37.251 [um], t= 167.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    104 container[0] at 48.374 [um], t= 217.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    105 container[0] at 59.497 [um], t= 267.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    106 container[0] at 70.620 [um], t= 317.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    107 container[0] at 81.744 [um], t= 367.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    108 container[0] at 92.867 [um], t= 417.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    109 container[0] at 103.990 [um], t= 467.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    110 container[0] at 115.113 [um], t= 517.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    111 container[0] at 126.236 [um], t= 567.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    112 container[0] at 137.360 [um], t= 617.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    113 container[0] at 148.483 [um], t= 667.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    114 container[0] at 159.606 [um], t= 717.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    115 container[0] at 170.729 [um], t= 767.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    116 container[0] at 181.852 [um], t= 817.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    117 container[0] at 192.976 [um], t= 867.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    118 container[0] at 204.099 [um], t= 917.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    119 container[0] at 215.222 [um], t= 967.447 [ps], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    120 container[0] at 226.345 [um], t= 1.017 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    121 container[0] at 237.468 [um], t= 1.067 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    122 container[0] at 248.592 [um], t= 1.117 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    123 container[0] at 259.715 [um], t= 1.167 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    124 container[0] at 270.838 [um], t= 1.217 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    125 container[0] at 281.961 [um], t= 1.267 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    126 container[0] at 293.084 [um], t= 1.317 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    127 container[0] at 304.208 [um], t= 1.367 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    128 container[0] at 315.331 [um], t= 1.417 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    129 container[0] at 326.454 [um], t= 1.467 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    130 container[0] at 337.577 [um], t= 1.517 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    131 container[0] at 348.700 [um], t= 1.567 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    132 container[0] at 359.824 [um], t= 1.617 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    133 container[0] at 370.947 [um], t= 1.667 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    134 container[0] at 382.070 [um], t= 1.717 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    135 container[0] at 393.193 [um], t= 1.767 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    136 container[0] at 404.316 [um], t= 1.817 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    137 container[0] at 415.440 [um], t= 1.867 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    138 container[0] at 426.563 [um], t= 1.917 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    139 container[0] at 437.686 [um], t= 1.967 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    140 container[0] at 448.809 [um], t= 2.017 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    141 container[0] at 459.932 [um], t= 2.067 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    142 container[0] at 471.056 [um], t= 2.117 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    143 container[0] at 482.179 [um], t= 2.167 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    144 container[0] at 493.302 [um], t= 2.217 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    145 container[0] at 504.425 [um], t= 2.267 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    146 container[0] at 515.548 [um], t= 2.317 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    147 container[0] at 526.672 [um], t= 2.367 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    148 container[0] at 537.795 [um], t= 2.417 [ns], E=0.550 [eV]
-OPAL-X> * 14:23:15 Step    149 container[0] at 548.918 [um], t= 2.467 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step      0;    -- no emission yet --     t= -19.637 [ps]
+OPAL-X> * 11:32:15 Step      1;    -- no emission yet --     t= -19.236 [ps]
+OPAL-X> * 11:32:15 Step      2;    -- no emission yet --     t= -18.835 [ps]
+OPAL-X> * 11:32:15 Step      3;    -- no emission yet --     t= -18.435 [ps]
+OPAL-X> * 11:32:15 Step      4;    -- no emission yet --     t= -18.034 [ps]
+OPAL-X> * 11:32:15 Step      5;    -- no emission yet --     t= -17.633 [ps]
+OPAL-X> * 11:32:15 Step      6;    -- no emission yet --     t= -17.232 [ps]
+OPAL-X> * 11:32:15 Step      7;    -- no emission yet --     t= -16.832 [ps]
+OPAL-X> * 11:32:15 Step      8 container[0] at 0.000 [um], t= -16.431 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step      9 container[0] at 0.000 [um], t= -16.030 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     10 container[0] at 0.000 [um], t= -15.629 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     11 container[0] at 0.000 [um], t= -15.229 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     12 container[0] at 0.000 [um], t= -14.828 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     13 container[0] at 0.000 [um], t= -14.427 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     14 container[0] at 0.000 [um], t= -14.026 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     15 container[0] at 0.000 [um], t= -13.626 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     16 container[0] at 0.000 [um], t= -13.225 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     17 container[0] at 0.000 [um], t= -12.824 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     18 container[0] at 0.000 [um], t= -12.423 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     19 container[0] at 0.000 [um], t= -12.023 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     20 container[0] at 0.000 [um], t= -11.622 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     21 container[0] at 0.000 [um], t= -11.221 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     22 container[0] at 0.000 [um], t= -10.820 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     23 container[0] at 0.000 [um], t= -10.420 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     24 container[0] at 0.000 [um], t= -10.019 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     25 container[0] at 0.000 [um], t= -9.618 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     26 container[0] at 0.000 [um], t= -9.217 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     27 container[0] at 0.000 [um], t= -8.817 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     28 container[0] at 0.000 [um], t= -8.416 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     29 container[0] at 0.000 [um], t= -8.015 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     30 container[0] at 0.000 [um], t= -7.614 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     31 container[0] at 0.000 [um], t= -7.214 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     32 container[0] at 0.000 [um], t= -6.813 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     33 container[0] at 0.000 [um], t= -6.412 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     34 container[0] at 0.000 [um], t= -6.011 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     35 container[0] at 0.000 [um], t= -5.611 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     36 container[0] at 0.000 [um], t= -5.210 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     37 container[0] at 0.000 [um], t= -4.809 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     38 container[0] at 0.000 [um], t= -4.408 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     39 container[0] at 0.000 [um], t= -4.008 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     40 container[0] at 0.000 [um], t= -3.607 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     41 container[0] at 0.000 [um], t= -3.206 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     42 container[0] at 0.000 [um], t= -2.805 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     43 container[0] at 0.000 [um], t= -2.405 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     44 container[0] at 0.000 [um], t= -2.004 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     45 container[0] at 0.000 [um], t= -1.603 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     46 container[0] at 0.000 [um], t= -1.202 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     47 container[0] at 0.000 [um], t= -801.510 [fs], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     48 container[0] at 0.000 [um], t= -400.755 [fs], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     49 container[0] at 0.000 [um], t= 0.000 [fs], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     50 container[0] at 0.089 [um], t= 400.755 [fs], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     51 container[0] at 0.178 [um], t= 801.510 [fs], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     52 container[0] at 0.267 [um], t= 1.202 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     53 container[0] at 0.357 [um], t= 1.603 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     54 container[0] at 0.446 [um], t= 2.004 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     55 container[0] at 0.535 [um], t= 2.405 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     56 container[0] at 0.624 [um], t= 2.805 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     57 container[0] at 0.713 [um], t= 3.206 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     58 container[0] at 0.802 [um], t= 3.607 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     59 container[0] at 0.892 [um], t= 4.008 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     60 container[0] at 0.981 [um], t= 4.408 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     61 container[0] at 1.070 [um], t= 4.809 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     62 container[0] at 1.159 [um], t= 5.210 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     63 container[0] at 1.248 [um], t= 5.611 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     64 container[0] at 1.337 [um], t= 6.011 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     65 container[0] at 1.426 [um], t= 6.412 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     66 container[0] at 1.516 [um], t= 6.813 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     67 container[0] at 1.605 [um], t= 7.214 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     68 container[0] at 1.694 [um], t= 7.614 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     69 container[0] at 1.783 [um], t= 8.015 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     70 container[0] at 1.872 [um], t= 8.416 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     71 container[0] at 1.961 [um], t= 8.817 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     72 container[0] at 2.051 [um], t= 9.217 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     73 container[0] at 2.140 [um], t= 9.618 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     74 container[0] at 2.229 [um], t= 10.019 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     75 container[0] at 2.318 [um], t= 10.420 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     76 container[0] at 2.407 [um], t= 10.820 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     77 container[0] at 2.496 [um], t= 11.221 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     78 container[0] at 2.585 [um], t= 11.622 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     79 container[0] at 2.675 [um], t= 12.023 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     80 container[0] at 2.764 [um], t= 12.423 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     81 container[0] at 2.853 [um], t= 12.824 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     82 container[0] at 2.942 [um], t= 13.225 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     83 container[0] at 3.031 [um], t= 13.626 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     84 container[0] at 3.120 [um], t= 14.026 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     85 container[0] at 3.210 [um], t= 14.427 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     86 container[0] at 3.299 [um], t= 14.828 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     87 container[0] at 3.388 [um], t= 15.229 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     88 container[0] at 3.477 [um], t= 15.629 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     89 container[0] at 3.566 [um], t= 16.030 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     90 container[0] at 3.655 [um], t= 16.431 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     91 container[0] at 3.744 [um], t= 16.832 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     92 container[0] at 3.834 [um], t= 17.232 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     93 container[0] at 14.957 [um], t= 67.232 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     94 container[0] at 26.080 [um], t= 117.232 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     95 container[0] at 37.203 [um], t= 167.232 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     96 container[0] at 48.326 [um], t= 217.232 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     97 container[0] at 59.450 [um], t= 267.232 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     98 container[0] at 70.573 [um], t= 317.232 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step     99 container[0] at 81.696 [um], t= 367.232 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    100 container[0] at 92.819 [um], t= 417.232 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    101 container[0] at 103.942 [um], t= 467.232 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    102 container[0] at 115.066 [um], t= 517.232 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    103 container[0] at 126.189 [um], t= 567.232 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    104 container[0] at 137.312 [um], t= 617.232 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    105 container[0] at 148.435 [um], t= 667.232 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    106 container[0] at 159.558 [um], t= 717.232 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    107 container[0] at 170.682 [um], t= 767.232 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    108 container[0] at 181.805 [um], t= 817.232 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    109 container[0] at 192.928 [um], t= 867.232 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    110 container[0] at 204.051 [um], t= 917.232 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    111 container[0] at 215.174 [um], t= 967.232 [ps], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    112 container[0] at 226.298 [um], t= 1.017 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    113 container[0] at 237.421 [um], t= 1.067 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    114 container[0] at 248.544 [um], t= 1.117 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    115 container[0] at 259.667 [um], t= 1.167 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    116 container[0] at 270.790 [um], t= 1.217 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    117 container[0] at 281.914 [um], t= 1.267 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    118 container[0] at 293.037 [um], t= 1.317 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    119 container[0] at 304.160 [um], t= 1.367 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    120 container[0] at 315.283 [um], t= 1.417 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    121 container[0] at 326.406 [um], t= 1.467 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    122 container[0] at 337.530 [um], t= 1.517 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    123 container[0] at 348.653 [um], t= 1.567 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    124 container[0] at 359.776 [um], t= 1.617 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    125 container[0] at 370.899 [um], t= 1.667 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    126 container[0] at 382.022 [um], t= 1.717 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    127 container[0] at 393.146 [um], t= 1.767 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    128 container[0] at 404.269 [um], t= 1.817 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    129 container[0] at 415.392 [um], t= 1.867 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    130 container[0] at 426.515 [um], t= 1.917 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    131 container[0] at 437.638 [um], t= 1.967 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    132 container[0] at 448.762 [um], t= 2.017 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    133 container[0] at 459.885 [um], t= 2.067 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    134 container[0] at 471.008 [um], t= 2.117 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    135 container[0] at 482.131 [um], t= 2.167 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    136 container[0] at 493.254 [um], t= 2.217 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    137 container[0] at 504.378 [um], t= 2.267 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    138 container[0] at 515.501 [um], t= 2.317 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    139 container[0] at 526.624 [um], t= 2.367 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    140 container[0] at 537.747 [um], t= 2.417 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    141 container[0] at 548.870 [um], t= 2.467 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    142 container[0] at 559.994 [um], t= 2.517 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    143 container[0] at 571.117 [um], t= 2.567 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    144 container[0] at 582.240 [um], t= 2.617 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    145 container[0] at 593.363 [um], t= 2.667 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    146 container[0] at 604.486 [um], t= 2.717 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    147 container[0] at 615.610 [um], t= 2.767 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    148 container[0] at 626.733 [um], t= 2.817 [ns], E=0.550 [eV]
+OPAL-X> * 11:32:15 Step    149 container[0] at 637.856 [um], t= 2.867 [ns], E=0.550 [eV]
 OPAL-X> * D1 gone off
 OPAL-X> 
-OPAL-X> * Done executing ParallelTracker at 14:23:15
+OPAL-X> * Done executing ParallelTracker at 11:32:15
 OPAL-X> 
 OPAL-X> * End of input stream 'Dist-emittedfromfile.in'
 Timings> ---------------------------------------------
 Timings>      Timing results for 1 rank(s):
 Timings> ---------------------------------------------
-Timings> mainTimer........... Wall tot =   0.387548
+Timings> mainTimer........... Wall tot =   0.398979
 Timings> 
-Timings> Write Stat.......... Wall max =   0.018731
-Timings>                      Wall avg =   0.018731
-Timings>                      Wall min =   0.018731
+Timings> Write Stat.......... Wall max =  0.0203075
+Timings>                      Wall avg =  0.0203075
+Timings>                      Wall min =  0.0203075
 Timings> 
-Timings> Write H5-File....... Wall max = 0.00105688
-Timings>                      Wall avg = 0.00105688
-Timings>                      Wall min = 0.00105688
+Timings> Write H5-File....... Wall max =  0.0011245
+Timings>                      Wall avg =  0.0011245
+Timings>                      Wall min =  0.0011245
 Timings> 
-Timings> samplingTime........ Wall max = 0.00622221
-Timings>                      Wall avg = 0.00622221
-Timings>                      Wall min = 0.00622221
+Timings> samplingTime........ Wall max = 0.00667733
+Timings>                      Wall avg = 0.00667733
+Timings>                      Wall min = 0.00667733
 Timings> 
-Timings> particleBC.......... Wall max = 0.00327422
-Timings>                      Wall avg = 0.00327422
-Timings>                      Wall min = 0.00327422
+Timings> particleBC.......... Wall max = 0.00347818
+Timings>                      Wall avg = 0.00347818
+Timings>                      Wall min = 0.00347818
 Timings> 
 Timings> updateParticle...... Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> computeMoments...... Wall max =  0.0430408
-Timings>                      Wall avg =  0.0430408
-Timings>                      Wall min =  0.0430408
+Timings> computeMoments...... Wall max =  0.0476642
+Timings>                      Wall avg =  0.0476642
+Timings>                      Wall min =  0.0476642
 Timings> 
-Timings> TIntegration1....... Wall max = 0.000941083
-Timings>                      Wall avg = 0.000941083
-Timings>                      Wall min = 0.000941083
+Timings> TIntegration1....... Wall max = 0.00105154
+Timings>                      Wall avg = 0.00105154
+Timings>                      Wall min = 0.00105154
 Timings> 
-Timings> TIntegration2....... Wall max = 0.00225413
-Timings>                      Wall avg = 0.00225413
-Timings>                      Wall min = 0.00225413
+Timings> TIntegration2....... Wall max = 0.00281796
+Timings>                      Wall avg = 0.00281796
+Timings>                      Wall min = 0.00281796
 Timings> 
-Timings> External field eval. Wall max =  0.0023062
-Timings>                      Wall avg =  0.0023062
-Timings>                      Wall min =  0.0023062
+Timings> External field eval. Wall max =  0.0030495
+Timings>                      Wall avg =  0.0030495
+Timings>                      Wall min =  0.0030495
 Timings> 
 Timings> Binaryrepart........ Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> OrbThreader......... Wall max =   0.288586
-Timings>                      Wall avg =   0.288586
-Timings>                      Wall min =   0.288586
+Timings> OrbThreader......... Wall max =   0.289392
+Timings>                      Wall avg =   0.289392
+Timings>                      Wall min =   0.289392
 Timings> 
 Timings> ---------------------------------------------
