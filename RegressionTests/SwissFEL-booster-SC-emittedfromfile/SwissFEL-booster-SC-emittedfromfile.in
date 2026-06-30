@@ -24,7 +24,7 @@ Value, {OPALVERSION};
 //------------------------------------------------------------------------ 
 REAL N                   = 8;        // FS grid size
 REAL rf_freq             = 2997.912;  // RF frequency (MHz)
-REAL n_particles         = 1E4;       // Number of particles in simulation.
+REAL n_particles         = 1024;       // Number of particles in simulation.
 REAL beam_bunch_charge   = 200e-12;   // Charge of bunch (C)
 REAL beam_current 		 = beam_bunch_charge * rf_freq * 1e6;  
 
