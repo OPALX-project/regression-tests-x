@@ -1,44 +1,44 @@
                       ranks  Wall tot
 =====================================
-mainTimer...........      1     2.717
+mainTimer...........      1     2.667
 
                       ranks  Wall max  Wall min  Wall avg
 =========================================================
-mainTimer...........      1     2.717     2.717     2.717
-Write Stat..........      1    0.0376    0.0376    0.0376
-Write H5-File.......      1  0.001012  0.001012  0.001012
-bInitLimits.........      1  0.007427  0.007427  0.007427
-bAllReduceLimits....      1  8.35e-05  8.35e-05  8.35e-05
-bAllReduceGlobalHis.      1 0.0001143 0.0001143 0.0001143
-bAssignUniformBins..      1  0.004806  0.004806  0.004806
-bExecuteHistoReduct.      1   0.01269   0.01269   0.01269
-bSortContainerByBin.      1  0.008062  0.008062  0.008062
+mainTimer...........      1     2.667     2.667     2.667
+Write Stat..........      1    0.0369    0.0369    0.0369
+Write H5-File.......      1  0.001316  0.001316  0.001316
+bInitLimits.........      1  0.007637  0.007637  0.007637
+bAllReduceLimits....      1 8.383e-05 8.383e-05 8.383e-05
+bAllReduceGlobalHis.      1 0.0001087 0.0001087 0.0001087
+bAssignUniformBins..      1  0.004755  0.004755  0.004755
+bExecuteHistoReduct.      1   0.01286   0.01286   0.01286
+bSortContainerByBin.      1  0.008074  0.008074  0.008074
 bVerifySorting......      1         0         0         0
-Initialize..........      1  0.000203  0.000203  0.000203
-Initialize: extra H.      1 1.767e-05 1.767e-05 1.767e-05
-Warmup..............      1 8.867e-05 8.867e-05 8.867e-05
-Green Init..........      1 5.504e-05 5.504e-05 5.504e-05
-FFT: Green..........      1    0.1831    0.1831    0.1831
-Solve...............      1     1.247     1.247     1.247
-Solve: Physical to .      1   0.00205   0.00205   0.00205
-FFT: Rho............      1    0.1836    0.1836    0.1836
-FFT: Convolution....      1    0.1848    0.1848    0.1848
-Solve: Double to ph.      1  0.002461  0.002461  0.002461
-Solve: Electric fie.      1    0.6967    0.6967    0.6967
-FFT: Efield.........      1    0.5541    0.5541    0.5541
-Efield: double to p.      1  0.007028  0.007028  0.007028
-samplingTime........      1  0.006598  0.006598  0.006598
-particleBC..........      1   0.03591   0.03591   0.03591
+Initialize..........      1 0.0003878 0.0003878 0.0003878
+Initialize: extra H.      1 5.154e-05 5.154e-05 5.154e-05
+Warmup..............      1  0.000123  0.000123  0.000123
+Green Init..........      1  9.55e-05  9.55e-05  9.55e-05
+FFT: Green..........      1    0.1811    0.1811    0.1811
+Solve...............      1     1.233     1.233     1.233
+Solve: Physical to .      1  0.001872  0.001872  0.001872
+FFT: Rho............      1     0.181     0.181     0.181
+FFT: Convolution....      1    0.1819    0.1819    0.1819
+Solve: Double to ph.      1  0.001707  0.001707  0.001707
+Solve: Electric fie.      1    0.6864    0.6864    0.6864
+FFT: Efield.........      1     0.547     0.547     0.547
+Efield: double to p.      1  0.006438  0.006438  0.006438
+samplingTime........      1  0.007544  0.007544  0.007544
+particleBC..........      1   0.03559   0.03559   0.03559
 updateParticle......      1         0         0         0
-computeMoments......      1    0.4886    0.4886    0.4886
-TIntegration1.......      1   0.00991   0.00991   0.00991
-TIntegration2.......      1   0.02637   0.02637   0.02637
-External field eval.      1    0.1017    0.1017    0.1017
+computeMoments......      1    0.4851    0.4851    0.4851
+TIntegration1.......      1  0.009774  0.009774  0.009774
+TIntegration2.......      1   0.02574   0.02574   0.02574
+External field eval.      1    0.1047    0.1047    0.1047
 Binaryrepart........      1         0         0         0
-OrbThreader.........      1   0.04088   0.04088   0.04088
-bDeviceSyncronizati.      1  0.000362  0.000362  0.000362
-bHistogramInit......      1  0.001433  0.001433  0.001433
-bMergeBins..........      1   0.04713   0.04713   0.04713
-FFT: Shifted Green..      1   0.08513   0.08513   0.08513
-fillHalo............      1 6.747e-05 6.747e-05 6.747e-05
-gather..............      1   0.04381   0.04381   0.04381
+OrbThreader.........      1   0.02875   0.02875   0.02875
+bDeviceSyncronizati.      1 0.0003519 0.0003519 0.0003519
+bHistogramInit......      1  0.001347  0.001347  0.001347
+bMergeBins..........      1   0.04506   0.04506   0.04506
+FFT: Shifted Green..      1   0.08384   0.08384   0.08384
+fillHalo............      1 6.893e-05 6.893e-05 6.893e-05
+gather..............      1   0.04367   0.04367   0.04367
