@@ -40,7 +40,7 @@ FS1: Fieldsolver, TYPE=NONE,
     NZ=N,
     PARFFTX = true,
     PARFFTY = true,
-    PARFFTZ = false,
+    PARFFTZ = true,
     BCFFTX=OPEN,
     BCFFTY=OPEN,
     BCFFTZ=OPEN, BBOXINCR = 5;

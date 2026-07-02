@@ -80,8 +80,8 @@ mySources: EMISSIONSOURCELIST = (ES1);
 
 FS_SC:  Fieldsolver, TYPE = NONE, 
         NX = N, NY = N, NZ = N, 
-        PARFFTX = false,
-        PARFFTY = false,
+        PARFFTX = true,
+        PARFFTY = true,
         PARFFTZ = true,  // parallel in the z direction only
         BCFFTX = open,
         BCFFTY = open,

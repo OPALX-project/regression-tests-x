@@ -37,7 +37,7 @@ value, {Edes, P0};
 D1: DRIFT, L = 1.0, ELEMEDGE = 0.0;
 myLine: Line = (D1);
 
-FS1: Fieldsolver, NX=32, NY=32, NZ=32, TYPE=NONE, PARFFTX = true, PARFFTY = true, PARFFTZ = false,
+FS1: Fieldsolver, NX=32, NY=32, NZ=32, TYPE=NONE, PARFFTX = true, PARFFTY = true, PARFFTZ = true,
                   BCFFTX=OPEN, BCFFTY=OPEN, BCFFTZ=OPEN,
                   BBOXINCR = 5, GREENSF = STANDARD;
 

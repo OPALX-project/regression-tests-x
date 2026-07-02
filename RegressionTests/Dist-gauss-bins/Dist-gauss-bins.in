@@ -51,7 +51,7 @@ FS1: Fieldsolver, TYPE=NONE, BINS=BINS1,
     NZ=N,  
     PARFFTX = true, 
     PARFFTY = true, 
-    PARFFTZ = false,
+    PARFFTZ = true,
     BCFFTX=OPEN, 
     BCFFTY=OPEN, 
     BCFFTZ=OPEN, BBOXINCR = 5, GREENSF = STANDARD;

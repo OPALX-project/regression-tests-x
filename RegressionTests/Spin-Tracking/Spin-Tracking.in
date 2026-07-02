@@ -138,7 +138,7 @@ MBEAM: BEAM,
 
 FS1: Fieldsolver, TYPE = NONE,
     NX = 2, NY = 2, NZ = 2,
-    PARFFTX = true,  PARFFTY = true,  PARFFTZ = false,
+    PARFFTX = true,  PARFFTY = true,  PARFFTZ = true,
     BCFFTX  = OPEN,  BCFFTY  = OPEN,  BCFFTZ  = OPEN,
     BBOXINCR = 5,
     GREENSF  = STANDARD;
