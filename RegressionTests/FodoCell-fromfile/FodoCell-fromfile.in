@@ -101,8 +101,8 @@ mySources: EMISSIONSOURCELIST = (ES1);
 
 FS_SC: Fieldsolver, TYPE = NONE,
             NX = 16, NY = 16, NZ = 16, // SC grid size is 32^3
-            PARFFTX = false,
-            PARFFTY = false,
+            PARFFTX = true,
+            PARFFTY = true,
             PARFFTZ = true,  // parallel in the z direction only
             BCFFTX = open,
             BCFFTY = open,

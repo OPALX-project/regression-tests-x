@@ -42,7 +42,7 @@ FS1: Fieldsolver, TYPE=FFT,
     NZ=N,  
     PARFFTX = true, 
     PARFFTY = true, 
-    PARFFTZ = false,
+    PARFFTZ = true,
     BCFFTX=PERIODIC, 
     BCFFTY=PERIODIC, 
     BCFFTZ=PERIODIC, BBOXINCR = 5, GREENSF = STANDARD;
