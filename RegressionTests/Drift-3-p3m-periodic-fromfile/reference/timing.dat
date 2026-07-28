@@ -1,0 +1,26 @@
+                      ranks  Wall tot
+=====================================
+mainTimer...........      1    0.8178
+
+                      ranks  Wall max  Wall min  Wall avg
+=========================================================
+mainTimer...........      1    0.8178    0.8178    0.8178
+Write Stat..........      1    0.0105    0.0105    0.0105
+Write H5-File.......      1    0.0019    0.0019    0.0019
+samplingTime........      1    0.0801    0.0801    0.0801
+particleBC..........      1  0.007158  0.007158  0.007158
+createPeriodicGhost.      1         0         0         0
+updateParticle......      1         0         0         0
+cellBuildTimer......      1   0.05949   0.05949   0.05949
+computeMoments......      1   0.07804   0.07804   0.07804
+TIntegration1.......      1  0.001474  0.001474  0.001474
+TIntegration2.......      1   0.00349   0.00349   0.00349
+External field eval.      1  0.003409  0.003409  0.003409
+Binaryrepart........      1         0         0         0
+OrbThreader.........      1     0.119     0.119     0.119
+scatter.............      1  0.009314  0.009314  0.009314
+accumulateHalo......      1  0.000266  0.000266  0.000266
+fillHalo............      1  0.000272  0.000272  0.000272
+gather..............      1  0.003711  0.003711  0.003711
+TruncatedGreenParti.      1    0.1144    0.1144    0.1144
+PPInteractionTimer..      1    0.1144    0.1144    0.1144
