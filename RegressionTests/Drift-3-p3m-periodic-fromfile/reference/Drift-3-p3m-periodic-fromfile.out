@@ -1,0 +1,266 @@
+OPAL-X>               ____  _____        _       __   __
+OPAL-X> [1;32m
+OPAL-X> 
+OPAL-X>   ██████  ██████   █████  ██      ██   ██
+OPAL-X>  ██    ██ ██   ██ ██   ██ ██       ██ ██
+OPAL-X>  ██    ██ ██████  ███████ ██        ███
+OPAL-X>  ██    ██ ██      ██   ██ ██       ██ ██
+OPAL-X>   ██████  ██      ██   ██ ███████ ██   ██
+OPAL-X> 
+OPAL-X>          This is OPALX (Object Oriented Parallel Accelerator Library for Exascale)
+OPAL-X> 
+OPAL-X> [0m
+OPAL-X> 
+OPAL-X> OPALX is the performance portable version of OPAL :: Version 0.9
+OPAL-X>             git rev. ba713a7eb10557572a49948ce8cf9478bb5085a8
+OPAL-X> 
+OPAL-X> 
+OPAL-X>              (c) PSI, https://github.com/OPALX-project/OPALX
+OPAL-X> 
+OPAL-X> 
+OPAL-X> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL-X> to the OPAL developers https://github.com/OPALX-project/OPALX/issues
+OPAL-X> 
+OPAL-X> Time: 10:43:14 date: 28/07/2026
+OPAL-X> 
+OPAL-X> * Host:   Serial
+OPAL-X> * Device: Serial execution
+OPAL-X> 
+OPAL-X> * Reading input stream 'Drift-3-p3m-periodic-fromfile.in'
+OPAL-X> 
+OPAL-X> value: {OPALVERSION} = {900}
+OPAL-X> 
+OPAL-X> 
+OPAL-X> value: {EDES,P0} = {1e-09, 1.01094e-06}
+OPAL-X> 
+OPAL-X> * ************* F I E L D S O L V E R ********************************************** 
+OPAL-X> * FIELDSOLVER  FS1
+OPAL-X> * BINS         NONE
+OPAL-X> * TYPE         P3M
+OPAL-X> * RANKS        1
+OPAL-X> * NX           32
+OPAL-X> * NY           32
+OPAL-X> * NZ           32
+OPAL-X> * BBOXINCR     5
+OPAL-X> * GREENSF      INTEGRATED
+OPAL-X> * RCUT         9.375e-05 [m]
+OPAL-X> * ALPHA        21333.3 [1/m]
+OPAL-X> * XDIM         parallel  
+OPAL-X> * YDIM         parallel  
+OPAL-X> * ZDIM         parallel  
+OPAL-X> * ********************************************************************************** 
+OPAL-X> 
+OPAL-X> * RUN resolved beams: BEAM1
+OPAL-X> * ************* B E A M ************************************************************ 
+OPAL-X> * BEAM        BEAM1
+OPAL-X> * PARTICLE    ELECTRON
+OPAL-X> * REST MASS   0.000510999 [GeV]
+OPAL-X> * CHARGE      -e * 1 
+OPAL-X> * MOMENTUM    1 [eV/c]
+OPAL-X> * MOMENTUM    0 [GeV/c]
+OPAL-X> * BCHARGE     1e-11 [C]
+OPAL-X> * NALLOC      32768
+OPAL-X> * ********************************************************************************** 
+OPAL-X> 
+OPAL-X> 
+OPAL-X> * Creating new file for data: 'Drift-3-p3m-periodic-fromfile.stat'
+OPAL-X> * Creating new file for data: 'Drift-3-p3m-periodic-fromfile.lbal'
+FromFile::generateParticles> FromFile: Loaded 32768 particles from file 'input-distr-gauss-drift.txt'
+FromFile::generateParticles> Rank 0: 32768 local particles
+OPAL-X> 
+OPAL-X> * ************** B U N C H ********************************************************* 
+OPAL-X> * CONTAINER       = 0
+OPAL-X> * PARTICLES       = 32768
+OPAL-X> * CHARGE          = -1.000000e-11 (Cb) 
+OPAL-X> * QM STORAGE MODE = SINGLE
+OPAL-X> * <EKIN>          = 1.046 [eV]
+OPAL-X> * <dEKIN>         = 0.247 [eV]
+OPAL-X> * INTEGRATOR      = LF2
+OPAL-X> * LB Threshold    = 5.000000e-02
+OPAL-X> * MIN R (origin)  = (     -2.99616 ,     -2.98631 ,     -2.98276 ) [mm]
+OPAL-X> * MAX R (max ext) = (      2.99637 ,      2.98336 ,      2.99799 ) [mm]
+OPAL-X> * RMS R           = (      0.99368 ,      0.98561 ,      1.00078 ) [mm]
+OPAL-X> * RMS P           = ( 2.452441e-04 , 2.459081e-04 , 2.439457e-04 ) [beta gamma]
+OPAL-X> * Mean R          = ( 2.640186e-15 , -1.490896e-15 , -2.217488e-12 ) [m]
+OPAL-X> * Mean P          = ( -7.598699e-12 , 3.152198e-12 , 1.978359e-03 ) [beta gamma]
+OPAL-X> * MESH SPACING    = (    212.63797 ,    211.82689 ,    212.22018 ) [um]
+OPAL-X> * COMPDOM INCR    = 5.000000e+00 (%) 
+OPAL-X> * FIELD LAYOUT    = Domain = {[0:31:1],[0:31:1],[0:31:1]}
+OPAL-X> Total number of boxes = 1
+OPAL-X>     Box 0 {[0:31:1],[0:31:1],[0:31:1]}
+OPAL-X> 
+OPAL-X> * Centroid : 
+OPAL-X> * 8.651362e-11 -2.489942e-07 -4.885368e-11 1.032912e-07 -7.266265e-08 6.482688e+01 
+OPAL-X> * Cov Matrix : 
+OPAL-X> * 9.873930e-07 2.090462e-07 -2.396465e-09 -2.931340e-11 5.693939e-09 3.689942e-10 
+OPAL-X> * 2.090462e-07 6.014468e-08 -3.520600e-11 -8.760124e-12 4.521631e-10 -8.814627e-11 
+OPAL-X> * -2.396465e-09 -3.520600e-11 9.714200e-07 2.074540e-07 4.862836e-09 1.446517e-10 
+OPAL-X> * -2.931340e-11 -8.760124e-12 2.074540e-07 6.047080e-08 1.712665e-10 -2.496541e-11 
+OPAL-X> * 5.693939e-09 4.521631e-10 4.862836e-09 1.712665e-10 1.001568e-06 2.095605e-07 
+OPAL-X> * 3.689942e-10 -8.814627e-11 1.446517e-10 -2.496541e-11 2.095605e-07 5.950951e-08 
+OPAL-X> * * ********************************************************************************** 
+OPAL-X> 
+OPAL-X> * OrbitThreader dt_m= 5e-11
+OPAL-X> * OrbitThreader maxDistance= 10
+OPAL-X> * OrbitThreader #elements  = 1
+OPAL-X> 
+OPAL-X> * Size of map 1 sections 
+OPAL-X> * Key: (0.000000 - 1.250009) number of overlapping elements 1
+OPAL-X> *                            D1
+OPAL-X> 
+OPAL-X> * Creating new file for data: 'data/Drift-3-p3m-periodic-fromfile_ElementPositions.sdds'
+OPAL-X> * Track start at: 10:43:14, t= 0.000 [fs]; sStart at: 0.000 [um]
+OPAL-X> * Initial dt = 50.000 [ps]
+OPAL-X> * Max integration steps = 20, next step = 0
+OPAL-X>                dt [ns]           sStop [m]        num Steps [1]
+OPAL-X> ->         5.000000e-11        1.250000e+00                  20
+OPAL-X> * 10:43:15 Step      0 container[0] at 29.655 [um], t= 50.000 [ps], E=1.189 [eV]
+OPAL-X> * 10:43:15 Step      1 container[0] at 59.310 [um], t= 100.000 [ps], E=1.414 [eV]
+OPAL-X> * 10:43:15 Step      2 container[0] at 88.964 [um], t= 150.000 [ps], E=1.715 [eV]
+OPAL-X> * 10:43:15 Step      3 container[0] at 118.619 [um], t= 200.000 [ps], E=2.079 [eV]
+OPAL-X> * 10:43:15 Step      4 container[0] at 148.274 [um], t= 250.000 [ps], E=2.495 [eV]
+OPAL-X> * 10:43:15 Step      5 container[0] at 177.929 [um], t= 300.000 [ps], E=2.949 [eV]
+OPAL-X> * 10:43:15 Step      6 container[0] at 207.584 [um], t= 350.000 [ps], E=3.427 [eV]
+OPAL-X> * 10:43:15 Step      7 container[0] at 237.238 [um], t= 400.000 [ps], E=3.920 [eV]
+OPAL-X> * 10:43:15 Step      8 container[0] at 266.893 [um], t= 450.000 [ps], E=4.416 [eV]
+OPAL-X> * 10:43:15 Step      9 container[0] at 296.548 [um], t= 500.000 [ps], E=4.909 [eV]
+OPAL-X> * 10:43:15 Step     10 container[0] at 326.203 [um], t= 550.000 [ps], E=5.390 [eV]
+OPAL-X> * 10:43:15 Step     11 container[0] at 355.858 [um], t= 600.000 [ps], E=5.855 [eV]
+OPAL-X> * 10:43:15 Step     12 container[0] at 385.512 [um], t= 650.000 [ps], E=6.300 [eV]
+OPAL-X> * 10:43:15 Step     13 container[0] at 415.167 [um], t= 700.000 [ps], E=6.723 [eV]
+OPAL-X> * 10:43:15 Step     14 container[0] at 444.822 [um], t= 750.000 [ps], E=7.122 [eV]
+OPAL-X> * 10:43:15 Step     15 container[0] at 474.477 [um], t= 800.000 [ps], E=7.499 [eV]
+OPAL-X> * 10:43:15 Step     16 container[0] at 504.132 [um], t= 850.000 [ps], E=7.855 [eV]
+OPAL-X> * 10:43:15 Step     17 container[0] at 533.786 [um], t= 900.000 [ps], E=8.189 [eV]
+OPAL-X> * 10:43:15 Step     18 container[0] at 563.441 [um], t= 950.000 [ps], E=8.505 [eV]
+OPAL-X> * 10:43:15 Step     19 container[0] at 593.096 [um], t= 1.000 [ns], E=8.802 [eV]
+OPAL-X> 
+OPAL-X> * Done executing ParallelTracker at 10:43:15
+OPAL-X> 
+OPAL-X> * End of input stream 'Drift-3-p3m-periodic-fromfile.in'
+Timings> ---------------------------------------------
+Timings>      Timing results for 1 rank(s):
+Timings> ---------------------------------------------
+Timings> mainTimer........... Wall tot =    0.81784
+Timings> 
+Timings> Write Stat.......... Wall max =   0.010497
+Timings>                      Wall avg =   0.010497
+Timings>                      Wall min =   0.010497
+Timings> 
+Timings> Write H5-File....... Wall max =     0.0019
+Timings>                      Wall avg =     0.0019
+Timings>                      Wall min =     0.0019
+Timings> 
+Timings> samplingTime........ Wall max =   0.080101
+Timings>                      Wall avg =   0.080101
+Timings>                      Wall min =   0.080101
+Timings> 
+Timings> particleBC.......... Wall max =   0.007158
+Timings>                      Wall avg =   0.007158
+Timings>                      Wall min =   0.007158
+Timings> 
+Timings> createPeriodicGhost. Wall max =          0
+Timings>                      Wall avg =          0
+Timings>                      Wall min =          0
+Timings> 
+Timings> updateParticle...... Wall max =          0
+Timings>                      Wall avg =          0
+Timings>                      Wall min =          0
+Timings> 
+Timings> cellBuildTimer...... Wall max =   0.059491
+Timings>                      Wall avg =   0.059491
+Timings>                      Wall min =   0.059491
+Timings> 
+Timings> computeMoments...... Wall max =   0.078038
+Timings>                      Wall avg =   0.078038
+Timings>                      Wall min =   0.078038
+Timings> 
+Timings> TIntegration1....... Wall max =   0.001474
+Timings>                      Wall avg =   0.001474
+Timings>                      Wall min =   0.001474
+Timings> 
+Timings> TIntegration2....... Wall max =    0.00349
+Timings>                      Wall avg =    0.00349
+Timings>                      Wall min =    0.00349
+Timings> 
+Timings> External field eval. Wall max =   0.003409
+Timings>                      Wall avg =   0.003409
+Timings>                      Wall min =   0.003409
+Timings> 
+Timings> Binaryrepart........ Wall max =          0
+Timings>                      Wall avg =          0
+Timings>                      Wall min =          0
+Timings> 
+Timings> OrbThreader......... Wall max =   0.119019
+Timings>                      Wall avg =   0.119019
+Timings>                      Wall min =   0.119019
+Timings> 
+Timings> scatter............. Wall max =   0.009314
+Timings>                      Wall avg =   0.009314
+Timings>                      Wall min =   0.009314
+Timings> 
+Timings> accumulateHalo...... Wall max =   0.000266
+Timings>                      Wall avg =   0.000266
+Timings>                      Wall min =   0.000266
+Timings> 
+Timings> fillHalo............ Wall max =   0.000272
+Timings>                      Wall avg =   0.000272
+Timings>                      Wall min =   0.000272
+Timings> 
+Timings> gather.............. Wall max =   0.003711
+Timings>                      Wall avg =   0.003711
+Timings>                      Wall min =   0.003711
+Timings> 
+Timings> TruncatedGreenParti. Wall max =   0.114447
+Timings>                      Wall avg =   0.114447
+Timings>                      Wall min =   0.114447
+Timings> 
+Timings> PPInteractionTimer.. Wall max =   0.114431
+Timings>                      Wall avg =   0.114431
+Timings>                      Wall min =   0.114431
+Timings> 
+Timings> ---------------------------------------------
+Timings>      Measurement counts:
+Timings> ---------------------------------------------
+Timings> mainTimer........... Count =          1
+Timings> Write Stat.......... Count =         20
+Timings> Write H5-File....... Count =          1
+Timings> samplingTime........ Count =          1
+Timings> particleBC.......... Count =        101
+Timings> createPeriodicGhost. Count =          0
+Timings> updateParticle...... Count =          0
+Timings> cellBuildTimer...... Count =        101
+Timings> computeMoments...... Count =        121
+Timings> TIntegration1....... Count =         20
+Timings> TIntegration2....... Count =         20
+Timings> External field eval. Count =         20
+Timings> Binaryrepart........ Count =          0
+Timings> OrbThreader......... Count =          1
+Timings> scatter............. Count =         20
+Timings> accumulateHalo...... Count =         20
+Timings> fillHalo............ Count =         20
+Timings> gather.............. Count =         20
+Timings> TruncatedGreenParti. Count =         20
+Timings> PPInteractionTimer.. Count =         20
+Timings> ---------------------------------------------
+Timings> ---------------------------------------------
+Timings>      Per-occurrence statistics:
+Timings> ---------------------------------------------
+Timings> mainTimer........... n=    1  mean=   0.81784  std=         0  min=   0.81784  max=   0.81784
+Timings> Write Stat.......... n=   20  mean=0.00052485  std=2.87846e-05  min=  0.000477  max=  0.000615
+Timings> Write H5-File....... n=    1  mean=    0.0019  std=         0  min=    0.0019  max=    0.0019
+Timings> samplingTime........ n=    1  mean=  0.080101  std=         0  min=  0.080101  max=  0.080101
+Timings> particleBC.......... n=  101  mean=7.08713e-05  std=1.42623e-05  min=   5.9e-05  max=    0.0002
+Timings> cellBuildTimer...... n=  101  mean=0.00058902  std=0.000127236  min=  0.000471  max=  0.001718
+Timings> computeMoments...... n=  121  mean=0.000644942  std=8.02656e-05  min=  0.000577  max=   0.00147
+Timings> TIntegration1....... n=   20  mean=  7.37e-05  std=6.1738e-06  min=   6.4e-05  max=   9.1e-05
+Timings> TIntegration2....... n=   20  mean= 0.0001745  std=9.45627e-06  min=  0.000158  max=  0.000186
+Timings> External field eval. n=   20  mean=0.00017045  std=8.9294e-06  min=  0.000154  max=  0.000186
+Timings> OrbThreader......... n=    1  mean=  0.119019  std=         0  min=  0.119019  max=  0.119019
+Timings> scatter............. n=   20  mean= 0.0004657  std=0.000136246  min=  0.000379  max=  0.001026
+Timings> accumulateHalo...... n=   20  mean=  1.33e-05  std=1.78001e-06  min=     1e-05  max=   1.8e-05
+Timings> fillHalo............ n=   20  mean=  1.36e-05  std=1.23117e-06  min=   1.2e-05  max=   1.7e-05
+Timings> gather.............. n=   20  mean=0.00018555  std=6.8708e-06  min=  0.000168  max=  0.000199
+Timings> TruncatedGreenParti. n=   20  mean=0.00572235  std=0.00168632  min=  0.004137  max=  0.011789
+Timings> PPInteractionTimer.. n=   20  mean=0.00572155  std=0.00168635  min=  0.004136  max=  0.011788
+Timings> ---------------------------------------------
