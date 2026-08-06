@@ -1,0 +1,57 @@
+/*      Drinft-1.in
+	OPALX
+	Sanity check of a simple uniform distribution without space charge and
+    velocity binning in a single drift step. Focuses on distribution
+    properties rather than multi-step tracking.
+*/
+
+OPTION, PSDUMPFREQ      = 10;     // 6d data written every 10th time step (h5).
+OPTION, STATDUMPFREQ    = 1;     // Beam Stats written every time step (stat).
+OPTION, BOUNDPDESTROY = 10;    // Delete lost particles, if any out of 10 \sigma
+OPTION, AUTOPHASE       = 4;     // Autophase is on, and phase of max energy
+                                 // gain will be found automatically for cavities.
+OPTION, VERSION=10900;
+
+Title, string="Test simple uniform distribution without space charge";
+
+Value,{OPALVERSION};
+
+// ----------------------------------------------------------------------------
+// Global Parameters
+
+REAL rf_freq             = 1.3e9;    // RF frequency. (Hz)
+REAL n_particles         = 1E5;      // Number of particles in simulation.
+REAL beam_bunch_charge   = 1e-9;     // Charge of bunch. (C)
+REAL BEAM_RADIUS = 1e-3; // 1.774e-3;
+
+// ----------------------------------------------------------------------------
+// Initial Momentum Calculation
+
+REAL Edes    = 1e-9; //initial energy in GeV
+REAL gamma   = (Edes+EMASS)/EMASS; 
+REAL beta    = sqrt(1-(1/gamma^2));
+REAL P0      = gamma*beta*EMASS;    //inital z momentum
+
+//Printing initial energy and momentum to terminal output.
+value, {Edes, P0};
+
+D1: DRIFT, L = 1.0, ELEMEDGE = 0.0;
+myLine: Line = (D1);
+
+FS1: Fieldsolver, NX=16, NY=16, NZ=16, TYPE=NONE, PARFFTX = true, PARFFTY = true, PARFFTZ = true,
+                  BCFFTX=OPEN, BCFFTY=OPEN, BCFFTZ=OPEN,
+                  BBOXINCR = 5, GREENSF = STANDARD;
+
+DIST1: DISTRIBUTION, TYPE = UNIFORM,
+    SIGMAX = BEAM_RADIUS, SIGMAY = BEAM_RADIUS, SIGMAZ = BEAM_RADIUS,
+    NPARTDIST = n_particles;
+
+ES1: EMISSIONSOURCE, DISTRIBUTION = Dist1;
+mySources: EMISSIONSOURCELIST = (ES1);
+
+BEAM1:  BEAM, PARTICLE = ELECTRON, pc = P0, NALLOC = n_particles,
+        BCHARGE = beam_bunch_charge, SOURCES = mySources, CHARGE = -1;
+
+TRACK, LINE = myLine, BEAM = BEAM1, MAXSTEPS = 1, DT = {5e-11}, ZSTOP=1.0; 
+RUN, METHOD = "PARALLEL", FIELDSOLVER = FS1;ENDTRACK;
+QUIT;
