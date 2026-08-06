@@ -1,4 +1,4 @@
-"Dist-gauss: 1 step Gaussian distribution sanity without BINNING element."
+"Dist-uniform: 1 step uniform distribution sanity."
 stat "rms_x"      last 1E-4
 stat "rms_y"      last 1E-4
 stat "rms_s"      last 1E-4
