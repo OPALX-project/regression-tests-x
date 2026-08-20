@@ -1,0 +1,9 @@
+"Disorder induced heating testcase with reduced resolution."
+stat "rms_x" last 1E-4
+stat "rms_s" last 1E-4
+stat "rms_py" last 1E-4
+stat "rms_ps" last 1E-4
+stat "emit_x" last 1E-5
+stat "emit_y" last 1E-5
+stat "emit_s" last 1E-5
+stat "energy" last 1E-3
