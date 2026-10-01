@@ -1,0 +1,5 @@
+#!/bin/bash
+set -euo pipefail
+cd "$(cd "$(dirname "$0")" && pwd)"
+: "${OPALX_EXE_PATH:?Set OPALX_EXE_PATH to the directory containing opalx}"
+exec mpirun -np 1 "$OPALX_EXE_PATH/opalx" Cyclotron-SC-Prestep.in --info 2 "$@" 2>&1

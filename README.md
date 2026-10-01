@@ -63,3 +63,10 @@ RegressionTests/
 ```
 Note that the `.local` file determines how the test is executed. It's auto-generated and generally doesn't need to be touched. Content inside the `reference/` folder is also auto-generated and should not be modified manually.
 
+
+## Ring and cyclotron regression cases
+
+The six [PR 544 tracking cases](docs/pr-544-regressions.md) cover DBA COF launches,
+cyclotron coasting and RF stopping, and MIDPOINT/PRESTEP space charge using only
+final `.stat` comparisons. The guide records their tolerances, reference
+provenance, limitations, and the command to run all 89 checks.

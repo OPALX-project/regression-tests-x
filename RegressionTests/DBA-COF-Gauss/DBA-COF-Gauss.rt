@@ -1,0 +1,15 @@
+"DBA-COF-Gauss: seeded Gaussian launch around fresh COF, one bare turn; reference state, centered bunch, energy and population checks."
+stat "numParticles" last 1e-12
+stat "energy" last 1e-9
+stat "t" last 1e-5
+stat "s" last 1e-8
+stat "ref_x" last 1e-9
+stat "ref_y" last 1e-9
+stat "ref_z" last 1e-9
+stat "ref_px" last 1e-10
+stat "ref_py" last 1e-10
+stat "ref_pz" last 1e-10
+stat "charge" last 1e-25
+stat "mean_x" last 1e-7 # m: tolerate sample-dependent nonlinear centroid motion
+stat "mean_y" last 1e-7 # m
+stat "mean_s" last 1e-7 # m
