@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+script_dir=$(CDPATH= cd "$(dirname "$0")" && pwd)
+cd "$script_dir"
+exec mpirun -np 1 "${OPALX_EXE_PATH:?Set OPALX_EXE_PATH to the directory containing opalx}/opalx" Cyclotron-RF-Stop.in --info 2 "$@" 2>&1

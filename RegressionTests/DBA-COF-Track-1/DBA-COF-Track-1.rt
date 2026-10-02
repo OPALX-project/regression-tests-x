@@ -1,0 +1,14 @@
+"DBA-COF-Track-1: fresh named Boris COF followed by one directed device-tracking turn, no space charge."
+stat "numParticles" last 1e-12
+stat "energy" last 1e-9
+stat "t" last 1e-5
+stat "s" last 1e-8
+stat "mean_x" last 1e-9
+stat "mean_y" last 1e-9
+stat "mean_s" last 1e-8
+stat "ref_x" last 1e-9
+stat "ref_y" last 1e-9
+stat "ref_z" last 1e-9
+stat "ref_px" last 1e-10
+stat "ref_py" last 1e-10
+stat "ref_pz" last 1e-10
