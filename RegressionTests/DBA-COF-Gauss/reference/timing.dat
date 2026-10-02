@@ -1,0 +1,24 @@
+                      ranks  Wall tot
+=====================================
+mainTimer...........      1     13.22
+
+                      ranks  Wall max  Wall min  Wall avg
+=========================================================
+mainTimer...........      1     13.22     13.22     13.22
+H5 open close.......      1  0.001869  0.001869  0.001869
+H5 total step.......      1         0         0         0
+H5 step header......      1         0         0         0
+H5 device host copy.      1         0         0         0
+H5 dataset write....      1         0         0         0
+Write Stat..........      1  0.005872  0.005872  0.005872
+samplingTime........      1 8.071e-05 8.071e-05 8.071e-05
+Sampling............      1 6.488e-05 6.488e-05 6.488e-05
+computeMoments......      1     1.071     1.071     1.071
+TIntegration1.......      1   0.07652   0.07652   0.07652
+TIntegration2.......      1     0.115     0.115     0.115
+External field eval.      1     1.617     1.617     1.617
+OrbThreader.........      1    0.2323    0.2323    0.2323
+OT reference........      1    0.2269    0.2269    0.2269
+OT output...........      1  0.005131  0.005131  0.005131
+particleBC..........      1   0.01012   0.01012   0.01012
+updateParticle......      1  0.008402  0.008402  0.008402

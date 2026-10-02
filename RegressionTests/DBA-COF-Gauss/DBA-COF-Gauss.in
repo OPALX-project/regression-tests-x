@@ -3,7 +3,7 @@
 // The generated distribution is orbit-local; INITIALORBIT supplies the solved lab pose.
 // No space charge; one directed reference turn. Final statistics only, no HDF5 dumps.
 OPTION, VERSION=10900, ECHO=FALSE, ASCIIDUMP=FALSE, SEED=20260910,
-        REPARTFREQ=0, PSDUMPFREQ=0, STATDUMPFREQ=1000000000, STEPINFOFQ=1000000000;
+        REPARTFREQ=0, PSDUMPFREQ=0, STATDUMPFREQ=2000, STEPINFOFQ=2000;
 OPTION, ENABLELINEARTRANSFERMAPS=FALSE;
 TITLE, STRING="DBA-COF-Gauss: named COF to one-turn device TRACK";
 
