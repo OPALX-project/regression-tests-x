@@ -1,0 +1,8 @@
+#!/bin/bash
+set -euo pipefail
+cd "$(cd "$(dirname "$0")" && pwd)"
+export OMP_NUM_THREADS=1 OMP_DYNAMIC=false OMP_PROC_BIND=false
+# Select one witness file for the existing single-stat .rt architecture.
+# Numerical output is copied verbatim, never recomputed or reformatted.
+mpirun -np 4 "${OPALX_EXE_PATH:?Set OPALX_EXE_PATH to the binary directory}/opalx" BeamBeam-WitnessMPI.in --info 2 "$@"
+cp BeamBeam-WitnessMPI_c1.stat BeamBeam-WitnessMPI.stat

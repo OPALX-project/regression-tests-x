@@ -1,0 +1,13 @@
+"Rigid BeamBeam offset electron first kick; compare the witness, not the frozen primary [tolerance: absolute]"
+stat "numParticles" last 0.5
+stat "t" last 1e-9
+stat "mean_x" last 1e-10
+stat "mean_y" last 1e-10
+stat "mean_s" last 1e-10
+stat "rms_x" last 1e-10
+stat "rms_y" last 1e-10
+stat "rms_px" last 1e-10
+stat "rms_py" last 1e-10
+stat "ref_px" last 1e-10
+stat "ref_py" last 1e-10
+stat "ref_pz" last 1e-10

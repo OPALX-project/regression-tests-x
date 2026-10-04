@@ -1,0 +1,13 @@
+"Rigid BeamBeam primary remains ballistic while its field accelerates passive witnesses [tolerance: absolute]"
+stat "numParticles" last 0.5
+stat "t" last 1e-9
+stat "rms_x" last 1e-12
+stat "rms_y" last 1e-12
+stat "rms_s" last 1e-12
+stat "rms_px" last 1e-12
+stat "rms_py" last 1e-12
+stat "rms_ps" last 1e-12
+stat "ref_px" last 1e-12
+stat "ref_py" last 1e-12
+stat "ref_pz" last 1e-12
+stat "energy" last 1e-9

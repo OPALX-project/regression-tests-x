@@ -44,7 +44,11 @@ mpirun -np ${RANKS} ${OPALX_EXE_PATH}/opalx ${F} --info 10 | tee ${FB}.out
 # collect output files (supports single and multi-container runs)
 OUT_FILE=${FB}.out
 shopt -s nullglob
-STAT_FILES=(${FB}.stat ${FB}_c*.stat)
+STAT_FILES=()
+if [ -f "${FB}.stat" ]; then
+    STAT_FILES+=("${FB}.stat")
+fi
+STAT_FILES+=(${FB}_c*.stat)
 shopt -u nullglob
 
 if [ ${#STAT_FILES[@]} -eq 0 ]; then
