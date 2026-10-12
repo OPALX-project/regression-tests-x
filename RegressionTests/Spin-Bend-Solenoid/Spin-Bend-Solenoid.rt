@@ -1,0 +1,6 @@
+"Spin benchmark: single muon through a 90 degree bend, then a longitudinal 1 T solenoid with transverse spin. Checks that Pol is rotated with the bunch frame, so the solenoid turns the spin about the beam axis."
+stat "mean_pol_mag" avg 1E-5
+stat "mean_polx"    avg 1E-5
+stat "mean_poly"    avg 1E-5
+stat "mean_polz"    avg 1E-5
+stat "energy"       avg 1E-6

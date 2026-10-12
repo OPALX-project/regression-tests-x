@@ -1,0 +1,146 @@
+/*
+    Spin benchmark -- 90 degree bend, then a longitudinal solenoid
+    ---------------------------------------------------------------
+
+    Goal: check that the spin uses the same axes as the momentum after the
+    bunch frame has turned. Particle positions, momenta, fields and spins
+    are stored in the bunch frame, whose z axis follows the reference
+    momentum. Before this test existed, Pol was never rotated with that
+    frame, so a solenoid placed after a bend turned the spin about the
+    wrong axis.
+
+    Setup:
+      - Single mu-, no decay, no space charge.
+      - DRIFT 0.2 m, then a hard-edge SBEND (ANGLE = pi/2, arc length
+        0.5 m), then DRIFT 0.2 m, then a SOLENOID with uniform
+        B = 1 T along the beam (KS = 1 with BF_Uniform_Large.T7).
+      - Muon at gamma = 1.10 along +z, initial spin along +x
+        (transverse to the momentum, in the bend plane).
+
+    Expected result (bunch-frame axes, as written to the .stat file):
+      - In the bend the spin turns G*gamma*theta further than the momentum:
+          G*gamma*theta = 1.16592061e-3 * 1.10 * pi/2 = 2.01e-3 rad,
+        so on leaving the bend Pol = (cos a, 0, -/+ sin a), a = G*gamma*theta.
+      - In the solenoid the velocity is parallel to B, so the spin turns
+        about the beam axis (bunch z) at
+          omega = (|q| B / m) * (1 + G) / gamma  ~  7.74e8 rad/s,
+        i.e. (mean_polx, mean_poly) = (cos(omega t'), sin(omega t')),
+        with t' the time spent in the solenoid.
+      - The old code (Pol not rotated with the frame) left the spin along
+        the lab z axis after the bend and then turned it about lab z, so
+        mean_polx and mean_poly stayed near zero in the solenoid.
+
+    Run length:
+      DT = 2e-11 s (2.5 mm per step, about 200 steps in the bend).
+      MAXSTEPS = 3000 -> 60 ns in total; the muon enters the solenoid at
+      about 7.2 ns and spends about 53 ns (about 6.5 spin turns) in it.
+
+    Checked against the closed form when the reference was made (2026-10-12):
+      - bend angle of the reference momentum: 1.569442 rad (hard edge).
+      - spin angle to P after the bend: 2.0209e-3 rad against
+        G*gamma*theta = 2.0128e-3 rad. The extra 8.1e-6 rad is the Boris
+        step: it turns the momentum by 2*atan(w_c*DT/2) per step, slightly
+        less than w_c*DT, while the spin turn is exact; the expected lead is
+        theta*(w_c*DT)^2/12 = 8.06e-6 rad.
+      - spin turn rate in the solenoid: 7.741952e8 rad/s against
+        7.741959e8 rad/s (9e-7 relative).
+      - |mean_pol| = 1 to 5e-13.
+      The same input on the code before the fix keeps the spin along z in the
+      solenoid (transverse part 1e-3).
+*/
+
+OPTION, PSDUMPFREQ    = 100000;
+OPTION, STATDUMPFREQ  = 10;
+OPTION, BOUNDPDESTROY = 0;
+OPTION, VERSION       = 10900;
+
+Title, string="Spin benchmark: 90 degree bend, then a longitudinal solenoid";
+
+Value, {OPALVERSION};
+
+// ----------------------------------------------------------------------------
+// Parameters
+// ----------------------------------------------------------------------------
+
+REAL n_muons       = 1;
+REAL bunch_charge  = 1.602176634e-19;
+REAL gamma_initial = 1.10;
+
+// SBEND scales its field by the global P0 [GeV/c] (default 1 GeV/c), so P0 must be the
+// muon momentum for the bend to turn it by ANGLE.
+REAL P0 = sqrt(gamma_initial^2 - 1) * MUMASS;
+
+REAL Lin   = 0.2;      // drift before the bend [m]
+REAL LB    = 0.5;      // bend arc length [m]
+REAL THETA = PI / 2;   // bend angle [rad]
+REAL Lmid  = 0.2;      // drift between bend and solenoid [m]
+REAL Lsol  = 20.0;     // solenoid length, the z range of the field map [m]
+
+// ----------------------------------------------------------------------------
+// Beamline. ELEMEDGE is the path length to each element's entrance, so the
+// solenoid follows the bent reference path.
+// ----------------------------------------------------------------------------
+
+D_IN: DRIFT, L = Lin, ELEMEDGE = 0.0;
+
+B1: SBEND, L = LB, ANGLE = THETA, HGAP = 0.0, ELEMEDGE = Lin;
+
+D_MID: DRIFT, L = Lmid, ELEMEDGE = Lin + LB;
+
+SOL: SOLENOID,
+    L        = Lsol,
+    ELEMEDGE = Lin + LB + Lmid,
+    KS       = 1.0,
+    FMAPFN   = "fieldmaps/BF_Uniform_Large.T7";
+
+myLine: Line = (D_IN, B1, D_MID, SOL);
+
+// ----------------------------------------------------------------------------
+// Distribution: exactly one particle (SIGMA* must be nonzero, see Spin-Tracking).
+// ----------------------------------------------------------------------------
+
+DistMuon: DISTRIBUTION, TYPE = GAUSS,
+    SIGMAX    = 1e-15,
+    SIGMAY    = 1e-15,
+    SIGMAZ    = 1e-15,
+    SIGMAPX   = 1e-15,
+    SIGMAPY   = 1e-15,
+    SIGMAPZ   = 1e-15,
+    NPARTDIST = n_muons;
+
+ES_Muon: EMISSIONSOURCE,
+    DISTRIBUTION = DistMuon,
+    R0X = 0.0,
+    R0Y = 0.0,
+    R0Z = 0.0,
+    P0X = 0.0,
+    P0Y = 0.0,
+    P0Z = 0.0;
+
+Sources_Muon: EMISSIONSOURCELIST = (ES_Muon);
+
+MBEAM: BEAM,
+    PARTICLE     = MUON,
+    GAMMA        = gamma_initial,
+    NALLOC       = n_muons,
+    BCHARGE      = bunch_charge,
+    SOURCES      = Sources_Muon,
+    CHARGE       = -1,
+    POLARIZATION = {1.0, 0.0, 0.0};                    // transverse, in the bend plane
+
+FS1: Fieldsolver, TYPE = NONE,
+    NX = 2, NY = 2, NZ = 2,
+    PARFFTX = true,  PARFFTY = true,  PARFFTZ = true,
+    BCFFTX  = OPEN,  BCFFTY  = OPEN,  BCFFTZ  = OPEN,
+    BBOXINCR = 5,
+    GREENSF  = STANDARD;
+
+TRACK, LINE     = myLine,
+       BEAMS    = {MBEAM},
+       MAXSTEPS = 3000,
+       DT       = {2e-11},
+       ZSTOP    = 20.0;
+
+RUN, METHOD = "PARALLEL", FIELDSOLVER = FS1;
+ENDTRACK;
+QUIT;
