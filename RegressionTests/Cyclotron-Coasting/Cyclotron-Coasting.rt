@@ -1,0 +1,14 @@
+"72 MeV PSI Ring: one coasting proton, one turn, no space charge"
+stat "ref_x" last 1E-6 # m: resolve micrometre changes in the final reference orbit
+stat "ref_y" last 1E-6 # m
+stat "ref_z" last 1E-6 # m
+stat "ref_px" last 1E-7 # dimensionless momentum p/(m*c)
+stat "ref_py" last 1E-7 # dimensionless momentum p/(m*c)
+stat "ref_pz" last 1E-7 # dimensionless momentum p/(m*c)
+stat "energy" last 1E-4 # MeV: 100 eV, small compared with an RF gap energy gain
+stat "t" last 1E-5 # ns: 10 fs, well below one configured integration step
+stat "s" last 1E-6 # m: accumulated reference path length
+stat "numParticles" last 0.5 # integer count: any gained or lost particle fails
+stat "mean_x" last 1e-6
+stat "mean_y" last 1e-6
+stat "mean_s" last 1e-6

@@ -1,0 +1,8 @@
+#!/bin/bash
+set -eu
+cd "$(cd "$(dirname "$0")" && pwd)"
+: "${OPALX_EXE_PATH:?Set OPALX_EXE_PATH to the directory containing opalx}"
+export OMP_NUM_THREADS=1
+export OMP_DYNAMIC=FALSE
+export OMP_PROC_BIND=FALSE
+mpirun -np 1 "$OPALX_EXE_PATH/opalx" DBA-COF-Gauss.in --info 2 "$@" 2>&1
