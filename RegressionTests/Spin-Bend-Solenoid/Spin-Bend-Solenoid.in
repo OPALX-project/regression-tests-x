@@ -96,7 +96,8 @@ SOL: SOLENOID,
 myLine: Line = (D_IN, B1, D_MID, SOL);
 
 // ----------------------------------------------------------------------------
-// Distribution: exactly one particle (SIGMA* must be nonzero, see Spin-Tracking).
+// Distribution: exactly one particle. SIGMA* must be strictly nonzero: the Gaussian sampler
+// scales its bounds by sigma, and sigma = 0 gives NaN positions.
 // ----------------------------------------------------------------------------
 
 DistMuon: DISTRIBUTION, TYPE = GAUSS,
