@@ -1,0 +1,89 @@
+/*
+    muE4 beamline, first part: WSX solenoid and the first dipole ASR61
+    -------------------------------------------------------------------
+
+    The start of the PSI muE4 line, built from the G4beamline field maps and placed by
+    absolute lab pose (X, Y, Z, THETA, PHI, PSI), as in the opalx-runs study
+    studies/g4bl/mue4. The elements below are copied unchanged from its
+    full/lattice_full.in, except for the map paths. They keep their names: a line placed
+    only by pose is sorted by element name.
+
+    Setup:
+      - 100 mu+ at 28 MeV/c from parts.txt (the first 100 of the study's beam file).
+      - E05_WSX: the WSX solenoid, cylinder map (G4BL2DMagnetoStatic), centre at z = 1.285 m.
+      - E08..E10: the ASR61 dipole, grid maps (G4BL3DGrid). The beam turns by 40 deg
+        between path length 2.578 m and 3.387 m; the maps sit at the bisector of the bend.
+      - No space charge, no decay (no GLOBALPROCESSES on BEAM), nothing removes particles.
+      - DT = 1e-11 s, ZSTOP = 3.5 m (the first G4beamline plane after the bend).
+
+    Checked against the whole muE4 line when the reference was made (2026-10-19):
+      opalx-runs studies/g4bl/mue4/regtest/full_line.in tracks the same 100 muons with the
+      same DT through all 22 field maps of the line, to 19.4 m. compare.py there matches the
+      .stat rows by time: all 455 rows up to 3.49 m are identical in every column, so the
+      maps left out here do not act before 3.5 m.
+      With the line's 22 monitors added, the bunch values differ by up to 1.4e-15 m from the
+      first monitor (s = 0.3 m) on: every element moves the particles into its own frame and
+      back, which is not exact in floating point. The reference orbit stays identical.
+*/
+
+OPTION, PSDUMPFREQ    = 100000;
+OPTION, STATDUMPFREQ  = 10;
+OPTION, BOUNDPDESTROY = 0;
+OPTION, VERSION       = 10900;
+
+Title, string="muE4: WSX solenoid and the first dipole ASR61, G4beamline field maps";
+
+Value, {OPALVERSION};
+
+REAL MUON_MASS = 0.1056583755;
+REAL P0        = 0.028;
+
+// ----------------------------------------------------------------------------
+// Beamline. BSCALE is the G4beamline placement's current=.
+// ----------------------------------------------------------------------------
+
+E05_WSX: FIELDMAP, X = 0.000000000, Y = 0.000000000, Z = 1.285000000,
+    THETA = 3.141592654, PHI = -0.000000000, PSI = 0.000000000,
+    FMAPFN = "fieldmaps/wsx_total.g4blmap", BSCALE = 1.000000e+00;
+
+E08_ASR61_300d: FIELDMAP, X = 0.069900004, Y = 0.000000000, Z = 2.974500020,
+    THETA = 0.349065850, PHI = -0.000000000, PSI = 0.000000000,
+    FMAPFN = "fieldmaps/asr61_300d_track.g4blmap", BSCALE = -9.952800e-01;
+
+E09_ASR61_300sm: FIELDMAP, X = 0.069900004, Y = 0.000000000, Z = 2.974500020,
+    THETA = 0.349065850, PHI = -0.000000000, PSI = 0.000000000,
+    FMAPFN = "fieldmaps/asr61_300sm_track.g4blmap", BSCALE = -9.952800e-01;
+
+E10_ASR61_300sm: FIELDMAP, X = 0.069900004, Y = 0.000000000, Z = 2.974500020,
+    THETA = -2.792526803, PHI = -0.000000000, PSI = -3.141592654,
+    FMAPFN = "fieldmaps/asr61_300sm_track.g4blmap", BSCALE = 9.952800e-01;
+
+MUE4: LINE = (E05_WSX, E08_ASR61_300d, E09_ASR61_300sm, E10_ASR61_300sm);
+
+// ----------------------------------------------------------------------------
+// Beam
+// ----------------------------------------------------------------------------
+
+FS1: FIELDSOLVER, TYPE = NONE, NX = 8, NY = 8, NZ = 8,
+     PARFFTX = true, PARFFTY = true, PARFFTZ = true,
+     BCFFTX = open, BCFFTY = open, BCFFTZ = open,
+     BBOXINCR = 1, GREENSF = INTEGRATED;
+
+REAL n_particles = 100;
+Dist1: DISTRIBUTION, TYPE = FROMFILE, FNAME = "parts.txt", NPARTDIST = n_particles;
+ES1: EMISSIONSOURCE, DISTRIBUTION = Dist1;
+mySources: EMISSIONSOURCELIST = (ES1);
+
+// CHARGE = 1 is needed for mu+: without it MUON gets charge -1.
+// No GLOBALPROCESSES: decay is off.
+BEAM1: BEAM, PARTICLE = MUON, NALLOC = n_particles,
+       BCHARGE = 1e-15, SOURCES = mySources, CHARGE = 1;
+
+// ZSTOP is path length along the reference orbit.
+TRACK, LINE = MUE4, BEAM = BEAM1,
+       MAXSTEPS = {100000},
+       DT = {1e-11},
+       ZSTOP = {3.5};
+RUN, METHOD = "PARALLEL", FIELDSOLVER = FS1;
+ENDTRACK;
+Quit;
