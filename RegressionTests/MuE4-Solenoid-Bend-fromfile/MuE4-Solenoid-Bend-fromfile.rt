@@ -1,0 +1,14 @@
+"muE4 start: 100 mu+ through the WSX solenoid and the 40 degree ASR61 dipole, all G4beamline field maps placed by lab pose, no decay. Up to 3.5 m the reference is identical to the whole line."
+stat "ref_x"        avg  1E-9
+stat "ref_z"        avg  1E-9
+stat "ref_px"       avg  1E-9
+stat "ref_pz"       avg  1E-9
+stat "mean_x"       avg  1E-9
+stat "mean_y"       avg  1E-9
+stat "rms_x"        avg  1E-9
+stat "rms_y"        avg  1E-9
+stat "rms_s"        avg  1E-9
+stat "rms_px"       avg  1E-9
+stat "rms_py"       avg  1E-9
+stat "energy"       avg  1E-9
+stat "numParticles" last 1E-12
