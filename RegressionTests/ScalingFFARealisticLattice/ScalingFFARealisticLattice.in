@@ -1,0 +1,165 @@
+OPTION, PSDUMPFREQ = 300000;     // 6d data written every 300000 time steps (h5).
+OPTION, STATDUMPFREQ = 100;   // Beam Stats written every 10 time steps (stat).
+OPTION, BOUNDPDESTROY=10; // Delete lost particles, if any
+OPTION, AUTOPHASE=4;        // Autophase is on, and phase of max energy
+                            // gain will be found automatically for cavities
+Option, VERSION=10900;
+
+Title, string="Scaling FFA Test";
+
+//----------------------------------------------------------------------------
+//Global Parameters
+
+REAL n_particles         = 10;      //Number of particles in simulation.
+REAL beam_bunch_charge   = 1.6021766339999998e-15;      //Charge of bunch. (C)
+
+//Initial Momentum Calculation
+// p = 1/3.3356 T m
+REAL EKIN = 0.012;
+REAL MASS = 0.938272;
+REAL ETOT = EKIN+MASS;
+REAL P0 = (ETOT^2-MASS^2)^0.5; // GeV/c, c*1e-9, magnetic rigidity for 1 T m
+REAL R0=4.42;
+REAL BF=-0.652456;
+REAL BD=0.504585;
+REAL K_VAL=7.728739;
+
+// 22.5 degrees in a cell
+//
+REAL F_LENGTH=4.5/360*2*PI*R0;
+REAL D_LENGTH=2.25/360*2*PI*R0;
+REAL F_POS=6.75/360*2*PI*R0;
+REAL D_POS=F_POS+F_LENGTH+2.25/360*2*PI*R0;
+REAL CELL_LENGTH=2*PI*R0/16;
+
+REAL LAMBDA=1e-3;
+REAL SPIRAL_ANGLE=PI/4;
+REAL ENGE_0=-1.3;
+REAL ENGE_1=3.42;
+REAL ENGE_2=-1.20;
+REAL ENGE_3=0.23;
+
+VALUE, VALUE = {F_LENGTH, D_LENGTH, LAMBDA};
+
+magnet_f_end: ENGE, LENGTH=F_LENGTH, FRINGE_LENGTH=LAMBDA, COEFFICIENTS={ENGE_0, ENGE_1, ENGE_2, ENGE_3};
+magnet_d_end: ENGE, LENGTH=D_LENGTH, FRINGE_LENGTH=LAMBDA, COEFFICIENTS={ENGE_0, ENGE_1, ENGE_2, ENGE_3};
+
+f1: SCALINGFFAMAGNET, B0=BF, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_f_end",
+                      ELEMEDGE=F_POS+CELL_LENGTH*0;
+d1: SCALINGFFAMAGNET, B0=BD, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_d_end",
+                      ELEMEDGE=D_POS+CELL_LENGTH*0;
+f2: SCALINGFFAMAGNET, B0=BF, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_f_end",
+                      ELEMEDGE=F_POS+CELL_LENGTH*1;
+d2: SCALINGFFAMAGNET, B0=BD, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_d_end",
+                      ELEMEDGE=D_POS+CELL_LENGTH*1;
+f3: SCALINGFFAMAGNET, B0=BF, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_f_end",
+                      ELEMEDGE=F_POS+CELL_LENGTH*2;
+d3: SCALINGFFAMAGNET, B0=BD, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_d_end",
+                      ELEMEDGE=D_POS+CELL_LENGTH*2;
+f4: SCALINGFFAMAGNET, B0=BF, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_f_end",
+                      ELEMEDGE=F_POS+CELL_LENGTH*3;
+d4: SCALINGFFAMAGNET, B0=BD, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_d_end",
+                      ELEMEDGE=D_POS+CELL_LENGTH*3;
+f5: SCALINGFFAMAGNET, B0=BF, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_f_end",
+                      ELEMEDGE=F_POS+CELL_LENGTH*4;
+d5: SCALINGFFAMAGNET, B0=BD, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_d_end",
+                      ELEMEDGE=D_POS+CELL_LENGTH*4;
+f6: SCALINGFFAMAGNET, B0=BF, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_f_end",
+                      ELEMEDGE=F_POS+CELL_LENGTH*5;
+d6: SCALINGFFAMAGNET, B0=BD, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_d_end",
+                      ELEMEDGE=D_POS+CELL_LENGTH*5;
+f7: SCALINGFFAMAGNET, B0=BF, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_f_end",
+                      ELEMEDGE=F_POS+CELL_LENGTH*6;
+d7: SCALINGFFAMAGNET, B0=BD, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_d_end",
+                      ELEMEDGE=D_POS+CELL_LENGTH*6;
+f8: SCALINGFFAMAGNET, B0=BF, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_f_end",
+                      ELEMEDGE=F_POS+CELL_LENGTH*7;
+d8: SCALINGFFAMAGNET, B0=BD, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_d_end",
+                      ELEMEDGE=D_POS+CELL_LENGTH*7;
+f9: SCALINGFFAMAGNET, B0=BF, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_f_end",
+                      ELEMEDGE=F_POS+CELL_LENGTH*8;
+d9: SCALINGFFAMAGNET, B0=BD, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_d_end",
+                      ELEMEDGE=D_POS+CELL_LENGTH*8;
+f10: SCALINGFFAMAGNET, B0=BF, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_f_end",
+                      ELEMEDGE=F_POS+CELL_LENGTH*9;
+d10: SCALINGFFAMAGNET, B0=BD, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_d_end",
+                      ELEMEDGE=D_POS+CELL_LENGTH*9;
+f11: SCALINGFFAMAGNET, B0=BF, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_f_end",
+                      ELEMEDGE=F_POS+CELL_LENGTH*10;
+d11: SCALINGFFAMAGNET, B0=BD, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_d_end",
+                      ELEMEDGE=D_POS+CELL_LENGTH*10;
+f12: SCALINGFFAMAGNET, B0=BF, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_f_end",
+                      ELEMEDGE=F_POS+CELL_LENGTH*11;
+d12: SCALINGFFAMAGNET, B0=BD, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_d_end",
+                      ELEMEDGE=D_POS+CELL_LENGTH*11;
+f13: SCALINGFFAMAGNET, B0=BF, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_f_end",
+                      ELEMEDGE=F_POS+CELL_LENGTH*12;
+d13: SCALINGFFAMAGNET, B0=BD, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_d_end",
+                      ELEMEDGE=D_POS+CELL_LENGTH*12;
+f14: SCALINGFFAMAGNET, B0=BF, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_f_end",
+                      ELEMEDGE=F_POS+CELL_LENGTH*13;
+d14: SCALINGFFAMAGNET, B0=BD, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_d_end",
+                      ELEMEDGE=D_POS+CELL_LENGTH*13;
+f15: SCALINGFFAMAGNET, B0=BF, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_f_end",
+                      ELEMEDGE=F_POS+CELL_LENGTH*14;
+d15: SCALINGFFAMAGNET, B0=BD, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_d_end",
+                      ELEMEDGE=D_POS+CELL_LENGTH*14;
+f16: SCALINGFFAMAGNET, B0=BF, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_f_end",
+                      ELEMEDGE=F_POS+CELL_LENGTH*15;
+d16: SCALINGFFAMAGNET, B0=BD, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANGLE), END_FIELD_MODEL="magnet_d_end",
+                      ELEMEDGE=D_POS+CELL_LENGTH*15;
+fbegin: SCALINGFFAMAGNET, B0=0, R0=R0, FIELD_INDEX=0, L=0.5, ELEMEDGE=0;
+fend: SCALINGFFAMAGNET, B0=0, R0=R0, FIELD_INDEX=0, L=0.5, ELEMEDGE=2*PI*R0-0.5;
+
+
+P1: PROBE, L=0.001, ELEMEDGE=1e-9,
+    XSTART=-1, XEND=1, YSTART=-1, YEND=1,
+    STEP=1, OUTFN="probe.h5";
+
+FFARing: Ring = (fbegin, f1, d1, f2, d2, f3, d3, f4, d4, f5, d5, f6, d6, f7, d7, f8, d8,
+                f9, d9, f10, d10, f11, d11, f12, d12, f13, d13, f14, d14, f15, d15, f16, d16, fend, P1);
+
+//Dumper : DUMPEMFIELDS, FILE_NAME="map.dat", COORDINATE_SYSTEM=CARTESIAN,
+//               X_START=-9.0, DX=0.05, X_STEPS=201,
+//               Y_START=0.0, DY=0.01, Y_STEPS=1,
+//               Z_START=-5.0, DZ=0.05, Z_STEPS=201,
+//               T_START=0.0, DT=0.0, T_STEPS=1;
+
+Dist: DISTRIBUTION, TYPE = FROMFILE,
+    FNAME = "distr-scalingffa.txt",
+    NPARTDIST = n_particles;
+
+ES1: EMISSIONSOURCE, DISTRIBUTION = Dist;
+mySources: EMISSIONSOURCELIST = (ES1);
+
+//----------------------------------------------------------------------------
+// Define Field solvers
+// The mesh sizes should be a factor of 2
+// for most efficient space charge calculation.
+
+FS_SC: Fieldsolver, TYPE = NONE,
+            NX = 16, NY = 16, NZ = 16, // SC grid size is 32^3
+            PARFFTX = true,
+            PARFFTY = true,
+            PARFFTZ = true,  // parallel in the z direction only
+            BCFFTX = open,
+            BCFFTY = open,
+            BCFFTZ = open,
+            BBOXINCR = 1,
+            GREENSF = INTEGRATED;
+
+//----------------------------------------------------------------------------
+// Electron Beam Definition
+
+BEAM1:  BEAM, PARTICLE = PROTON, NALLOC = n_particles,
+        BCHARGE = beam_bunch_charge, SOURCES = mySources, CHARGE = -1;
+
+//----------------------------------------------------------------------------
+// Simulate the beamline using TRACK and RUN.
+
+TRACK, LINE = FFARing, BEAM = BEAM1, MAXSTEPS = 4000, DT = 1e-10, ZSTOP=60.0;
+RUN, METHOD = "PARALLEL",
+    FIELDSOLVER = FS_SC;
+ENDTRACK;
+Quit;
+
