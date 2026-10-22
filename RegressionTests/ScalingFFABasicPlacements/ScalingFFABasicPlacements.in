@@ -47,22 +47,7 @@ SpiralMagnetNegR0  : SCALINGFFAMAGNET, L=0.5, ELEMEDGE=1.5, FRINGE_LENGTH=0.01,
            B0=+1.0, R0=R0_NEG, FIELD_INDEX=1, TAN_DELTA=0.5, MAX_Y_POWER=1,
            RADIAL_NEG_EXTENT=0.2, RADIAL_POS_EXTENT=0.2, HEIGHT=0.5;
 
-Dumper : DUMPEMFIELDS, FILE_NAME="map.dat", COORDINATE_SYSTEM=CARTESIAN,
-               X_START=-2.0, DX=0.02, X_STEPS=201,
-               Y_START=0.0, DY=0.01, Y_STEPS=1,
-               Z_START=-2.0, DZ=0.02, Z_STEPS=201,
-               T_START=0.0, DT=0.0, T_STEPS=1;
-
-TestPoint : DUMPEMFIELDS, FILE_NAME="testpoint.dat", COORDINATE_SYSTEM=CYLINDRICAL,
-               R_START=3.0, DR=0.02, R_STEPS=1,
-               Y_START=0.1, DY=0.01, Y_STEPS=1,
-               PHI_START=20.0/57.2958, DPHI=1.0/57.2958, PHI_STEPS=1,
-               T_START=0.0, DT=0.0, T_STEPS=1,
-               CYL_ORIGIN_X=-3.0, CYL_ORIGIN_Y=0.0, CYL_ORIGIN_Z=0.0;
-
-
-SOLine: Line = (MagnetEnge, Magnet1, Magnet2, SpiralMagnet, MinimalMagnet,
-                MagnetNegR0, SpiralMagnetNegR0);
+FFALine: Line = (Magnet1, Magnet2, MagnetEnge, SpiralMagnet, MinimalMagnet, MagnetNegR0, SpiralMagnetNegR0);
 
 Dist: DISTRIBUTION, TYPE = FROMFILE,
     FNAME = "distr-scalingffa.txt",
@@ -70,6 +55,13 @@ Dist: DISTRIBUTION, TYPE = FROMFILE,
 
 ES1: EMISSIONSOURCE, DISTRIBUTION = Dist;
 mySources: EMISSIONSOURCELIST = (ES1);
+
+//Disabled by default because it is quite slow...
+//FieldMapGenerator : DUMPEMFIELDS, FILE_NAME="map.dat", COORDINATE_SYSTEM=CARTESIAN,
+//               X_START=-2.0, DX=0.02, X_STEPS=201,
+//               Y_START=0.0, DY=0.01, Y_STEPS=1,
+//               Z_START=-1.0, DZ=0.02, Z_STEPS=201,
+//               T_START=0.0, DT=0.0, T_STEPS=1;
 
 //----------------------------------------------------------------------------
 // Define Field solvers
@@ -96,7 +88,7 @@ BEAM1:  BEAM, PARTICLE = PROTON, NALLOC = n_particles,
 //----------------------------------------------------------------------------
 // Simulate the beamline using TRACK and RUN.
 
-TRACK, LINE = SOLine, BEAM = BEAM1, MAXSTEPS = 10, DT = 1e-10, ZSTOP=60.0;
+TRACK, LINE = FFALine, BEAM = BEAM1, MAXSTEPS = 1000, DT = 1e-10, ZSTOP=60.0;
 RUN, METHOD = "PARALLEL",
     FIELDSOLVER = FS_SC;
 ENDTRACK;
