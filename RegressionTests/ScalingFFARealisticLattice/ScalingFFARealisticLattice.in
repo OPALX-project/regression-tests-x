@@ -10,18 +10,17 @@ Title, string="Scaling FFA Test";
 //----------------------------------------------------------------------------
 //Global Parameters
 
-REAL n_particles         = 10;      //Number of particles in simulation.
+REAL n_particles         = 100000;      //Number of particles in simulation.
 REAL beam_bunch_charge   = 1.6021766339999998e-15;      //Charge of bunch. (C)
 
 //Initial Momentum Calculation
-// p = 1/3.3356 T m
 REAL EKIN = 0.012;
 REAL MASS = 0.938272;
 REAL ETOT = EKIN+MASS;
 REAL P0 = (ETOT^2-MASS^2)^0.5; // GeV/c, c*1e-9, magnetic rigidity for 1 T m
 REAL R0=4.42;
-REAL BF=-0.652456;
-REAL BD=0.504585;
+REAL BF=0.652456;
+REAL BD=-0.504585;
 REAL K_VAL=7.728739;
 
 // 22.5 degrees in a cell
@@ -32,7 +31,7 @@ REAL F_POS=6.75/360*2*PI*R0;
 REAL D_POS=F_POS+F_LENGTH+2.25/360*2*PI*R0;
 REAL CELL_LENGTH=2*PI*R0/16;
 
-REAL LAMBDA=1e-3;
+REAL LAMBDA=0.12;
 REAL SPIRAL_ANGLE=PI/4;
 REAL ENGE_0=-1.3;
 REAL ENGE_1=3.42;
@@ -111,7 +110,6 @@ d16: SCALINGFFAMAGNET, B0=BD, R0=R0, FIELD_INDEX=K_VAL, TAN_DELTA=tan(SPIRAL_ANG
 fbegin: SCALINGFFAMAGNET, B0=0, R0=R0, FIELD_INDEX=0, L=0.5, ELEMEDGE=0;
 fend: SCALINGFFAMAGNET, B0=0, R0=R0, FIELD_INDEX=0, L=0.5, ELEMEDGE=2*PI*R0-0.5;
 
-
 P1: PROBE, L=0.001, ELEMEDGE=1e-9,
     XSTART=-1, XEND=1, YSTART=-1, YEND=1,
     STEP=1, OUTFN="probe.h5";
@@ -119,18 +117,24 @@ P1: PROBE, L=0.001, ELEMEDGE=1e-9,
 FFARing: Ring = (fbegin, f1, d1, f2, d2, f3, d3, f4, d4, f5, d5, f6, d6, f7, d7, f8, d8,
                 f9, d9, f10, d10, f11, d11, f12, d12, f13, d13, f14, d14, f15, d15, f16, d16, fend, P1);
 
-//Dumper : DUMPEMFIELDS, FILE_NAME="map.dat", COORDINATE_SYSTEM=CARTESIAN,
-//               X_START=-9.0, DX=0.05, X_STEPS=201,
+//Disabled by default because it is quite slow...
+//FieldMapGenerator : DUMPEMFIELDS, FILE_NAME="map.dat", COORDINATE_SYSTEM=CARTESIAN,
+//               X_START=-10.0, DX=0.06, X_STEPS=201,
 //               Y_START=0.0, DY=0.01, Y_STEPS=1,
 //               Z_START=-5.0, DZ=0.05, Z_STEPS=201,
 //               T_START=0.0, DT=0.0, T_STEPS=1;
 
-Dist: DISTRIBUTION, TYPE = FROMFILE,
-    FNAME = "distr-scalingffa.txt",
-    NPARTDIST = n_particles;
+DistRef: DISTRIBUTION, TYPE=GAUSS,
+           SIGMAX=1e-19, SIGMAY=5e-19, SIGMAZ=10e-19,
+           SIGMAPX=1e-19, SIGMAPY=1e-19, SIGMAPZ=1e-19, NPARTDIST = 1;
 
-ES1: EMISSIONSOURCE, DISTRIBUTION = Dist;
-mySources: EMISSIONSOURCELIST = (ES1);
+DistGauss: DISTRIBUTION, TYPE=GAUSS,
+           SIGMAX=1e-3, SIGMAY=5e-3, SIGMAZ=10e-3,
+           SIGMAPX=1e-6, SIGMAPY=1e-6, SIGMAPZ=1e-6, NPARTDIST = n_particles;
+
+ES0: EMISSIONSOURCE, DISTRIBUTION = DistRef;
+ES1: EMISSIONSOURCE, DISTRIBUTION = DistGauss;
+mySources: EMISSIONSOURCELIST = (ES1, ES0);
 
 //----------------------------------------------------------------------------
 // Define Field solvers
@@ -151,15 +155,14 @@ FS_SC: Fieldsolver, TYPE = NONE,
 //----------------------------------------------------------------------------
 // Electron Beam Definition
 
-BEAM1:  BEAM, PARTICLE = PROTON, NALLOC = n_particles,
-        BCHARGE = beam_bunch_charge, SOURCES = mySources, CHARGE = -1;
+BEAM1:  BEAM, PARTICLE = PROTON, NALLOC = n_particles+1,
+        BCHARGE = beam_bunch_charge, SOURCES = mySources, CHARGE = 1, PC = P0;
 
 //----------------------------------------------------------------------------
 // Simulate the beamline using TRACK and RUN.
 
-TRACK, LINE = FFARing, BEAM = BEAM1, MAXSTEPS = 4000, DT = 1e-10, ZSTOP=60.0;
-RUN, METHOD = "PARALLEL",
-    FIELDSOLVER = FS_SC;
+TRACK, LINE = FFARing, BEAM = BEAM1, MAXSTEPS = 8000, DT = 4e-10, ZSTOP=60.0;
+RUN, METHOD = "PARALLEL", FIELDSOLVER = FS_SC;
 ENDTRACK;
 Quit;
 
