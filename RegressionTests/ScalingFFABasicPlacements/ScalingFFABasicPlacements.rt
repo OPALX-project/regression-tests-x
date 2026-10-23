@@ -1,0 +1,4 @@
+"Just a simple test to check that magnets get put in the right place"
+stat "mean_x" avg 1E-4
+stat "mean_y" avg 1E-4
+stat "mean_s" avg 1E-4
