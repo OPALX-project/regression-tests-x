@@ -1,0 +1,13 @@
+"IdealRFCavity: fixed-phase acceleration, bunch evolution and particle conservation without space charge"
+stat "energy" avg 1E-7
+stat "energy" last 1E-7
+stat "numParticles" avg 1E-12
+stat "numParticles" last 1E-12
+stat "charge" last 1E-12
+stat "s" last 1E-9
+stat "ref_pz" last 1E-9
+stat "rms_x" last 1E-9
+stat "rms_y" last 1E-9
+stat "rms_s" last 1E-7
+stat "rms_ps" last 1E-7
+stat "dE" last 1E-7

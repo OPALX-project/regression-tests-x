@@ -1,0 +1,309 @@
+OPAL-X>               ____  _____        _       __   __
+OPAL-X> [1;32m
+OPAL-X> 
+OPAL-X>   ██████  ██████   █████  ██      ██   ██
+OPAL-X>  ██    ██ ██   ██ ██   ██ ██       ██ ██
+OPAL-X>  ██    ██ ██████  ███████ ██        ███
+OPAL-X>  ██    ██ ██      ██   ██ ██       ██ ██
+OPAL-X>   ██████  ██      ██   ██ ███████ ██   ██
+OPAL-X> 
+OPAL-X>          This is OPALX (Object Oriented Parallel Accelerator Library for Exascale)
+OPAL-X> 
+OPAL-X> [0m
+OPAL-X> 
+OPAL-X> OPALX is the performance portable version of OPAL :: Version 0.9
+OPAL-X>             git rev. 7ec5346fb635fa474f7582fe7a60834976999904
+OPAL-X> 
+OPAL-X> 
+OPAL-X>              (c) PSI, https://github.com/OPALX-project/OPALX
+OPAL-X> 
+OPAL-X> 
+OPAL-X> Please send cookies, goodies or other motivations (wine and beer ... ) 
+OPAL-X> to the OPAL developers https://github.com/OPALX-project/OPALX/issues
+OPAL-X> 
+OPAL-X> Time: 19:52:18 date: 23/10/2026
+OPAL-X> 
+OPAL-X> * Executable: /Users/michalis/Work/git_projects/OPALX/build_serial/src/opalx
+OPAL-X> * Build configuration: Release
+OPAL-X> * Compiler: AppleClang 21.0.0.21000334
+OPAL-X> * CMake C++ flags (configure-time):  -O3 -DNDEBUG
+OPAL-X> * MPI ranks: 1
+OPAL-X> * C++ assertions: disabled (NDEBUG)
+OPAL-X> * OpenMP: disabled
+OPAL-X> * Kokkos host concurrency: 1
+OPAL-X> * Host:   Serial
+OPAL-X> * Device: Serial execution
+OPAL-X> 
+OPAL-X> * Reading input stream 'IdealRFCavity.in'
+OPAL-X> * ************* F I E L D S O L V E R ********************************************** 
+OPAL-X> * FIELDSOLVER  FS_NONE
+OPAL-X> * BINS         NONE
+OPAL-X> * TYPE         NONE
+OPAL-X> * RANKS        1
+OPAL-X> * NX           8
+OPAL-X> * NY           8
+OPAL-X> * NZ           8
+OPAL-X> * BBOXINCR     2
+OPAL-X> * GREENSF      INTEGRATED
+OPAL-X> * XDIM         serial  
+OPAL-X> * YDIM         serial  
+OPAL-X> * ZDIM         parallel  
+OPAL-X> * ********************************************************************************** 
+OPAL-X> 
+OPAL-X> * RUN resolved beams: BEAM1
+OPAL-X> * ************* B E A M ************************************************************ 
+OPAL-X> * BEAM        BEAM1
+OPAL-X> * PARTICLE    ELECTRON
+OPAL-X> * REST MASS   0.000510999 [GeV]
+OPAL-X> * CHARGE      -e * 1 
+OPAL-X> * MOMENTUM    1e-09 [GeV/c]
+OPAL-X> * BCHARGE     6.40871e-17 [C]
+OPAL-X> * NALLOC      4
+OPAL-X> * ********************************************************************************** 
+OPAL-X> 
+OPAL-X> 
+OPAL-X> * Creating new file for data: 'IdealRFCavity.stat'
+OPAL-X> * Creating new file for data: 'IdealRFCavity.lbal'
+FromFile::generateParticles> FromFile: Loaded 4 particles from file 'particles.txt'
+FromFile::generateParticles> Rank 0: 4 local particles
+OPAL-X> 
+OPAL-X> * ************** B U N C H ********************************************************* 
+OPAL-X> * CONTAINER       = 0
+OPAL-X> * PARTICLES       = 4
+OPAL-X> * CHARGE          = -6.408707e-17 (Cb) 
+OPAL-X> * QM STORAGE MODE = SINGLE
+OPAL-X> * <EKIN>          = 6.600 [MeV]
+OPAL-X> * <dEKIN>         = 0.000 [eV]
+OPAL-X> * INTEGRATOR      = LF2
+OPAL-X> * LB Threshold    = 5.000000e-02
+OPAL-X> * MIN R (origin)  = (      0.00000 ,      0.00000 ,      0.00000 ) [um]
+OPAL-X> * MAX R (max ext) = (      0.00000 ,      0.00000 ,      0.00000 ) [um]
+OPAL-X> * RMS R           = (    158.11388 ,    158.11388 ,    223.60680 ) [um]
+OPAL-X> * RMS P           = ( 0.000000e+00 , 0.000000e+00 , 0.000000e+00 ) [beta gamma]
+OPAL-X> * Mean R          = ( 0.000000e+00 , 0.000000e+00 , 0.000000e+00 ) [m]
+OPAL-X> * Mean P          = ( 0.000000e+00 , 0.000000e+00 , 1.387990e+01 ) [beta gamma]
+OPAL-X> * MESH SPACING    = (    750.00000 ,    750.00000 ,    750.00000 ) [mm]
+OPAL-X> * COMPDOM INCR    = 2.000000e+00 (%) 
+OPAL-X> * FIELD LAYOUT    = Domain = {[0:7:1],[0:7:1],[0:7:1]}
+OPAL-X> Total number of boxes = 1
+OPAL-X>     Box 0 {[0:7:1],[0:7:1],[0:7:1]}
+OPAL-X> 
+OPAL-X> * Centroid : 
+OPAL-X> * 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 5.551960e+01 
+OPAL-X> * Cov Matrix : 
+OPAL-X> * 2.500000e-08 0.000000e+00 -3.746046e-25 0.000000e+00 -1.500000e-08 0.000000e+00 
+OPAL-X> * 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 
+OPAL-X> * -3.746046e-25 0.000000e+00 2.500000e-08 0.000000e+00 -5.000000e-09 0.000000e+00 
+OPAL-X> * 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 
+OPAL-X> * -1.500000e-08 0.000000e+00 -5.000000e-09 0.000000e+00 5.000000e-08 0.000000e+00 
+OPAL-X> * 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 0.000000e+00 
+OPAL-X> * * ********************************************************************************** 
+OPAL-X> 
+OPAL-X> * OrbitThreader settings: design_beam=1 maps=0 dt_s=2e-12 integrator=BORIS richardson_levels=0 period_m=0; reference and map rays execute serially on the host.
+OPAL-X> 
+OPAL-X> * OrbitThreader dt_m= 2e-12
+OPAL-X> 
+OPAL-X> * Size of map 4 sections 
+OPAL-X> * Key: (0.000000 - 0.019735) number of overlapping elements 1
+OPAL-X> *                            D
+OPAL-X> * Key: (0.019735 - 0.040069) number of overlapping elements 2
+OPAL-X> *                            D
+OPAL-X> *                            RF
+OPAL-X> * Key: (0.040069 - 0.080140) number of overlapping elements 1
+OPAL-X> *                            D
+OPAL-X> * Key: (0.080140 - 0.080738) number of overlapping elements 0
+OPAL-X> 
+OPAL-X> * Creating new file for data: 'data/IdealRFCavity_ElementPositions.sdds'
+OPAL-X> * OrbitThreader work (this pass, rank 0 local; accepted includes localization trials):
+OPAL-X> * OT reference: nominal_steps=135 advances=0 trials=135 accepted_steps=135 cap_splits=0 support_splits=0 max_depth=0 min_accepted_dt_s=2e-12 step_cap_s=0
+OPAL-X> * OT reference: support_lookups=138 body_lookups=0 element_tests=276 field_samples=135 element_fields=168 membership_reuses=0
+OPAL-X> * OT reference: reference_samples=0 segments=0 rays=0 ray_tracking_s=0 ray_transport_s=0 ray_exit_s=0 exit_iterations=0 log_rows=20 log_write_s=6.8877e-05
+OPAL-X> * OT segmentation: nominal_steps=0 advances=0 trials=0 accepted_steps=0 cap_splits=0 support_splits=0 max_depth=0 min_accepted_dt_s=0 step_cap_s=0
+OPAL-X> * OT segmentation: support_lookups=0 body_lookups=0 element_tests=0 field_samples=0 element_fields=0 membership_reuses=0
+OPAL-X> * OT segmentation: reference_samples=0 segments=0 rays=0 ray_tracking_s=0 ray_transport_s=0 ray_exit_s=0 exit_iterations=0 log_rows=0 log_write_s=0
+OPAL-X> * OT maps: nominal_steps=0 advances=0 trials=0 accepted_steps=0 cap_splits=0 support_splits=0 max_depth=0 min_accepted_dt_s=0 step_cap_s=0
+OPAL-X> * OT maps: support_lookups=0 body_lookups=0 element_tests=0 field_samples=0 element_fields=0 membership_reuses=0
+OPAL-X> * OT maps: reference_samples=0 segments=0 rays=0 ray_tracking_s=0 ray_transport_s=0 ray_exit_s=0 exit_iterations=0 log_rows=0 log_write_s=0
+OPAL-X> * OT output: nominal_steps=0 advances=0 trials=0 accepted_steps=0 cap_splits=0 support_splits=0 max_depth=0 min_accepted_dt_s=0 step_cap_s=0
+OPAL-X> * OT output: support_lookups=0 body_lookups=0 element_tests=0 field_samples=0 element_fields=0 membership_reuses=0
+OPAL-X> * OT output: reference_samples=0 segments=0 rays=0 ray_tracking_s=0 ray_transport_s=0 ray_exit_s=0 exit_iterations=0 log_rows=0 log_write_s=0
+OPAL-X> 
+OPAL-X> * Track start at: 19:52:18, t= 0.000 [fs]; sStart at: 0.000 [um]
+OPAL-X> * Initial dt = 2.000 [ps]
+OPAL-X> * Max integration steps = 1000, next step = 0
+OPAL-X>                dt [ns]           sStop [m]        num Steps [1]
+OPAL-X> ->         2.000000e-12        6.000000e-02                1000
+OPAL-X> * 19:52:18 Step      0 container[0] at 598.035 [um], t= 2.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step      1 container[0] at 1.196 [mm], t= 4.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step      2 container[0] at 1.794 [mm], t= 6.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step      3 container[0] at 2.392 [mm], t= 8.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step      4 container[0] at 2.990 [mm], t= 10.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step      5 container[0] at 3.588 [mm], t= 12.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step      6 container[0] at 4.186 [mm], t= 14.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step      7 container[0] at 4.784 [mm], t= 16.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step      8 container[0] at 5.382 [mm], t= 18.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step      9 container[0] at 5.980 [mm], t= 20.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     10 container[0] at 6.578 [mm], t= 22.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     11 container[0] at 7.176 [mm], t= 24.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     12 container[0] at 7.774 [mm], t= 26.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     13 container[0] at 8.372 [mm], t= 28.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     14 container[0] at 8.971 [mm], t= 30.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     15 container[0] at 9.569 [mm], t= 32.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     16 container[0] at 10.167 [mm], t= 34.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     17 container[0] at 10.765 [mm], t= 36.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     18 container[0] at 11.363 [mm], t= 38.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     19 container[0] at 11.961 [mm], t= 40.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     20 container[0] at 12.559 [mm], t= 42.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     21 container[0] at 13.157 [mm], t= 44.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     22 container[0] at 13.755 [mm], t= 46.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     23 container[0] at 14.353 [mm], t= 48.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     24 container[0] at 14.951 [mm], t= 50.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     25 container[0] at 15.549 [mm], t= 52.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     26 container[0] at 16.147 [mm], t= 54.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     27 container[0] at 16.745 [mm], t= 56.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     28 container[0] at 17.343 [mm], t= 58.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     29 container[0] at 17.941 [mm], t= 60.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     30 container[0] at 18.539 [mm], t= 62.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     31 container[0] at 19.137 [mm], t= 64.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     32 container[0] at 19.735 [mm], t= 66.000 [ps], E=6.600 [MeV]
+OPAL-X> * 19:52:18 Step     33 container[0] at 20.333 [mm], t= 68.000 [ps], E=6.601 [MeV]
+OPAL-X> * 19:52:18 Step     34 container[0] at 20.931 [mm], t= 70.000 [ps], E=6.604 [MeV]
+OPAL-X> * 19:52:18 Step     35 container[0] at 21.529 [mm], t= 72.000 [ps], E=6.607 [MeV]
+OPAL-X> * 19:52:18 Step     36 container[0] at 22.127 [mm], t= 74.000 [ps], E=6.610 [MeV]
+OPAL-X> * 19:52:18 Step     37 container[0] at 22.725 [mm], t= 76.000 [ps], E=6.613 [MeV]
+OPAL-X> * 19:52:18 Step     38 container[0] at 23.323 [mm], t= 78.000 [ps], E=6.616 [MeV]
+OPAL-X> * 19:52:18 Step     39 container[0] at 23.921 [mm], t= 80.000 [ps], E=6.619 [MeV]
+OPAL-X> * 19:52:18 Step     40 container[0] at 24.519 [mm], t= 82.000 [ps], E=6.622 [MeV]
+OPAL-X> * 19:52:18 Step     41 container[0] at 25.118 [mm], t= 84.000 [ps], E=6.625 [MeV]
+OPAL-X> * 19:52:18 Step     42 container[0] at 25.716 [mm], t= 86.000 [ps], E=6.628 [MeV]
+OPAL-X> * 19:52:18 Step     43 container[0] at 26.314 [mm], t= 88.000 [ps], E=6.631 [MeV]
+OPAL-X> * 19:52:18 Step     44 container[0] at 26.912 [mm], t= 90.000 [ps], E=6.634 [MeV]
+OPAL-X> * 19:52:18 Step     45 container[0] at 27.510 [mm], t= 92.000 [ps], E=6.637 [MeV]
+OPAL-X> * 19:52:18 Step     46 container[0] at 28.108 [mm], t= 94.000 [ps], E=6.640 [MeV]
+OPAL-X> * 19:52:18 Step     47 container[0] at 28.706 [mm], t= 96.000 [ps], E=6.643 [MeV]
+OPAL-X> * 19:52:18 Step     48 container[0] at 29.304 [mm], t= 98.000 [ps], E=6.646 [MeV]
+OPAL-X> * 19:52:18 Step     49 container[0] at 29.902 [mm], t= 100.000 [ps], E=6.649 [MeV]
+OPAL-X> * 19:52:18 Step     50 container[0] at 30.500 [mm], t= 102.000 [ps], E=6.652 [MeV]
+OPAL-X> * 19:52:18 Step     51 container[0] at 31.098 [mm], t= 104.000 [ps], E=6.655 [MeV]
+OPAL-X> * 19:52:18 Step     52 container[0] at 31.696 [mm], t= 106.000 [ps], E=6.658 [MeV]
+OPAL-X> * 19:52:18 Step     53 container[0] at 32.294 [mm], t= 108.000 [ps], E=6.661 [MeV]
+OPAL-X> * 19:52:18 Step     54 container[0] at 32.892 [mm], t= 110.000 [ps], E=6.664 [MeV]
+OPAL-X> * 19:52:18 Step     55 container[0] at 33.490 [mm], t= 112.000 [ps], E=6.667 [MeV]
+OPAL-X> * 19:52:18 Step     56 container[0] at 34.088 [mm], t= 114.000 [ps], E=6.670 [MeV]
+OPAL-X> * 19:52:18 Step     57 container[0] at 34.686 [mm], t= 116.000 [ps], E=6.673 [MeV]
+OPAL-X> * 19:52:18 Step     58 container[0] at 35.284 [mm], t= 118.000 [ps], E=6.676 [MeV]
+OPAL-X> * 19:52:18 Step     59 container[0] at 35.883 [mm], t= 120.000 [ps], E=6.679 [MeV]
+OPAL-X> * 19:52:18 Step     60 container[0] at 36.481 [mm], t= 122.000 [ps], E=6.682 [MeV]
+OPAL-X> * 19:52:18 Step     61 container[0] at 37.079 [mm], t= 124.000 [ps], E=6.685 [MeV]
+OPAL-X> * 19:52:18 Step     62 container[0] at 37.677 [mm], t= 126.000 [ps], E=6.688 [MeV]
+OPAL-X> * 19:52:18 Step     63 container[0] at 38.275 [mm], t= 128.000 [ps], E=6.691 [MeV]
+OPAL-X> * 19:52:18 Step     64 container[0] at 38.873 [mm], t= 130.000 [ps], E=6.694 [MeV]
+OPAL-X> * 19:52:18 Step     65 container[0] at 39.471 [mm], t= 132.000 [ps], E=6.697 [MeV]
+OPAL-X> * 19:52:18 Step     66 container[0] at 40.069 [mm], t= 134.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     67 container[0] at 40.667 [mm], t= 136.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     68 container[0] at 41.265 [mm], t= 138.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     69 container[0] at 41.863 [mm], t= 140.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     70 container[0] at 42.461 [mm], t= 142.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     71 container[0] at 43.059 [mm], t= 144.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     72 container[0] at 43.658 [mm], t= 146.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     73 container[0] at 44.256 [mm], t= 148.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     74 container[0] at 44.854 [mm], t= 150.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     75 container[0] at 45.452 [mm], t= 152.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     76 container[0] at 46.050 [mm], t= 154.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     77 container[0] at 46.648 [mm], t= 156.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     78 container[0] at 47.246 [mm], t= 158.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     79 container[0] at 47.844 [mm], t= 160.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     80 container[0] at 48.442 [mm], t= 162.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     81 container[0] at 49.040 [mm], t= 164.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     82 container[0] at 49.638 [mm], t= 166.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     83 container[0] at 50.236 [mm], t= 168.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     84 container[0] at 50.834 [mm], t= 170.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     85 container[0] at 51.433 [mm], t= 172.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     86 container[0] at 52.031 [mm], t= 174.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     87 container[0] at 52.629 [mm], t= 176.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     88 container[0] at 53.227 [mm], t= 178.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     89 container[0] at 53.825 [mm], t= 180.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     90 container[0] at 54.423 [mm], t= 182.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     91 container[0] at 55.021 [mm], t= 184.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     92 container[0] at 55.619 [mm], t= 186.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     93 container[0] at 56.217 [mm], t= 188.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     94 container[0] at 56.815 [mm], t= 190.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     95 container[0] at 57.413 [mm], t= 192.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     96 container[0] at 58.011 [mm], t= 194.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     97 container[0] at 58.609 [mm], t= 196.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     98 container[0] at 59.208 [mm], t= 198.000 [ps], E=6.699 [MeV]
+OPAL-X> * 19:52:18 Step     99 container[0] at 59.806 [mm], t= 200.000 [ps], E=6.699 [MeV]
+OPAL-X> Boris boundary trials=0, rejected=0
+OPAL-X> 
+OPAL-X> * Done executing ParallelTracker at 19:52:18
+OPAL-X> 
+OPAL-X> * End of input stream 'IdealRFCavity.in'
+Timings> ---------------------------------------------
+Timings>      Timing results for 1 rank(s):
+Timings> ---------------------------------------------
+Timings> mainTimer........... Wall tot =  0.0149417
+Timings> 
+Timings> Write Stat.......... Wall max = 0.00708687
+Timings>                      Wall avg = 0.00708687
+Timings>                      Wall min = 0.00708687
+Timings> 
+Timings> samplingTime........ Wall max = 0.000262375
+Timings>                      Wall avg = 0.000262375
+Timings>                      Wall min = 0.000262375
+Timings> 
+Timings> computeMoments...... Wall max = 0.000223465
+Timings>                      Wall avg = 0.000223465
+Timings>                      Wall min = 0.000223465
+Timings> 
+Timings> TIntegration1....... Wall max = 5.8886e-05
+Timings>                      Wall avg = 5.8886e-05
+Timings>                      Wall min = 5.8886e-05
+Timings> 
+Timings> TIntegration2....... Wall max = 9.7328e-05
+Timings>                      Wall avg = 9.7328e-05
+Timings>                      Wall min = 9.7328e-05
+Timings> 
+Timings> External field eval. Wall max = 0.000247958
+Timings>                      Wall avg = 0.000247958
+Timings>                      Wall min = 0.000247958
+Timings> 
+Timings> OrbThreader......... Wall max = 0.000562333
+Timings>                      Wall avg = 0.000562333
+Timings>                      Wall min = 0.000562333
+Timings> 
+Timings> OT reference........ Wall max = 0.000124584
+Timings>                      Wall avg = 0.000124584
+Timings>                      Wall min = 0.000124584
+Timings> 
+Timings> OT output........... Wall max = 0.000346292
+Timings>                      Wall avg = 0.000346292
+Timings>                      Wall min = 0.000346292
+Timings> 
+Timings> ---------------------------------------------
+Timings>      Measurement counts:
+Timings> ---------------------------------------------
+Timings> mainTimer........... Count =          1
+Timings> Write Stat.......... Count =        100
+Timings> samplingTime........ Count =          1
+Timings> computeMoments...... Count =        401
+Timings> TIntegration1....... Count =        100
+Timings> TIntegration2....... Count =        100
+Timings> External field eval. Count =        100
+Timings> OrbThreader......... Count =          1
+Timings> OT reference........ Count =          1
+Timings> OT output........... Count =          1
+Timings> ---------------------------------------------
+Timings> ---------------------------------------------
+Timings>      Per-occurrence statistics:
+Timings> ---------------------------------------------
+Timings> mainTimer........... n=    1  mean= 0.0149417  std=         0  min= 0.0149417  max= 0.0149417
+Timings> Write Stat.......... n=  100  mean=7.08687e-05  std=2.30421e-05  min= 5.325e-05  max=0.000210167
+Timings> samplingTime........ n=    1  mean=0.000262375  std=         0  min=0.000262375  max=0.000262375
+Timings> computeMoments...... n=  401  mean=5.57269e-07  std=2.80585e-07  min=  4.58e-07  max= 3.958e-06
+Timings> TIntegration1....... n=  100  mean=5.8886e-07  std=1.07682e-06  min=  3.75e-07  max=1.1042e-05
+Timings> TIntegration2....... n=  100  mean=9.7328e-07  std=1.87811e-07  min=  8.33e-07  max=  2.25e-06
+Timings> External field eval. n=  100  mean=2.47958e-06  std=7.84724e-07  min= 1.833e-06  max= 5.792e-06
+Timings> OrbThreader......... n=    1  mean=0.000562333  std=         0  min=0.000562333  max=0.000562333
+Timings> OT reference........ n=    1  mean=0.000124584  std=         0  min=0.000124584  max=0.000124584
+Timings> OT output........... n=    1  mean=0.000346292  std=         0  min=0.000346292  max=0.000346292
+Timings> ---------------------------------------------
