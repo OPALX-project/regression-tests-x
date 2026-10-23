@@ -12,7 +12,7 @@ OPAL-X>
 OPAL-X> [0m
 OPAL-X> 
 OPAL-X> OPALX is the performance portable version of OPAL :: Version 0.9
-OPAL-X>             git rev. d5667df15f75705f858ac4531f7a6dd2cfe3daa0
+OPAL-X>             git rev. b73c3bba37949a97cc42e2480e4f6eb120bddccd
 OPAL-X> 
 OPAL-X> 
 OPAL-X>              (c) PSI, https://github.com/OPALX-project/OPALX
@@ -21,10 +21,18 @@ OPAL-X>
 OPAL-X> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL-X> to the OPAL developers https://github.com/OPALX-project/OPALX/issues
 OPAL-X> 
-OPAL-X> Time: 13:03:04 date: 09/04/2026
+OPAL-X> Time: 19:46:07 date: 23/10/2026
 OPAL-X> 
-OPAL-X> * Host:   OpenMP
-OPAL-X> * Device: OpenMP
+OPAL-X> * Executable: /Users/mohsensadr/Codes/GitHub/OPALX/build/src/opalx
+OPAL-X> * Build configuration: RelWithDebInfo
+OPAL-X> * Compiler: AppleClang 17.0.0.17000404
+OPAL-X> * CMake C++ flags (configure-time):  -O2 -g -DNDEBUG
+OPAL-X> * MPI ranks: 1
+OPAL-X> * C++ assertions: disabled (NDEBUG)
+OPAL-X> * OpenMP: disabled
+OPAL-X> * Kokkos host concurrency: 1
+OPAL-X> * Host:   Serial
+OPAL-X> * Device: Serial execution
 OPAL-X> 
 OPAL-X> * Reading input stream 'Dist-gauss.in'
 OPAL-X> 
@@ -45,7 +53,7 @@ OPAL-X> * BBOXINCR     5
 OPAL-X> * GREENSF      STANDARD
 OPAL-X> * XDIM         parallel  
 OPAL-X> * YDIM         parallel  
-OPAL-X> * ZDIM         serial  
+OPAL-X> * ZDIM         parallel  
 OPAL-X> * ********************************************************************************** 
 OPAL-X> 
 OPAL-X> * RUN resolved beams: BEAM1
@@ -54,11 +62,9 @@ OPAL-X> * BEAM        BEAM1
 OPAL-X> * PARTICLE    ELECTRON
 OPAL-X> * REST MASS   0.000510999 [GeV]
 OPAL-X> * CHARGE      -e * 1 
-OPAL-X> * MOMENTUM    1010.94 [eV/c]
 OPAL-X> * MOMENTUM    1.01094e-06 [GeV/c]
-OPAL-X> * CURRENT     1.3 [A]
-OPAL-X> * FREQUENCY   1.3e+09 [MHz]
-OPAL-X> * NPART       100000
+OPAL-X> * BCHARGE     1e-09 [C]
+OPAL-X> * NALLOC      100000
 OPAL-X> * ********************************************************************************** 
 OPAL-X> 
 OPAL-X> 
@@ -68,102 +74,183 @@ OPAL-X>
 OPAL-X> * ************** B U N C H ********************************************************* 
 OPAL-X> * CONTAINER       = 0
 OPAL-X> * PARTICLES       = 100000
-OPAL-X> * CHARGE          = -1.000000e-15 (Cb) 
+OPAL-X> * CHARGE          = -1.000000e-09 (Cb) 
 OPAL-X> * QM STORAGE MODE = SINGLE
 OPAL-X> * <EKIN>          = 1.000 [eV]
 OPAL-X> * <dEKIN>         = 0.001 [eV]
 OPAL-X> * INTEGRATOR      = LF2
-OPAL-X> * MIN R (origin)  = (     -2.99749 ,    -14.96149 ,    -29.96675 ) [mm]
-OPAL-X> * MAX R (max ext) = (      2.99898 ,     15.00431 ,     29.99476 ) [mm]
-OPAL-X> * RMS R           = (      0.99083 ,      4.93719 ,      9.87592 ) [mm]
-OPAL-X> * RMS P           = ( 9.996079e-07 , 1.004210e-06 , 9.986487e-07 ) [beta gamma]
-OPAL-X> * Mean R          = ( -6.938894e-23 , 2.386980e-20 , -1.376677e-19 ) [m]
-OPAL-X> * Mean P          = ( 2.340136e-09 , -1.285497e-09 , 1.978361e-03 ) [beta gamma]
-OPAL-X> * MESH SPACING    = (      0.20613 ,      1.03007 ,      2.06118 ) [mm]
+OPAL-X> * LB Threshold    = 5.000000e-02
+OPAL-X> * MIN R (origin)  = (      0.00000 ,      0.00000 ,      0.00000 ) [um]
+OPAL-X> * MAX R (max ext) = (      0.00000 ,      0.00000 ,      0.00000 ) [um]
+OPAL-X> * RMS R           = (      0.97752 ,      4.87169 ,      9.83384 ) [mm]
+OPAL-X> * RMS P           = ( 9.718965e-07 , 9.766687e-07 , 9.861672e-07 ) [beta gamma]
+OPAL-X> * Mean R          = ( -3.280796e-20 , -7.971054e-21 , -1.640701e-19 ) [m]
+OPAL-X> * Mean P          = ( -9.272893e-23 , 3.686499e-23 , 1.978359e-03 ) [beta gamma]
+OPAL-X> * MESH SPACING    = (    187.50000 ,    187.50000 ,    187.50000 ) [mm]
 OPAL-X> * COMPDOM INCR    = 5.000000e+00 (%) 
 OPAL-X> * FIELD LAYOUT    = Domain = {[0:31:1],[0:31:1],[0:31:1]}
 OPAL-X> Total number of boxes = 1
 OPAL-X>     Box 0 {[0:31:1],[0:31:1],[0:31:1]}
 OPAL-X> 
 OPAL-X> * Centroid : 
-OPAL-X> * -6.938894e-18 2.340136e-04 2.386980e-15 -1.285497e-04 -1.376677e-14 1.978361e+02 
+OPAL-X> * -3.280796e-15 -9.272893e-18 -7.971054e-16 3.686499e-18 -1.640701e-14 1.978359e+02 
 OPAL-X> * Cov Matrix : 
-OPAL-X> * 9.817498e-07 -6.932746e-13 1.984391e-09 -1.396070e-12 -8.333211e-09 -1.969014e-12 
-OPAL-X> * -6.932746e-13 9.992159e-13 2.704748e-12 2.960243e-15 -5.549864e-12 -8.822221e-16 
-OPAL-X> * 1.984391e-09 2.704748e-12 2.437589e-05 -1.120342e-11 -3.962772e-07 2.261946e-11 
-OPAL-X> * -1.396070e-12 2.960243e-15 -1.120342e-11 1.008438e-12 2.776063e-11 3.256992e-16 
-OPAL-X> * -8.333211e-09 -5.549864e-12 -3.962772e-07 2.776063e-11 9.753381e-05 -1.703912e-11 
-OPAL-X> * -1.969014e-12 -8.822221e-16 2.261946e-11 3.256992e-16 -1.703912e-11 9.972993e-13 
+OPAL-X> * 9.555532e-07 -6.969660e-12 1.501243e-08 2.652210e-12 -3.104074e-08 -1.302495e-13 
+OPAL-X> * -6.969660e-12 9.445828e-13 -1.432959e-12 -5.785216e-15 4.437680e-11 -5.609624e-16 
+OPAL-X> * 1.501243e-08 -1.432959e-12 2.373333e-05 -2.818508e-12 2.081419e-07 -4.474655e-11 
+OPAL-X> * 2.652210e-12 -5.785216e-15 -2.818508e-12 9.538817e-13 -3.561506e-11 4.931686e-15 
+OPAL-X> * -3.104074e-08 4.437680e-11 2.081419e-07 -3.561506e-11 9.670447e-05 -6.428676e-11 
+OPAL-X> * -1.302495e-13 -5.609624e-16 -4.474655e-11 4.931686e-15 -6.428676e-11 9.725257e-13 
 OPAL-X> * * ********************************************************************************** 
 OPAL-X> 
-OPAL-X> * D1 gone live
+OPAL-X> * OrbitThreader settings: design_beam=1 maps=0 dt_s=5e-11 integrator=BORIS richardson_levels=0 period_m=0; reference and map rays execute serially on the host.
+OPAL-X> 
 OPAL-X> * OrbitThreader dt_m= 5e-11
-OPAL-X> * OrbitThreader maxDistance= 1.0003
-OPAL-X> * OrbitThreader #elements  = 1
 OPAL-X> 
 OPAL-X> * Size of map 1 sections 
-OPAL-X> * Key: (0.000000 - 0.999990) number of overlapping elements 1
+OPAL-X> * Key: (0.000000 - 0.999989) number of overlapping elements 1
 OPAL-X> *                            D1
 OPAL-X> 
 OPAL-X> * Creating new file for data: 'data/Dist-gauss_ElementPositions.sdds'
-OPAL-X> * Track start at: 13:03:04, t= 0.000 [fs]; zstart at: 0.000 [um]
+OPAL-X> * OrbitThreader work (this pass, rank 0 local; accepted includes localization trials):
+OPAL-X> * OT reference: nominal_steps=33721 advances=0 trials=33721 accepted_steps=33721 cap_splits=0 support_splits=0 max_depth=0 min_accepted_dt_s=5e-11 step_cap_s=0
+OPAL-X> * OT reference: support_lookups=33723 body_lookups=0 element_tests=33723 field_samples=33721 element_fields=33721 membership_reuses=0
+OPAL-X> * OT reference: reference_samples=0 segments=0 rays=0 ray_tracking_s=0 ray_transport_s=0 ray_exit_s=0 exit_iterations=0 log_rows=33720 log_write_s=0.0938901
+OPAL-X> * OT segmentation: nominal_steps=0 advances=0 trials=0 accepted_steps=0 cap_splits=0 support_splits=0 max_depth=0 min_accepted_dt_s=0 step_cap_s=0
+OPAL-X> * OT segmentation: support_lookups=0 body_lookups=0 element_tests=0 field_samples=0 element_fields=0 membership_reuses=0
+OPAL-X> * OT segmentation: reference_samples=0 segments=0 rays=0 ray_tracking_s=0 ray_transport_s=0 ray_exit_s=0 exit_iterations=0 log_rows=0 log_write_s=0
+OPAL-X> * OT maps: nominal_steps=0 advances=0 trials=0 accepted_steps=0 cap_splits=0 support_splits=0 max_depth=0 min_accepted_dt_s=0 step_cap_s=0
+OPAL-X> * OT maps: support_lookups=0 body_lookups=0 element_tests=0 field_samples=0 element_fields=0 membership_reuses=0
+OPAL-X> * OT maps: reference_samples=0 segments=0 rays=0 ray_tracking_s=0 ray_transport_s=0 ray_exit_s=0 exit_iterations=0 log_rows=0 log_write_s=0
+OPAL-X> * OT output: nominal_steps=0 advances=0 trials=0 accepted_steps=0 cap_splits=0 support_splits=0 max_depth=0 min_accepted_dt_s=0 step_cap_s=0
+OPAL-X> * OT output: support_lookups=0 body_lookups=0 element_tests=0 field_samples=0 element_fields=0 membership_reuses=0
+OPAL-X> * OT output: reference_samples=0 segments=0 rays=0 ray_tracking_s=0 ray_transport_s=0 ray_exit_s=0 exit_iterations=0 log_rows=0 log_write_s=0
+OPAL-X> 
+OPAL-X> * Track start at: 19:46:07, t= 0.000 [fs]; sStart at: 0.000 [um]
 OPAL-X> * Initial dt = 50.000 [ps]
 OPAL-X> * Max integration steps = 1, next step = 0
-OPAL-X>                dt [ns]           zStop [m]        num Steps [1]
+OPAL-X>                dt [ns]           sStop [m]        num Steps [1]
 OPAL-X> ->         5.000000e-11        1.000000e+00                   1
-OPAL-X> * 13:03:04 Step      0 at 29.655 [um], t= 50.000 [ps], E=1.000 [eV]
-OPAL-X> * D1 gone off
+OPAL-X> * 19:46:07 Step      0 container[0] at 29.655 [um], t= 50.000 [ps], E=1.000 [eV]
+OPAL-X> Boris boundary trials=0, rejected=0
 OPAL-X> 
-OPAL-X> * Done executing ParallelTracker at 13:03:04
+OPAL-X> * Done executing ParallelTracker at 19:46:07
 OPAL-X> 
 OPAL-X> * End of input stream 'Dist-gauss.in'
 Timings> ---------------------------------------------
 Timings>      Timing results for 1 rank(s):
 Timings> ---------------------------------------------
-Timings> mainTimer........... Wall tot =   0.138015
+Timings> mainTimer........... Wall tot =   0.153306
 Timings> 
-Timings> Write Stat.......... Wall max =   0.000252
-Timings>                      Wall avg =   0.000252
-Timings>                      Wall min =   0.000252
+Timings> H5 open close....... Wall max =  0.0155174
+Timings>                      Wall avg =  0.0155174
+Timings>                      Wall min =  0.0155174
 Timings> 
-Timings> Write H5-File....... Wall max =   0.004915
-Timings>                      Wall avg =   0.004915
-Timings>                      Wall min =   0.004915
+Timings> H5 total step....... Wall max = 0.00353971
+Timings>                      Wall avg = 0.00353971
+Timings>                      Wall min = 0.00353971
 Timings> 
-Timings> samplingTime........ Wall max =   0.007096
-Timings>                      Wall avg =   0.007096
-Timings>                      Wall min =   0.007096
+Timings> H5 step header...... Wall max = 0.000162083
+Timings>                      Wall avg = 0.000162083
+Timings>                      Wall min = 0.000162083
 Timings> 
-Timings> Sampling............ Wall max =   0.007049
-Timings>                      Wall avg =   0.007049
-Timings>                      Wall min =   0.007049
+Timings> H5 device host copy. Wall max =  1.707e-06
+Timings>                      Wall avg =  1.707e-06
+Timings>                      Wall min =  1.707e-06
 Timings> 
-Timings> particleBC.......... Wall max =   0.001361
-Timings>                      Wall avg =   0.001361
-Timings>                      Wall min =   0.001361
+Timings> H5 dataset write.... Wall max = 0.00120621
+Timings>                      Wall avg = 0.00120621
+Timings>                      Wall min = 0.00120621
 Timings> 
-Timings> updateParticle...... Wall max =          0
-Timings>                      Wall avg =          0
-Timings>                      Wall min =          0
+Timings> Write Stat.......... Wall max = 0.00142517
+Timings>                      Wall avg = 0.00142517
+Timings>                      Wall min = 0.00142517
 Timings> 
-Timings> TIntegration1....... Wall max =   0.000299
-Timings>                      Wall avg =   0.000299
-Timings>                      Wall min =   0.000299
+Timings> samplingTime........ Wall max = 0.00845867
+Timings>                      Wall avg = 0.00845867
+Timings>                      Wall min = 0.00845867
 Timings> 
-Timings> TIntegration2....... Wall max =   0.000389
-Timings>                      Wall avg =   0.000389
-Timings>                      Wall min =   0.000389
+Timings> Sampling............ Wall max = 0.00844075
+Timings>                      Wall avg = 0.00844075
+Timings>                      Wall min = 0.00844075
 Timings> 
-Timings> External field eval. Wall max =   0.000701
-Timings>                      Wall avg =   0.000701
-Timings>                      Wall min =   0.000701
+Timings> computeMoments...... Wall max =  0.0122782
+Timings>                      Wall avg =  0.0122782
+Timings>                      Wall min =  0.0122782
 Timings> 
-Timings> Binaryrepart........ Wall max =          0
-Timings>                      Wall avg =          0
-Timings>                      Wall min =          0
+Timings> TIntegration1....... Wall max =  0.0002575
+Timings>                      Wall avg =  0.0002575
+Timings>                      Wall min =  0.0002575
 Timings> 
-Timings> OrbThreader......... Wall max =   0.088464
-Timings>                      Wall avg =   0.088464
-Timings>                      Wall min =   0.088464
+Timings> TIntegration2....... Wall max = 0.000771375
+Timings>                      Wall avg = 0.000771375
+Timings>                      Wall min = 0.000771375
 Timings> 
+Timings> External field eval. Wall max = 0.000824916
+Timings>                      Wall avg = 0.000824916
+Timings>                      Wall min = 0.000824916
+Timings> 
+Timings> OrbThreader......... Wall max =   0.101463
+Timings>                      Wall avg =   0.101463
+Timings>                      Wall min =   0.101463
+Timings> 
+Timings> OT reference........ Wall max =   0.100896
+Timings>                      Wall avg =   0.100896
+Timings>                      Wall min =   0.100896
+Timings> 
+Timings> OT output........... Wall max = 0.000463958
+Timings>                      Wall avg = 0.000463958
+Timings>                      Wall min = 0.000463958
+Timings> 
+Timings> particleBC.......... Wall max =   1.25e-07
+Timings>                      Wall avg =   1.25e-07
+Timings>                      Wall min =   1.25e-07
+Timings> 
+Timings> updateParticle...... Wall max =    4.2e-08
+Timings>                      Wall avg =    4.2e-08
+Timings>                      Wall min =    4.2e-08
+Timings> 
+Timings> ---------------------------------------------
+Timings>      Measurement counts:
+Timings> ---------------------------------------------
+Timings> mainTimer........... Count =          1
+Timings> H5 open close....... Count =          4
+Timings> H5 total step....... Count =          1
+Timings> H5 step header...... Count =          1
+Timings> H5 device host copy. Count =          5
+Timings> H5 dataset write.... Count =         11
+Timings> Write Stat.......... Count =          1
+Timings> samplingTime........ Count =          1
+Timings> Sampling............ Count =          1
+Timings> computeMoments...... Count =          7
+Timings> TIntegration1....... Count =          1
+Timings> TIntegration2....... Count =          1
+Timings> External field eval. Count =          1
+Timings> OrbThreader......... Count =          1
+Timings> OT reference........ Count =          1
+Timings> OT output........... Count =          1
+Timings> particleBC.......... Count =          2
+Timings> updateParticle...... Count =          2
+Timings> ---------------------------------------------
+Timings> ---------------------------------------------
+Timings>      Per-occurrence statistics:
+Timings> ---------------------------------------------
+Timings> mainTimer........... n=    1  mean=  0.153306  std=         0  min=  0.153306  max=  0.153306
+Timings> H5 open close....... n=    4  mean=0.00387935  std=0.00624196  min=  0.000372  max= 0.0132106
+Timings> H5 total step....... n=    1  mean=0.00353971  std=         0  min=0.00353971  max=0.00353971
+Timings> H5 step header...... n=    1  mean=0.000162083  std=         0  min=0.000162083  max=0.000162083
+Timings> H5 device host copy. n=    5  mean= 3.414e-07  std=9.96459e-08  min=  2.08e-07  max=  4.58e-07
+Timings> H5 dataset write.... n=   11  mean=0.000109655  std=0.000173162  min= 2.175e-05  max=0.000629917
+Timings> Write Stat.......... n=    1  mean=0.00142517  std=         0  min=0.00142517  max=0.00142517
+Timings> samplingTime........ n=    1  mean=0.00845867  std=         0  min=0.00845867  max=0.00845867
+Timings> Sampling............ n=    1  mean=0.00844075  std=         0  min=0.00844075  max=0.00844075
+Timings> computeMoments...... n=    7  mean=0.00175402  std=3.16361e-06  min=0.00175113  max=0.00176029
+Timings> TIntegration1....... n=    1  mean= 0.0002575  std=         0  min= 0.0002575  max= 0.0002575
+Timings> TIntegration2....... n=    1  mean=0.000771375  std=         0  min=0.000771375  max=0.000771375
+Timings> External field eval. n=    1  mean=0.000824916  std=         0  min=0.000824916  max=0.000824916
+Timings> OrbThreader......... n=    1  mean=  0.101463  std=         0  min=  0.101463  max=  0.101463
+Timings> OT reference........ n=    1  mean=  0.100896  std=         0  min=  0.100896  max=  0.100896
+Timings> OT output........... n=    1  mean=0.000463958  std=         0  min=0.000463958  max=0.000463958
+Timings> particleBC.......... n=    2  mean=  6.25e-08  std=2.89914e-08  min=   4.2e-08  max=   8.3e-08
+Timings> updateParticle...... n=    2  mean=   2.1e-08  std=2.96985e-08  min=         0  max=   4.2e-08
 Timings> ---------------------------------------------
