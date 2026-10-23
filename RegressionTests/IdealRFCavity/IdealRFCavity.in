@@ -1,0 +1,76 @@
+/*      IdealRFCavity.in
+        OPALX
+        Map-free ideal RF cavity with four electrons loaded from file.
+        Tests fixed-phase acceleration and particle conservation without space charge.
+*/
+
+OPTION, ECHO                     = FALSE,
+        PSDUMPFREQ               = 0,
+        STATDUMPFREQ             = 1,
+        VERSION                  = 10900,
+        ENABLELINEARTRANSFERMAPS = FALSE,
+        ASCIIDUMP                = FALSE,
+        ENABLEHDF5               = FALSE,
+        AUTOPHASE                = 0;
+
+TITLE, STRING = "Map-free ideal RF cavity";
+
+// ----------------------------------------------------------------------------
+// Beamline and ideal RF cavity
+// VOLT is the signed peak integrated voltage [MV], FREQ is in MHz, LAG is in rad.
+// Negative voltage accelerates electrons at this phase. APVETO fixes the phase.
+
+RF: RFCAVITY, TYPE     = "IDEAL",
+              L        = 0.02,
+              VOLT     = -0.1,
+              FREQ     = 100.0,
+              LAG      = 0,
+              APVETO   = TRUE,
+              ELEMEDGE = 0.02,
+              APERTURE = "RECTANGLE(0.02,0.02)";
+
+D: DRIFT, L = 0.08, ELEMEDGE = 0.0;
+
+LATTICE: LINE = (D, RF);
+
+// ----------------------------------------------------------------------------
+// Initial distribution and emission source
+// Four electrons with an initial mean kinetic energy of 6.6 MeV.
+
+DIST1: DISTRIBUTION, TYPE      = FROMFILE,
+                     FNAME     = "particles.txt",
+                     NPARTDIST = 4;
+
+ES1: EMISSIONSOURCE, DISTRIBUTION = DIST1;
+SOURCES1: EMISSIONSOURCELIST = (ES1);
+
+BEAM1: BEAM, PARTICLE = ELECTRON,
+             CHARGE   = -1,
+             NALLOC   = 4,
+             BCHARGE  = 6.408706536e-17,
+             SOURCES  = SOURCES1;
+
+// ----------------------------------------------------------------------------
+// Field solver: no space charge
+
+FS_NONE: FIELDSOLVER, TYPE   = NONE,
+                     NX     = 8,
+                     NY     = 8,
+                     NZ     = 8,
+                     BCFFTX = OPEN,
+                     BCFFTY = OPEN,
+                     BCFFTZ = OPEN;
+
+// ----------------------------------------------------------------------------
+// Tracking: fixed phase, 2 ps timestep, stop after the cavity
+
+TRACK, LINE     = LATTICE,
+       BEAM     = BEAM1,
+       MAXSTEPS = 1000,
+       DT       = 2e-12,
+       ZSTOP    = 0.06;
+
+    RUN, METHOD = PARALLEL, FIELDSOLVER = FS_NONE;
+
+ENDTRACK;
+QUIT;
