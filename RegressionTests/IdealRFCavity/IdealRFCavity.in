@@ -17,12 +17,12 @@ TITLE, STRING = "Map-free ideal RF cavity";
 
 // ----------------------------------------------------------------------------
 // Beamline and ideal RF cavity
-// VOLT is the signed peak integrated voltage [MV], FREQ is in MHz, LAG is in rad.
-// Negative voltage accelerates electrons at this phase. APVETO fixes the phase.
+// VOLT is the signed peak electric field [MV/m], FREQ is in MHz, LAG is in rad.
+// A negative field accelerates electrons at this phase. APVETO fixes the phase.
 
 RF: RFCAVITY, TYPE     = "IDEAL",
               L        = 0.02,
-              VOLT     = -0.1,
+              VOLT     = -5.0,
               FREQ     = 100.0,
               LAG      = 0,
               APVETO   = TRUE,
