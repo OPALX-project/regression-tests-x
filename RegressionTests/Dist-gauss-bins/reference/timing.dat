@@ -1,12 +1,18 @@
                       ranks  Wall tot
 =====================================
-mainTimer...........      1    0.1546
+mainTimer...........      1     0.143
 
                       ranks  Wall max  Wall min  Wall avg
 =========================================================
-mainTimer...........      1    0.1546    0.1546    0.1546
-Write Stat..........      1  0.000582  0.000582  0.000582
-Write H5-File.......      1  0.006803  0.006803  0.006803
+mainTimer...........      1     0.143     0.143     0.143
+H5 open close.......      1  0.002658  0.002658  0.002658
+H5 total step.......      1  0.002061  0.002061  0.002061
+H5 step header......      1  0.000149  0.000149  0.000149
+H5 device host copy.      1 1.416e-06 1.416e-06 1.416e-06
+H5 dataset write....      1 0.0003744 0.0003744 0.0003744
+Write Stat..........      1 0.0005742 0.0005742 0.0005742
+samplingTime........      1  0.002747  0.002747  0.002747
+Sampling............      1  0.002737  0.002737  0.002737
 bInitLimits.........      1         0         0         0
 bAllReduceLimits....      1         0         0         0
 bAllReduceGlobalHis.      1         0         0         0
@@ -14,12 +20,12 @@ bAssignUniformBins..      1         0         0         0
 bExecuteHistoReduct.      1         0         0         0
 bSortContainerByBin.      1         0         0         0
 bVerifySorting......      1         0         0         0
-samplingTime........      1    0.0026    0.0026    0.0026
-Sampling............      1  0.002577  0.002577  0.002577
-particleBC..........      1  0.001055  0.001055  0.001055
+computeMoments......      1  0.004037  0.004037  0.004037
+TIntegration1.......      1 0.0001125 0.0001125 0.0001125
+TIntegration2.......      1 0.0002463 0.0002463 0.0002463
+External field eval.      1 0.0002665 0.0002665 0.0002665
+OrbThreader.........      1    0.1268    0.1268    0.1268
+OT reference........      1    0.1259    0.1259    0.1259
+OT output...........      1 0.0008143 0.0008143 0.0008143
+particleBC..........      1  2.09e-07  2.09e-07  2.09e-07
 updateParticle......      1         0         0         0
-TIntegration1.......      1  0.000183  0.000183  0.000183
-TIntegration2.......      1  0.000301  0.000301  0.000301
-External field eval.      1  0.000565  0.000565  0.000565
-Binaryrepart........      1         0         0         0
-OrbThreader.........      1    0.1106    0.1106    0.1106
