@@ -1,4 +1,6 @@
-"Just a simple test to check that magnets get put in the right place"
+"Ten protons on the reference orbit through seven overlapping SCALINGFFAMAGNETs; checks particle/reference agreement and the reference path"
 stat "mean_x" avg 1E-4
 stat "mean_y" avg 1E-4
 stat "mean_s" avg 1E-4
+stat "ref_x" avg 1E-6
+stat "ref_z" avg 1E-6

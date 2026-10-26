@@ -1,6 +1,6 @@
-"Add one line of meaningful explanation of your test"
-stat "mean_x" avg 1E-3
-stat "mean_y" avg 1E-3
-stat "mean_z" avg 1E-3
-stat "rms_x" avg 1E-3
-stat "rms_y" avg 1E-3
+"12 MeV protons, 1000 Gaussian particles plus one reference particle from file, about 2.1 turns (ZSTOP) in a 16-cell spiral scaling FFA ring, no space charge"
+stat "mean_x" avg 1E-4
+stat "mean_y" avg 1E-4
+stat "mean_s" avg 1E-4
+stat "rms_x" avg 1E-4
+stat "rms_y" avg 1E-4
