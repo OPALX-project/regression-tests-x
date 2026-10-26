@@ -1,4 +1,4 @@
-"AWAGun-1-p3m-emittedfromfile: AWA photoinjector with EMITTEDFROMFILE source, shifted P3M solver, adaptive binning, and reduced-cost time stepping."
+"AWAGun-binned-p3m-emittedfromfile: AWA photoinjector with EMITTEDFROMFILE source, shifted P3M solver, adaptive binning, and reduced-cost time stepping."
 stat "rms_x"        avg 1E-3
 stat "rms_s"        avg 1E-3
 stat "rms_px"       avg 1E-2
