@@ -11,8 +11,8 @@ OPAL-X>          This is OPALX (Object Oriented Parallel Accelerator Library for
 OPAL-X> 
 OPAL-X> [0m
 OPAL-X> 
-OPAL-X> OPALX is the performance portable version of OPAL :: Version 0.9
-OPAL-X>             git rev. 9d3a25e29887f2df58c6c1335c48202a723c57e1
+OPAL-X> OPALX is the performance portable version of OPAL :: Version 1.0.0
+OPAL-X>             git rev. 19a4de6156286a8e92b24738a8ce2be45d6d84aa
 OPAL-X> 
 OPAL-X> 
 OPAL-X>              (c) PSI, https://github.com/OPALX-project/OPALX
@@ -21,11 +21,11 @@ OPAL-X>
 OPAL-X> Please send cookies, goodies or other motivations (wine and beer ... ) 
 OPAL-X> to the OPAL developers https://github.com/OPALX-project/OPALX/issues
 OPAL-X> 
-OPAL-X> Time: 11:15:40 date: 26/10/2026
+OPAL-X> Time: 10:33:48 date: 06/11/2026
 OPAL-X> 
-OPAL-X> * Executable: /Users/aliemen/Desktop/opalx/build/src/opalx
-OPAL-X> * Build configuration: Release
-OPAL-X> * Compiler: Clang 21.1.8
+OPAL-X> * Executable: /Users/michalis/Work/git_projects/OPALX/build_serial/src/opalx
+OPAL-X> * Build configuration: RELEASE
+OPAL-X> * Compiler: AppleClang 21.0.0.21000334
 OPAL-X> * CMake C++ flags (configure-time):  -O3 -DNDEBUG
 OPAL-X> * MPI ranks: 1
 OPAL-X> * C++ assertions: disabled (NDEBUG)
@@ -36,7 +36,7 @@ OPAL-X> * Device: Serial execution
 OPAL-X> 
 OPAL-X> * Reading input stream 'AWAGun-binned-p3m-emittedfromfile.in'
 OPAL-X> 
-OPAL-X> value: {EDES,P0,OPALVERSION} = {1.4e-09, 1.19616e-06, 900}
+OPAL-X> value: {EDES,P0,OPALVERSION} = {1.4e-09, 1.19616e-06, 10000}
 OPAL-X> 
 OPAL-X> 
 OPAL-X> value: {KSBF,SF} = {0.120154, 0.379111}
@@ -144,7 +144,7 @@ OPAL-X> * Creating new file for data: 'data/AWAGun-binned-p3m-emittedfromfile_El
 OPAL-X> * OrbitThreader work (this pass, rank 0 local; accepted includes localization trials):
 OPAL-X> * OT reference: nominal_steps=8790 advances=0 trials=8790 accepted_steps=8790 cap_splits=0 support_splits=0 max_depth=0 min_accepted_dt_s=4e-12 step_cap_s=0
 OPAL-X> * OT reference: support_lookups=8793 body_lookups=0 element_tests=35172 field_samples=8790 element_fields=9468 membership_reuses=0
-OPAL-X> * OT reference: reference_samples=0 segments=0 rays=0 ray_tracking_s=0 ray_transport_s=0 ray_exit_s=0 exit_iterations=0 log_rows=840 log_write_s=0.00284997
+OPAL-X> * OT reference: reference_samples=0 segments=0 rays=0 ray_tracking_s=0 ray_transport_s=0 ray_exit_s=0 exit_iterations=0 log_rows=840 log_write_s=0.00226109
 OPAL-X> * OT segmentation: nominal_steps=0 advances=0 trials=0 accepted_steps=0 cap_splits=0 support_splits=0 max_depth=0 min_accepted_dt_s=0 step_cap_s=0
 OPAL-X> * OT segmentation: support_lookups=0 body_lookups=0 element_tests=0 field_samples=0 element_fields=0 membership_reuses=0
 OPAL-X> * OT segmentation: reference_samples=0 segments=0 rays=0 ray_tracking_s=0 ray_transport_s=0 ray_exit_s=0 exit_iterations=0 log_rows=0 log_write_s=0
@@ -155,227 +155,227 @@ OPAL-X> * OT output: nominal_steps=0 advances=0 trials=0 accepted_steps=0 cap_sp
 OPAL-X> * OT output: support_lookups=0 body_lookups=0 element_tests=0 field_samples=0 element_fields=0 membership_reuses=0
 OPAL-X> * OT output: reference_samples=0 segments=0 rays=0 ray_tracking_s=0 ray_transport_s=0 ray_exit_s=0 exit_iterations=0 log_rows=0 log_write_s=0
 OPAL-X> 
-OPAL-X> * Track start at: 11:15:40, t= -20.038 [ps]; sStart at: 0.000 [um]
+OPAL-X> * Track start at: 10:33:48, t= -20.038 [ps]; sStart at: 0.000 [um]
 OPAL-X> * Initial dt = 31250.000 [ms]
 OPAL-X> * Max integration steps = 4000, next step = 0
 OPAL-X>                dt [ns]           sStop [m]        num Steps [1]
 OPAL-X> ->         4.000000e-12        4.000000e-01                2000
 OPAL-X>            9.000000e-11        2.000000e+00                2000
-OPAL-X> * 11:15:40 Step      0;    -- no emission yet --     t= -19.637 [ps]
-OPAL-X> * 11:15:41 Step     50 container[0] at 0.744 [um], t= 400.755 [fs], E=6.818 [keV]
-OPAL-X> * 11:15:43 Step    100 container[0] at 7.730 [mm], t= 49.232 [ps], E=349.985 [keV]
-CartesianPIC3DAlgorithm::solvePass> The bin rest-frame mesh spacing gamma*hz = 0.00237054 m is 2.10154 times the largest lab-frame spacing, giving alpha*h = 4.20309 for the P3M cutoff 0.001128 m; mesh accuracy is reduced. Increase NZ by about this factor for a near-isotropic rest-frame mesh. Further occurrences are not reported.
+OPAL-X> * 10:33:48 Step      0;    -- no emission yet --     t= -19.637 [ps]
+OPAL-X> * 10:33:49 Step     50 container[0] at 0.744 [um], t= 400.755 [fs], E=6.818 [keV]
+OPAL-X> * 10:33:51 Step    100 container[0] at 6.841 [mm], t= 45.633 [ps], E=345.203 [keV]
+CartesianPIC3DAlgorithm::solvePass> The bin rest-frame mesh spacing gamma*hz = 0.00235668 m is 2.09083 times the largest lab-frame spacing, giving alpha*h = 4.18167 for the P3M cutoff 0.00112715 m; mesh accuracy is reduced. Increase NZ by about this factor for a near-isotropic rest-frame mesh. Further occurrences are not reported.
 ParticleContainer::deleteInvalidParticles> New total number:               4095 (local: 4095)
-ParticleContainer::deleteInvalidParticles> New total number:               4091 (local: 4091)
+ParticleContainer::deleteInvalidParticles> New total number:               4092 (local: 4092)
 ParticleContainer::deleteInvalidParticles> New total number:               4083 (local: 4083)
-OPAL-X> * 11:15:46 Step    150 container[0] at 65.448 [mm], t= 249.232 [ps], E=2.528 [MeV]
-OPAL-X> * 11:15:48 Step    200 container[0] at 124.746 [mm], t= 449.232 [ps], E=4.189 [MeV]
-OPAL-X> * 11:15:49 Step    250 container[0] at 184.488 [mm], t= 649.232 [ps], E=6.291 [MeV]
-OPAL-X> * 11:15:51 Step    300 container[0] at 244.277 [mm], t= 849.232 [ps], E=6.268 [MeV]
-OPAL-X> * 11:15:52 Step    350 container[0] at 304.066 [mm], t= 1.049 [ns], E=6.268 [MeV]
-OPAL-X> * 11:15:53 Step    400 container[0] at 363.855 [mm], t= 1.249 [ns], E=6.268 [MeV]
-OPAL-X> * 11:15:54 Step    450 container[0] at 937.826 [mm], t= 3.169 [ns], E=6.267 [MeV]
+OPAL-X> * 10:33:54 Step    150 container[0] at 64.384 [mm], t= 245.633 [ps], E=2.549 [MeV]
+OPAL-X> * 10:33:55 Step    200 container[0] at 123.673 [mm], t= 445.633 [ps], E=4.159 [MeV]
+OPAL-X> * 10:33:57 Step    250 container[0] at 183.412 [mm], t= 645.633 [ps], E=6.294 [MeV]
+OPAL-X> * 10:33:58 Step    300 container[0] at 243.202 [mm], t= 845.633 [ps], E=6.274 [MeV]
+OPAL-X> * 10:33:59 Step    350 container[0] at 302.990 [mm], t= 1.046 [ns], E=6.274 [MeV]
+OPAL-X> * 10:34:00 Step    400 container[0] at 362.779 [mm], t= 1.246 [ns], E=6.274 [MeV]
+OPAL-X> * 10:34:01 Step    450 container[0] at 911.041 [mm], t= 3.080 [ns], E=6.273 [MeV]
 OPAL-X> Boris boundary trials=0, rejected=0
 OPAL-X> 
-OPAL-X> * Done executing ParallelTracker at 11:15:55
+OPAL-X> * Done executing ParallelTracker at 10:34:02
 OPAL-X> 
 OPAL-X> * End of input stream 'AWAGun-binned-p3m-emittedfromfile.in'
 Timings> ---------------------------------------------
 Timings>      Timing results for 1 rank(s):
 Timings> ---------------------------------------------
-Timings> mainTimer........... Wall tot =    14.9097
+Timings> mainTimer........... Wall tot =    13.6443
 Timings> 
-Timings> H5 open close....... Wall max =  0.0130472
-Timings>                      Wall avg =  0.0130472
-Timings>                      Wall min =  0.0130472
+Timings> H5 open close....... Wall max =   0.022944
+Timings>                      Wall avg =   0.022944
+Timings>                      Wall min =   0.022944
 Timings> 
-Timings> H5 total step....... Wall max = 0.00406533
-Timings>                      Wall avg = 0.00406533
-Timings>                      Wall min = 0.00406533
+Timings> H5 total step....... Wall max = 0.00319421
+Timings>                      Wall avg = 0.00319421
+Timings>                      Wall min = 0.00319421
 Timings> 
-Timings> H5 step header...... Wall max = 0.000784708
-Timings>                      Wall avg = 0.000784708
-Timings>                      Wall min = 0.000784708
+Timings> H5 step header...... Wall max = 0.000174125
+Timings>                      Wall avg = 0.000174125
+Timings>                      Wall min = 0.000174125
 Timings> 
-Timings> H5 device host copy. Wall max =  1.542e-06
-Timings>                      Wall avg =  1.542e-06
-Timings>                      Wall min =  1.542e-06
+Timings> H5 device host copy. Wall max =  1.583e-06
+Timings>                      Wall avg =  1.583e-06
+Timings>                      Wall min =  1.583e-06
 Timings> 
-Timings> H5 dataset write.... Wall max = 0.00205963
-Timings>                      Wall avg = 0.00205963
-Timings>                      Wall min = 0.00205963
+Timings> H5 dataset write.... Wall max = 0.00169538
+Timings>                      Wall avg = 0.00169538
+Timings>                      Wall min = 0.00169538
 Timings> 
-Timings> Write Stat.......... Wall max =  0.0197682
-Timings>                      Wall avg =  0.0197682
-Timings>                      Wall min =  0.0197682
+Timings> Write Stat.......... Wall max =  0.0200365
+Timings>                      Wall avg =  0.0200365
+Timings>                      Wall min =  0.0200365
 Timings> 
-Timings> samplingTime........ Wall max = 0.00699417
-Timings>                      Wall avg = 0.00699417
-Timings>                      Wall min = 0.00699417
+Timings> samplingTime........ Wall max = 0.00637775
+Timings>                      Wall avg = 0.00637775
+Timings>                      Wall min = 0.00637775
 Timings> 
-Timings> bInitLimits......... Wall max =   0.003071
-Timings>                      Wall avg =   0.003071
-Timings>                      Wall min =   0.003071
+Timings> bInitLimits......... Wall max = 0.00290737
+Timings>                      Wall avg = 0.00290737
+Timings>                      Wall min = 0.00290737
 Timings> 
-Timings> bAllReduceLimits.... Wall max = 1.9245e-05
-Timings>                      Wall avg = 1.9245e-05
-Timings>                      Wall min = 1.9245e-05
+Timings> bAllReduceLimits.... Wall max = 2.3999e-05
+Timings>                      Wall avg = 2.3999e-05
+Timings>                      Wall min = 2.3999e-05
 Timings> 
-Timings> bAllReduceGlobalHis. Wall max = 5.1707e-05
-Timings>                      Wall avg = 5.1707e-05
-Timings>                      Wall min = 5.1707e-05
+Timings> bAllReduceGlobalHis. Wall max = 4.6453e-05
+Timings>                      Wall avg = 4.6453e-05
+Timings>                      Wall min = 4.6453e-05
 Timings> 
-Timings> bAssignUniformBins.. Wall max = 0.00197462
-Timings>                      Wall avg = 0.00197462
-Timings>                      Wall min = 0.00197462
+Timings> bAssignUniformBins.. Wall max = 0.00151355
+Timings>                      Wall avg = 0.00151355
+Timings>                      Wall min = 0.00151355
 Timings> 
-Timings> bExecuteHistoReduct. Wall max = 0.00519425
-Timings>                      Wall avg = 0.00519425
-Timings>                      Wall min = 0.00519425
+Timings> bExecuteHistoReduct. Wall max =  0.0048448
+Timings>                      Wall avg =  0.0048448
+Timings>                      Wall min =  0.0048448
 Timings> 
-Timings> bSortContainerByBin. Wall max = 0.00330577
-Timings>                      Wall avg = 0.00330577
-Timings>                      Wall min = 0.00330577
+Timings> bSortContainerByBin. Wall max = 0.00320791
+Timings>                      Wall avg = 0.00320791
+Timings>                      Wall min = 0.00320791
 Timings> 
 Timings> bVerifySorting...... Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> Initialize.......... Wall max = 0.00271929
-Timings>                      Wall avg = 0.00271929
-Timings>                      Wall min = 0.00271929
+Timings> Initialize.......... Wall max = 0.00242933
+Timings>                      Wall avg = 0.00242933
+Timings>                      Wall min = 0.00242933
 Timings> 
-Timings> Warmup.............. Wall max =   0.001328
-Timings>                      Wall avg =   0.001328
-Timings>                      Wall min =   0.001328
+Timings> Warmup.............. Wall max = 0.00115879
+Timings>                      Wall avg = 0.00115879
+Timings>                      Wall min = 0.00115879
 Timings> 
-Timings> Green Init.......... Wall max = 0.000862084
-Timings>                      Wall avg = 0.000862084
-Timings>                      Wall min = 0.000862084
+Timings> Green Init.......... Wall max =   0.000704
+Timings>                      Wall avg =   0.000704
+Timings>                      Wall min =   0.000704
 Timings> 
-Timings> FFT: Green.......... Wall max =    1.06304
-Timings>                      Wall avg =    1.06304
-Timings>                      Wall min =    1.06304
+Timings> FFT: Green.......... Wall max =   0.943437
+Timings>                      Wall avg =   0.943437
+Timings>                      Wall min =   0.943437
 Timings> 
-Timings> P3M: mesh solve..... Wall max =    5.88015
-Timings>                      Wall avg =    5.88015
-Timings>                      Wall min =    5.88015
+Timings> P3M: mesh solve..... Wall max =    5.28691
+Timings>                      Wall avg =    5.28691
+Timings>                      Wall min =    5.28691
 Timings> 
-Timings> P3M: image solve.... Wall max =    5.69335
-Timings>                      Wall avg =    5.69335
-Timings>                      Wall min =    5.69335
+Timings> P3M: image solve.... Wall max =    5.11013
+Timings>                      Wall avg =    5.11013
+Timings>                      Wall min =    5.11013
 Timings> 
-Timings> Solve............... Wall max =    10.4564
-Timings>                      Wall avg =    10.4564
-Timings>                      Wall min =    10.4564
+Timings> Solve............... Wall max =    9.41296
+Timings>                      Wall avg =    9.41296
+Timings>                      Wall min =    9.41296
 Timings> 
-Timings> Solve: Physical to . Wall max = 0.00577987
-Timings>                      Wall avg = 0.00577987
-Timings>                      Wall min = 0.00577987
+Timings> Solve: Physical to . Wall max = 0.00501431
+Timings>                      Wall avg = 0.00501431
+Timings>                      Wall min = 0.00501431
 Timings> 
-Timings> FFT: Rho............ Wall max =    2.11535
-Timings>                      Wall avg =    2.11535
-Timings>                      Wall min =    2.11535
+Timings> FFT: Rho............ Wall max =    1.88971
+Timings>                      Wall avg =    1.88971
+Timings>                      Wall min =    1.88971
 Timings> 
-Timings> Solve: Electric fie. Wall max =    7.00178
-Timings>                      Wall avg =    7.00178
-Timings>                      Wall min =    7.00178
+Timings> Solve: Electric fie. Wall max =      6.323
+Timings>                      Wall avg =      6.323
+Timings>                      Wall min =      6.323
 Timings> 
-Timings> FFT: Efield......... Wall max =    6.36342
-Timings>                      Wall avg =    6.36342
-Timings>                      Wall min =    6.36342
+Timings> FFT: Efield......... Wall max =     5.7217
+Timings>                      Wall avg =     5.7217
+Timings>                      Wall min =     5.7217
 Timings> 
-Timings> Efield: double to p. Wall max =  0.0290255
-Timings>                      Wall avg =  0.0290255
-Timings>                      Wall min =  0.0290255
+Timings> Efield: double to p. Wall max =  0.0239318
+Timings>                      Wall avg =  0.0239318
+Timings>                      Wall min =  0.0239318
 Timings> 
-Timings> computeMoments...... Wall max =   0.193509
-Timings>                      Wall avg =   0.193509
-Timings>                      Wall min =   0.193509
+Timings> computeMoments...... Wall max =    0.18668
+Timings>                      Wall avg =    0.18668
+Timings>                      Wall min =    0.18668
 Timings> 
-Timings> TIntegration1....... Wall max = 0.00464129
-Timings>                      Wall avg = 0.00464129
-Timings>                      Wall min = 0.00464129
+Timings> TIntegration1....... Wall max = 0.00443181
+Timings>                      Wall avg = 0.00443181
+Timings>                      Wall min = 0.00443181
 Timings> 
-Timings> TIntegration2....... Wall max =  0.0148587
-Timings>                      Wall avg =  0.0148587
-Timings>                      Wall min =  0.0148587
+Timings> TIntegration2....... Wall max =  0.0139551
+Timings>                      Wall avg =  0.0139551
+Timings>                      Wall min =  0.0139551
 Timings> 
-Timings> External field eval. Wall max =  0.0595136
-Timings>                      Wall avg =  0.0595136
-Timings>                      Wall min =  0.0595136
+Timings> External field eval. Wall max =  0.0566881
+Timings>                      Wall avg =  0.0566881
+Timings>                      Wall min =  0.0566881
 Timings> 
-Timings> OrbThreader......... Wall max = 0.00654429
-Timings>                      Wall avg = 0.00654429
-Timings>                      Wall min = 0.00654429
+Timings> OrbThreader......... Wall max = 0.00684567
+Timings>                      Wall avg = 0.00684567
+Timings>                      Wall min = 0.00684567
 Timings> 
-Timings> OT reference........ Wall max = 0.00593346
-Timings>                      Wall avg = 0.00593346
-Timings>                      Wall min = 0.00593346
+Timings> OT reference........ Wall max = 0.00571488
+Timings>                      Wall avg = 0.00571488
+Timings>                      Wall min = 0.00571488
 Timings> 
-Timings> OT output........... Wall max = 0.000426792
-Timings>                      Wall avg = 0.000426792
-Timings>                      Wall min = 0.000426792
+Timings> OT output........... Wall max =    0.00098
+Timings>                      Wall avg =    0.00098
+Timings>                      Wall min =    0.00098
 Timings> 
-Timings> particleBC.......... Wall max = 0.00027729
-Timings>                      Wall avg = 0.00027729
-Timings>                      Wall min = 0.00027729
+Timings> particleBC.......... Wall max = 0.000246123
+Timings>                      Wall avg = 0.000246123
+Timings>                      Wall min = 0.000246123
 Timings> 
-Timings> createPeriodicGhost. Wall max = 2.6581e-05
-Timings>                      Wall avg = 2.6581e-05
-Timings>                      Wall min = 2.6581e-05
+Timings> createPeriodicGhost. Wall max = 2.3495e-05
+Timings>                      Wall avg = 2.3495e-05
+Timings>                      Wall min = 2.3495e-05
 Timings> 
 Timings> updateParticle...... Wall max =          0
 Timings>                      Wall avg =          0
 Timings>                      Wall min =          0
 Timings> 
-Timings> cellBuildTimer...... Wall max =   0.551093
-Timings>                      Wall avg =   0.551093
-Timings>                      Wall min =   0.551093
+Timings> cellBuildTimer...... Wall max =    0.52934
+Timings>                      Wall avg =    0.52934
+Timings>                      Wall min =    0.52934
 Timings> 
-Timings> bDeviceSyncronizati. Wall max = 0.00012527
-Timings>                      Wall avg = 0.00012527
-Timings>                      Wall min = 0.00012527
+Timings> bDeviceSyncronizati. Wall max = 0.000121279
+Timings>                      Wall avg = 0.000121279
+Timings>                      Wall min = 0.000121279
 Timings> 
-Timings> bHistogramInit...... Wall max = 0.000942737
-Timings>                      Wall avg = 0.000942737
-Timings>                      Wall min = 0.000942737
+Timings> bHistogramInit...... Wall max = 0.000716086
+Timings>                      Wall avg = 0.000716086
+Timings>                      Wall min = 0.000716086
 Timings> 
-Timings> bMergeBins.......... Wall max =  0.0218948
-Timings>                      Wall avg =  0.0218948
-Timings>                      Wall min =  0.0218948
+Timings> bMergeBins.......... Wall max =  0.0191251
+Timings>                      Wall avg =  0.0191251
+Timings>                      Wall min =  0.0191251
 Timings> 
-Timings> scatter............. Wall max =  0.0339073
-Timings>                      Wall avg =  0.0339073
-Timings>                      Wall min =  0.0339073
+Timings> scatter............. Wall max =  0.0315871
+Timings>                      Wall avg =  0.0315871
+Timings>                      Wall min =  0.0315871
 Timings> 
-Timings> accumulateHalo...... Wall max = 8.8103e-05
-Timings>                      Wall avg = 8.8103e-05
-Timings>                      Wall min = 8.8103e-05
+Timings> accumulateHalo...... Wall max = 8.7905e-05
+Timings>                      Wall avg = 8.7905e-05
+Timings>                      Wall min = 8.7905e-05
 Timings> 
-Timings> FFT: Shifted Green.. Wall max =    1.05427
-Timings>                      Wall avg =    1.05427
-Timings>                      Wall min =    1.05427
+Timings> FFT: Shifted Green.. Wall max =   0.945262
+Timings>                      Wall avg =   0.945262
+Timings>                      Wall min =   0.945262
 Timings> 
-Timings> mirrorField......... Wall max =   0.021401
-Timings>                      Wall avg =   0.021401
-Timings>                      Wall min =   0.021401
+Timings> mirrorField......... Wall max =  0.0196684
+Timings>                      Wall avg =  0.0196684
+Timings>                      Wall min =  0.0196684
 Timings> 
-Timings> fillHalo............ Wall max = 3.2493e-05
-Timings>                      Wall avg = 3.2493e-05
-Timings>                      Wall min = 3.2493e-05
+Timings> fillHalo............ Wall max = 2.3704e-05
+Timings>                      Wall avg = 2.3704e-05
+Timings>                      Wall min = 2.3704e-05
 Timings> 
-Timings> gather.............. Wall max =  0.0179839
-Timings>                      Wall avg =  0.0179839
-Timings>                      Wall min =  0.0179839
+Timings> gather.............. Wall max =  0.0183261
+Timings>                      Wall avg =  0.0183261
+Timings>                      Wall min =  0.0183261
 Timings> 
-Timings> P3M: PP moving src.. Wall max =    2.06489
-Timings>                      Wall avg =    2.06489
-Timings>                      Wall min =    2.06489
+Timings> P3M: PP moving src.. Wall max =    2.04255
+Timings>                      Wall avg =    2.04255
+Timings>                      Wall min =    2.04255
 Timings> 
-Timings> PPInteractionTimer.. Wall max =    2.06464
-Timings>                      Wall avg =    2.06464
-Timings>                      Wall min =    2.06464
+Timings> PPInteractionTimer.. Wall max =    2.04241
+Timings>                      Wall avg =    2.04241
+Timings>                      Wall min =    2.04241
 Timings> 
 Timings> ---------------------------------------------
 Timings>      Measurement counts:
@@ -386,98 +386,98 @@ Timings> H5 total step....... Count =          1
 Timings> H5 step header...... Count =          1
 Timings> H5 device host copy. Count =          5
 Timings> H5 dataset write.... Count =         11
-Timings> Write Stat.......... Count =         98
+Timings> Write Stat.......... Count =         99
 Timings> samplingTime........ Count =          1
-Timings> bInitLimits......... Count =        477
-Timings> bAllReduceLimits.... Count =        477
-Timings> bAllReduceGlobalHis. Count =        477
-Timings> bAssignUniformBins.. Count =        477
-Timings> bExecuteHistoReduct. Count =        954
-Timings> bSortContainerByBin. Count =        477
+Timings> bInitLimits......... Count =        478
+Timings> bAllReduceLimits.... Count =        478
+Timings> bAllReduceGlobalHis. Count =        478
+Timings> bAssignUniformBins.. Count =        478
+Timings> bExecuteHistoReduct. Count =        956
+Timings> bSortContainerByBin. Count =        478
 Timings> bVerifySorting...... Count =          0
 Timings> Initialize.......... Count =          1
 Timings> Warmup.............. Count =          1
 Timings> Green Init.......... Count =          1
-Timings> FFT: Green.......... Count =       1754
-Timings> P3M: mesh solve..... Count =       1754
-Timings> P3M: image solve.... Count =       1753
-Timings> Solve............... Count =       3507
-Timings> Solve: Physical to . Count =       3507
-Timings> FFT: Rho............ Count =       3507
-Timings> Solve: Electric fie. Count =       3507
-Timings> FFT: Efield......... Count =      10521
-Timings> Efield: double to p. Count =      10521
-Timings> computeMoments...... Count =       2910
-Timings> TIntegration1....... Count =        490
-Timings> TIntegration2....... Count =        490
-Timings> External field eval. Count =        490
+Timings> FFT: Green.......... Count =       1705
+Timings> P3M: mesh solve..... Count =       1705
+Timings> P3M: image solve.... Count =       1704
+Timings> Solve............... Count =       3409
+Timings> Solve: Physical to . Count =       3409
+Timings> FFT: Rho............ Count =       3409
+Timings> Solve: Electric fie. Count =       3409
+Timings> FFT: Efield......... Count =      10227
+Timings> Efield: double to p. Count =      10227
+Timings> computeMoments...... Count =       2916
+Timings> TIntegration1....... Count =        491
+Timings> TIntegration2....... Count =        491
+Timings> External field eval. Count =        491
 Timings> OrbThreader......... Count =          1
 Timings> OT reference........ Count =          1
 Timings> OT output........... Count =          1
-Timings> particleBC.......... Count =        954
-Timings> createPeriodicGhost. Count =        954
+Timings> particleBC.......... Count =        956
+Timings> createPeriodicGhost. Count =        956
 Timings> updateParticle...... Count =          0
-Timings> cellBuildTimer...... Count =        954
-Timings> bDeviceSyncronizati. Count =       5247
-Timings> bHistogramInit...... Count =       2862
-Timings> bMergeBins.......... Count =        477
-Timings> scatter............. Count =       3506
-Timings> accumulateHalo...... Count =       3506
-Timings> FFT: Shifted Green.. Count =       1753
-Timings> mirrorField......... Count =       1753
-Timings> fillHalo............ Count =        954
-Timings> gather.............. Count =        954
-Timings> P3M: PP moving src.. Count =        477
-Timings> PPInteractionTimer.. Count =        477
+Timings> cellBuildTimer...... Count =        956
+Timings> bDeviceSyncronizati. Count =       5258
+Timings> bHistogramInit...... Count =       2868
+Timings> bMergeBins.......... Count =        478
+Timings> scatter............. Count =       3408
+Timings> accumulateHalo...... Count =       3408
+Timings> FFT: Shifted Green.. Count =       1704
+Timings> mirrorField......... Count =       1704
+Timings> fillHalo............ Count =        956
+Timings> gather.............. Count =        956
+Timings> P3M: PP moving src.. Count =        478
+Timings> PPInteractionTimer.. Count =        478
 Timings> ---------------------------------------------
 Timings> ---------------------------------------------
 Timings>      Per-occurrence statistics:
 Timings> ---------------------------------------------
-Timings> mainTimer........... n=    1  mean=   14.9097  std=         0  min=   14.9097  max=   14.9097
-Timings> H5 open close....... n=    4  mean=0.00326179  std=0.00541614  min=0.000255625  max= 0.0113743
-Timings> H5 total step....... n=    1  mean=0.00406533  std=         0  min=0.00406533  max=0.00406533
-Timings> H5 step header...... n=    1  mean=0.000784708  std=         0  min=0.000784708  max=0.000784708
-Timings> H5 device host copy. n=    5  mean= 3.084e-07  std=1.2348e-07  min=  1.67e-07  max=     5e-07
-Timings> H5 dataset write.... n=   11  mean=0.000187239  std=0.000445049  min=1.4917e-05  max=0.00148988
-Timings> Write Stat.......... n=   98  mean=0.000201716  std=4.05974e-05  min=0.000131875  max=  0.000367
-Timings> samplingTime........ n=    1  mean=0.00699417  std=         0  min=0.00699417  max=0.00699417
-Timings> bInitLimits......... n=  477  mean=6.43815e-06  std=1.64769e-06  min=  2.09e-07  max=1.1125e-05
-Timings> bAllReduceLimits.... n=  477  mean=4.03459e-08  std=3.09284e-08  min=         0  max=  3.34e-07
-Timings> bAllReduceGlobalHis. n=  477  mean= 1.084e-07  std=4.09999e-08  min=   4.1e-08  max=     5e-07
-Timings> bAssignUniformBins.. n=  477  mean=4.13967e-06  std=1.12465e-06  min=  2.09e-07  max=   1.3e-05
-Timings> bExecuteHistoReduct. n=  954  mean=5.44471e-06  std=2.36671e-06  min=  5.41e-07  max=1.8125e-05
-Timings> bSortContainerByBin. n=  477  mean=6.93035e-06  std=1.76622e-06  min=   2.5e-07  max=1.1541e-05
-Timings> Initialize.......... n=    1  mean=0.00271929  std=         0  min=0.00271929  max=0.00271929
-Timings> Warmup.............. n=    1  mean=  0.001328  std=         0  min=  0.001328  max=  0.001328
-Timings> Green Init.......... n=    1  mean=0.000862084  std=         0  min=0.000862084  max=0.000862084
-Timings> FFT: Green.......... n= 1754  mean=0.000606065  std=9.88231e-05  min=0.000533292  max=0.00303408
-Timings> P3M: mesh solve..... n= 1754  mean=0.00335242  std=0.000322621  min=0.00278292  max=  0.010625
-Timings> P3M: image solve.... n= 1753  mean=0.00324777  std=0.00025994  min=0.00289029  max= 0.0107991
-Timings> Solve............... n= 3507  mean=0.00298157  std=0.000470429  min=0.00231258  max= 0.0106216
-Timings> Solve: Physical to . n= 3507  mean=1.6481e-06  std=4.61769e-06  min= 1.166e-06  max=0.000274041
-Timings> FFT: Rho............ n= 3507  mean=0.00060318  std=6.08363e-05  min=0.000531708  max=0.00202625
-Timings> Solve: Electric fie. n= 3507  mean=0.00199651  std=0.000201084  min= 0.0017635  max=0.00953271
-Timings> FFT: Efield......... n=10521  mean=0.000604831  std=8.27811e-05  min=0.000531917  max=0.00680862
-Timings> Efield: double to p. n=10521  mean=2.75881e-06  std=6.15916e-07  min=  2.25e-06  max=1.6875e-05
-Timings> computeMoments...... n= 2910  mean=6.64978e-05  std=1.96518e-05  min=  3.75e-07  max=0.000215042
-Timings> TIntegration1....... n=  490  mean=9.47202e-06  std=2.93614e-06  min=  3.33e-07  max=2.4292e-05
-Timings> TIntegration2....... n=  490  mean=3.03239e-05  std=1.05654e-05  min=  7.92e-07  max=0.000120125
-Timings> External field eval. n=  490  mean=0.000121456  std=5.29373e-05  min= 4.541e-06  max=0.000476541
-Timings> OrbThreader......... n=    1  mean=0.00654429  std=         0  min=0.00654429  max=0.00654429
-Timings> OT reference........ n=    1  mean=0.00593346  std=         0  min=0.00593346  max=0.00593346
-Timings> OT output........... n=    1  mean=0.000426792  std=         0  min=0.000426792  max=0.000426792
-Timings> particleBC.......... n=  954  mean=2.9066e-07  std=4.24154e-07  min=   8.3e-08  max=1.1458e-05
-Timings> createPeriodicGhost. n=  954  mean=2.78627e-08  std=2.8606e-08  min=         0  max=  3.33e-07
-Timings> cellBuildTimer...... n=  954  mean=0.000577666  std= 0.0069508  min=  2.15e-05  max=  0.181777
-Timings> bDeviceSyncronizati. n= 5247  mean=2.38746e-08  std=2.09063e-08  min=         0  max=  1.67e-07
-Timings> bHistogramInit...... n= 2862  mean=3.29398e-07  std=2.35208e-07  min=   4.1e-08  max= 1.583e-06
-Timings> bMergeBins.......... n=  477  mean=4.59011e-05  std=6.09584e-06  min=3.1541e-05  max=0.000126791
-Timings> scatter............. n= 3506  mean=9.67123e-06  std=4.61301e-06  min=  3.33e-07  max=6.5792e-05
-Timings> accumulateHalo...... n= 3506  mean=2.51292e-08  std=2.11372e-08  min=         0  max=  1.67e-07
-Timings> FFT: Shifted Green.. n= 1753  mean=0.000601412  std=2.65964e-05  min=0.000530875  max=0.00115754
-Timings> mirrorField......... n= 1753  mean=1.22082e-05  std=2.11583e-06  min= 9.333e-06  max=4.3792e-05
-Timings> fillHalo............ n=  954  mean=3.40597e-08  std=1.10963e-07  min=         0  max= 2.459e-06
-Timings> gather.............. n=  954  mean=1.88511e-05  std=4.90698e-06  min=  2.08e-07  max=3.5417e-05
-Timings> P3M: PP moving src.. n=  477  mean=0.00432891  std=0.00774509  min= 7.917e-06  max= 0.0563535
-Timings> PPInteractionTimer.. n=  477  mean=0.00432838  std=0.00774507  min= 6.959e-06  max= 0.0563529
+Timings> mainTimer........... n=    1  mean=   13.6443  std=         0  min=   13.6443  max=   13.6443
+Timings> H5 open close....... n=    4  mean=0.00573599  std= 0.0102352  min=0.000517875  max= 0.0210876
+Timings> H5 total step....... n=    1  mean=0.00319421  std=         0  min=0.00319421  max=0.00319421
+Timings> H5 step header...... n=    1  mean=0.000174125  std=         0  min=0.000174125  max=0.000174125
+Timings> H5 device host copy. n=    5  mean= 3.166e-07  std=4.74057e-08  min=   2.5e-07  max=  3.75e-07
+Timings> H5 dataset write.... n=   11  mean=0.000154125  std=0.000287871  min=1.9458e-05  max=0.000827791
+Timings> Write Stat.......... n=   99  mean=0.000202388  std=0.00011098  min=  0.000115  max=0.00120017
+Timings> samplingTime........ n=    1  mean=0.00637775  std=         0  min=0.00637775  max=0.00637775
+Timings> bInitLimits......... n=  478  mean=6.08236e-06  std=1.5332e-06  min=  2.08e-07  max=1.3083e-05
+Timings> bAllReduceLimits.... n=  478  mean=5.02071e-08  std=3.20203e-08  min=         0  max=  3.33e-07
+Timings> bAllReduceGlobalHis. n=  478  mean=9.7182e-08  std=2.80686e-08  min=   4.1e-08  max=  2.09e-07
+Timings> bAssignUniformBins.. n=  478  mean=3.16643e-06  std=7.43338e-07  min=   2.5e-07  max= 5.958e-06
+Timings> bExecuteHistoReduct. n=  956  mean=5.06779e-06  std=2.45109e-06  min=  4.58e-07  max= 1.575e-05
+Timings> bSortContainerByBin. n=  478  mean=6.71111e-06  std=1.70332e-06  min=  2.91e-07  max=1.2458e-05
+Timings> Initialize.......... n=    1  mean=0.00242933  std=         0  min=0.00242933  max=0.00242933
+Timings> Warmup.............. n=    1  mean=0.00115879  std=         0  min=0.00115879  max=0.00115879
+Timings> Green Init.......... n=    1  mean=  0.000704  std=         0  min=  0.000704  max=  0.000704
+Timings> FFT: Green.......... n= 1705  mean=0.000553336  std=2.28751e-05  min=0.000499042  max=0.000711792
+Timings> P3M: mesh solve..... n= 1705  mean=0.00310082  std=0.00019146  min=0.00239717  max=0.00758967
+Timings> P3M: image solve.... n= 1704  mean= 0.0029989  std=0.000176558  min=0.00271012  max=0.00868779
+Timings> Solve............... n= 3409  mean=0.00276121  std=0.000380838  min=0.00218454  max=0.00758892
+Timings> Solve: Physical to . n= 3409  mean=1.4709e-06  std=1.01231e-06  min= 1.125e-06  max=5.8459e-05
+Timings> FFT: Rho............ n= 3409  mean=0.000554331  std=3.27304e-05  min=0.000498208  max=0.00182133
+Timings> Solve: Electric fie. n= 3409  mean= 0.0018548  std=0.000131821  min=0.00166879  max=0.00643412
+Timings> FFT: Efield......... n=10227  mean=0.00055947  std=4.50736e-05  min=0.000500542  max=0.00283971
+Timings> Efield: double to p. n=10227  mean=2.34006e-06  std=3.41508e-07  min=     2e-06  max=1.1792e-05
+Timings> computeMoments...... n= 2916  mean=6.40192e-05  std=1.80266e-05  min=  4.16e-07  max=0.000172833
+Timings> TIntegration1....... n=  491  mean=9.02609e-06  std=2.73261e-06  min=  3.33e-07  max=   2.1e-05
+Timings> TIntegration2....... n=  491  mean=2.84218e-05  std=8.21855e-06  min=  8.33e-07  max=4.7625e-05
+Timings> External field eval. n=  491  mean=0.000115454  std=4.83485e-05  min= 4.875e-06  max=0.000181458
+Timings> OrbThreader......... n=    1  mean=0.00684567  std=         0  min=0.00684567  max=0.00684567
+Timings> OT reference........ n=    1  mean=0.00571488  std=         0  min=0.00571488  max=0.00571488
+Timings> OT output........... n=    1  mean=   0.00098  std=         0  min=   0.00098  max=   0.00098
+Timings> particleBC.......... n=  956  mean=2.57451e-07  std=3.04598e-06  min=   8.3e-08  max=9.4208e-05
+Timings> createPeriodicGhost. n=  956  mean=2.45764e-08  std=2.25345e-08  min=         0  max=  1.25e-07
+Timings> cellBuildTimer...... n=  956  mean=0.000553703  std=0.00696282  min=2.2583e-05  max=  0.188388
+Timings> bDeviceSyncronizati. n= 5258  mean=2.30656e-08  std=2.07396e-08  min=         0  max=   8.3e-08
+Timings> bHistogramInit...... n= 2868  mean=2.49681e-07  std=9.22238e-07  min=   4.1e-08  max=4.7417e-05
+Timings> bMergeBins.......... n=  478  mean=4.00107e-05  std=3.37224e-06  min=3.1125e-05  max=5.9875e-05
+Timings> scatter............. n= 3408  mean=9.26853e-06  std=4.17202e-06  min=  3.33e-07  max=   5.9e-05
+Timings> accumulateHalo...... n= 3408  mean=2.57937e-08  std=1.03779e-07  min=         0  max= 5.958e-06
+Timings> FFT: Shifted Green.. n= 1704  mean=0.000554731  std=2.9213e-05  min=0.000499042  max=0.00117175
+Timings> mirrorField......... n= 1704  mean=1.15425e-05  std=8.9867e-06  min= 9.292e-06  max=0.000377375
+Timings> fillHalo............ n=  956  mean=2.4795e-08  std=2.11578e-08  min=         0  max=  1.25e-07
+Timings> gather.............. n=  956  mean=1.91696e-05  std=5.53022e-06  min=  2.08e-07  max=   7.7e-05
+Timings> P3M: PP moving src.. n=  478  mean=0.00427312  std=0.00782928  min=   8.5e-06  max= 0.0569299
+Timings> PPInteractionTimer.. n=  478  mean=0.00427283  std=0.00782917  min= 7.625e-06  max= 0.0569292
 Timings> ---------------------------------------------
