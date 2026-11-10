@@ -70,3 +70,11 @@ The six [PR 544 tracking cases](docs/pr-544-regressions.md) cover DBA COF launch
 cyclotron coasting and RF stopping, and MIDPOINT/PRESTEP space charge using only
 final `.stat` comparisons. The guide records their tolerances, reference
 provenance, limitations, and the command to run all 89 checks.
+
+## FFT2D5 curved-orbit validation
+
+The [uniform-field ellipsoid cases](docs/fft2d5-uniform-b.md) add zero-space-charge
+and 1 pC half-turn tracking controls. Their test-local `validate.py` checks every
+time step against an independent covariance model. Direct-launch CI runners
+must invoke that hook in addition to their conventional `.rt` baseline checks;
+last/average comparisons alone do not enforce the all-step physics criterion.

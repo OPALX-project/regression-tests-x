@@ -1,0 +1,4 @@
+"Uniform-field half-turn thin ellipsoid; baseline RMS checks complement validate.py all-step independent-physics checks"
+stat "rms_x" last 1E-5
+stat "rms_y" last 1E-5
+stat "rms_s" last 1E-5

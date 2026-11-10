@@ -1,0 +1,17 @@
+{
+  "model": "independent nonrelativistic electrostatic cold affine uniform ellipsoid",
+  "input_from_OPALX": false,
+  "config_sha256": "64186e535662814cc4a893ab9a1d65da1a06a87382b89387e8e61f8b8246de97",
+  "model_source_sha256": "fa868b75bf1d0dade70cd41b7ee5182cafdf87711d94d73d471325572b960708",
+  "covariance_sha256": "e074c2566f908603a426fc2b54fd7ae55881d276cc4001a1a7dc746e3dcc95c0",
+  "integrator": "DOP853",
+  "rtol": 2e-11,
+  "atol": 2e-13,
+  "independent_model_checks": {
+    "energy_max_relative_drift": 9.34765598259446e-11,
+    "canonical_Lz_max_relative_drift": 9.550693569337909e-11,
+    "max_sum_D_error": 4.440892098500626e-16,
+    "upper_bound_particle_beta": 0.010500264004762732,
+    "min_det_A_m3": 1.2500000000000005e-07
+  }
+}
