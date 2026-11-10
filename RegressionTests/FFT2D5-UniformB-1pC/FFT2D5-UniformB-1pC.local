@@ -1,0 +1,7 @@
+#!/bin/bash
+set -euo pipefail
+cd "$(cd "$(dirname "$0")" && pwd)"
+export OMP_NUM_THREADS="${OMP_NUM_THREADS:-4}"
+export OMP_PROC_BIND=false
+mpirun -np 1 "${OPALX_EXE_PATH:?Set OPALX_EXE_PATH to the binary directory}/opalx" FFT2D5-UniformB-1pC.in --info 4 "$@" 2>&1
+"${OPALX_PYTHON:-python3}" validate.py --stat FFT2D5-UniformB-1pC.stat --output physics-validation.json

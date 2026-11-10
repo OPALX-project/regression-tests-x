@@ -1,0 +1,2 @@
+# Preserve native generated SDDS bytes, including their padded columns.
+reference/*.stat -whitespace

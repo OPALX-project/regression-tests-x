@@ -1,0 +1,23 @@
+{
+  "generated_with": "bin/makeReference.sh --ranks 1 in private copy",
+  "OPALX_commit": "fd6ba8dc5c952ce034869dc40e963ecabef7cfa8",
+  "OPALX_binary_sha256": "ba08fdd0b0bb1e90a64ba0fd3763a8b6d044b128c0af9b9dfd215ad0ffac8fd4",
+  "MPI_ranks": 1,
+  "OMP_NUM_THREADS": 4,
+  "regression_base_commit": "a8bd50c40d66ecb2ce4a75d5c15b6ecb86ae5615",
+  "input_sha256": {
+    "FFT2D5-UniformB-ZeroSC.in": "6647d5205c841c6141f1c850669871ab074108d6297f84041f246f3f15dcceda",
+    "ellipsoid.dist": "da5607b38e39c45ca899b7d1577b1c682e3575c8f431435c978b15d04b78070a",
+    "uniform-by.g4blmap": "4f3df35fa2bb8decc61f0007eb11ca38eb00805d033ac2e8805e8e3ba7755741",
+    "reference_path.dat": "83aec299d216e5ab46f57897814d7c809ad5f106acac103b0174ec06cc5c93fd",
+    "physics_config.json": "af7c7b40c47c7d08fb520de5dd84ffee85e0101e78289587355ee25ce4b0b68b",
+    "analytic_covariance.csv": "b072ff0d28cd4168912d84c1b798c37cdbdd208c83e756b70136b0e41e49bda1",
+    "analytic_provenance.json": "e2183eefa3c144daab5c2fc34bc6746d0d9d271762d3fc85ea88ab4e98febea5",
+    "validate.py": "1e2f9d01c0ab114fbf2633d08c173c04cbbe32fcf1e4513cdccf0047091b3338",
+    "ellipsoid_model.py": "fa868b75bf1d0dade70cd41b7ee5182cafdf87711d94d73d471325572b960708",
+    "make_analytic_reference.py": "10cbfc41343380cf50590c71e35bf21322cfce3c03acf261ff55080621ac512c"
+  },
+  "stat_sha256": "df906d02717e7c0cf917ff8be38753ed3738b2064a22426e19afd4d0c398a2bb",
+  "no_hand_edited_simulation_reference": true,
+  "full_step_physics_validation": "reference_validation.json"
+}
