@@ -1,7 +1,7 @@
 // Deterministic one-particle regression; no self fields or random sampling.
 // Keep only the forced final statistics row; disable phase-space dumps.
 // Lattice, maps and launch are from the existing cyclotron guard fixtures.
-OPTION, VERSION=10900, PSDUMPFREQ=0, STATDUMPFREQ=1000000000, STEPINFOFQ=1000;
+OPTION, PSDUMPFREQ=0, STATDUMPFREQ=1000000000, STEPINFOFQ=1000;
 OPTION, ENABLELINEARTRANSFERMAPS=FALSE;
 TITLE, STRING="72 MeV PSI Ring single coasting proton";
 TC1: TRIMCOIL, TYPE="PSI-BFIELD-MIRRORED", RMIN=4.350, RMAX=4.470,

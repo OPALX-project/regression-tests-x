@@ -9,7 +9,6 @@ OPTION, BOUNDPDESTROY = 10;
 
 Title, string = "SwissFEL TW Cavities"; 
 
-OPTION, VERSION = 20212;
 
 Value, {OPALVERSION};
 
