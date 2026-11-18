@@ -17,7 +17,6 @@ OPTION, STATDUMPFREQ    = 1;
 OPTION, BOUNDPDESTROY   = 10;
 OPTION, AUTOPHASE       = 4;
 OPTION, EBDUMP          = true;
-OPTION, VERSION         = 10900;
 
 Title, string="Test Flattop+Gauss drift with space charge and binning.";
 

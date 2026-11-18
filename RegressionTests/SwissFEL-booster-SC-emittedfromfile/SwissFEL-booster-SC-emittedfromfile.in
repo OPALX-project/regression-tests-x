@@ -15,7 +15,6 @@ OPTION, STEPINFOFQ   = 100;	 // Print out every 100 turns
 
 Title, string = "Swiss FEL Gun & Booster"; 
 
-OPTION, VERSION      = 10900; 
 
 Value, {OPALVERSION};
 

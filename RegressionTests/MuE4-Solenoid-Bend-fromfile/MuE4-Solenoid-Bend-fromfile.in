@@ -29,7 +29,6 @@
 OPTION, PSDUMPFREQ    = 100000;
 OPTION, STATDUMPFREQ  = 10;
 OPTION, BOUNDPDESTROY = 0;
-OPTION, VERSION       = 10900;
 
 Title, string="muE4: WSX solenoid and the first dipole ASR61, G4beamline field maps";
 

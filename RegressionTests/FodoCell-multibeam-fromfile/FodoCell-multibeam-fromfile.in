@@ -3,7 +3,6 @@ OPTION, STATDUMPFREQ  = 1;
 OPTION, BOUNDPDESTROY = 10;
 OPTION, AUTOPHASE     = 4;
 
-Option, VERSION = 10900;
 
 Title, string="FODO multibeam fromfile Test";
 
