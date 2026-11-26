@@ -1,0 +1,129 @@
+{
+  "schema": "opalx.closed_orbits",
+  "schema_version": 1,
+  "species": [
+    {
+      "id": "proton",
+      "name": "PROTON",
+      "rest_energy_eV": 938272088.15999997,
+      "charge_e": 1
+    }
+  ],
+  "orbits": [
+    {
+      "id": "orbit_beam1",
+      "beam_id": "BEAM1",
+      "cof_id": "ORBIT",
+      "line_id": "LATTICE",
+      "reference": {
+        "species_id": "proton",
+        "kinetic_energy_MeV": 2.5000000033701659
+      },
+      "section": {
+        "origin_m": [-0.51794919243112258, 0, 1.433012701892219],
+        "lab_to_section_quaternion_wxyz": [0.96592582628906831, -0, 0.25881904510252079, -0],
+        "coordinate_order": [
+          "x",
+          "px",
+          "y",
+          "py"
+        ],
+        "coordinate_units": [
+          "m",
+          "p/(mc)",
+          "m",
+          "p/(mc)"
+        ]
+      },
+      "solution": {
+        "section_coordinates": [6.8357819596381116e-11, -9.5745715112361158e-13, 1.3978930172184652e-11, -9.3254608462194649e-14],
+        "closure_residual": [-8.7371012960553593e-11, 2.5035607586677251e-12, -4.0455048612111468e-12, 7.4310308610111066e-13],
+        "launch": {
+          "frame": "laboratory",
+          "time_s": 0,
+          "position_m": [-0.51794919237192294, 1.3978930172184652e-11, 1.4330127019263978],
+          "momentum_mc": [-0.036524115472156768, -9.3254608462194649e-14, 0.063261623697373121]
+        }
+      },
+      "solver": {
+        "status": "converged",
+        "method": "NEWTON",
+        "integrator": "DOP853",
+        "dt_s": 6.2500000000000017e-11,
+        "settings": {
+          "position_tolerance_m": 1e-10,
+          "momentum_tolerance_mc": 1e-10,
+          "max_iterations": 20,
+          "max_steps": 2000000,
+          "max_path_m": 35,
+          "initial_coordinates": [0.001, 0.0001, 0.001, 0.0001],
+          "finite_difference_steps": [3.0000000000000004e-05, 2.1914469282796537e-06, 3.0000000000000004e-05, 2.1914469282796537e-06],
+          "coordinate_scales": [1, 0.07304823084391622, 1, 0.07304823084391622],
+          "damping": true,
+          "rank_tolerance": 9.9999999999999998e-13,
+          "max_backtracks": 20,
+          "geometry_tolerance_m": 1.0000000000000001e-09,
+          "angle_tolerance_rad": 1e-10
+        },
+        "iterations": 2,
+        "map_evaluations": 28,
+        "diagnostic": "Closed orbit verified by a fresh map evaluation."
+      },
+      "optics": {
+        "one_turn_matrix": [
+          [-1.1370139587572214, -61.309635179532798, 9.6231939530659794e-10, 9.8452384208474608e-09],
+          [0.042070659607082443, 1.389021458735793, -2.6136500371383889e-11, -2.8655491958300714e-10],
+          [-4.7569333999402731e-14, 2.414292098700352e-10, 0.44598978865825956, -39.665226668392023],
+          [7.2172523409259173e-14, 3.7735093234808612e-12, 0.038564783253805836, -1.1876524632531622]
+        ],
+        "stability": "STABLE",
+        "near_integer": false,
+        "eigenvalues": [
+          {
+            "real": 0.12600374998928576,
+            "imag": 0.99202976752981287
+          },
+          {
+            "real": 0.12600374998928576,
+            "imag": -0.99202976752981287
+          },
+          {
+            "real": -0.37083133729745149,
+            "imag": 0.92870023009153035
+          },
+          {
+            "real": -0.37083133729745149,
+            "imag": -0.92870023009153035
+          }
+        ],
+        "maximum_relative_eigenpair_residual": 4.767417482180858e-17,
+        "basis_reciprocal_condition": 0.20447277549133552,
+        "fractional_modes": [
+          {
+            "tune": 0.22989243126767686,
+            "complement": 0.77010756873232311
+          },
+          {
+            "tune": 0.31046360322810307,
+            "complement": 0.68953639677189693
+          }
+        ],
+        "full_tunes": {
+          "status": "available",
+          "method": "uncoupled_planar_phase_winding",
+          "horizontal_radial": 0.77010756873232311,
+          "vertical": 1.689536396771897,
+          "phase_samples": 18877,
+          "maximum_phase_step_rad": 0.00077599766137570469,
+          "diagnostic": "Uncoupled planar phase winding; validate DT and FDSTEP convergence."
+        }
+      },
+      "diagnostics": {
+        "relative_energy_drift": 0,
+        "return_duration_s": 1.1797187181236241e-06,
+        "path_length_m": 25.766370614264591,
+        "section_residual_m": 1.0266218372098923e-17
+      }
+    }
+  ]
+}

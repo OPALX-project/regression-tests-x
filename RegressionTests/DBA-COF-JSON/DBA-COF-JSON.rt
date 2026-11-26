@@ -1,0 +1,9 @@
+"DBA-COF-JSON: DOP853 COF from an off-orbit start on the 2.5 MeV proton DBA ring; closed orbit, full tunes, orbit length and energy drift from the COF result JSON."
+orbit.json root.orbits.0.solution.section_coordinates.0 1e-9 # x [m]: 10x XTOL, the solver accepts any point within XTOL
+orbit.json root.orbits.0.solution.section_coordinates.1 1e-9 # px [p/(mc)]: 10x PTOL
+orbit.json root.orbits.0.solution.section_coordinates.2 1e-9 # y [m]: zero by midplane symmetry
+orbit.json root.orbits.0.solution.section_coordinates.3 1e-9 # py [p/(mc)]
+orbit.json root.orbits.0.optics.full_tunes.horizontal_radial 1e-9 # all linear focusing of the ring
+orbit.json root.orbits.0.optics.full_tunes.vertical 1e-9
+orbit.json root.orbits.0.diagnostics.path_length_m 1e-8 # [m]: ring geometry along the whole orbit
+orbit.json root.orbits.0.diagnostics.relative_energy_drift 1e-12 # static magnetic fields do no work
