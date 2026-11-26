@@ -38,36 +38,44 @@ mpirun -np ${RANKS} "\$OPALX_EXE_PATH/opalx" ${F} --info 2 "\$@" 2>&1
 EOF
 chmod +x ${FB}.local
 
+# JSON files already in the test directory are inputs; only the ones the run writes are results
+shopt -s nullglob
+JSON_INPUTS=(*.json)
+shopt -u nullglob
+
 #
 mpirun -np ${RANKS} ${OPALX_EXE_PATH}/opalx ${F} --info 10 | tee ${FB}.out
 
-# collect output files (supports single and multi-container runs)
+# collect output files (supports single and multi-container runs, and JSON results such as
+# COF OUTPUT, which a .rt line "<file>.json <path> <eps>" compares)
 OUT_FILE=${FB}.out
 shopt -s nullglob
-STAT_FILES=(${FB}.stat ${FB}_c*.stat)
+STAT_FILES=()
+for SF in ${FB}.stat ${FB}_c*.stat; do
+    [ -f "${SF}" ] && STAT_FILES+=("${SF}")
+done
+JSON_FILES=()
+for JF in *.json; do
+    [[ " ${JSON_INPUTS[*]} " == *" ${JF} "* ]] || JSON_FILES+=("${JF}")
+done
 shopt -u nullglob
 
-if [ ${#STAT_FILES[@]} -eq 0 ]; then
-    echo "Error: no .stat files found for ${FB}"
+if [ ${#STAT_FILES[@]} -eq 0 ] && [ ${#JSON_FILES[@]} -eq 0 ]; then
+    echo "Error: no .stat or new .json files found for ${FB}"
     exit 1
 fi
 
-TIMING_FILE=timing.dat
+# a run without tracking (e.g. COF only) writes no timing.dat
+REF_FILES=(${OUT_FILE} "${STAT_FILES[@]}" "${JSON_FILES[@]}")
+[ -f timing.dat ] && REF_FILES+=(timing.dat)
 
 #
 mkdir -p reference
-cp ${OUT_FILE} reference/
-cp ${TIMING_FILE} reference/
-cd reference
-md5sum ${OUT_FILE} > ${OUT_FILE}.md5
-md5sum ${TIMING_FILE} > ${TIMING_FILE}.md5
-cd ..
-
-for SF in "${STAT_FILES[@]}"; do
-    cp ${SF} reference/
+for RF in "${REF_FILES[@]}"; do
+    cp ${RF} reference/
     cd reference
-    md5sum ${SF} > ${SF}.md5
+    md5sum ${RF} > ${RF}.md5
     cd ..
 done
 
-rm -rf data *.h5 *.out *.stat timing.dat
+rm -rf data *.h5 *.out *.stat timing.dat "${JSON_FILES[@]}"

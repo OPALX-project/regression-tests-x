@@ -14,10 +14,10 @@ Each test case folder (e.g., `RegressionTests/FodoCell/`) generally contains the
 - **`<TestName>.local`**: A shell script to execute the simulation locally. It typically sets up the environment and calls the executable with `mpirun`.
 - **`<TestName>.rt`**: The regression test definition file. This file specifies:
   - The name/description of the test.
-  - The statistics to check (e.g., `rms_x`, `energy`).
+  - The statistics to check (e.g., `rms_x`, `energy`), or values in a JSON file the run writes.
   - The type of check (e.g., `avg`).
   - The tolerance allowed for the test to pass.
-- **`reference/`**: A subdirectory containing the reference output files (e.g., `<TestName>.stat`) used to validate the current run.
+- **`reference/`**: A subdirectory containing the reference output files (e.g., `<TestName>.stat`, or the JSON files the `.rt` names) used to validate the current run.
 
 ## Make a Reference
 
@@ -51,7 +51,13 @@ stat "emit_y" avg 1E-5
 stat "emit_s" avg 1E-5
 stat "energy" avg 1E-5
 ```
-Here you can use all the flags that are available in the `.stat` file and use either `avg` or `last` as the type of check. Your test directory tree should now look like this:
+Here you can use all the flags that are available in the `.stat` file and use either `avg` or `last` as the type of check. `#` starts a comment; use it to say why a tolerance was chosen.
+
+A test can also check numbers in a JSON file that the run writes, such as the closed-orbit result of `COF, OUTPUT="orbit.json"`. A line names the file, a path into it and the tolerance:
+```rt
+orbit.json root.orbits.0.optics.full_tunes.horizontal_radial 1E-9
+```
+The path is dot-separated and starts with `root`, the whole document; every further part is an object key or, inside a list, the index of an entry (`orbits.0` is the first orbit). The value at the path must be a number, so a single array entry such as `root.orbits.0.solution.section_coordinates.1` works, a whole array does not. The check passes when the value differs from the one in `reference/orbit.json` by less than the tolerance. `makeReference.sh` copies every JSON file the run writes into `reference/`; a test may consist of JSON checks only (see `DBA-COF-JSON`). Your test directory tree should now look like this:
 ```text
 RegressionTests/
 └── FodoCell/
